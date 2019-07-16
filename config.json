@@ -1,0 +1,10 @@
+{
+  "track_id": "gleam",
+  "language": "Gleam",
+  "active": false,
+  "blurb": "",
+  "ignore_pattern": "[Ee]xample",
+  "solution_pattern": "[Ee]xample",
+  "test_pattern": "[Tt]est",
+  "exercises": null
+}
