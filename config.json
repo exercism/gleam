@@ -3,8 +3,20 @@
   "language": "Gleam",
   "active": false,
   "blurb": "",
-  "ignore_pattern": "[Ee]xample",
-  "solution_pattern": "[Ee]xample",
-  "test_pattern": "[Tt]est",
-  "exercises": null
+  "ignore_pattern": "example",
+  "solution_pattern": "example",
+  "test_pattern": "test",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "40e473b4-74a2-4513-8b3e-e3b42841624f",
+      "core": true,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
+    }
+  ]
 }
