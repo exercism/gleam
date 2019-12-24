@@ -1,6 +1,0 @@
-{"1.1.0",
-[{<<"gleam_stdlib">>,{pkg,<<"gleam_stdlib">>,<<"0.4.0">>},0}]}.
-[
-{pkg_hash,[
- {<<"gleam_stdlib">>, <<"4A53A69AA534D22BAE6E4BFDDBFEBB3A9012B1713E6D4B0ECCDD0A2DAF8824DC">>}]}
-].
