@@ -14,9 +14,15 @@
       "auto_approve": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-        "strings"
-      ]
+      "topics": ["strings"]
+    },
+    {
+      "slug": "two-fer",
+      "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": ["strings"]
     }
   ]
 }
