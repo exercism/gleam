@@ -31,6 +31,14 @@
       "unlocked_by": "hello-world",
       "difficulty": 1,
       "topics": ["custom-types"]
+    },
+    {
+      "slug": "leap",
+      "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 2,
+      "topics": ["algorithms"]
     }
   ]
 }
