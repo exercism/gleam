@@ -1,5 +1,5 @@
 # Exercism Gleam Track
 
-[![Build Status](https://travis-ci.org/exercism/gleam.svg?branch=master)](https://travis-ci.org/exercism/gleam)
+[![Configlet Status](https://github.com/exercism/gleam/workflows/configlet/badge.svg)]
 
 Exercism exercises in Gleam.

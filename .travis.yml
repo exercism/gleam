@@ -1,5 +1,0 @@
-language: bash
-
-script:
-  - bin/fetch-configlet
-  - bin/configlet lint --track-id gleam .
