@@ -1,0 +1,16 @@
+{application, forth,
+ [{description, "A Gleam program"},
+  {vsn, "1.0.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib,
+    gleam_stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {include_files, ["gleam.toml", "gen"]},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+]}.
