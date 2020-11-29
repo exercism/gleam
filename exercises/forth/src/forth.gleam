@@ -12,13 +12,13 @@ pub type ForthError {
 }
 
 pub fn new() -> Forth {
-  Forth
+  todo("Implement this function")
 }
 
 pub fn format_stack(f: Forth) -> String {
-  "I'm a little stack, short and stout..."
+  todo("Implement this function")
 }
 
 pub fn eval(f: Forth, prog: String) -> Result(Forth, ForthError) {
-  Ok(f)
+  todo("Implement this function")
 }
