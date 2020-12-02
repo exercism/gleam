@@ -5,11 +5,11 @@ import gleam/list
 import gleam/io
 
 fn error_with(o: result.Result(a, b), err: b) -> should.Expectation {
-  should.equal(Error(err), o)
+  should.equal(o, Error(err))
 }
 
 fn succeed_with(o: result.Result(a, b), res: a) -> should.Expectation {
-  should.equal(Ok(res), o)
+  should.equal(o, Ok(res))
 }
 
 fn run_forth_for(prog: String, expected: String) -> should.Expectation {
@@ -27,11 +27,6 @@ pub fn numbers_just_get_pushed_onto_the_stack_test() {
   run_forth_for("1 2 3 4 5", "1 2 3 4 5")
 }
 
-pub fn non_word_chars_are_separators_test() {
-  // Note the Ogham Space Mark ( ), this is a spacing character.
-  run_forth_for("1\x002\x013\n4\r5 6\t7", "1 2 3 4 5 6 7")
-}
-
 pub fn basic_arithmetic_test() {
   run_forth_for("1 2 + 4 -", "-1")
 }
@@ -41,7 +36,7 @@ pub fn integer_division_test() {
 }
 
 pub fn division_by_zero_test() {
-  forth.new() |> forth.eval("4 2 2 - /") |> error_with(forth.DivisionByZero)
+  forth.new() |> forth.eval("4 0 /") |> error_with(forth.DivisionByZero)
 }
 
 pub fn stack_dup1_test() {
