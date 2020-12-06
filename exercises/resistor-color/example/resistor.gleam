@@ -27,16 +27,5 @@ pub fn code(color: Color) -> Int {
 }
 
 pub fn colors() -> List(Color) {
-  [
-    Black,
-    Brown,
-    Red,
-    Orange,
-    Yellow,
-    Green,
-    Blue,
-    Violet,
-    Grey,
-    White
-  ]
+  [Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White]
 }
