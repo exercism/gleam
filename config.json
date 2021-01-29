@@ -18,57 +18,59 @@
   "ignore_pattern": "example",
   "solution_pattern": "example",
   "test_pattern": "test",
-  "exercises": [
-    {
-      "slug": "hello-world",
-      "name": "Hello World",
-      "uuid": "40e473b4-74a2-4513-8b3e-e3b42841624f",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
-      "slug": "resistor-color",
-      "name": "Resistor Color",
-      "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "custom-types"
-      ]
-    },
-    {
-      "slug": "two-fer",
-      "name": "Two Fer",
-      "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
-      "slug": "leap",
-      "name": "Leap",
-      "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "algorithms"
-      ]
-    },
-    {
-      "slug": "forth",
-      "name": "Forth",
-      "uuid": "8176ac78-d4fd-475f-ac8b-e205ca7b3a77",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "algorithms",
-        "custom_types"
-      ]
-    }
-  ]
+  "exercises": {
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "40e473b4-74a2-4513-8b3e-e3b42841624f",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "custom-types"
+        ]
+      },
+      {
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "algorithms"
+        ]
+      },
+      {
+        "slug": "forth",
+        "name": "Forth",
+        "uuid": "8176ac78-d4fd-475f-ac8b-e205ca7b3a77",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "algorithms",
+          "custom_types"
+        ]
+      }
+    ]
+  }
 }
