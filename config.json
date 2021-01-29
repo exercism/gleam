@@ -19,6 +19,7 @@
   "solution_pattern": "example",
   "test_pattern": "test",
   "exercises": {
+    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
