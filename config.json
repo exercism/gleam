@@ -2,6 +2,12 @@
   "track_id": "gleam",
   "language": "Gleam",
   "active": false,
+  "status": {
+    "concept_exercises": false,
+    "test_runner": false,
+    "representer": false,
+    "analyzer": false
+  },
   "blurb": "Gleam is a statically typed functional programming language for building scalable concurrent systems. It compiles to Erlang and has straightforward interoperability with other BEAM languages such as Erlang, Elixir, and LFE.",
   "version": 3,
   "ignore_pattern": "example",
