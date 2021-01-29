@@ -3,6 +3,7 @@
   "language": "Gleam",
   "active": false,
   "blurb": "Gleam is a statically typed functional programming language for building scalable concurrent systems. It compiles to Erlang and has straightforward interoperability with other BEAM languages such as Erlang, Elixir, and LFE.",
+  "version": 3,
   "ignore_pattern": "example",
   "solution_pattern": "example",
   "test_pattern": "test",
@@ -14,7 +15,9 @@
       "auto_approve": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": ["strings"]
+      "topics": [
+        "strings"
+      ]
     },
     {
       "slug": "two-fer",
@@ -22,7 +25,9 @@
       "core": false,
       "unlocked_by": "hello-world",
       "difficulty": 1,
-      "topics": ["strings"]
+      "topics": [
+        "strings"
+      ]
     },
     {
       "slug": "resistor-color",
@@ -30,7 +35,9 @@
       "core": false,
       "unlocked_by": "hello-world",
       "difficulty": 1,
-      "topics": ["custom-types"]
+      "topics": [
+        "custom-types"
+      ]
     },
     {
       "slug": "leap",
@@ -38,7 +45,9 @@
       "core": false,
       "unlocked_by": "hello-world",
       "difficulty": 2,
-      "topics": ["algorithms"]
+      "topics": [
+        "algorithms"
+      ]
     },
     {
       "slug": "forth",
@@ -46,7 +55,10 @@
       "core": false,
       "unlocked_by": "hello-world",
       "difficulty": 3,
-      "topics": ["algorithms", "custom_types"]
+      "topics": [
+        "algorithms",
+        "custom_types"
+      ]
     }
   ]
 }
