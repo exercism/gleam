@@ -22,9 +22,6 @@
     {
       "slug": "hello-world",
       "uuid": "40e473b4-74a2-4513-8b3e-e3b42841624f",
-      "core": true,
-      "auto_approve": true,
-      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "strings"
@@ -33,8 +30,6 @@
     {
       "slug": "resistor-color",
       "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
-      "core": false,
-      "unlocked_by": "hello-world",
       "difficulty": 1,
       "topics": [
         "custom-types"
@@ -43,8 +38,6 @@
     {
       "slug": "two-fer",
       "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
-      "core": false,
-      "unlocked_by": "hello-world",
       "difficulty": 1,
       "topics": [
         "strings"
@@ -53,8 +46,6 @@
     {
       "slug": "leap",
       "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
-      "core": false,
-      "unlocked_by": "hello-world",
       "difficulty": 2,
       "topics": [
         "algorithms"
@@ -63,8 +54,6 @@
     {
       "slug": "forth",
       "uuid": "8176ac78-d4fd-475f-ac8b-e205ca7b3a77",
-      "core": false,
-      "unlocked_by": "hello-world",
       "difficulty": 3,
       "topics": [
         "algorithms",
