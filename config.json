@@ -25,6 +25,7 @@
         "slug": "hello-world",
         "name": "Hello World",
         "uuid": "40e473b4-74a2-4513-8b3e-e3b42841624f",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
@@ -35,6 +36,7 @@
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
@@ -45,6 +47,7 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
@@ -55,6 +58,7 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
@@ -65,6 +69,7 @@
         "slug": "forth",
         "name": "Forth",
         "uuid": "8176ac78-d4fd-475f-ac8b-e205ca7b3a77",
+        "practices": [],
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
