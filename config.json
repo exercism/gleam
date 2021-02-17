@@ -18,6 +18,20 @@
   "ignore_pattern": "example",
   "solution_pattern": "example",
   "test_pattern": "test",
+  "files": {
+    "solution": [
+      "src/%{snake_slug}.gleam"
+    ],
+    "test": [
+      "test/%{snake_slug}_test.gleam"
+    ],
+    "example": [
+      "example/%{snake_slug}.gleam"
+    ],
+    "exemplar": [
+      ".meta/src/%{snake_slug}.gleam"
+    ]
+  },
   "exercises": {
     "concept": [],
     "practice": [
