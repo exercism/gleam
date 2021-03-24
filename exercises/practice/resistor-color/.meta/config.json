@@ -1,6 +1,11 @@
 {
   "blurb": "Convert a resistor band's color to its numeric representation",
-  "authors": [],
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+    "itsgreggreg"
+  ],
   "files": {
     "solution": [],
     "test": [],
