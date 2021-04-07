@@ -8,9 +8,15 @@
     "itsgreggreg"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/hello_world.gleam"
+    ],
+    "test": [
+      "test/hello_world_test.gleam"
+    ],
+    "example": [
+      "example/hello_world.gleam"
+    ]
   },
   "source": "This is an exercise to introduce users to using Exercism",
   "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program"
