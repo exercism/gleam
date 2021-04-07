@@ -4,9 +4,15 @@
     "lpil"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/leap.gleam"
+    ],
+    "test": [
+      "test/leap_test.gleam"
+    ],
+    "example": [
+      "example/leap.gleam"
+    ]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",
   "source_url": "http://www.javaranch.com/leap.jsp"

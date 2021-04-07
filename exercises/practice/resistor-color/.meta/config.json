@@ -7,9 +7,15 @@
     "itsgreggreg"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/resistor_color.gleam"
+    ],
+    "test": [
+      "test/resistor_color_test.gleam"
+    ],
+    "example": [
+      "example/resistor_color.gleam"
+    ]
   },
   "source": "Maud de Vries, Erik Schierboom",
   "source_url": "https://github.com/exercism/problem-specifications/issues/1458"
