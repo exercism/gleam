@@ -49,7 +49,7 @@
       {
         "slug": "resistor-color",
         "name": "Resistor Color",
-        "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
+        "uuid": "6bc57e73-1629-4a18-b2f0-0b93ef4f3b8c",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
@@ -60,7 +60,7 @@
       {
         "slug": "two-fer",
         "name": "Two Fer",
-        "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
+        "uuid": "b0a6f0d2-0bba-4f8f-89ad-a41995a4b87d",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
@@ -71,7 +71,7 @@
       {
         "slug": "leap",
         "name": "Leap",
-        "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
+        "uuid": "5f8fa8fe-3775-4b34-a602-d5cb47d83d8c",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
