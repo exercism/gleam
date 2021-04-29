@@ -13,7 +13,9 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 4
+    "indent_size": 4,
+    "ace_editor_language": "gleam",
+    "highlightjs_language": "gleam"
   },
   "ignore_pattern": "example",
   "solution_pattern": "example",
