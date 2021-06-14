@@ -1,4 +1,4 @@
-{application, resistor,
+{application, resistor_color,
  [{description, "A Gleam program"},
   {vsn, "1.0.0"},
   {registered, []},
