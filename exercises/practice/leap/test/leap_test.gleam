@@ -1,5 +1,5 @@
 import leap
-import gleam/expect
+import gleam/should
 
 pub fn year_2015_test() {
   leap.is_leap_year(2015)
