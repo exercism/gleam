@@ -1,3 +1,3 @@
 pub fn hello() {
-  "Your implemetation goes here"
+  "Goodbye, Mars!"
 }
