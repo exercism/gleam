@@ -96,32 +96,32 @@
     {
       "title": "Safe",
       "content": "Gleam's powerful static type system helps find and prevent bugs at compile time.",
-      "icon": "TODO"
+      "icon": "immutable"
     },
     {
       "title": "Fault tolerant",
       "content": "The Erlang virtual machine provides well tested mechanisms for gracefully handling failure.",
-      "icon": "TODO"
+      "icon": "safe"
     },
     {
       "title": "Friendly compiler",
       "content": "Hunting down bugs can be stressful so Gleam's compiler provides clear and helpful feedback.",
-      "icon": "TODO"
+      "icon": "fun"
     },
     {
       "title": "Friendly community",
       "content": "People of all backgrounds, genders, and experience levels are welcome in the Gleam community.",
-      "icon": "TODO"
+      "icon": "community"
     },
     {
       "title": "Erlang compatible",
       "content": "Gleam makes it easy to use code written in other BEAM languages such as Erlang, Elixir and LFE.",
-      "icon": "TODO"
+      "icon": "interop"
     },
     {
       "title": "Performant",
       "content": "Gleam adds no overhead of its own, so all Gleam programs are as fast as their Erlang counterparts.",
-      "icon": "TODO"
+      "icon": "fast"
     }
   ],
   "tags": [
