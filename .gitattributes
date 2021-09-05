@@ -1,2 +1,1 @@
-*.gleam linguist-language=Rust
 examples/* linguist-documentation=false
