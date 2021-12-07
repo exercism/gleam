@@ -1,5 +1,10 @@
 import leap
-import gleam/should
+import gleeunit
+import gleeunit/should
+
+pub fn main() {
+  gleeunit.main()
+}
 
 pub fn year_2015_test() {
   leap.is_leap_year(2015)

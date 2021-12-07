@@ -1,18 +1,23 @@
 import forth
-import gleam/should
 import gleam/result
 import gleam/list
 import gleam/io
+import gleeunit
+import gleeunit/should
 
-fn error_with(o: result.Result(a, b), err: b) -> should.Expectation {
+pub fn main() {
+  gleeunit.main()
+}
+
+fn error_with(o: Result(a, b), err: b) -> Nil {
   should.equal(o, Error(err))
 }
 
-fn succeed_with(o: result.Result(a, b), res: a) -> should.Expectation {
+fn succeed_with(o: Result(a, b), res: a) -> Nil {
   should.equal(o, Ok(res))
 }
 
-fn run_forth_for(prog: String, expected: String) -> should.Expectation {
+fn run_forth_for(prog: String, expected: String) -> Nil {
   forth.new()
   |> forth.eval(prog)
   |> result.map(forth.format_stack)
