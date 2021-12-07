@@ -1,5 +1,10 @@
 import hello_world
-import gleam/should
+import gleeunit
+import gleeunit/should
+
+pub fn main() {
+  gleeunit.main()
+}
 
 pub fn hello_world_test() {
   hello_world.hello()
