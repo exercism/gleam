@@ -61,10 +61,10 @@ fn stack_push(s: List(a), i) -> List(a) {
   [i, ..s]
 }
 
-fn stack_pop(s: List(a)) -> Result(tuple(a, List(a)), ForthError) {
+fn stack_pop(s: List(a)) -> Result(#(a, List(a)), ForthError) {
   case s {
     [] -> Error(StackUnderflow)
-    [a, ..t] -> Ok(tuple(a, t))
+    [a, ..t] -> Ok(#(a, t))
   }
 }
 
@@ -77,10 +77,10 @@ pub fn format_stack(f: Forth) -> String {
   |> string_builder.to_string
 }
 
-fn toke_word(w: String, t: List(String)) -> tuple(ForthTok, List(String)) {
+fn toke_word(w: String, t: List(String)) -> #(ForthTok, List(String)) {
   case w {
     ":" -> {
-      let tuple([w, ..def], [_, ..rest]) =
+      let #([w, ..def], [_, ..rest]) =
         list.split_while(
           t,
           fn(c) {
@@ -90,13 +90,13 @@ fn toke_word(w: String, t: List(String)) -> tuple(ForthTok, List(String)) {
             }
           },
         )
-      tuple(WordDef(string.uppercase(w), UserDef(tokenise(def, []))), rest)
+      #(WordDef(string.uppercase(w), UserDef(tokenise(def, []))), rest)
     }
 
     v ->
       case int.parse(v) {
-        Ok(i) -> tuple(Value(i), t)
-        Error(_) -> tuple(Word(string.uppercase(v)), t)
+        Ok(i) -> #(Value(i), t)
+        Error(_) -> #(Word(string.uppercase(v)), t)
       }
   }
 }
@@ -105,11 +105,11 @@ fn tokenise(ins: List(String), toks: List(ForthTok)) -> List(ForthTok) {
   case ins {
     [] -> toks
     [w] -> {
-      let tuple(t, _) = toke_word(w, [])
+      let #(t, _) = toke_word(w, [])
       [t, ..toks]
     }
     [h, ..t] -> {
-      let tuple(tok, ts) = toke_word(h, t)
+      let #(tok, ts) = toke_word(h, t)
       tokenise(ts, [tok, ..toks])
     }
   }
@@ -117,7 +117,7 @@ fn tokenise(ins: List(String), toks: List(ForthTok)) -> List(ForthTok) {
 
 fn execute(f: Forth, xs: List(ForthTok)) -> Result(Forth, ForthError) {
   case stack_pop(xs) {
-    Ok(tuple(i, rest0)) -> {
+    Ok(#(i, rest0)) -> {
       try f0 = eval_token(f, i)
       execute(f0, rest0)
     }
@@ -129,8 +129,8 @@ fn binary_op(
   f: Forth,
   op: fn(Int, Int) -> Result(Int, ForthError),
 ) -> Result(Forth, ForthError) {
-  try tuple(a, rest) = stack_pop(f.stack)
-  try tuple(b, rest0) = stack_pop(rest)
+  try #(a, rest) = stack_pop(f.stack)
+  try #(b, rest0) = stack_pop(rest)
   try i = op(b, a)
   // order is important
   Ok(Forth(..f, stack: stack_push(rest0, i)))
@@ -152,41 +152,32 @@ fn execute_builtin(f: Forth, builtin: String) -> Result(Forth, ForthError) {
         },
       )
     "DUP" -> {
-      try tuple(h, rest0) = stack_pop(f.stack)
-      Ok(
-        Forth(
-          ..f,
-          stack: stack_push(rest0, h)
-          |> stack_push(h),
-        ),
-      )
+      try #(h, rest0) = stack_pop(f.stack)
+      let stack =
+        stack_push(rest0, h)
+        |> stack_push(h)
+      Ok(Forth(..f, stack: stack))
     }
     "DROP" -> {
-      try tuple(_, rest0) = stack_pop(f.stack)
+      try #(_, rest0) = stack_pop(f.stack)
       Ok(Forth(..f, stack: rest0))
     }
     "SWAP" -> {
-      try tuple(a, rest0) = stack_pop(f.stack)
-      try tuple(b, rest1) = stack_pop(rest0)
-      Ok(
-        Forth(
-          ..f,
-          stack: stack_push(rest1, a)
-          |> stack_push(b),
-        ),
-      )
+      try #(a, rest0) = stack_pop(f.stack)
+      try #(b, rest1) = stack_pop(rest0)
+      let stack =
+        stack_push(rest1, a)
+        |> stack_push(b)
+      Ok(Forth(..f, stack: stack))
     }
     "OVER" -> {
-      try tuple(a, rest0) = stack_pop(f.stack)
-      try tuple(b, rest1) = stack_pop(rest0)
-      Ok(
-        Forth(
-          ..f,
-          stack: stack_push(rest1, b)
-          |> stack_push(a)
-          |> stack_push(b),
-        ),
-      )
+      try #(a, rest0) = stack_pop(f.stack)
+      try #(b, rest1) = stack_pop(rest0)
+      let stack =
+        stack_push(rest1, b)
+        |> stack_push(a)
+        |> stack_push(b)
+      Ok(Forth(..f, stack: stack))
     }
   }
 }

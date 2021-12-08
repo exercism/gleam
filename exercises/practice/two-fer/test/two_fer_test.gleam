@@ -1,6 +1,11 @@
 import two_fer.{two_fer}
 import gleam/option.{None, Some}
-import gleam/should
+import gleeunit
+import gleeunit/should
+
+pub fn main() {
+  gleeunit.main()
+}
 
 pub fn no_name_test() {
   two_fer(None)

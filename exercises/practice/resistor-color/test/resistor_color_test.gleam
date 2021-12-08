@@ -1,7 +1,12 @@
 import resistor_color.{
   Black, Blue, Brown, Green, Grey, Orange, Red, Violet, White, Yellow,
 }
-import gleam/should
+import gleeunit
+import gleeunit/should
+
+pub fn main() {
+  gleeunit.main()
+}
 
 pub fn black_test() {
   resistor_color.code(Black)
