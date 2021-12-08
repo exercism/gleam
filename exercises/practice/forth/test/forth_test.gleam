@@ -9,15 +9,15 @@ pub fn main() {
   gleeunit.main()
 }
 
-fn error_with(o: Result(a, b), err: b) -> Nil {
+fn error_with(o: Result(a, b), err: b) {
   should.equal(o, Error(err))
 }
 
-fn succeed_with(o: Result(a, b), res: a) -> Nil {
+fn succeed_with(o: Result(a, b), res: a) {
   should.equal(o, Ok(res))
 }
 
-fn run_forth_for(prog: String, expected: String) -> Nil {
+fn run_forth_for(prog: String, expected: String) {
   forth.new()
   |> forth.eval(prog)
   |> result.map(forth.format_stack)
