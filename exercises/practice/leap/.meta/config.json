@@ -11,7 +11,7 @@
       "test/leap_test.gleam"
     ],
     "example": [
-      "example.gleam"
+      ".meta/example.gleam"
     ]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",

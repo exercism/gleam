@@ -24,7 +24,7 @@
       "test/%{snake_slug}_test.gleam"
     ],
     "example": [
-      "example/%{snake_slug}.gleam"
+      ".meta/%{snake_slug}.gleam"
     ],
     "exemplar": [
       ".meta/src/%{snake_slug}.gleam"
