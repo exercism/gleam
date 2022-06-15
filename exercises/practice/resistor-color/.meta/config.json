@@ -14,7 +14,7 @@
       "test/resistor_color_test.gleam"
     ],
     "example": [
-      "example.gleam"
+      ".meta/example.gleam"
     ]
   },
   "source": "Maud de Vries, Erik Schierboom",

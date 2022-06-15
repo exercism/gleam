@@ -9,7 +9,7 @@
       "test/forth_test.gleam"
     ],
     "example": [
-      "example.gleam"
+      ".meta/example.gleam"
     ]
   }
 }
