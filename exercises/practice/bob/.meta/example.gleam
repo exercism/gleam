@@ -7,7 +7,7 @@ pub fn hey(remark: String) -> String {
   let is_yelling =
     string.uppercase(remark) == remark && string.lowercase(remark) != remark
 
-  case [is_empty, is_yelling, is_question] {
+  case is_empty, is_yelling, is_question {
     [True, _, _] -> "Fine. Be that way!"
     [_, True, True] -> "Calm down, I know what I'm doing!"
     [_, True, _] -> "Whoa, chill out!"
