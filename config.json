@@ -56,6 +56,18 @@
         ]
       },
       {
+        "slug": "difference-of-squares",
+        "name": "Difference Of Squares",
+        "uuid": "ce45a52e-0541-4384-8abf-b787bd49cbf7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "integers",
+          "math"
+        ]
+      },
+      {
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b0a6f0d2-0bba-4f8f-89ad-a41995a4b87d",
