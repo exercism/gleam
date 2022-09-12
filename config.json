@@ -101,6 +101,18 @@
         ]
       },
       {
+        "slug": "accumulate",
+        "name": "Accumulate",
+        "uuid": "d04cd9d6-6494-4336-8e6c-2b9f612eba05",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "recursion",
+          "transforming"
+        ]
+      },
+      {
         "slug": "forth",
         "name": "Forth",
         "uuid": "8176ac78-d4fd-475f-ac8b-e205ca7b3a77",
