@@ -1,4 +1,4 @@
-name = "pascal_triangle"
+name = "pascals_triangle"
 version = "0.1.0"
 
 [dependencies]

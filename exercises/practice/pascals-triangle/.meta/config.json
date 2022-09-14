@@ -7,13 +7,13 @@
   ],
   "files": {
     "solution": [
-      "src/pascal_triangle.gleam"
+      "src/pascals_triangle.gleam"
     ],
     "test": [
-      "test/pascal_triangle_test.gleam"
+      "test/pascals_triangle_test.gleam"
     ],
     "example": [
-      ".meta/.example.gleam"
+      ".meta/example.gleam"
     ]
   },
   "blurb": "Compute Pascal's triangle up to a given number of rows.",
