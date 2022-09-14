@@ -113,6 +113,19 @@
         ]
       },
       {
+        "slug": "pascals-triangle",
+        "name": "Pascals Triangle",
+        "uuid": "b6459bf2-1e93-42ea-a743-628548b79e2f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "lists",
+          "math",
+          "recursion"
+        ]
+      },
+      {
         "slug": "forth",
         "name": "Forth",
         "uuid": "8176ac78-d4fd-475f-ac8b-e205ca7b3a77",
