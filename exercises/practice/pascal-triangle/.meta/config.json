@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "nono"
+  ],
+  "contributors": [
+    "lpil"
+  ],
+  "files": {
+    "solution": [
+      "src/pascal_triangle.gleam"
+    ],
+    "test": [
+      "test/pascal_triangle_test.gleam"
+    ],
+    "example": [
+      ".meta/.example.gleam"
+    ]
+  },
+  "blurb": "Compute Pascal's triangle up to a given number of rows.",
+  "source": "Pascal's Triangle at Wolfram Math World",
+  "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html"
+}
