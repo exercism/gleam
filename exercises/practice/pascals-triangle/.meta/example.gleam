@@ -4,7 +4,7 @@ import gleam/result
 
 pub fn rows(n: Int) -> List(List(Int)) {
   add_rows(n, [])
-  |> list.reverse()
+  |> list.reverse
 }
 
 fn add_rows(n: Int, acc: List(List(Int))) -> List(List(Int)) {
@@ -13,7 +13,7 @@ fn add_rows(n: Int, acc: List(List(Int))) -> List(List(Int)) {
     _ ->
       list.first(acc)
       |> result.unwrap([])
-      |> next_row()
+      |> next_row
       |> list.prepend(acc, _)
       |> add_rows(n - 1, _)
   }
@@ -22,6 +22,6 @@ fn add_rows(n: Int, acc: List(List(Int))) -> List(List(Int)) {
 fn next_row(row: List(Int)) -> List(Int) {
   row
   |> list.map_fold(from: 0, with: fn(memo, item) { #(item, item + memo) })
-  |> pair.second()
+  |> pair.second
   |> list.append([1])
 }
