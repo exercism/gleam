@@ -56,12 +56,35 @@
         ]
       },
       {
+        "slug": "difference-of-squares",
+        "name": "Difference Of Squares",
+        "uuid": "ce45a52e-0541-4384-8abf-b787bd49cbf7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "integers",
+          "math"
+        ]
+      },
+      {
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b0a6f0d2-0bba-4f8f-89ad-a41995a4b87d",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "bob",
+        "name": "Bob",
+        "uuid": "c9f7d06c-a2fb-45c3-a320-b9a93fd88201",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
         "topics": [
           "strings"
         ]
@@ -78,12 +101,37 @@
         ]
       },
       {
+        "slug": "accumulate",
+        "name": "Accumulate",
+        "uuid": "d04cd9d6-6494-4336-8e6c-2b9f612eba05",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "recursion",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "pascals-triangle",
+        "name": "Pascals Triangle",
+        "uuid": "b6459bf2-1e93-42ea-a743-628548b79e2f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "lists",
+          "math",
+          "recursion"
+        ]
+      },
+      {
         "slug": "forth",
         "name": "Forth",
         "uuid": "8176ac78-d4fd-475f-ac8b-e205ca7b3a77",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
+        "difficulty": 9,
         "topics": [
           "algorithms",
           "custom_types"
