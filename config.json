@@ -136,6 +136,15 @@
           "algorithms",
           "custom_types"
         ]
+      },
+      {
+        "slug": "bowling",
+        "name": "Bowling",
+        "uuid": "1d54b9d2-bf6f-473f-8bf6-668d3c0fd5f3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 9,
+        "topics": []
       }
     ]
   },
