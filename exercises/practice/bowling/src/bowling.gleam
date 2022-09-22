@@ -1,7 +1,7 @@
-pub fn roll(pins: Int) {
+pub fn roll(state: List(Int), knocked_pins: Int) -> List(Int) {
   todo
 }
 
-pub fn score() -> Int {
+pub fn score(state: List(Int)) -> Int {
   todo
 }
