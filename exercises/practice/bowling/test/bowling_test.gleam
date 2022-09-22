@@ -216,21 +216,21 @@ pub fn rolling_after_bonus_rolls_after_strike_test() {
 
 fn roll_and_check_score(rolls: List(Int), correct_score: Int) {
   rolls
-  |> list.fold([], fn(state, pins) { list.append(state, [roll(state, pins)]) })
+  |> list.fold([], fn(state, pins) { list.append(state, roll(state, pins)) })
   |> score()
   |> should.equal(correct_score)
 }
 
 fn roll_and_last_roll_be_error(rolls: List(Int), last_roll: Int) {
   rolls
-  |> list.fold([], fn(state, pins) { list.append(state, [roll(state, pins)]) })
+  |> list.fold([], fn(state, pins) { list.append(state, roll(state, pins)) })
   |> roll(last_roll)
   |> should.be_error()
 }
 
 fn roll_and_score_be_error(rolls: List(Int)) {
   rolls
-  |> list.fold([], fn(state, pins) { list.append(state, [roll(pins)]) })
+  |> list.fold([], fn(state, pins) { list.append(state, roll(pins)) })
   |> score()
   |> should.be_error()
 }
