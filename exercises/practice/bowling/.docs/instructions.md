@@ -55,5 +55,5 @@ For a tenth frame of XXX (three strikes), the total value is 30.
 Write code to keep track of the score of a game of bowling. It should
 support two operations:
 
-- `roll(state: List(Int), knocked_pins: Int) -> List(Int)` is called each time the player rolls a ball. The first argument is the state of the game until now. The second argument is the number of knocked down pins.
-- `score(state: List(Int)) -> Int` is called only at the very end of the game. It recieves the state of the game and returns the total score for that game.
+- `roll(game: Game, knocked_pins: Int) -> Result(Game, Error)` is called each time the player rolls a ball. The first argument is the state of the game until now. The second argument is the number of knocked down pins.
+- `score(game: Game) -> Result(Int, Error)` is called only at the very end of the game. It recieves the state of the game and returns the total score for that game.
