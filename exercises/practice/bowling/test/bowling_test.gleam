@@ -1,4 +1,6 @@
-import bowling.{roll, score}
+import bowling.{
+  Error, Game, GameComplete, GameNotComplete, InvalidPinCount, roll, score,
+}
 import gleeunit
 import gleeunit/should
 import gleam/list
@@ -106,20 +108,23 @@ pub fn all_strikes_test() {
 }
 
 pub fn negative_point_roll_test() {
-  []
+  Game([])
   |> roll(-1)
   |> should.be_error()
 }
 
-pub fn more_than_10_point_roll_test() {
-  []
+pub fn more_than_10_points_roll_test() {
+  Game([])
   |> roll(11)
   |> should.be_error()
 }
 
 pub fn more_than_10_points_frame_test() {
-  []
-  |> roll(5)
+  assert Ok(game) =
+    Game([])
+    |> roll(5)
+
+  game
   |> roll(6)
   |> should.be_error()
 }
@@ -128,14 +133,14 @@ pub fn bonus_roll_after_strike_in_last_frame_test() {
   let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10]
 
   rolls
-  |> roll_and_last_roll_be_error(11)
+  |> roll_and_last_roll_be_error(11, InvalidPinCount)
 }
 
 pub fn two_bonus_rolls_after_strike_in_last_frame_test() {
   let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5]
 
   rolls
-  |> roll_and_last_roll_be_error(6)
+  |> roll_and_last_roll_be_error(6, InvalidPinCount)
 }
 
 pub fn two_bonus_rolls_after_strike_in_last_frame_and_one_is_strike_test() {
@@ -149,18 +154,18 @@ pub fn two_bonus_rolls_after_strike_in_last_frame_and_first_one_is_not_strike_te
   let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 6]
 
   rolls
-  |> roll_and_last_roll_be_error(10)
+  |> roll_and_last_roll_be_error(10, InvalidPinCount)
 }
 
 pub fn two_bonus_rolls_after_strike_in_last_frame_and_first_one_is_strike_test() {
   let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10]
 
   rolls
-  |> roll_and_last_roll_be_error(11)
+  |> roll_and_last_roll_be_error(11, InvalidPinCount)
 }
 
 pub fn trying_to_score_unstarted_game_test() {
-  []
+  Game([])
   |> score()
   |> should.be_error()
 }
@@ -176,7 +181,7 @@ pub fn rolling_after_10_frames_test() {
   let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
   rolls
-  |> roll_and_last_roll_be_error(0)
+  |> roll_and_last_roll_be_error(0, GameComplete)
 }
 
 pub fn trying_to_score_game_before_rolling_bonus_rolls_after_strike_in_last_frame_test() {
@@ -204,33 +209,57 @@ pub fn rolling_after_bonus_roll_after_spare_test() {
   let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 2]
 
   rolls
-  |> roll_and_last_roll_be_error(2)
+  |> roll_and_last_roll_be_error(2, GameComplete)
 }
 
 pub fn rolling_after_bonus_rolls_after_strike_test() {
   let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 3, 2]
 
   rolls
-  |> roll_and_last_roll_be_error(2)
+  |> roll_and_last_roll_be_error(2, GameComplete)
 }
 
 fn roll_and_check_score(rolls: List(Int), correct_score: Int) {
   rolls
-  |> list.fold([], fn(state, pins) { list.append(state, roll(state, pins)) })
+  |> list.fold(
+    Game([]),
+    fn(game, pins) {
+      assert Ok(new_game) =
+        game
+        |> roll(pins)
+      new_game
+    },
+  )
   |> score()
-  |> should.equal(correct_score)
+  |> should.equal(Ok(correct_score))
 }
 
-fn roll_and_last_roll_be_error(rolls: List(Int), last_roll: Int) {
+fn roll_and_last_roll_be_error(rolls: List(Int), last_roll: Int, error: Error) {
   rolls
-  |> list.fold([], fn(state, pins) { list.append(state, roll(state, pins)) })
+  |> list.fold(
+    Game([]),
+    fn(game, pins) {
+      assert Ok(new_game) =
+        game
+        |> roll(pins)
+      new_game
+    },
+  )
   |> roll(last_roll)
-  |> should.be_error()
+  |> should.equal(Error(error))
 }
 
 fn roll_and_score_be_error(rolls: List(Int)) {
   rolls
-  |> list.fold([], fn(state, pins) { list.append(state, roll(pins)) })
+  |> list.fold(
+    Game([]),
+    fn(game, pins) {
+      assert Ok(new_game) =
+        game
+        |> roll(pins)
+      new_game
+    },
+  )
   |> score()
-  |> should.be_error()
+  |> should.equal(Error(GameNotComplete))
 }
