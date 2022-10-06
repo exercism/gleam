@@ -120,7 +120,7 @@ pub fn roll(game: Game, knocked_pins: Int) -> Result(Game, Error) {
           let new_game =
             Game(
               game.frames
-              |> list.map(add_roll_to_frame(knocked_pins)),
+              |> list.map(add_roll_to_frame(_, knocked_pins)),
             )
           case list.all(new_game.frames, is_frame_valid) {
             True -> {
