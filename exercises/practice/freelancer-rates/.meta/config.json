@@ -1,0 +1,9 @@
+{
+  "authors": ["Theosaurus-Rex"],
+  "contributors": ["lpil"],
+  "files": {
+    "solution": ["src/freelancer_rates.gleam"],
+    "test": ["test/freelancer_rates_test.gleam"]
+  },
+  "blurb": "Learn about integers and floating point numbers by helping a freelancer communicate with a project manager about billing."
+}
