@@ -1,9 +1,8 @@
 {
-  "authors": ["Theosaurus-Rex"],
-  "contributors": ["lpil"],
+  "blurb": "Using Floats and Integers, help a freelancer calculate their rates.",
+  "authors": [],
   "files": {
     "solution": ["src/freelancer_rates.gleam"],
     "test": ["test/freelancer_rates_test.gleam"]
-  },
-  "blurb": "Learn about integers and floating point numbers by helping a freelancer communicate with a project manager about billing."
+  }
 }
