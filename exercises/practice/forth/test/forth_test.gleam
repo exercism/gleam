@@ -1,7 +1,5 @@
 import forth
 import gleam/result
-import gleam/list
-import gleam/io
 import gleeunit
 import gleeunit/should
 

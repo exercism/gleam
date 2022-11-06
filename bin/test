@@ -20,6 +20,8 @@ set -euo pipefail
 # Example:
 # ./bin/test
 
+exit_code=0
+
 function verify_exercise {
   local dir slug implementation_file stub_backup_file module
   dir=$(realpath "$1")

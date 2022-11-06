@@ -1,9 +1,6 @@
-import gleam/result
-import gleam/io
 import gleam/int
 import gleam/map
 import gleam/order
-import gleam/bool
 import gleam/list
 import gleam/string
 import gleam/string_builder

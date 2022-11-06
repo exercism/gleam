@@ -1,5 +1,3 @@
-import gleam/result
-
 pub type Forth {
   Forth
 }
