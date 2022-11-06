@@ -23,4 +23,4 @@ jobs:
         run: bin/test
 
       - name: Check formatting
-        run: gleam format --check exercises/*/*/{src,test,.meta}/**/*.gleam
+        run: gleam format --check exercises/*/*/{src,test,.meta}/*.gleam
