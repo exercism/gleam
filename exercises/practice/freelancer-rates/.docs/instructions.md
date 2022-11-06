@@ -36,7 +36,7 @@ The returned value should always be a float, not rounded in any way.
 
 Implement a function to calculate the monthly rate, and apply a discount:
 
-```
+```gleam
 freelancer_rates.monthly_rate(77, 10.5)
 # => 12130
 ```
