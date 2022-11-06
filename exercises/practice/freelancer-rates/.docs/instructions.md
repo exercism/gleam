@@ -25,7 +25,7 @@ The returned daily rate should be a float.
 
 Implement a function to calculate the price after a discount.
 
-```
+```gleam
 freelancer_rates.apply_discount(150, 10)
 # => 135.0
 ```
