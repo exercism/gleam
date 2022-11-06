@@ -47,7 +47,7 @@ The returned monthly rate should be rounded up (take the ceiling) to the nearest
 
 Implement a function that takes a budget, a hourly rate, and a discount, and calculates how many days of work that covers.
 
-```
+```gleam
 freelancer_rates.days_in_budget(20000, 80, 11.0)
 # => 35
 ```
