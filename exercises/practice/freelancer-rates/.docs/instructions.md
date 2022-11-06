@@ -14,7 +14,7 @@ Discounts are modeled as fractional numbers representing percentage, for example
 
 Implement a function to calculate the daily rate given an hourly rate:
 
-```
+```gleam
 freelancer_rates.daily_rate(60)
 # => 480.0
 ```
