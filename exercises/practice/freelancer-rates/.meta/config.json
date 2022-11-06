@@ -4,7 +4,7 @@
   "files": {
     "solution": ["src/freelancer_rates.gleam"],
     "test": ["test/freelancer_rates_test.gleam"],
-    "example": ["./example.gleam"]
+    "example": [".meta/example.gleam"]
   },
   "forked_from": ["elixir/freelancer-rates"]
 }
