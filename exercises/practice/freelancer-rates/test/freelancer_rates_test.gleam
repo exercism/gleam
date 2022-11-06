@@ -25,7 +25,7 @@ pub fn monthly_rate_test() {
 
 pub fn days_in_budget_test() {
   freelancer_rates.days_in_budget(20000, 80, 11.0)
-  |> should.equal(35.1)
+  |> should.equal(35)
 }
 
 
