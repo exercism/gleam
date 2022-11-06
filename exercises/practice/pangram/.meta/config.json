@@ -1,0 +1,12 @@
+{
+  "authors": ["lpil"],
+  "contributors": [],
+  "files": {
+    "solution": ["src/pangram.gleam"],
+    "test": ["test/pangram_test.gleam"],
+    "example": [".meta/example.gleam"]
+  },
+  "blurb": "Determine if a sentence is a pangram.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Pangram"
+}

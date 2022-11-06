@@ -19,6 +19,7 @@ set -euo pipefail
 
 # Example:
 # ./bin/test
+# ./bin/test practice/the-slug-of-my-practice-exercise
 
 exit_code=0
 
@@ -36,31 +37,46 @@ function verify_exercise {
 
   if ! (cd "$dir" && gleam test)
   then
-    echo "${slug}: proof solution did not pass the tests"
+    echo "${slug}: solution did not pass the tests"
     exit_code=1
   fi
 
   mv "${stub_backup_file}" "${stub_file}"
 }
 
-# Verify the Concept Exercises
-for concept_exercise_dir in ./exercises/concept/*/
-do
-  if [ -d "$concept_exercise_dir" ]
-  then
-    echo "Checking $(basename "${concept_exercise_dir}") concept exercise..."
-    verify_exercise "${concept_exercise_dir}"
-  fi
-done
+function run_all {
+  # Verify the Concept Exercises
+  for concept_exercise_dir in ./exercises/concept/*/
+  do
+    if [ -d "$concept_exercise_dir" ]
+    then
+      echo "Checking $(basename "${concept_exercise_dir}") concept exercise..."
+      verify_exercise "${concept_exercise_dir}"
+    fi
+  done
 
-# Verify the Practice Exercises
-for practice_exercise_dir in ./exercises/practice/*/
-do
-  if [ -d "$practice_exercise_dir" ]
-  then
-    echo "Checking $(basename "${practice_exercise_dir}") practice exercise..."
-    verify_exercise "${practice_exercise_dir}"
-  fi
-done
+  # Verify the Practice Exercises
+  for practice_exercise_dir in ./exercises/practice/*/
+  do
+    if [ -d "$practice_exercise_dir" ]
+    then
+      echo "Checking $(basename "${practice_exercise_dir}") practice exercise..."
+      verify_exercise "${practice_exercise_dir}"
+    fi
+  done
+}
+
+case $# in
+  0)
+    run_all
+    ;;
+  1)
+    verify_exercise "./exercises/$1"
+    ;;
+  *)
+    echo "Usage: ./bin/test practice/[exercise-slug]"
+    exit 1
+    ;;
+esac
 
 exit ${exit_code}
