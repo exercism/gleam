@@ -21,3 +21,6 @@ jobs:
 
       - name: Run tests for all exercises
         run: bin/test
+
+      - name: Check formatting
+        run: gleam format --check exercises/*/*/{src,test,.meta}/*.gleam

@@ -1,4 +1,3 @@
-
 import freelancer_rates
 import gleeunit
 import gleeunit/should
@@ -17,7 +16,6 @@ pub fn apply_discount_test() {
   |> should.equal(135.0)
 }
 
-
 pub fn monthly_rate_test() {
   freelancer_rates.monthly_rate(77, 10.5)
   |> should.equal(12130)
@@ -27,6 +25,3 @@ pub fn days_in_budget_test() {
   freelancer_rates.days_in_budget(20000, 80, 11.0)
   |> should.equal(35.0)
 }
-
-
-

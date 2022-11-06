@@ -1,4 +1,6 @@
 *.swp
+*.bak
 .DS_Store
 bin/configlet
 bin/configlet.exe
+exercises/practice/*/build
