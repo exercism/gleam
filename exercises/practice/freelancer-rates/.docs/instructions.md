@@ -49,7 +49,7 @@ Implement a function that takes a budget, a hourly rate, and a discount, and cal
 
 ```
 freelancer_rates.days_in_budget(20000, 80, 11.0)
-# => 35.1
+# => 35
 ```
 
 The returned number of days should be rounded down (take the floor) to one decimal place.
