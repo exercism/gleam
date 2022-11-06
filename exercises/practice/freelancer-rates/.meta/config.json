@@ -1,9 +1,10 @@
 {
   "blurb": "Using Floats and Integers, help a freelancer calculate their rates.",
-  "authors": [],
+  "authors": ["Theosaurus-Rex"],
   "files": {
     "solution": ["src/freelancer_rates.gleam"],
     "test": ["test/freelancer_rates_test.gleam"],
-    "example": [".meta/example.gleam"]
-  }
+    "example": ["./example.gleam"]
+  },
+  "forked_from": ["elixir/freelancer-rates"]
 }
