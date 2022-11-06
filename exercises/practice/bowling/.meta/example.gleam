@@ -1,5 +1,4 @@
 import gleam/list
-import gleam/bool
 import gleam/result
 
 pub opaque type Frame {
@@ -26,7 +25,7 @@ fn is_frame_rolls_valid(frame: Frame) -> Bool {
 }
 
 fn is_frame_open(frame: Frame) -> Bool {
-  list.length(frame.rolls) == 2 && frame.rolls(score_rolls) < 10
+  list.length(frame.rolls) == 2 && score_rolls(frame.rolls) < 10
 }
 
 fn is_frame_strike(frame: Frame) -> Bool {
