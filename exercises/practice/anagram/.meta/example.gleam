@@ -45,11 +45,13 @@ fn list_anagrams(word: String) {
 
 pub fn find_anagrams(word: String, candidates: List(String)) -> List(String) {
   let anagrams = list_anagrams(word)
-  
-  candidates
-  |> list.filter(fn(candidate) {
-    candidate
-    |> string.lowercase
-    |> list.contains(anagrams, _)
-  })
+
+  list.filter(
+    candidates,
+    fn(candidate) {
+      candidate
+      |> string.lowercase
+      |> list.contains(anagrams, _)
+    },
+  )
 }
