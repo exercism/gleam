@@ -43,13 +43,9 @@ fn list_anagrams(word: String) {
   |> list.filter(fn(anagram) { anagram != word })
 }
 
-fn is_anagram(word: String, candidate: String) -> Bool {
-  word
-  |> list_anagrams
-  |> list.contains(string.lowercase(candidate))
-}
-
 pub fn find_anagrams(word: String, candidates: List(String)) -> List(String) {
+  let anagrams = list_anagrams(word)
+  
   candidates
-  |> list.filter(is_anagram(word, _))
+  |> list.filter(list.contains(anagrams, _))
 }
