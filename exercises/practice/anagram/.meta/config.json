@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "massivefermion"
+    ],
+    "contributors": [
+        "lpil"
+    ],
+    "files": {
+        "solution": [
+            "src/anagram.gleam"
+        ],
+        "test": [
+            "test/anagram_test.gleam"
+        ],
+        "example": [
+            ".meta/example.gleam"
+        ]
+    },
+    "blurb": "Given a word and a list of possible anagrams, select the correct sublist."
+}
