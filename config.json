@@ -143,7 +143,7 @@
         "uuid": "1d54b9d2-bf6f-473f-8bf6-668d3c0fd5f3",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 9,
+        "difficulty": 4,
         "topics": []
       },
       {
@@ -164,7 +164,7 @@
         "uuid": "093aa488-077f-4180-9d8c-59d0ad8837da",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 9,
+        "difficulty": 3,
         "topics": []
       },
       {
@@ -178,6 +178,15 @@
           "booleans",
           "strings"
         ]
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "de777d9f-7963-4a1f-a923-9fa0aad4eac8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
       }
     ]
   },

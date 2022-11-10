@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "massivefermion"
+  ],
+  "contributors": [
+    "lpil"
+  ],
+  "files": {
+    "solution": [
+      "src/roman_numerals.gleam"
+    ],
+    "test": [
+      "test/roman_numerals_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ]
+  },
+  "blurb": "Write a function to convert numbers to Roman Numerals."
+}
