@@ -39,154 +39,190 @@
         "uuid": "40e473b4-74a2-4513-8b3e-e3b42841624f",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "strings"
-        ]
+        "difficulty": 1
       },
       {
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "6bc57e73-1629-4a18-b2f0-0b93ef4f3b8c",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 1,
-        "topics": [
-          "custom-types"
+        "prerequisites": [
+          "custom-type",
+          "case"
+        ],
+        "practices": [
+          "custom-type",
+          "case"
         ]
       },
       {
         "slug": "difference-of-squares",
         "name": "Difference Of Squares",
         "uuid": "ce45a52e-0541-4384-8abf-b787bd49cbf7",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 1,
-        "topics": [
-          "integers",
-          "math"
+        "prerequisites": [
+          "int",
+          "maths"
+        ],
+        "practices": [
+          "maths"
         ]
       },
       {
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "b0a6f0d2-0bba-4f8f-89ad-a41995a4b87d",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 1,
-        "topics": [
-          "strings"
+        "practices": [
+          "option"
+        ],
+        "prerequisites": [
+          "string", 
+          "option"
         ]
       },
       {
         "slug": "bob",
         "name": "Bob",
         "uuid": "c9f7d06c-a2fb-45c3-a320-b9a93fd88201",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "strings"
+        "practices": [
+          "case"
+        ],
+        "prerequisites": [
+          "case",
+          "string"
         ]
       },
       {
         "slug": "leap",
         "name": "Leap",
         "uuid": "5f8fa8fe-3775-4b34-a602-d5cb47d83d8c",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "algorithms"
+        "practices": [
+          "maths"
+        ],
+        "prerequisites": [
+          "maths"
         ]
       },
       {
         "slug": "accumulate",
         "name": "Accumulate",
         "uuid": "d04cd9d6-6494-4336-8e6c-2b9f612eba05",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 2,
-        "topics": [
+        "practices": [
+          "recursion"
+        ],
+        "prerequisites": [
+          "list",
           "recursion",
-          "transforming"
+          "case"
         ]
       },
       {
         "slug": "pascals-triangle",
         "name": "Pascals Triangle",
         "uuid": "b6459bf2-1e93-42ea-a743-628548b79e2f",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "lists",
-          "math",
-          "recursion"
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "case"
         ]
       },
       {
         "slug": "forth",
         "name": "Forth",
         "uuid": "8176ac78-d4fd-475f-ac8b-e205ca7b3a77",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 9,
-        "topics": [
-          "algorithms",
-          "custom_types"
+        "practices": [
+          "custom-type",
+          "case"
+        ],
+        "prerequisites": [
+          "int",
+          "string",
+          "map",
+          "result",
+          "list",
+          "case",
+          "custom-type"
         ]
       },
       {
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "1d54b9d2-bf6f-473f-8bf6-668d3c0fd5f3",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 4,
-        "topics": []
+        "practices": [
+          "math",
+          "bool"
+        ],
+        "prerequisites": [
+          "bool",
+          "list",
+          "case",
+          "int",
+          "math"
+        ]
       },
       {
         "slug": "freelancer-rates",
         "name": "Freelancer Rates",
         "uuid": "fee79e03-1496-476f-964f-e60632cb13dc",
-        "concepts": [
-          "integers",
-          "floating-point-numbers"
-        ],
         "difficulty": 4,
-        "practices": [],
-        "prerequisites": []
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "int",
+          "float",
+          "math"
+        ]
       },
       {
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "093aa488-077f-4180-9d8c-59d0ad8837da",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 3,
-        "topics": []
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "string",
+          "list"
+        ]
       },
       {
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "a70503ba-f1f3-4583-9226-c3ada98e9500",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "booleans",
-          "strings"
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "bool",
+          "string"
         ]
       },
       {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "uuid": "de777d9f-7963-4a1f-a923-9fa0aad4eac8",
-        "practices": [],
-        "prerequisites": [],
         "difficulty": 3,
-        "topics": []
+        "practices": [
+          "string", 
+          "math"
+        ],
+        "prerequisites": [
+          "string",
+          "int",
+          "math"
+        ]
       }
     ]
   },
