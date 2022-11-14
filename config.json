@@ -16,6 +16,9 @@
     "indent_size": 2,
     "highlightjs_language": "rust"
   },
+  "test_runner": {
+    "average_run_time": 3.0
+  },
   "files": {
     "solution": [
       "src/%{snake_slug}.gleam"
