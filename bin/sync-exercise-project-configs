@@ -1,0 +1,71 @@
+#!/usr/bin/env sh
+
+# Download the `gleam.toml` and `manifest.toml` project files from the
+# `exercism/gleam-test-runner` repository to each exercise to ensure they are
+# using the correct versions of the dependencies.
+#
+#   ./bin/sync-exercise-project-configs
+#
+# Alternatively you can give the `check` argument to check that the manifests
+# are correct.
+#
+#   ./bin/sync-exercise-project-configs --check
+#
+
+set -eu
+
+download() {
+  file="$1"
+  url="$2"
+  curl --silent --show-error --fail --retry 3 --max-time 3 \
+    --output "$file" "$url"
+}
+
+update_config_name() {
+  project="$1"
+  name="$(basename "$project" | sed 's/-/_/g')"
+  sed -i -e "s/name = \".*\"/name = \"$name\"/" "$canonical_config"
+}
+
+check() {
+  project="$1"
+  update_config_name "$project"
+
+  if ! diff "$canonical_config" "$project"/gleam.toml && 
+    diff "$canonical_manifest" "$project"/manifest.toml
+  then
+    echo "ERROR: Config files are out of sync with gleam-test-runner config" 1>&2
+    echo "Run \`bin/sync-exercise-project-configs\` to correct this" 1>&2
+    exit 1
+  fi
+}
+
+sync() {
+  project="$1"
+  update_config_name "$project"
+  cp "$canonical_config" "$project"/gleam.toml
+  cp "$canonical_manifest" "$project"/manifest.toml
+}
+
+packages_prefix="https://raw.githubusercontent.com/exercism/gleam-test-runner/main/packages"
+project_dir="$(dirname "$(dirname "$0")")"
+tmp_dir="$(mktemp -d)"
+canonical_config="$tmp_dir"/gleam.toml
+canonical_manifest="$tmp_dir"/manifest.toml
+
+download "$canonical_config" "$packages_prefix"/gleam.toml
+download "$canonical_manifest" "$packages_prefix"/manifest.toml
+
+for config in "$project_dir"/exercises/*/*/gleam.toml
+do
+  project="$(dirname "$config")"
+  echo "$project"
+  case "$@" in
+    *--check*)
+      check "$project"
+      ;;
+    *)
+      sync "$project"
+      ;;
+  esac
+done
