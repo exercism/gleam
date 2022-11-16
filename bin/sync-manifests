@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# Download the `manifest.toml` dependency lock file from the
+# `exercism/gleam-test-runner` repository to each exercise to ensure they are
+# using the correct versions of the dependencies.
+#
+#   ./bin/sync-manifests
+#
+
+set -eu
+
+project_dir="$(dirname "$(dirname "$0")")"
+
+cd "$(mktemp -d)"
+
+# Download file to manifest.toml
+curl --show-error --fail --location --retry 3 \
+  --output manifest.toml \
+  https://raw.githubusercontent.com/exercism/gleam-test-runner/main/packages/manifest.toml
+
+for manifest in "$project_dir"/exercises/*/*/manifest.toml
+do
+  cp -v manifest.toml "$manifest"
+done
