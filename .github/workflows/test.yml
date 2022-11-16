@@ -24,3 +24,6 @@ jobs:
 
       - name: Check formatting
         run: gleam format --check exercises/*/*/{src,test,.meta}/*.gleam
+
+      - name: Check manifests
+        run: bin/sync-manifests --check
