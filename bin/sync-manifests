@@ -26,7 +26,7 @@ do
   echo "$manifest"
   case "$@" in
     *--check*)
-      cmp --silent "$canonical" "$manifest" || {
+      diff "$canonical" "$manifest" || {
         echo "ERROR: Manifests are out of sync with gleam-test-runner config" 1>&2
         echo "Run \`bin/sync-manifests\` to correct this" 1>&2
         exit 1
