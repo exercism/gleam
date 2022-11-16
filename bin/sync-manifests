@@ -21,6 +21,8 @@ curl --silent --show-error --fail --retry 3 --max-time 3 \
   --output "$canonical" \
   https://raw.githubusercontent.com/exercism/gleam-test-runner/main/packages/manifest.toml
 
+cat "$canonical"
+
 for manifest in "$project_dir"/exercises/*/*/manifest.toml
 do
   echo "$manifest"
