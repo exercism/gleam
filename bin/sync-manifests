@@ -6,19 +6,34 @@
 #
 #   ./bin/sync-manifests
 #
+# Alternatively you can give the `check` argument to check that the manifests
+# are correct.
+#
+#   ./bin/sync-manifests --check
+#
 
 set -eu
 
 project_dir="$(dirname "$(dirname "$0")")"
+canonical="$(mktemp -d)"/manifest.toml
 
-cd "$(mktemp -d)"
-
-# Download file to manifest.toml
-curl --show-error --fail --location --retry 3 \
-  --output manifest.toml \
+curl --silent --show-error --fail --retry 3 --max-time 3 \
+  --output "$canonical" \
   https://raw.githubusercontent.com/exercism/gleam-test-runner/main/packages/manifest.toml
 
 for manifest in "$project_dir"/exercises/*/*/manifest.toml
 do
-  cp -v manifest.toml "$manifest"
+  echo "$manifest"
+  case "$@" in
+    *--check*)
+      cmp --silent "$canonical" "$manifest" || {
+        echo "ERROR: Manifests are out of sync with gleam-test-runner config" 1>&2
+        echo "Run \`bin/sync-manifests\` to correct this" 1>&2
+        exit 1
+      }
+      ;;
+    *)
+      cp "$canonical" "$manifest"
+      ;;
+  esac
 done
