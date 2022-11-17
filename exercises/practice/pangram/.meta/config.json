@@ -11,6 +11,10 @@
     ],
     "example": [
       ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
     ]
   },
   "blurb": "Determine if a sentence is a pangram.",

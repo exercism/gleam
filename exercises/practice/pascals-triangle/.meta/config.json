@@ -14,6 +14,10 @@
     ],
     "example": [
       ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
     ]
   },
   "blurb": "Compute Pascal's triangle up to a given number of rows.",
