@@ -8,5 +8,5 @@ pub fn main() {
 
 pub fn hello_world_test() {
   hello_world.hello()
-  |> should.equal("Hello, world!")
+  |> should.equal("Hello, World!")
 }

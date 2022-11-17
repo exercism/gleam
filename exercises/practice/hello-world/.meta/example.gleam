@@ -1,3 +1,3 @@
 pub fn hello() {
-  "Hello, world!"
+  "Hello, World!"
 }
