@@ -15,6 +15,10 @@
     ],
     "example": [
       ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
     ]
   },
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
