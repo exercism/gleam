@@ -31,6 +31,10 @@
     ],
     "exemplar": [
       ".meta/src/%{snake_slug}.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
     ]
   },
   "exercises": {
