@@ -1,5 +1,4 @@
 {
-  "blurb": "Create a sentence of the form \"One for X, one for me.\"",
   "authors": [
     "lpil"
   ],
@@ -17,5 +16,6 @@
       ".meta/example.gleam"
     ]
   },
+  "blurb": "Create a sentence of the form \"One for X, one for me.\"",
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"
 }

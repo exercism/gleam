@@ -1,10 +1,17 @@
 {
-  "authors": ["lpil"],
-  "contributors": [],
+  "authors": [
+    "lpil"
+  ],
   "files": {
-    "solution": ["src/pangram.gleam"],
-    "test": ["test/pangram_test.gleam"],
-    "example": [".meta/example.gleam"]
+    "solution": [
+      "src/pangram.gleam"
+    ],
+    "test": [
+      "test/pangram_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ]
   },
   "blurb": "Determine if a sentence is a pangram.",
   "source": "Wikipedia",
