@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "massivefermion"
+  ],
+  "contributors": [
+    "lpil"
+  ],
+  "files": {
+    "solution": [
+      "src/dominoes.gleam"
+    ],
+    "test": [
+      "test/dominoes_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Make a chain of dominoes"
+}

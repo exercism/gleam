@@ -84,7 +84,7 @@
           "option"
         ],
         "prerequisites": [
-          "string", 
+          "string",
           "option"
         ]
       },
@@ -222,7 +222,7 @@
         "uuid": "de777d9f-7963-4a1f-a923-9fa0aad4eac8",
         "difficulty": 3,
         "practices": [
-          "string", 
+          "string",
           "math"
         ],
         "prerequisites": [
@@ -230,6 +230,14 @@
           "int",
           "math"
         ]
+      },
+      {
+        "slug": "dominoes",
+        "name": "Dominoes",
+        "uuid": "b59b630e-8648-4498-b8d8-fcfaf261ece3",
+        "difficulty": 7,
+        "practices": [],
+        "prerequisites": []
       }
     ]
   },
