@@ -1,30 +1,6 @@
 import gleam/pair
 import gleam/list
 
-fn permutations(l: List(a)) -> List(List(a)) {
-  case l {
-    [] -> [[]]
-    _ ->
-      l
-      |> list.index_map(fn(i_idx, i) {
-        l
-        |> list.index_fold(
-          [],
-          fn(acc, j, j_idx) {
-            case i_idx == j_idx {
-              True -> acc
-              False -> [j, ..acc]
-            }
-          },
-        )
-        |> list.reverse
-        |> permutations
-        |> list.map(fn(permutation) { [i, ..permutation] })
-      })
-      |> list.flatten
-  }
-}
-
 fn check(chain: List(#(Int, Int))) -> Bool {
   let checked_chain =
     list.fold_until(
@@ -78,7 +54,7 @@ pub fn arrange(chain: List(#(Int, Int))) -> List(List(#(Int, Int))) {
 
     _ ->
       chain
-      |> permutations
+      |> list.permutations
       |> list.filter(check)
   }
 }
