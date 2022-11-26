@@ -236,8 +236,18 @@
         "name": "Dominoes",
         "uuid": "b59b630e-8648-4498-b8d8-fcfaf261ece3",
         "difficulty": 7,
-        "practices": [],
-        "prerequisites": []
+        "practices": [
+          "case",
+          "list",
+          "queue",
+          "tuple",
+          "use"
+        ],
+        "prerequisites": [
+          "case",
+          "list",
+          "tuple"
+        ]
       }
     ]
   },
