@@ -240,8 +240,7 @@
           "case",
           "list",
           "queue",
-          "tuple",
-          "use"
+          "tuple"
         ],
         "prerequisites": [
           "case",

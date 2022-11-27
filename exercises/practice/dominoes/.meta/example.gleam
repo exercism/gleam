@@ -1,13 +1,6 @@
 import gleam/list
 import gleam/queue
 
-fn take_tile(chain, taker, rest) {
-  case taker(chain) {
-    Ok(#(tile, _)) -> rest(tile)
-    Error(Nil) -> False
-  }
-}
-
 fn check(chain: List(#(Int, Int))) -> Bool {
   let checked_chain =
     list.fold_until(
@@ -34,11 +27,16 @@ fn check(chain: List(#(Int, Int))) -> Bool {
     )
 
   case queue.length(checked_chain) == list.length(chain) {
-    True -> {
-      use first_tile <- take_tile(checked_chain, queue.pop_front)
-      use last_tile <- take_tile(checked_chain, queue.pop_back)
-      first_tile.0 == last_tile.0 || first_tile.0 == last_tile.1
-    }
+    True ->
+      case queue.pop_front(checked_chain) {
+        Ok(#(first_tile, _)) ->
+          case queue.pop_back(checked_chain) {
+            Ok(#(last_tile, _)) ->
+              first_tile.0 == last_tile.0 || first_tile.0 == last_tile.1
+            Error(Nil) -> False
+          }
+        Error(Nil) -> False
+      }
 
     False -> False
   }
