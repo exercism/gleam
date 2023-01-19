@@ -1,3 +1,3 @@
-pub fn proteins(rna: String) -> List(String) {
+pub fn proteins(rna: String) -> Result(List(String), Nil) {
   todo
 }
