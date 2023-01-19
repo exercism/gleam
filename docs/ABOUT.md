@@ -1,6 +1,6 @@
 # About
 
-[Gleam](https://gleam.run/) is designed with the followinng principles in mind:
+[Gleam](https://gleam.run/) is designed with the following principles in mind:
 
 ##Be safe
 
