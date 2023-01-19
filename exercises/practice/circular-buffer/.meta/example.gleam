@@ -1,5 +1,4 @@
 import gleam/queue.{Queue}
-import gleam/result
 
 pub opaque type CircularBuffer(t) {
   CircularBuffer(capacity: Int, size: Int, queue: Queue(t))
@@ -11,9 +10,13 @@ pub fn new(capacity: Int) -> CircularBuffer(t) {
 }
 
 pub fn read(buffer: CircularBuffer(t)) -> Result(#(t, CircularBuffer(t)), Nil) {
-  use pair <- result.then(queue.pop_front(buffer.queue))
-  let buffer = CircularBuffer(..buffer, queue: pair.1, size: buffer.size - 1)
-  Ok(#(pair.0, buffer))
+  case queue.pop_front(buffer.queue) {
+    Ok(#(item, queue)) -> {
+      let buffer = CircularBuffer(..buffer, queue: queue, size: buffer.size - 1)
+      Ok(#(item, buffer))
+    }
+    Error(Nil) -> Error(Nil)
+  }
 }
 
 pub fn write(
