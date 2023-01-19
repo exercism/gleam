@@ -150,12 +150,6 @@ pub fn translation_stops_if_stop_codon_in_middle_of_three_codon_sequence_test() 
   |> should.equal(Ok(["Tryptophan"]))
 }
 
-pub fn translation_stops_if_stop_codon_in_middle_of_six_codon_sequence_test() {
-  "UGGUGUUAUUAAUGGUUU"
-  |> protein_translation.proteins
-  |> should.equal(Ok(["Tryptophan", "Cysteine", "Tyrosine"]))
-}
-
 pub fn non_existing_codon_cant_translate_test() {
   "AAA"
   |> protein_translation.proteins
