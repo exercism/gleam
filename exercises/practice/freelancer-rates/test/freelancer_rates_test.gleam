@@ -18,10 +18,10 @@ pub fn apply_discount_test() {
 
 pub fn monthly_rate_test() {
   freelancer_rates.monthly_rate(77, 10.5)
-  |> should.equal(12130)
+  |> should.equal(12_130)
 }
 
 pub fn days_in_budget_test() {
-  freelancer_rates.days_in_budget(20000, 80, 11.0)
+  freelancer_rates.days_in_budget(20_000, 80, 11.0)
   |> should.equal(35.0)
 }
