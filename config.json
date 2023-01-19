@@ -275,6 +275,21 @@
         ],
         "prerequisites": ["list", "string", "result", "case"],
         "difficulty": 1
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "b62f8574-9bac-4b95-a76c-f13789ae2663",
+        "practices": ["custom-type", "generics", "queue"],
+        "prerequisites": [
+          "custom-type",
+          "result",
+          "generics",
+          "int",
+          "tuple",
+          "queue"
+        ],
+        "difficulty": 5
       }
     ]
   },
