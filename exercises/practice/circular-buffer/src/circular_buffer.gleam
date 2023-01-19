@@ -1,4 +1,4 @@
-pub type CircularBuffer(t) {
+pub opaque type CircularBuffer(t) {
   CircularBuffer
 }
 
