@@ -232,6 +232,22 @@
         ]
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "612395a5-238e-4be0-8ce0-4ac66f57056e",
+        "practices": [
+          "string",
+          "list",
+          "case"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "dominoes",
         "name": "Dominoes",
         "uuid": "b59b630e-8648-4498-b8d8-fcfaf261ece3",
