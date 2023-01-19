@@ -1,6 +1,5 @@
 import circular_buffer
 import gleeunit
-import gleeunit/should
 
 pub fn main() {
   gleeunit.main()
@@ -59,21 +58,21 @@ pub fn read_position_is_maintained_even_across_multiple_writes_test() {
 pub fn items_cleared_out_of_buffer_cant_be_read_test() {
   let buffer = circular_buffer.new(1)
   assert Ok(buffer) = circular_buffer.write(buffer, 1)
-  assert Ok(buffer) = circular_buffer.clear(buffer)
+  let buffer = circular_buffer.clear(buffer)
   assert Error(Nil) = circular_buffer.read(buffer)
 }
 
 pub fn clear_frees_up_capacity_for_another_write_test() {
   let buffer = circular_buffer.new(1)
   assert Ok(buffer) = circular_buffer.write(buffer, 1)
-  assert Ok(buffer) = circular_buffer.clear(buffer)
+  let buffer = circular_buffer.clear(buffer)
   assert Ok(buffer) = circular_buffer.write(buffer, 2)
   assert Ok(#(2, _)) = circular_buffer.read(buffer)
 }
 
 pub fn clear_does_nothing_on_empty_buffer_test() {
   let buffer = circular_buffer.new(1)
-  assert Ok(buffer) = circular_buffer.clear(buffer)
+  let buffer = circular_buffer.clear(buffer)
   assert Ok(buffer) = circular_buffer.write(buffer, 1)
   assert Ok(#(1, _)) = circular_buffer.read(buffer)
 }
@@ -110,7 +109,7 @@ pub fn overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read_t
 
 pub fn initial_clear_does_not_affect_wrapping_around_test() {
   let buffer = circular_buffer.new(2)
-  assert Ok(buffer) = circular_buffer.clear(buffer)
+  let buffer = circular_buffer.clear(buffer)
   assert Ok(buffer) = circular_buffer.write(buffer, 1)
   assert Ok(buffer) = circular_buffer.write(buffer, 2)
   let buffer = circular_buffer.overwrite(buffer, 3)
