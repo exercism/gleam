@@ -8,7 +8,7 @@
       "src/rna_transcription.gleam"
     ],
     "test": [
-      "test/rna_transcription.gleam"
+      "test/rna_transcription_test.gleam"
     ],
     "example": [
       ".meta/example.gleam"

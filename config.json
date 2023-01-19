@@ -165,7 +165,7 @@
         "uuid": "1d54b9d2-bf6f-473f-8bf6-668d3c0fd5f3",
         "difficulty": 4,
         "practices": [
-          "math",
+          "maths",
           "bool"
         ],
         "prerequisites": [
@@ -173,7 +173,7 @@
           "list",
           "case",
           "int",
-          "math"
+          "maths"
         ]
       },
       {
@@ -182,12 +182,12 @@
         "uuid": "fee79e03-1496-476f-964f-e60632cb13dc",
         "difficulty": 4,
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
           "int",
           "float",
-          "math"
+          "maths"
         ]
       },
       {
@@ -223,12 +223,12 @@
         "difficulty": 3,
         "practices": [
           "string",
-          "math"
+          "maths"
         ],
         "prerequisites": [
           "string",
           "int",
-          "math"
+          "maths"
         ]
       },
       {
@@ -247,6 +247,18 @@
           "list",
           "tuple"
         ]
+      },
+      {
+        "slug": "rna-transcription",
+        "name": "RNA Transcription",
+        "uuid": "3a015501-58bf-427c-8c4c-2197321f4a34",
+        "practices": [
+          "list",
+          "result",
+          "case"
+        ],
+        "prerequisites": ["list", "string", "result", "case"],
+        "difficulty": 1
       }
     ]
   },
