@@ -1,4 +1,4 @@
-# Description
+# Instructions
 
 Translate RNA sequences into proteins.
 
