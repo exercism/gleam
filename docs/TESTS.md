@@ -11,8 +11,7 @@ This will execute the test file found in the `test` subfolder -- a file ending i
 ## Test functions
 
 The tests use a Gleam test framework named [Gleeunit](https://github.com/lpil/gleeunit).
-Any public function in the `test` directory with a name ending in `_test` will be
-considered a test by Gleeunit.
+Any public function in the `test` directory with a name ending in `_test` will be considered a test by Gleeunit.
 
 For example:
 
