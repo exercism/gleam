@@ -291,6 +291,14 @@
         "difficulty": 8
       },
       {
+        "slug": "word-count",
+        "name": "Word Count",
+        "uuid": "0c7a2f06-1e53-4043-9e1a-386e90e945b4",
+        "practices": ["regex"],
+        "prerequisites": ["list", "string", "regex"],
+        "difficulty": 4
+      },
+      {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "b62f8574-9bac-4b95-a76c-f13789ae2663",
