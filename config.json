@@ -290,6 +290,19 @@
           "queue"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "4522b139-6f0c-4172-a4fa-6a6adef33a9e",
+        "prerequisites": [
+          "int",
+          "string"
+        ],
+        "practices": [
+          "int"
+        ],
+        "difficulty": 2
       }
     ]
   },
