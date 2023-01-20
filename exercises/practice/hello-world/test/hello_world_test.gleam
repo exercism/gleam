@@ -6,7 +6,7 @@ pub fn main() {
   gleeunit.main()
 }
 
-pub fn hello_world_test() {
+pub fn say_hi_test() {
   hello_world.hello()
   |> should.equal("Hello, World!")
 }
