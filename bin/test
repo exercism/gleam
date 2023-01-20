@@ -25,7 +25,7 @@ exit_code=0
 
 function verify_exercise {
   local dir slug implementation_file stub_backup_file module
-  dir=$(realpath "$1")
+  dir="$1"
   slug=$(basename "${dir}")
   module=${slug//-/_}
   implementation_file="${dir}/.meta/example.gleam"
