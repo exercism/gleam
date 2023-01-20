@@ -277,6 +277,20 @@
         "difficulty": 1
       },
       {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "736a470f-412c-41fc-b92d-9bd59ef3bcce",
+        "practices": ["string", "list", "maths"],
+        "prerequisites": [
+          "string",
+          "list",
+          "maths",
+          "case",
+          "int"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "b62f8574-9bac-4b95-a76c-f13789ae2663",
