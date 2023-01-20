@@ -1,3 +1,3 @@
-pub fn build(letter: Int) -> String {
+pub fn build(letter: String) -> String {
   todo
 }
