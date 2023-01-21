@@ -1,3 +1,3 @@
-pub fn hello() {
-  "Goodbye, Mars!"
+pub fn score(x x: Float, y y: Float) -> Int {
+  todo
 }
