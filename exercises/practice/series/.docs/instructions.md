@@ -1,16 +1,19 @@
 # Instructions
 
-The classical introductory exercise.
-Just say "Hello, World!".
+Given a string of digits, output all the contiguous substrings of length `n` in that string in the order that they appear.
 
-["Hello, World!"][hello-world] is the traditional first program for beginning programming in a new language or environment.
+For example, the string "49142" has the following 3-digit series:
 
-The objectives are simple:
+- "491"
+- "914"
+- "142"
 
-- Modify the provided code so that it produces the string "Hello, World!".
-- Run the test suite and make sure that it succeeds.
-- Submit your solution and check it at the website.
+And the following 4-digit series:
 
-If everything goes well, you will be ready to fetch your first real exercise.
+- "4914"
+- "9142"
 
-[hello-world]: https://en.wikipedia.org/wiki/%22Hello,_world!%22_program
+And if you ask for a 6-digit series from a 5-digit string, you deserve whatever you get.
+
+Note that these series are only required to occupy *adjacent positions* in the input;
+the digits need not be *numerically consecutive*.
