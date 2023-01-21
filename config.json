@@ -295,10 +295,27 @@
         "name": "Series",
         "uuid": "4a084cb7-335d-41f1-8148-5d3abbce8ab0",
         "prerequisites": [
-
+          "string",
+          "int",
+          "list",
+          "bool"
         ],
         "practices": [
-
+          "list"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "a68113f8-92be-40e0-a97f-eb4239303ef5",
+        "prerequisites": [
+          "bool",
+          "int",
+          "float"
+        ],
+        "practices": [
+          "bool"
         ],
         "difficulty": 2
       },
