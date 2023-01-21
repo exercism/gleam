@@ -6,37 +6,37 @@ pub fn main() {
   gleeunit.main()
 }
 
-pub fn slices_of_one_from_one() {
+pub fn slices_of_one_from_one_test() {
   "1"
   |> series.slices(1)
   |> should.equal(Ok(["1"]))
 }
 
-pub fn slices_of_one_from_two() {
+pub fn slices_of_one_from_two_test() {
   "12"
   |> series.slices(1)
   |> should.equal(Ok(["1", "2"]))
 }
 
-pub fn slices_of_two() {
+pub fn slices_of_two_test() {
   "35"
   |> series.slices(2)
   |> should.equal(Ok(["35"]))
 }
 
-pub fn slices_of_two_overlap() {
+pub fn slices_of_two_overlap_test() {
   "9142"
   |> series.slices(2)
   |> should.equal(Ok(["91", "14", "42"]))
 }
 
-pub fn slices_can_include_duplicates() {
+pub fn slices_can_include_duplicates_test() {
   "777777"
   |> series.slices(3)
   |> should.equal(Ok(["777", "777", "777", "777"]))
 }
 
-pub fn slices_of_a_long_series() {
+pub fn slices_of_a_long_series_test() {
   "918493904243"
   |> series.slices(5)
   |> should.equal(Ok([
@@ -44,31 +44,31 @@ pub fn slices_of_a_long_series() {
   ]))
 }
 
-pub fn slice_length_is_too_large() {
+pub fn slice_length_is_too_large_test() {
   "12345"
   |> series.slices(6)
   |> should.equal(Error(series.SliceLengthTooLarge))
 }
 
-pub fn slice_length_is_way_too_large() {
+pub fn slice_length_is_way_too_large_test() {
   "12345"
   |> series.slices(42)
   |> should.equal(Error(series.SliceLengthTooLarge))
 }
 
-pub fn slice_length_cannot_be_zero() {
+pub fn slice_length_cannot_be_zero_test() {
   "12345"
   |> series.slices(0)
   |> should.equal(Error(series.SliceLengthZero))
 }
 
-pub fn slice_length_cannot_be_negative() {
+pub fn slice_length_cannot_be_negative_test() {
   "123"
   |> series.slices(-1)
   |> should.equal(Error(series.SliceLengthNegative))
 }
 
-pub fn empty_series_is_invalid() {
+pub fn empty_series_is_invalid_test() {
   ""
   |> series.slices(1)
   |> should.equal(Error(series.EmptySeries))
