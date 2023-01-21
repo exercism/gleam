@@ -1,3 +1,3 @@
-pub fn hello() {
-  "Hello, World!"
+pub fn slices(input: String, size: Int) -> List(String) {
+  todo
 }
