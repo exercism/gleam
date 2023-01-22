@@ -2,7 +2,6 @@
   "authors": [
     "lpil"
   ],
-  "contributors": [],
   "files": {
     "solution": [
       "src/rna_transcription.gleam"
