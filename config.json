@@ -375,6 +375,19 @@
           "int"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "ed2c7e78-9443-4e1e-941c-0bae1322dd3b",
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "string",
+          "list"
+        ],
+        "difficulty": 3
       }
     ]
   },
