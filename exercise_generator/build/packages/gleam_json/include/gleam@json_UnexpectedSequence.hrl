@@ -1,1 +1,0 @@
--record(unexpected_sequence, {byte :: binary(), position :: integer()}).
