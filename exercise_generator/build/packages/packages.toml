@@ -1,0 +1,6 @@
+[packages]
+gleam_json = "0.5.0"
+gleam_stdlib = "0.26.0"
+thoas = "0.4.0"
+gleam_erlang = "0.17.1"
+gleeunit = "0.10.0"
