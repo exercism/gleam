@@ -174,7 +174,7 @@ fn write_solution_files(
         })
         |> string.join(", ")
 
-      "pub fn " <> name <> "(" <> args <> ") -> " <> return <> " {\n todo \n}"
+      "pub fn " <> clean_variable(name) <> "(" <> args <> ") -> " <> return <> " {\n todo \n}"
     })
     |> string.join("\n")
 
@@ -340,7 +340,7 @@ fn print_test(
       |> string.replace("<comments>", comments)
       |> string.replace("<test_name>", test_name)
       |> string.replace("<exercise>", exercise)
-      |> string.replace("<function>", function)
+      |> string.replace("<function>", clean_variable(function))
       |> string.replace("<input>", input)
       |> string.replace("<expected>", expected)
     }
