@@ -273,14 +273,23 @@
           "result",
           "case"
         ],
-        "prerequisites": ["list", "string", "result", "case"],
+        "prerequisites": [
+          "list",
+          "string",
+          "result",
+          "case"
+        ],
         "difficulty": 1
       },
       {
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "736a470f-412c-41fc-b92d-9bd59ef3bcce",
-        "practices": ["string", "list", "maths"],
+        "practices": [
+          "string",
+          "list",
+          "maths"
+        ],
         "prerequisites": [
           "string",
           "list",
@@ -323,15 +332,27 @@
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "0c7a2f06-1e53-4043-9e1a-386e90e945b4",
-        "practices": ["regex", "map"],
-        "prerequisites": ["list", "string", "regex", "map"],
+        "practices": [
+          "regex",
+          "map"
+        ],
+        "prerequisites": [
+          "list",
+          "string",
+          "regex",
+          "map"
+        ],
         "difficulty": 4
       },
       {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "b62f8574-9bac-4b95-a76c-f13789ae2663",
-        "practices": ["custom-type", "generics", "queue"],
+        "practices": [
+          "custom-type",
+          "generics",
+          "queue"
+        ],
         "prerequisites": [
           "custom-type",
           "result",
