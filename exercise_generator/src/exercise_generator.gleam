@@ -63,7 +63,7 @@ fn json_data_to_gleam_type(data: JsonData) -> String {
     JsonFloat(_) -> "Float"
     JsonString(_) -> "String"
     JsonList([]) -> "List(unknown)"
-    JsonList([head, ..]) -> "List (" <> json_data_to_gleam_type(head) <> ")"
+    JsonList([head, ..]) -> "List(" <> json_data_to_gleam_type(head) <> ")"
     JsonObject(_) -> "CustomRecordType"
   }
 }
