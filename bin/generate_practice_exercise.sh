@@ -13,10 +13,10 @@ SLUG="$1"
 exercise_dir="exercises/practice/${SLUG}"
 
 download() {
-  file="$1"
-  url="$2"
-  curl --silent --show-error --fail --retry 3 --max-time 3 \
-    --output "$file" "$url"
+    file="$1"
+    url="$2"
+    curl --silent --show-error --fail --retry 3 --max-time 3 \
+        --output "$file" "$url"
 }
 
 # build configlet
