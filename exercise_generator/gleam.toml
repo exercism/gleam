@@ -8,4 +8,3 @@ gleam_erlang = "~> 0.17"
 gleam_json = "~> 0.5"
 
 [dev-dependencies]
-gleeunit = "~> 0.9"
