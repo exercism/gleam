@@ -68,18 +68,6 @@ pub fn normalize_case_test() {
 }
 
 pub fn with_apostrophes_test() {
-  "First: don't laugh. Then: don't cry."
-  |> word_count.count_words
-  |> should.equal(map.from_list([
-    #("first", 1),
-    #("don't", 2),
-    #("laugh", 1),
-    #("then", 1),
-    #("cry", 1),
-  ]))
-}
-
-pub fn with_apostrophes_with_multiple_letters_after_test() {
   "'First: don't laugh. Then: don't cry. You're getting it.'"
   |> word_count.count_words
   |> should.equal(map.from_list([
