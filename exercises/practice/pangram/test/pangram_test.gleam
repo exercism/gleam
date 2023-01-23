@@ -46,7 +46,7 @@ pub fn missing_letters_replaced_by_numbers_test() {
 }
 
 pub fn mixed_case_and_punctuation_test() {
-  let sentence = "Five quacking Zephyrs jolt my wax bed."
+  let sentence = "\"Five quacking Zephyrs jolt my wax bed.\""
   assert True = is_pangram(sentence)
 }
 
@@ -55,7 +55,7 @@ pub fn case_insensitive_test() {
   assert False = is_pangram(sentence)
 }
 
-pub fn a_m_and_upper_a_m_are_26_different_characters_but_not_a_pangram_test() {
+pub fn a_m_and_a_m_are_26_different_characters_but_not_a_pangram_test() {
   let sentence = "abcdefghijklm ABCDEFGHIJKLM"
   assert False = is_pangram(sentence)
 }

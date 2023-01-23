@@ -2,6 +2,9 @@
   "authors": [
     "lpil"
   ],
+  "contributors": [
+    "kytrinyx"
+  ],
   "files": {
     "solution": [
       "src/pangram.gleam"
