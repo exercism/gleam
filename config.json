@@ -388,6 +388,22 @@
           "list"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "satellite",
+        "name": "Satellite",
+        "uuid": "34fa6aa9-c3de-4d59-abfd-cfe1b76d7748",
+        "practices": [
+          "list",
+          "recursion"
+        ],
+        "prerequisites": [
+          "result",
+          "list",
+          "set",
+          "recursion"
+        ],
+        "difficulty": 4
       }
     ]
   },
