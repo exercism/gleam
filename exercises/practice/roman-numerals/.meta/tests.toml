@@ -71,7 +71,6 @@ description = "16 is XVI"
 
 [4465ffd5-34dc-44f3-ada5-56f5007b6dad]
 description = "66 is LXVI"
-include = false
 
 [902ad132-0b4d-40e3-8597-ba5ed611dd8d]
 description = "166 is CLXVI"
@@ -84,8 +83,6 @@ description = "1666 is MDCLXVI"
 
 [3bc4b41c-c2e6-49d9-9142-420691504336]
 description = "3001 is MMMI"
-include = false
 
 [4e18e96b-5fbb-43df-a91b-9cb511fe0856]
 description = "3999 is MMMCMXCIX"
-include = false
