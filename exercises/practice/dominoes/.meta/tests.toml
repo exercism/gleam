@@ -23,36 +23,27 @@ description = "three elements"
 
 [99e615c6-c059-401c-9e87-ad7af11fea5c]
 description = "can reverse dominoes"
-include = false
 
 [51f0c291-5d43-40c5-b316-0429069528c9]
 description = "can't be chained"
-include = false
 
 [9a75e078-a025-4c23-8c3a-238553657f39]
 description = "disconnected - simple"
-include = false
 
 [0da0c7fe-d492-445d-b9ef-1f111f07a301]
 description = "disconnected - double loop"
-include = false
 
 [b6087ff0-f555-4ea0-a71c-f9d707c5994a]
 description = "disconnected - single isolated"
-include = false
 
 [2174fbdc-8b48-4bac-9914-8090d06ef978]
 description = "need backtrack"
-include = false
 
 [167bb480-dfd1-4318-a20d-4f90adb4a09f]
 description = "separate loops"
-include = false
 
 [cd061538-6046-45a7-ace9-6708fe8f6504]
 description = "nine elements"
-include = false
 
 [44704c7c-3adb-4d98-bd30-f45527cf8b49]
 description = "separate three-domino loops"
-include = false

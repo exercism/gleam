@@ -1,6 +1,24 @@
 import gleam/list
 import gleam/queue
 
+pub fn can_chain(chain: List(#(Int, Int))) -> Bool {
+  case chain {
+    [] -> True
+
+    [tile] -> tile.0 == tile.1
+
+    _ -> {
+      let no_solution =
+        chain
+        |> list.permutations
+        |> list.filter(check)
+        |> list.is_empty
+
+      !no_solution
+    }
+  }
+}
+
 fn check(chain: List(#(Int, Int))) -> Bool {
   let checked_chain =
     list.fold_until(
@@ -39,22 +57,5 @@ fn check(chain: List(#(Int, Int))) -> Bool {
       }
 
     False -> False
-  }
-}
-
-pub fn arrange(chain: List(#(Int, Int))) -> List(List(#(Int, Int))) {
-  case chain {
-    [] -> []
-
-    [tile] ->
-      case tile.0 == tile.1 {
-        True -> [chain]
-        False -> []
-      }
-
-    _ ->
-      chain
-      |> list.permutations
-      |> list.filter(check)
   }
 }
