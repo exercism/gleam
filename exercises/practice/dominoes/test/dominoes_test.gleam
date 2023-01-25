@@ -1,5 +1,4 @@
 import dominoes.{can_chain}
-import gleam/list
 import gleeunit
 
 pub fn main() {
