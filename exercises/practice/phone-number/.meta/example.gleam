@@ -3,9 +3,9 @@ import gleam/result
 import gleam/list
 
 pub fn clean(input: String) -> Result(String, String) {
-  Ok(input)
-  |> result.map(remove_valid_punctuation)
-  |> result.then(validate_characters)
+  input
+  |> remove_valid_punctuation
+  |> validate_characters
   |> result.then(validate_length)
   |> result.then(validate_and_remove_country_code)
   |> result.then(validate_area_code)
