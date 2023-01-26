@@ -1,7 +1,7 @@
 {
   "language": "Gleam",
   "slug": "gleam",
-  "active": false,
+  "active": true,
   "status": {
     "concept_exercises": false,
     "test_runner": true,
@@ -376,6 +376,20 @@
         "difficulty": 2
       },
       {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "3f592a98-3044-48ee-9433-330a2496867b",
+        "practices": [
+          "result"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "result"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "ed2c7e78-9443-4e1e-941c-0bae1322dd3b",
@@ -389,18 +403,20 @@
         "difficulty": 3
       },
       {
-        "slug": "phone-number",
-        "name": "Phone Number",
-        "uuid": "3f592a98-3044-48ee-9433-330a2496867b",
+        "slug": "zipper",
+        "name": "Zipper",
+        "uuid": "48a708c6-c6dd-419c-8c88-f28fb65dff93",
         "practices": [
-          "result"
+          "custom-type"
         ],
         "prerequisites": [
-          "string",
+          "custom-type",
           "list",
-          "result"
+          "result",
+          "generics",
+          "case"
         ],
-        "difficulty": 4
+        "difficulty": 6
       }
     ]
   },
