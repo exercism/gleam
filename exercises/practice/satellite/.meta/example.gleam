@@ -13,9 +13,12 @@ pub fn tree_from_traversals(
   let inorder_set = set.from_list(inorder)
   let preorder_set = set.from_list(preorder)
 
-  let different_length = list.length(inorder) != list.length(preorder)
+  let inorder_length = list.length(inorder)
+  let preorder_length = list.length(preorder)
+
+  let different_length = inorder_length != preorder_length
   let different_elements = inorder_set != preorder_set
-  let duplicate_elements = list.length(inorder) != set.size(inorder_set)
+  let duplicate_elements = inorder_length != set.size(inorder_set)
 
   case Nil {
     _ if different_length -> Error("traversals must have the same length")
