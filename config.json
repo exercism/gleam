@@ -403,6 +403,22 @@
         "difficulty": 3
       },
       {
+        "slug": "satellite",
+        "name": "Satellite",
+        "uuid": "34fa6aa9-c3de-4d59-abfd-cfe1b76d7748",
+        "practices": [
+          "list",
+          "recursion"
+        ],
+        "prerequisites": [
+          "result",
+          "list",
+          "set",
+          "recursion"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "zipper",
         "name": "Zipper",
         "uuid": "48a708c6-c6dd-419c-8c88-f28fb65dff93",
