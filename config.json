@@ -1,5 +1,4 @@
 {
-  "track_id": "gleam",
   "language": "Gleam",
   "slug": "gleam",
   "active": false,
@@ -404,6 +403,22 @@
           "recursion"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "zipper",
+        "name": "Zipper",
+        "uuid": "48a708c6-c6dd-419c-8c88-f28fb65dff93",
+        "practices": [
+          "custom-type"
+        ],
+        "prerequisites": [
+          "custom-type",
+          "list",
+          "result",
+          "generics",
+          "case"
+        ],
+        "difficulty": 6
       }
     ]
   },
