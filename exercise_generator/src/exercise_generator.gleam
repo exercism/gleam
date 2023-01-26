@@ -366,12 +366,17 @@ fn get_expected_value(
   functions: Map(String, Function),
   expected: JsonData,
 ) {
-  case #(map.get(functions, function), expected) {
-    #(Ok(Function(can_error: True, ..)), JsonObject(map)) ->
-      case map.get(map, "error") {
-        Ok(value) -> "Error(" <> json_data_to_gleam_value(value) <> ")"
-        Error(Nil) -> "Ok(" <> json_data_to_gleam_value(expected) <> ")"
+  case map.get(functions, function) {
+    Ok(Function(can_error: True, ..)) ->
+      case expected {
+        JsonObject(map) ->
+          case map.get(map, "error") {
+            Ok(value) -> "Error(" <> json_data_to_gleam_value(value) <> ")"
+            Error(Nil) -> "Ok(" <> json_data_to_gleam_value(expected) <> ")"
+          }
+        _ -> "Ok(" <> json_data_to_gleam_value(expected) <> ")"
       }
+
     _ -> json_data_to_gleam_value(expected)
   }
 }

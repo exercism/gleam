@@ -376,6 +376,20 @@
         "difficulty": 2
       },
       {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "3f592a98-3044-48ee-9433-330a2496867b",
+        "practices": [
+          "result"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "result"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "ed2c7e78-9443-4e1e-941c-0bae1322dd3b",
