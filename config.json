@@ -387,6 +387,20 @@
           "list"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "3f592a98-3044-48ee-9433-330a2496867b",
+        "practices": [
+          "result"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "result"
+        ],
+        "difficulty": 4
       }
     ]
   },
