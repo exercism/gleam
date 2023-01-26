@@ -6,10 +6,16 @@ pub type Tree(a) {
   Node(value: a, left: Tree(a), right: Tree(a))
 }
 
+pub type Error {
+  DifferentLengths
+  DifferentItems
+  NonUniqueItems
+}
+
 pub fn tree_from_traversals(
   inorder inorder: List(a),
   preorder preorder: List(a),
-) -> Result(Tree(a), String) {
+) -> Result(Tree(a), Error) {
   let inorder_set = set.from_list(inorder)
   let preorder_set = set.from_list(preorder)
 
@@ -21,9 +27,9 @@ pub fn tree_from_traversals(
   let duplicate_elements = inorder_length != set.size(inorder_set)
 
   case Nil {
-    _ if different_length -> Error("traversals must have the same length")
-    _ if different_elements -> Error("traversals must have the same elements")
-    _ if duplicate_elements -> Error("traversals must contain unique items")
+    _ if different_length -> Error(DifferentLengths)
+    _ if different_elements -> Error(DifferentItems)
+    _ if duplicate_elements -> Error(NonUniqueItems)
     _ -> Ok(tree_from_traversals_safe(inorder, preorder))
   }
 }

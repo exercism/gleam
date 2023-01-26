@@ -1,6 +1,6 @@
 import gleeunit
 import gleeunit/should
-import satellite.{Nil, Node}
+import satellite.{DifferentItems, DifferentLengths, Nil, Node, NonUniqueItems}
 
 pub fn main() {
   gleeunit.main()
@@ -34,7 +34,7 @@ pub fn tree_with_many_items_test() {
 
 pub fn reject_traversals_of_different_length_test() {
   satellite.tree_from_traversals(inorder: ["b", "a", "r"], preorder: ["a", "b"])
-  |> should.equal(Error("traversals must have the same length"))
+  |> should.equal(Error(DifferentLengths))
 }
 
 pub fn reject_inconsistent_traversals_of_same_length_test() {
@@ -42,7 +42,7 @@ pub fn reject_inconsistent_traversals_of_same_length_test() {
     inorder: ["a", "b", "c"],
     preorder: ["x", "y", "z"],
   )
-  |> should.equal(Error("traversals must have the same elements"))
+  |> should.equal(Error(DifferentItems))
 }
 
 pub fn reject_traversals_with_repeated_items_test() {
@@ -50,5 +50,5 @@ pub fn reject_traversals_with_repeated_items_test() {
     inorder: ["b", "a", "a"],
     preorder: ["a", "b", "a"],
   )
-  |> should.equal(Error("traversals must contain unique items"))
+  |> should.equal(Error(NonUniqueItems))
 }
