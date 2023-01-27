@@ -403,6 +403,21 @@
         "difficulty": 3
       },
       {
+        "slug": "binary-search-tree",
+        "name": "Binary Search Tree",
+        "uuid": "4a3b220f-f978-44b6-9768-ab86e372a42a",
+        "practices": [
+          "recursion"
+        ],
+        "prerequisites": [
+          "custom-type",
+          "recursion",
+          "case",
+          "list"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "satellite",
         "name": "Satellite",
         "uuid": "34fa6aa9-c3de-4d59-abfd-cfe1b76d7748",
