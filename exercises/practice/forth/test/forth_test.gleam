@@ -142,7 +142,9 @@ pub fn redefining_an_existing_builtin_word_test() {
 pub fn defining_words_with_odd_characters_test() {
   forth.new()
   |> forth.eval(": € 220371 ;")
-  |> succeed_with("€")
+  |> result.then(forth.eval(_, "€"))
+  |> result.map(forth.format_stack)
+  |> succeed_with("220371")
 }
 
 pub fn defining_a_number_test() {
