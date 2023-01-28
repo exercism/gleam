@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "jiegillet"
+  ],
+  "files": {
+    "solution": [
+      "src/binary_search_tree.gleam"
+    ],
+    "test": [
+      "test/binary_search_tree_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ]
+  },
+  "blurb": "Insert and search for numbers in a binary tree.",
+  "source": "Josh Cheek",
+  "source_url": "https://twitter.com/josh_cheek"
+}
