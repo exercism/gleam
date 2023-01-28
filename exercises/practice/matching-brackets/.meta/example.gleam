@@ -9,11 +9,11 @@ pub fn is_paired(value: String) -> Bool {
 }
 
 fn match(stack: List(String), char: String) -> List(String) {
-  case #(char, stack) {
-    #("}", ["{", ..rest]) | #("]", ["[", ..rest]) | #(")", ["(", ..rest]) ->
+  case char, stack {
+    "}", ["{", ..rest] | "]", ["[", ..rest] | ")", ["(", ..rest] ->
       rest
-    #("}", _) | #("]", _) | #(")", _) -> [char, ..stack]
-    #("{", _) | #("[", _) | #("(", _) -> [char, ..stack]
-    _ -> stack
+    "}", _) | "]", _ | ")", _ -> [char, ..stack]
+    "{", _) | "[", _ | "(", _ -> [char, ..stack]
+    _, _ -> stack
   }
 }
