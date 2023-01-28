@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "jiegillet"
+  ],
+  "files": {
+    "solution": [
+      "src/matching_brackets.gleam"
+    ],
+    "test": [
+      "test/matching_brackets_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ]
+  },
+  "blurb": "Make sure the brackets and braces all match.",
+  "source": "Ginna Baker"
+}

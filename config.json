@@ -433,6 +433,20 @@
           "case"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "d1cdd91e-5ed6-4875-bbcc-a8395cdf51ce",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "string",
+          "case"
+        ],
+        "difficulty": 3
       }
     ]
   },
