@@ -434,6 +434,25 @@
         "difficulty": 4
       },
       {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "1bf9a89e-a411-4eac-8d61-377290e17101",
+        "practices": [
+          "map",
+          "string"
+        ],
+        "prerequisites": [
+          "map",
+          "string",
+          "list",
+          "order",
+          "option",
+          "case",
+          "custom-type"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "zipper",
         "name": "Zipper",
         "uuid": "48a708c6-c6dd-419c-8c88-f28fb65dff93",
