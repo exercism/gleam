@@ -11,7 +11,7 @@ pub fn just_the_header_if_no_input_test() {
   |> should.equal("Team                           | MP |  W |  D |  L |  P")
 }
 
-pub fn a_win_is_three_points__a_loss_is_zero_points_test() {
+pub fn a_win_is_three_points_a_loss_is_zero_points_test() {
   tournament.tally("Allegoric Alaskans;Blithering Badgers;win")
   |> should.equal(
     "Team                           | MP |  W |  D |  L |  P
@@ -103,7 +103,7 @@ Courageous Californians        |  3 |  0 |  1 |  2 |  1",
   )
 }
 
-pub fn incomplete_competition__not_all_pairs_have_played__test() {
+pub fn incomplete_competition_not_all_pairs_have_played_test() {
   tournament.tally(
     "Allegoric Alaskans;Blithering Badgers;loss
 Devastating Donkeys;Allegoric Alaskans;loss
