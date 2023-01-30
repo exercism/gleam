@@ -462,6 +462,22 @@
           "case"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "a433d1f6-d8a2-40b9-a7d7-a611420d7164",
+        "practices": [
+          "maths"
+        ],
+        "prerequisites": [
+          "list",
+          "maths",
+          "case",
+          "custom-type",
+          "recursion"
+        ],
+        "difficulty": 6
       }
     ]
   },
