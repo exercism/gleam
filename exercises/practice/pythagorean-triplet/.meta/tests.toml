@@ -29,3 +29,5 @@ description = "several matching triplets"
 
 [f5be5734-8aa0-4bd1-99a2-02adcc4402b4]
 description = "triplets for large number"
+include = false
+comment = "Not including because naive approaches will timeout"

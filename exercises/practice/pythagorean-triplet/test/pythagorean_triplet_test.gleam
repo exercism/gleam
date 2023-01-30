@@ -44,14 +44,3 @@ pub fn several_matching_triplets_test() {
     Triplet(240, 252, 348),
   ])
 }
-
-pub fn triplets_for_large_number_test() {
-  pythagorean_triplet.triplets_with_sum(30_000)
-  |> should.equal([
-    Triplet(1200, 14_375, 14_425),
-    Triplet(1875, 14_000, 14_125),
-    Triplet(5000, 12_000, 13_000),
-    Triplet(6000, 11_250, 12_750),
-    Triplet(7500, 10_000, 12_500),
-  ])
-}
