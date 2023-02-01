@@ -8,7 +8,9 @@ import gleam/set.{Set}
 pub fn solve(puzzle: String) -> Result(Map(String, Int), Nil) {
   let #(coefficients, leading_digits) = parse_puzzle(puzzle)
   let letters = map.keys(coefficients)
-  let values = list.range(0, 9)
+  let values =
+    list.range(0, 9)
+    |> set.from_list
   let guess = map.new()
   solve_puzzle(letters, values, guess, coefficients, leading_digits)
 }
@@ -64,7 +66,7 @@ fn pow(base: Int, exp: Int) -> Int {
 
 fn solve_puzzle(
   letters_to_assign: List(String),
-  possible_values: List(Int),
+  possible_values: Set(Int),
   current_guess: Map(String, Int),
   coefficients: Map(String, Int),
   leading_digits: Set(String),
@@ -74,10 +76,11 @@ fn solve_puzzle(
     [letter, ..rest] ->
       possible_values
       |> maybe_remove_zero(letter, leading_digits)
+      |> set.to_list
       |> list.fold_until(
         from: Error(Nil),
         with: fn(_, value) {
-          let possible_values = remove_value(possible_values, value)
+          let possible_values = set.delete(possible_values, value)
           let current_guess = map.insert(current_guess, letter, value)
           case
             solve_puzzle(
@@ -97,18 +100,14 @@ fn solve_puzzle(
 }
 
 fn maybe_remove_zero(
-  values: List(Int),
+  values: Set(Int),
   letter: String,
   leading_digits: Set(String),
-) -> List(Int) {
+) -> Set(Int) {
   case set.contains(leading_digits, letter) {
-    True -> remove_value(values, 0)
+    True -> set.delete(values, 0)
     False -> values
   }
-}
-
-fn remove_value(values: List(Int), value: Int) -> List(Int) {
-  list.filter(values, fn(v) { v != value })
 }
 
 fn is_solution(
