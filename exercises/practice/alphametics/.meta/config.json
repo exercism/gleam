@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "jiegillet"
+  ],
+  "files": {
+    "solution": [
+      "src/alphametics.gleam"
+    ],
+    "test": [
+      "test/alphametics_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Write a function to solve alphametics puzzles."
+}
