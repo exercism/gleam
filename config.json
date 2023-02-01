@@ -481,6 +481,26 @@
           "case"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "alphametics",
+        "name": "Alphametics",
+        "uuid": "5aef7d9d-3939-4014-8102-a7262fdde754",
+        "practices": [
+          "maths"
+        ],
+        "prerequisites": [
+          "list",
+          "set",
+          "map",
+          "maths",
+          "string",
+          "option",
+          "recursion",
+          "result",
+          "case"
+        ],
+        "difficulty": 8
       }
     ]
   },
