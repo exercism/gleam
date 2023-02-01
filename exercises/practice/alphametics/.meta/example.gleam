@@ -28,7 +28,6 @@ fn parse_puzzle(puzzle: String) -> #(Map(String, Int), Set(String)) {
   let leading_digits =
     [right, ..terms]
     |> list.map(string.slice(_, at_index: 0, length: 1))
-    |> list.unique
     |> set.from_list
 
   #(coefficients, leading_digits)
