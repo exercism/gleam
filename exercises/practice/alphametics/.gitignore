@@ -2,7 +2,3 @@
 *.ez
 build
 erl_crash.dump
-*.beam
-*.ez
-build
-erl_crash.dump
