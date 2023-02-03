@@ -1,3 +1,6 @@
+import gleam/string
+import gleam/list
+
 pub type Robot {
   Robot(direction: Direction, position: Position)
 }
@@ -13,17 +16,14 @@ pub type Position {
   Position(x: Int, y: Int)
 }
 
-pub fn create(
-  direction direction: Direction,
-  position position: Position,
-) -> Robot {
+pub fn create(direction: Direction, position: Position) -> Robot {
   todo
 }
 
 pub fn move(
-  direction direction: Direction,
-  instructions instructions: String,
-  position position: Position,
+  direction: Direction,
+  position: Position,
+  instructions: String,
 ) -> Robot {
   todo
 }
