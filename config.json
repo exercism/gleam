@@ -531,6 +531,21 @@
           "case"
         ],
         "difficulty": 8
+      },
+      {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "21ad5280-6acd-42cb-ba8c-fe8b4bbe485e",
+        "practices": [
+          "custom-type"
+        ],
+        "prerequisites": [
+          "custom-type",
+          "list",
+          "string",
+          "case"
+        ],
+        "difficulty": 3
       }
     ]
   },
