@@ -469,6 +469,20 @@
         "difficulty": 6
       },
       {
+        "slug": "sum-of-multiples",
+        "name": "Sum of Multiples",
+        "uuid": "ff4ce860-92cc-4768-a482-ba10cc6d1190",
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math",
+          "list",
+          "set"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "d1cdd91e-5ed6-4875-bbcc-a8395cdf51ce",
