@@ -473,10 +473,10 @@
         "name": "Sum of Multiples",
         "uuid": "ff4ce860-92cc-4768-a482-ba10cc6d1190",
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
-          "math",
+          "maths",
           "list",
           "set"
         ],
@@ -546,6 +546,22 @@
           "case"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "rectangles",
+        "name": "Rectangles",
+        "uuid": "68171b71-a9eb-4925-a2f3-df0bc27ce41d",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "list",
+          "string",
+          "map",
+          "tuple",
+          "bool"
+        ],
+        "difficulty": 6
       }
     ]
   },
