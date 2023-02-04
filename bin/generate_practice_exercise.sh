@@ -32,11 +32,12 @@ jq --arg slug "$SLUG" --arg uuid "$UUID" \
 mv config.json.tmp config.json
 
 # Create instructions and config files
-./bin/configlet sync --update --yes --docs --filepaths --metadata --exercise "$SLUG"
+./bin/configlet sync --update --yes --docs --metadata --exercise "$SLUG"
 
 packages_prefix="https://raw.githubusercontent.com/exercism/gleam-test-runner/main/packages"
 download "$exercise_dir"/gleam.toml "$packages_prefix"/gleam.toml
 download "$exercise_dir"/manifest.toml "$packages_prefix"/manifest.toml
+./bin/configlet sync --update --yes --filepaths --exercise "$SLUG"
 
 name=$(echo $SLUG | sed 's/-/_/g' )
 sed -i -e "s/name = \".*\"/name = \"$name\"/" "$exercise_dir"/gleam.toml
