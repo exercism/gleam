@@ -11,6 +11,10 @@
     ],
     "example": [
       ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
     ]
   },
   "blurb": "Make sure the brackets and braces all match.",

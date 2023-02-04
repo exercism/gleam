@@ -11,6 +11,10 @@
     ],
     "example": [
       ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
     ]
   },
   "blurb": "Given a number, find the sum of all the multiples of particular numbers up to but not including that number.",
