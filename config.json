@@ -16,7 +16,7 @@
     "highlightjs_language": "rust"
   },
   "test_runner": {
-    "average_run_time": 3.0
+    "average_run_time": 3
   },
   "files": {
     "solution": [
@@ -562,6 +562,230 @@
           "bool"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "9bff4ae4-4fff-4161-ae3d-a2133de5f9c5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "0317a056-8b56-4e1c-bb49-9a5bae66b889",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "7755cf69-f4de-4dbd-a4fb-44663e759806",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "anagram",
+        "name": "TODO",
+        "uuid": "c07f4306-3fd1-4a39-b07c-56c12c04b74a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "180195af-eee4-428b-b063-980742aa3146",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "82745df3-2235-438a-a986-27bed0f94473",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "45f14ab3-e092-4ea4-a25c-44e83555dcf3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "b623b974-17c8-4a49-9864-c03552b10486",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "4380b807-b801-42d1-b85d-2ac17abc7780",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "7218776e-fd5a-4dca-a9e5-7a87cda2f752",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "f4a42605-e843-466e-9d79-c8781575330b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "1e893809-a9c3-4316-835d-7e66a76041a8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "6c66249e-9725-47a4-a65b-a67c2d24d8c3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "5fb5313e-876d-4759-9ae5-fe2782059583",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "8de876e2-ecbc-448d-b0b7-be288dbf2193",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "7a722ae2-d399-4341-8b4e-5014c1672c40",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "e7dfb220-6b53-4ef2-acbb-79cb420c925b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "50254c72-0ef9-402e-b97e-e5ac26d3fe7a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "629f0c03-6f7e-490a-a612-d10bca831d65",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "8b721388-217f-4536-ab86-ab5db91a4c24",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "375c69f3-e238-4727-89b2-f4ef7aeb1ea9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "bd76656a-a1b7-4210-bf78-6b49911a16ff",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "bb856b09-465e-4a23-adf2-f401168fa89a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "6279c724-1209-40ab-bbb8-ecbd78f57b01",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "ade24c6e-fd66-4d06-9bbb-270c1c9c56af",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "d4bc7f03-1c5c-4ab8-9116-affb75ecb7fa",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "0eda1033-a4f2-4852-9773-cae4402910e9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "reverse-string",
+        "name": "TODO",
+        "uuid": "6f32694a-87e0-4e01-a228-dabc24f315b6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
