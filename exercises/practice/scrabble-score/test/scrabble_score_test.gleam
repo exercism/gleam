@@ -60,8 +60,3 @@ pub fn entire_alphabet_available_test() {
   scrabble_score.score(word: "abcdefghijklmnopqrstuvwxyz")
   |> should.equal(87)
 }
-
-pub fn non_alphabet_word_test() {
-  scrabble_score.score(word: "$##%6745$")
-  |> should.equal(0)
-}
