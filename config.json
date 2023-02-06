@@ -564,20 +564,19 @@
         "difficulty": 6
       },
       {
-        "slug": "reverse-string",
-        "name": "TODO",
-        "uuid": "6cf90987-bc60-4de9-8f68-343ca5039c3b",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "armstrong-numbers",
-        "name": "TODO",
+        "name": "Armstrong Numbers",
         "uuid": "f89958c7-da81-43de-9450-3ccc558b7bc2",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
+        "practices": [
+          "list",
+          "recursion"
+        ],
+        "prerequisites": [
+            "list",
+            "bool",
+            "int"
+        ],
+        "difficulty": 3
       }
     ]
   },
