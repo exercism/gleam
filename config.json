@@ -572,9 +572,9 @@
           "recursion"
         ],
         "prerequisites": [
-            "list",
-            "bool",
-            "int"
+          "list",
+          "bool",
+          "int"
         ],
         "difficulty": 3
       }
