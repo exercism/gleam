@@ -570,6 +570,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "armstrong-numbers",
+        "name": "TODO",
+        "uuid": "f89958c7-da81-43de-9450-3ccc558b7bc2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
