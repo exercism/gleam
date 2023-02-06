@@ -576,6 +576,21 @@
           "string"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "f89958c7-da81-43de-9450-3ccc558b7bc2",
+        "practices": [
+          "list",
+          "recursion"
+        ],
+        "prerequisites": [
+          "list",
+          "bool",
+          "int"
+        ],
+        "difficulty": 3
       }
     ]
   },
