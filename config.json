@@ -16,7 +16,7 @@
     "highlightjs_language": "rust"
   },
   "test_runner": {
-    "average_run_time": 3
+    "average_run_time": 3.0
   },
   "files": {
     "solution": [
@@ -562,6 +562,20 @@
           "bool"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "21946b94-c304-4a10-a6b6-b9fd5bbe9966",
+        "practices": [
+          "regex"
+        ],
+        "prerequisites": [
+          "regex",
+          "list",
+          "string"
+        ],
+        "difficulty": 4
       }
     ]
   },
