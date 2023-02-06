@@ -1,5 +1,5 @@
 {
-  "authors": [],
+  "authors": ["suraj-mandal"],
   "files": {
     "solution": [
       "src/armstrong_numbers.gleam"
