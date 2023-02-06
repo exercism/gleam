@@ -16,7 +16,7 @@
     "highlightjs_language": "rust"
   },
   "test_runner": {
-    "average_run_time": 3
+    "average_run_time": 3.0
   },
   "files": {
     "solution": [
@@ -565,11 +565,13 @@
       },
       {
         "slug": "reverse-string",
-        "name": "TODO",
+        "name": "Reverse String",
         "uuid": "6cf90987-bc60-4de9-8f68-343ca5039c3b",
-        "practices": [],
+        "practices": [
+          "string"
+        ],
         "prerequisites": [],
-        "difficulty": 5
+        "difficulty": 1
       }
     ]
   },
