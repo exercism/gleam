@@ -16,7 +16,7 @@
     "highlightjs_language": "rust"
   },
   "test_runner": {
-    "average_run_time": 3
+    "average_run_time": 3.0
   },
   "files": {
     "solution": [
@@ -604,6 +604,26 @@
           "string"
         ],
         "difficulty": 1
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "a35a95b5-e8ea-4c0a-8ca8-621c6f3501be",
+        "practices": [
+          "map",
+          "list",
+          "string",
+          "custom-type",
+          "case"
+        ],
+        "prerequisites": [
+          "map",
+          "list",
+          "string",
+          "custom-type",
+          "case"
+        ],
+        "difficulty": 3
       }
     ]
   },
