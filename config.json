@@ -562,6 +562,35 @@
           "bool"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "21946b94-c304-4a10-a6b6-b9fd5bbe9966",
+        "practices": [
+          "regex"
+        ],
+        "prerequisites": [
+          "regex",
+          "list",
+          "string"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "f89958c7-da81-43de-9450-3ccc558b7bc2",
+        "practices": [
+          "list",
+          "recursion"
+        ],
+        "prerequisites": [
+          "list",
+          "bool",
+          "int"
+        ],
+        "difficulty": 3
       }
     ]
   },
