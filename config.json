@@ -16,7 +16,7 @@
     "highlightjs_language": "rust"
   },
   "test_runner": {
-    "average_run_time": 3
+    "average_run_time": 3.0
   },
   "files": {
     "solution": [
@@ -604,6 +604,24 @@
           "string"
         ],
         "difficulty": 1
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "333129cf-8be6-4ce6-b6eb-1d2b12d383f2",
+        "practices": [
+          "string",
+          "list",
+          "recursion",
+          "case"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "recursion",
+          "case"
+        ],
+        "difficulty": 5
       }
     ]
   },
