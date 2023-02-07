@@ -564,7 +564,20 @@
         "difficulty": 6
       },
       {
-<<<<<<< HEAD
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "21946b94-c304-4a10-a6b6-b9fd5bbe9966",
+        "practices": [
+          "regex"
+        ],
+        "prerequisites": [
+          "regex",
+          "list",
+          "string"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "109a8a3e-cc3f-4f2a-a385-c12f9e9865cf",
@@ -575,19 +588,6 @@
           "map",
           "list",
           "case",
-          "string"
-        ],
-        "difficulty": 4
-=======
-        "slug": "acronym",
-        "name": "Acronym",
-        "uuid": "21946b94-c304-4a10-a6b6-b9fd5bbe9966",
-        "practices": [
-          "regex"
-        ],
-        "prerequisites": [
-          "regex",
-          "list",
           "string"
         ],
         "difficulty": 4
@@ -619,7 +619,6 @@
           "string"
         ],
         "difficulty": 1
->>>>>>> main
       }
     ]
   },

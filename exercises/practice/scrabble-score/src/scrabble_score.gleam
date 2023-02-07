@@ -1,3 +1,3 @@
-pub fn score(word word: String) -> Int {
+pub fn score(word: String) -> Int {
   todo
 }
