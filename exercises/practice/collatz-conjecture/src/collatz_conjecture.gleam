@@ -1,3 +1,3 @@
-pub fn steps(number number: Int) -> Result(Int, String) {
+pub fn steps(number: Int) -> Result(Int, String) {
   todo
 }
