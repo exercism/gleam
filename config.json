@@ -587,6 +587,7 @@
         ],
         "prerequisites": [
           "list",
+          "recursion",
           "bool",
           "int"
         ],
