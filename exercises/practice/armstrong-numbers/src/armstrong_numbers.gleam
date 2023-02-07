@@ -1,3 +1,3 @@
-pub fn is_armstrong_number(number number: Int) -> Bool {
+pub fn is_armstrong_number(number: Int) -> Bool {
   todo
 }
