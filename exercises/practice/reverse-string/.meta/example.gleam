@@ -10,7 +10,7 @@ pub fn reverse_accumulate(
   }
 }
 
-pub fn reverse(value value: String) -> String {
+pub fn reverse(value: String) -> String {
   value
   |> to_graphemes
   |> reverse_accumulate("")
