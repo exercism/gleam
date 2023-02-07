@@ -16,7 +16,7 @@ pub fn all_zeroes_score_test() {
   |> roll_and_check_score(0)
 }
 
-pub fn no_stirkes_or_spares_test() {
+pub fn no_strikes_or_spares_test() {
   let rolls = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]
 
   rolls
