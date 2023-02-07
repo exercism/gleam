@@ -599,7 +599,9 @@
         "practices": [
           "string"
         ],
-        "prerequisites": [],
+        "prerequisites": [
+          "string"
+        ],
         "difficulty": 1
       }
     ]
