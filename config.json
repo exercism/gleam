@@ -562,6 +562,7 @@
           "bool"
         ],
         "difficulty": 6
+<<<<<<< HEAD
       },
       {
         "slug": "reverse-string",
@@ -572,6 +573,8 @@
         ],
         "prerequisites": [],
         "difficulty": 1
+=======
+>>>>>>> main
       }
     ]
   },
