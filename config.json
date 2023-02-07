@@ -592,6 +592,18 @@
           "int"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "c10a4881-6605-4ce9-83ec-96b4c12f679a",
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "string"
+        ],
+        "difficulty": 1
       }
     ]
   },
