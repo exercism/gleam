@@ -591,6 +591,23 @@
           "int"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "576c4a50-6aef-4b28-a7b4-0e682004a690",
+        "practices": [
+          "int",
+          "maths",
+          "recursion"
+        ],
+        "prerequisites": [
+          "int",
+          "bool",
+          "maths",
+          "recursion"
+        ],
+        "difficulty": 3
       }
     ]
   },
