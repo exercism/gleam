@@ -1,14 +1,14 @@
 import gleam/int.{digits}
 import gleam/list.{fold, length}
 
-pub fn repeat_mult(number number: Int, power power: Int) -> Int {
+fn repeat_mult(number: Int, power: Int) -> Int {
   case power {
     1 -> number
     pow -> number * repeat_mult(number, pow - 1)
   }
 }
 
-pub fn is_armstrong_number(number number: Int) -> Bool {
+pub fn is_armstrong_number(number: Int) -> Bool {
   case digits(number, 10) {
     Ok(digits_list) -> {
       let num_digits = length(digits_list)
