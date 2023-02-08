@@ -578,6 +578,21 @@
         "difficulty": 4
       },
       {
+        "slug": "scrabble-score",
+        "name": "Scrabble Score",
+        "uuid": "109a8a3e-cc3f-4f2a-a385-c12f9e9865cf",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "map",
+          "list",
+          "case",
+          "string"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "f89958c7-da81-43de-9450-3ccc558b7bc2",

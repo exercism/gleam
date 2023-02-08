@@ -1,4 +1,4 @@
-name = "reverse_string"
+name = "scrabble_score"
 version = "0.1.0"
 
 [dependencies]
