@@ -634,6 +634,22 @@
           "case"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "f85e087a-355b-49d0-ac8d-3dc0d47fdad6",
+        "practices": [
+          "maths"
+        ],
+        "prerequisites": [
+          "int",
+          "maths",
+          "order",
+          "case",
+          "result"
+        ],
+        "difficulty": 3
       }
     ]
   },
