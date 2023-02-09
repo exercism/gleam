@@ -619,6 +619,21 @@
           "string"
         ],
         "difficulty": 1
+      },
+      {
+        "slug": "list-ops",
+        "name": "List Ops",
+        "uuid": "81458cfe-eb13-4026-93fb-211d1229ce53",
+        "practices": [
+          "list",
+          "recursion"
+        ],
+        "prerequisites": [
+          "list",
+          "recursion",
+          "case"
+        ],
+        "difficulty": 6
       }
     ]
   },
