@@ -5,8 +5,8 @@ fn prepend(list: List(a), element: a) -> List(a) {
   }
 }
 
-pub fn append(list1 list1: List(a), list2 list2: List(a)) -> List(a) {
-  foldr(over: list1, from: list2, with: prepend)
+pub fn append(first first: List(a), second second: List(a)) -> List(a) {
+  foldr(over: first, from: second, with: prepend)
 }
 
 pub fn concat(lists: List(List(a))) -> List(a) {

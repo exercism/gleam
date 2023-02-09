@@ -1,4 +1,4 @@
-pub fn append(list1 list1: List(a), list2 list2: List(a)) -> List(a) {
+pub fn append(first first: List(a), second second: List(a)) -> List(a) {
   todo
 }
 

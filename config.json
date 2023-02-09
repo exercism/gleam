@@ -610,11 +610,11 @@
         "name": "List Ops",
         "uuid": "81458cfe-eb13-4026-93fb-211d1229ce53",
         "practices": [
-          "list", 
+          "list",
           "recursion"
         ],
         "prerequisites": [
-          "list", 
+          "list",
           "recursion",
           "case"
         ],

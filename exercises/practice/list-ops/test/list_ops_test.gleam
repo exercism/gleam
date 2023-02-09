@@ -7,22 +7,22 @@ pub fn main() {
 }
 
 pub fn append_entries_to_a_list_and_return_the_new_list_empty_lists_test() {
-  list_ops.append(list1: [], list2: [])
+  list_ops.append(first: [], second: [])
   |> should.equal([])
 }
 
 pub fn append_entries_to_a_list_and_return_the_new_list_list_to_empty_list_test() {
-  list_ops.append(list1: [], list2: [1, 2, 3, 4])
+  list_ops.append(first: [], second: [1, 2, 3, 4])
   |> should.equal([1, 2, 3, 4])
 }
 
 pub fn append_entries_to_a_list_and_return_the_new_list_empty_list_to_list_test() {
-  list_ops.append(list1: [1, 2, 3, 4], list2: [])
+  list_ops.append(first: [1, 2, 3, 4], second: [])
   |> should.equal([1, 2, 3, 4])
 }
 
 pub fn append_entries_to_a_list_and_return_the_new_list_non_empty_lists_test() {
-  list_ops.append(list1: [1, 2], list2: [2, 3, 4, 5])
+  list_ops.append(first: [1, 2], second: [2, 3, 4, 5])
   |> should.equal([1, 2, 2, 3, 4, 5])
 }
 
