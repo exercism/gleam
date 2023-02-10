@@ -1,4 +1,4 @@
-name = "reverse_string"
+name = "list_ops"
 version = "0.1.0"
 
 [dependencies]
