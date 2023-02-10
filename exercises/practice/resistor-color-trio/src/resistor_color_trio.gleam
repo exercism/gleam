@@ -1,7 +1,7 @@
-pub type CustomRecordType {
-  CustomRecordType(unit: String, value: Int)
+pub type Resistance {
+  Resistance(unit: String, value: Int)
 }
 
-pub fn label(colors: List(String)) -> CustomRecordType {
+pub fn label(colors: List(String)) -> Result(Resistance, Nil) {
   todo
 }

@@ -1,52 +1,58 @@
-import gleam/map.{from_list, get}
-import gleam/int.{parse, to_string}
-import gleam/string.{repeat}
-import gleam/list.{at}
+import gleam/int
+import gleam/string
 
-pub type CustomRecordType {
-  CustomRecordType(unit: String, value: Int)
+pub type Resistance {
+  Resistance(unit: String, value: Int)
 }
 
-pub fn label(colors: List(String)) -> CustomRecordType {
-  let colors_map =
-    from_list([
-      #("black", 0),
-      #("brown", 1),
-      #("red", 2),
-      #("orange", 3),
-      #("yellow", 4),
-      #("green", 5),
-      #("blue", 6),
-      #("violet", 7),
-      #("grey", 8),
-      #("white", 9),
-    ])
-
-  assert Ok(first_color) = at(colors, 0)
-  assert Ok(second_color) = at(colors, 1)
-  assert Ok(multiplier) = at(colors, 2)
-
-  assert Ok(first_color_val) = get(colors_map, first_color)
-  assert Ok(second_color_val) = get(colors_map, second_color)
-  assert Ok(multiplier_val) = get(colors_map, multiplier)
-
-  let value_string =
-    to_string(first_color_val) <> to_string(second_color_val) <> repeat(
-      "0",
-      multiplier_val,
-    )
-
-  assert Ok(value) = parse(value_string)
-
-  let total_zeros = case second_color_val {
-    0 -> multiplier_val + 1
-    _ -> multiplier_val
+fn get_label(color: String) -> Int {
+  case color {
+    "black" -> 0
+    "brown" -> 1
+    "red" -> 2
+    "orange" -> 3
+    "yellow" -> 4
+    "green" -> 5
+    "blue" -> 6
+    "violet" -> 7
+    "grey" -> 8
+    "white" -> 9
+    _ -> -1
   }
+}
 
-  case total_zeros {
-    9 -> CustomRecordType(unit: "gigaohms", value: value / 1_000_000_000)
-    6 | 7 | 8 -> CustomRecordType(unit: "megaohms", value: value / 1_000_000)
-    3 | 4 | 5 -> CustomRecordType(unit: "kiloohms", value: value / 1000)
-    0 | 1 | 2 -> CustomRecordType(unit: "ohms", value: value)
+pub fn label(colors: List(String)) -> Result(Resistance, Nil) {
+  assert [first_color, second_color, multiplier, ..] = colors
+
+  let first_color_val = get_label(first_color)
+  let second_color_val = get_label(second_color)
+  let multiplier_val = get_label(multiplier)
+
+  case first_color_val, second_color_val, multiplier_val {
+    -1, _, _ -> Error(Nil)
+    _, -1, _ -> Error(Nil)
+    _, _, -1 -> Error(Nil)
+    _, _, _ -> {
+      let value_string =
+        int.to_string(first_color_val) <> int.to_string(second_color_val) <> string.repeat(
+          "0",
+          multiplier_val,
+        )
+
+      assert Ok(value) = int.parse(value_string)
+
+      let total_zeros = case second_color_val {
+        0 -> multiplier_val + 1
+        _ -> multiplier_val
+      }
+
+      case total_zeros {
+        9 -> Ok(Resistance(unit: "gigaohms", value: value / 1_000_000_000))
+        6 | 7 | 8 -> Ok(Resistance(unit: "megaohms", value: value / 1_000_000))
+        3 | 4 | 5 -> Ok(Resistance(unit: "kiloohms", value: value / 1000))
+        0 | 1 | 2 -> Ok(Resistance(unit: "ohms", value: value))
+        _ -> Error(Nil)
+      }
+    }
   }
 }
