@@ -28,10 +28,10 @@ pub fn large_number_of_even_and_odd_steps_test() {
 
 pub fn zero_is_an_error_test() {
   collatz_conjecture.steps(0)
-  |> should.equal(Error("Only positive numbers are allowed"))
+  |> should.equal(Error(collatz_conjecture.NonPositiveNumber))
 }
 
 pub fn negative_value_is_an_error_test() {
   collatz_conjecture.steps(-15)
-  |> should.equal(Error("Only positive numbers are allowed"))
+  |> should.equal(Error(collatz_conjecture.NonPositiveNumber))
 }

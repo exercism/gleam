@@ -1,3 +1,7 @@
+pub type NonPositiveNumber {
+  NonPositiveNumber
+}
+
 pub fn get_collatz(number: Int) -> Int {
   case number {
     1 -> 0
@@ -9,9 +13,9 @@ pub fn get_collatz(number: Int) -> Int {
   }
 }
 
-pub fn steps(number: Int) -> Result(Int, String) {
+pub fn steps(number: Int) -> Result(Int, NonPositiveNumber) {
   case number <= 0 {
-    True -> Error("Only positive numbers are allowed")
+    True -> Error(NonPositiveNumber)
     False -> Ok(get_collatz(number))
   }
 }
