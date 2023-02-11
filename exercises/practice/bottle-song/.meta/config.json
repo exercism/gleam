@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "suraj-mandal"
+  ],
+  "files": {
+    "solution": [
+      "src/bottle_song.gleam"
+    ],
+    "test": [
+      "test/bottle_song_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Produce the lyrics to the popular children's repetitive song: Ten Green Bottles.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Ten_Green_Bottles"
+}
