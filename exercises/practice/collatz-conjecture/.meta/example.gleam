@@ -1,4 +1,4 @@
-pub type NonPositiveNumber {
+pub type Error {
   NonPositiveNumber
 }
 
@@ -13,7 +13,7 @@ pub fn get_collatz(number: Int) -> Int {
   }
 }
 
-pub fn steps(number: Int) -> Result(Int, NonPositiveNumber) {
+pub fn steps(number: Int) -> Result(Int, Error) {
   case number <= 0 {
     True -> Error(NonPositiveNumber)
     False -> Ok(get_collatz(number))

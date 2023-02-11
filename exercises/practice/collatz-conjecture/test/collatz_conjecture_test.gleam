@@ -1,6 +1,6 @@
 import gleeunit
 import gleeunit/should
-import collatz_conjecture
+import collatz_conjecture.{Error, NonPositiveNumber}
 
 pub fn main() {
   gleeunit.main()
@@ -28,10 +28,10 @@ pub fn large_number_of_even_and_odd_steps_test() {
 
 pub fn zero_is_an_error_test() {
   collatz_conjecture.steps(0)
-  |> should.equal(Error(collatz_conjecture.NonPositiveNumber))
+  |> should.equal(Error(NonPositiveNumber))
 }
 
 pub fn negative_value_is_an_error_test() {
   collatz_conjecture.steps(-15)
-  |> should.equal(Error(collatz_conjecture.NonPositiveNumber))
+  |> should.equal(Error(NonPositiveNumber))
 }
