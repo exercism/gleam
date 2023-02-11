@@ -664,6 +664,22 @@
           "result"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "22298714-cc36-49b7-8e70-cfb91ff42112",
+        "practices": [
+          "maths"
+        ],
+        "prerequisites": [
+          "int",
+          "maths",
+          "order",
+          "case",
+          "result"
+        ],
+        "difficulty": 5
       }
     ]
   },
