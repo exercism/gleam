@@ -621,6 +621,24 @@
         "difficulty": 1
       },
       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "a35a95b5-e8ea-4c0a-8ca8-621c6f3501be",
+        "practices": [
+          "maths",
+          "list"
+        ],
+        "prerequisites": [
+          "map",
+          "list",
+          "string",
+          "custom-type",
+          "case",
+          "maths"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "bottle-song",
         "name": "Bottle Song",
         "uuid": "333129cf-8be6-4ce6-b6eb-1d2b12d383f2",
