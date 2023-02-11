@@ -1,4 +1,4 @@
-name = "reverse_string"
+name = "perfect_numbers"
 version = "0.1.0"
 
 [dependencies]
