@@ -1,7 +1,6 @@
 import gleeunit
 import gleeunit/should
 import bottle_song
-import gleam/string
 
 pub fn main() {
   gleeunit.main()
@@ -9,7 +8,6 @@ pub fn main() {
 
 pub fn verse_single_verse_first_generic_verse_test() {
   bottle_song.recite(start_bottles: 10, take_down: 1)
-  |> string.trim
   |> should.equal(
     "Ten green bottles hanging on the wall,
 Ten green bottles hanging on the wall,
@@ -20,7 +18,6 @@ There'll be nine green bottles hanging on the wall.",
 
 pub fn verse_single_verse_last_generic_verse_test() {
   bottle_song.recite(start_bottles: 3, take_down: 1)
-  |> string.trim
   |> should.equal(
     "Three green bottles hanging on the wall,
 Three green bottles hanging on the wall,
@@ -31,7 +28,6 @@ There'll be two green bottles hanging on the wall.",
 
 pub fn verse_single_verse_verse_with_2_bottles_test() {
   bottle_song.recite(start_bottles: 2, take_down: 1)
-  |> string.trim
   |> should.equal(
     "Two green bottles hanging on the wall,
 Two green bottles hanging on the wall,
@@ -42,7 +38,6 @@ There'll be one green bottle hanging on the wall.",
 
 pub fn verse_single_verse_verse_with_1_bottle_test() {
   bottle_song.recite(start_bottles: 1, take_down: 1)
-  |> string.trim
   |> should.equal(
     "One green bottle hanging on the wall,
 One green bottle hanging on the wall,
@@ -53,7 +48,6 @@ There'll be no green bottles hanging on the wall.",
 
 pub fn lyrics_multiple_verses_first_two_verses_test() {
   bottle_song.recite(start_bottles: 10, take_down: 2)
-  |> string.trim
   |> should.equal(
     "Ten green bottles hanging on the wall,
 Ten green bottles hanging on the wall,
@@ -69,7 +63,6 @@ There'll be eight green bottles hanging on the wall.",
 
 pub fn lyrics_multiple_verses_last_three_verses_test() {
   bottle_song.recite(start_bottles: 3, take_down: 3)
-  |> string.trim
   |> should.equal(
     "Three green bottles hanging on the wall,
 Three green bottles hanging on the wall,
@@ -90,7 +83,6 @@ There'll be no green bottles hanging on the wall.",
 
 pub fn lyrics_multiple_verses_all_verses_test() {
   bottle_song.recite(start_bottles: 10, take_down: 10)
-  |> string.trim
   |> should.equal(
     "Ten green bottles hanging on the wall,
 Ten green bottles hanging on the wall,
