@@ -609,6 +609,22 @@
         "difficulty": 3
       },
       {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "576c4a50-6aef-4b28-a7b4-0e682004a690",
+        "practices": [
+          "int",
+          "recursion"
+        ],
+        "prerequisites": [
+          "int",
+          "bool",
+          "maths",
+          "recursion"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "c10a4881-6605-4ce9-83ec-96b4c12f679a",
@@ -619,6 +635,38 @@
           "string"
         ],
         "difficulty": 1
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "a35a95b5-e8ea-4c0a-8ca8-621c6f3501be",
+        "practices": [
+          "maths",
+          "list"
+        ],
+        "prerequisites": [
+          "map",
+          "list",
+          "string",
+          "custom-type",
+          "case",
+          "maths"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "333129cf-8be6-4ce6-b6eb-1d2b12d383f2",
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case"
+        ],
+        "difficulty": 5
       },
       {
         "slug": "list-ops",
@@ -650,6 +698,18 @@
           "result"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "b5b9be18-9141-4176-8f8c-3dd14d14bed5",
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math"
+        ],
+        "difficulty": 2
       }
     ]
   },
