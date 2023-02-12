@@ -709,8 +709,8 @@
         "prerequisites": [
           "int",
           "string",
-          "int",
-          "case"
+          "case",
+          "list"
         ],
         "difficulty": 5
       },
