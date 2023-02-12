@@ -609,6 +609,22 @@
         "difficulty": 3
       },
       {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "576c4a50-6aef-4b28-a7b4-0e682004a690",
+        "practices": [
+          "int",
+          "recursion"
+        ],
+        "prerequisites": [
+          "int",
+          "bool",
+          "maths",
+          "recursion"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "c10a4881-6605-4ce9-83ec-96b4c12f679a",
