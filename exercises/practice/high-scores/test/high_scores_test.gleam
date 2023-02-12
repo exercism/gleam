@@ -13,12 +13,22 @@ pub fn list_of_scores_test() {
 
 pub fn latest_score_test() {
   high_scores.latest([100, 0, 90, 30])
-  |> should.equal(30)
+  |> should.equal(Ok(30))
+}
+
+pub fn latest_score_without_scores_test() {
+  high_scores.latest([])
+  |> should.equal(Error(Nil))
 }
 
 pub fn personal_best_test() {
   high_scores.personal_best([40, 100, 70])
-  |> should.equal(100)
+  |> should.equal(Ok(100))
+}
+
+pub fn personal_best_without_scores_test() {
+  high_scores.personal_best([])
+  |> should.equal(Error(Nil))
 }
 
 pub fn personal_top_three_from_a_list_of_scores_test() {
