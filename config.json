@@ -700,6 +700,21 @@
         "difficulty": 3
       },
       {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "22298714-cc36-49b7-8e70-cfb91ff42112",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "int",
+          "string",
+          "case",
+          "list"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "grains",
         "name": "Grains",
         "uuid": "b5b9be18-9141-4176-8f8c-3dd14d14bed5",
