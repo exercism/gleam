@@ -1,6 +1,6 @@
 import gleeunit
 import gleeunit/should
-import collatz_conjecture.{Error, NonPositiveNumber}
+import collatz_conjecture.{NonPositiveNumber}
 
 pub fn main() {
   gleeunit.main()
