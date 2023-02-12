@@ -698,6 +698,18 @@
           "result"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "b5b9be18-9141-4176-8f8c-3dd14d14bed5",
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math"
+        ],
+        "difficulty": 2
       }
     ]
   },
