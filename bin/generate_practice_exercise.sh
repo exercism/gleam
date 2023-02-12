@@ -42,7 +42,7 @@ download "$exercise_dir"/manifest.toml "$packages_prefix"/manifest.toml
 name=$(echo $SLUG | sed 's/-/_/g' )
 sed -i -e "s/name = \".*\"/name = \"$name\"/" "$exercise_dir"/gleam.toml
 
-cat <<EOT >> "$exercise_dir"/.gitignore
+cat <<EOT > "$exercise_dir"/.gitignore
 *.beam
 *.ez
 build
