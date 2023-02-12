@@ -1,21 +1,21 @@
-pub type InvalidSquare {
+pub type Error {
   InvalidSquare
 }
 
-fn power(exponent: Int, result: Int) -> Int {
+fn square_up(exponent: Int, result: Int) -> Int {
   case exponent {
     0 -> result
-    val -> power(val - 1, 2 * result)
+    val -> square_up(val - 1, 2 * result)
   }
 }
 
-pub fn square(square: Int) -> Result(Int, InvalidSquare) {
+pub fn square(square: Int) -> Result(Int, Error) {
   case square >= 1 && square <= 64 {
-    True -> Ok(power(square - 1, 1))
+    True -> Ok(square_up(square - 1, 1))
     False -> Error(InvalidSquare)
   }
 }
 
 pub fn total() -> Int {
-  power(64, 1) - 1
+  square_up(64, 1) - 1
 }

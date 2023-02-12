@@ -1,9 +1,6 @@
 import gleeunit
 import gleeunit/should
-import grains
-
-// The final tests of square test error conditions
-// In these cases you should expect an error as is idiomatic for your language
+import grains.{InvalidSquare}
 
 pub fn main() {
   gleeunit.main()
@@ -46,17 +43,17 @@ pub fn returns_the_number_of_grains_on_the_square_grains_on_square_64_test() {
 
 pub fn returns_the_number_of_grains_on_the_square_square_0_raises_an_exception_test() {
   grains.square(0)
-  |> should.equal(Error(grains.InvalidSquare))
+  |> should.equal(Error(InvalidSquare))
 }
 
 pub fn returns_the_number_of_grains_on_the_square_negative_square_raises_an_exception_test() {
   grains.square(-1)
-  |> should.equal(Error(grains.InvalidSquare))
+  |> should.equal(Error(InvalidSquare))
 }
 
 pub fn returns_the_number_of_grains_on_the_square_square_greater_than_64_raises_an_exception_test() {
   grains.square(65)
-  |> should.equal(Error(grains.InvalidSquare))
+  |> should.equal(Error(InvalidSquare))
 }
 
 pub fn returns_the_total_number_of_grains_on_the_board_test() {

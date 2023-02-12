@@ -1,8 +1,8 @@
-pub type InvalidSquare {
+pub type Error {
   InvalidSquare
 }
 
-pub fn square(square square: Int) -> Result(Int, String) {
+pub fn square(square: Int) -> Result(Int, Error) {
   todo
 }
 
