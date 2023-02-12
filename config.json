@@ -725,6 +725,24 @@
           "math"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "64a40995-c380-4233-a7af-98498dbc5c2d",
+        "practices": [
+          "list",
+          "string",
+          "result"
+        ],
+        "prerequisites": [
+          "list",
+          "string",
+          "int",
+          "nil",
+          "result"
+        ],
+        "difficulty": 2
       }
     ]
   },
