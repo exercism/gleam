@@ -1,5 +1,7 @@
 {
-  "authors": ["erikschierboom"],
+  "authors": [
+    "erikschierboom"
+  ],
   "files": {
     "solution": [
       "src/nucleotide_count.gleam"
