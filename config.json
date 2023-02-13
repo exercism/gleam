@@ -759,6 +759,20 @@
           "result"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "d2288ce0-3ef4-4a79-8e21-bf5624b5ab27",
+        "practices": [
+          "list",
+          "string"
+        ],
+        "prerequisites": [
+          "list",
+          "string"
+        ],
+        "difficulty": 2
       }
     ]
   },
