@@ -775,6 +775,20 @@
           "int"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "2e7fdb4d-3e75-4dc2-9fb7-ee1a9e1950f9",
+        "practices": [
+          "string",
+          "int"
+        ],
+        "prerequisites": [
+          "string",
+          "int"
+        ],
+        "difficulty": 5
       }
     ]
   },
