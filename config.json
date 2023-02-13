@@ -762,7 +762,8 @@
         "practices": [
           "int",
           "list",
-          "bitwise"
+          "bitwise",
+          "bit-string"
         ],
         "prerequisites": [
           "int",
