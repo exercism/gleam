@@ -180,14 +180,9 @@
         "name": "Freelancer Rates",
         "uuid": "fee79e03-1496-476f-964f-e60632cb13dc",
         "difficulty": 4,
-        "practices": [
-          "maths"
-        ],
-        "prerequisites": [
-          "int",
-          "float",
-          "maths"
-        ]
+        "practices": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "anagram",
