@@ -1,3 +1,3 @@
-pub fn recite(inputs: List(String)) -> List(String) {
+pub fn recite(inputs: List(String)) -> String {
   todo
 }
