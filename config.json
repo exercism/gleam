@@ -759,6 +759,22 @@
           "result"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "etl",
+        "name": "ETL",
+        "uuid": "1655d9f6-6199-4462-85bd-a5da5f25d30a",
+        "practices": [
+          "map",
+          "list"
+        ],
+        "prerequisites": [
+          "map",
+          "list",
+          "string",
+          "int"
+        ],
+        "difficulty": 2
       }
     ]
   },
