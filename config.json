@@ -756,6 +756,24 @@
         "difficulty": 2
       },
       {
+        "slug": "allergies",
+        "name": "Allergies",
+        "uuid": "f829a1af-0eaf-4880-b1d8-cd2cb3753fb0",
+        "practices": [
+          "int",
+          "list",
+          "bitwise",
+          "bit-string"
+        ],
+        "prerequisites": [
+          "int",
+          "list",
+          "bitwise",
+          "case"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "etl",
         "name": "ETL",
         "uuid": "1655d9f6-6199-4462-85bd-a5da5f25d30a",
