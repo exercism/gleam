@@ -5,10 +5,10 @@ pub fn recite(inputs: List(String)) -> List(String) {
     [] -> []
     [subject, ..] ->
       inputs
-      |> list.window(2)
+      |> list.window_by_2()
       |> list.map(fn(pair) {
         case pair {
-          [want, lost] ->
+          #(want, lost) ->
             "For want of a " <> want <> " the " <> lost <> " was lost."
         }
       })
