@@ -180,14 +180,9 @@
         "name": "Freelancer Rates",
         "uuid": "fee79e03-1496-476f-964f-e60632cb13dc",
         "difficulty": 4,
-        "practices": [
-          "maths"
-        ],
-        "prerequisites": [
-          "int",
-          "float",
-          "maths"
-        ]
+        "practices": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "anagram",
@@ -727,6 +722,22 @@
         "difficulty": 2
       },
       {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide count",
+        "uuid": "3b7e1bbf-08b2-4e0e-ba5d-5a887deb4817",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "list",
+          "result",
+          "string",
+          "int",
+          "map"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "64a40995-c380-4233-a7af-98498dbc5c2d",
@@ -757,6 +768,36 @@
           "result"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "etl",
+        "name": "ETL",
+        "uuid": "1655d9f6-6199-4462-85bd-a5da5f25d30a",
+        "practices": [
+          "map",
+          "list"
+        ],
+        "prerequisites": [
+          "map",
+          "list",
+          "string",
+          "int"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "2e7fdb4d-3e75-4dc2-9fb7-ee1a9e1950f9",
+        "practices": [
+          "string",
+          "int"
+        ],
+        "prerequisites": [
+          "string",
+          "int"
+        ],
+        "difficulty": 5
       }
     ]
   },
