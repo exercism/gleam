@@ -8,12 +8,12 @@ pub fn main() {
 }
 
 pub fn single_letter_test() {
-  etl.transform(legacy: map.from_list([#(1, ["A"])]))
+  etl.transform(map.from_list([#(1, ["A"])]))
   |> should.equal(map.from_list([#("a", 1)]))
 }
 
 pub fn single_score_with_multiple_letters_test() {
-  etl.transform(legacy: map.from_list([#(1, ["A", "E", "I", "O", "U"])]))
+  etl.transform(map.from_list([#(1, ["A", "E", "I", "O", "U"])]))
   |> should.equal(map.from_list([
     #("a", 1),
     #("e", 1),
@@ -24,12 +24,12 @@ pub fn single_score_with_multiple_letters_test() {
 }
 
 pub fn multiple_scores_with_multiple_letters_test() {
-  etl.transform(legacy: map.from_list([#(1, ["A", "E"]), #(2, ["D", "G"])]))
+  etl.transform(map.from_list([#(1, ["A", "E"]), #(2, ["D", "G"])]))
   |> should.equal(map.from_list([#("a", 1), #("d", 2), #("e", 1), #("g", 2)]))
 }
 
 pub fn multiple_scores_with_differing_numbers_of_letters_test() {
-  etl.transform(legacy: map.from_list([
+  etl.transform(map.from_list([
     #(1, ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"]),
     #(10, ["Q", "Z"]),
     #(2, ["D", "G"]),

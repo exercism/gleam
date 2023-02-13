@@ -2,7 +2,7 @@ import gleam/string
 import gleam/map.{Map}
 import gleam/list
 
-pub fn transform(legacy legacy: Map(Int, List(String))) -> Map(String, Int) {
+pub fn transform(legacy: Map(Int, List(String))) -> Map(String, Int) {
   map.fold(
     over: legacy,
     from: map.new(),
