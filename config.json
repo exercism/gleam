@@ -784,6 +784,22 @@
           "int"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "change",
+        "name": "Change",
+        "uuid": "8dc8aceb-fe74-415c-bf4b-956840155272",
+        "practices": [
+          "list",
+          "result"
+        ],
+        "prerequisites": [
+          "list",
+          "result",
+          "int",
+          "custom-type"
+        ],
+        "difficulty": 6
       }
     ]
   },
