@@ -759,6 +759,23 @@
           "result"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "allergies",
+        "name": "Allergies",
+        "uuid": "f829a1af-0eaf-4880-b1d8-cd2cb3753fb0",
+        "practices": [
+          "int",
+          "list",
+          "bitwise"
+        ],
+        "prerequisites": [
+          "int",
+          "list",
+          "bitwise",
+          "case"
+        ],
+        "difficulty": 4
       }
     ]
   },
