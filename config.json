@@ -727,6 +727,22 @@
         "difficulty": 2
       },
       {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide count",
+        "uuid": "3b7e1bbf-08b2-4e0e-ba5d-5a887deb4817",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "list",
+          "result",
+          "string",
+          "int",
+          "map"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "64a40995-c380-4233-a7af-98498dbc5c2d",
