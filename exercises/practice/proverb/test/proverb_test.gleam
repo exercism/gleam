@@ -7,24 +7,24 @@ pub fn main() {
 }
 
 pub fn zero_pieces_test() {
-  proverb.recite(inputs: [])
+  proverb.recite([])
   |> should.equal([])
 }
 
 pub fn one_piece_test() {
-  proverb.recite(inputs: ["nail"])
+  proverb.recite(["nail"])
   |> should.equal(["And all for the want of a nail."])
 }
 
 pub fn two_pieces_test() {
-  proverb.recite(inputs: ["nail", "shoe"])
+  proverb.recite(["nail", "shoe"])
   |> should.equal([
     "For want of a nail the shoe was lost.", "And all for the want of a nail.",
   ])
 }
 
 pub fn three_pieces_test() {
-  proverb.recite(inputs: ["nail", "shoe", "horse"])
+  proverb.recite(["nail", "shoe", "horse"])
   |> should.equal([
     "For want of a nail the shoe was lost.",
     "For want of a shoe the horse was lost.", "And all for the want of a nail.",
@@ -32,7 +32,7 @@ pub fn three_pieces_test() {
 }
 
 pub fn full_proverb_test() {
-  proverb.recite(inputs: [
+  proverb.recite([
     "nail", "shoe", "horse", "rider", "message", "battle", "kingdom",
   ])
   |> should.equal([
@@ -47,7 +47,7 @@ pub fn full_proverb_test() {
 }
 
 pub fn four_pieces_modernized_test() {
-  proverb.recite(inputs: ["pin", "gun", "soldier", "battle"])
+  proverb.recite(["pin", "gun", "soldier", "battle"])
   |> should.equal([
     "For want of a pin the gun was lost.",
     "For want of a gun the soldier was lost.",
