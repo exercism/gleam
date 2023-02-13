@@ -11,7 +11,7 @@ pub fn latest(high_scores: List(Int)) -> Result(Int, Nil) {
 
 pub fn personal_best(high_scores: List(Int)) -> Result(Int, Nil) {
   high_scores
-  |> list.sort(by: int.compare)
+  |> list.sort(by: fn(a, b) { int.compare(b, a) })
   |> list.reverse()
   |> list.first()
 }
