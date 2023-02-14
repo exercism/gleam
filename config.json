@@ -819,6 +819,21 @@
         "difficulty": 2
       },
       {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "6d4933cc-0845-4992-93ee-54f79a79fc5a",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "order",
+          "list",
+          "case",
+          "recursion"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "2e7fdb4d-3e75-4dc2-9fb7-ee1a9e1950f9",
