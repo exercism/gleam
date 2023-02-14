@@ -1,5 +1,7 @@
 {
-  "authors": ["suraj-mandal"],
+  "authors": [
+    "suraj-mandal"
+  ],
   "files": {
     "solution": [
       "src/scrabble_score.gleam"
