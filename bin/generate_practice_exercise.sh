@@ -30,7 +30,7 @@ jq --arg slug "$SLUG" --arg uuid "$UUID" \
     '.exercises.practice += [{slug: $slug, name: "TODO", uuid: $uuid, practices: [], prerequisites: [], difficulty: 5}]' \
     config.json > config.json.tmp
 # jq always rounds whole numbers, but average_run_time needs to be a float
-sed -i -e 's/"average_run_time": \([[:digit:]]\+\)$/"average_run_time": \1.0/' config.json.tmp
+sed -i 's/"average_run_time": \([[:digit:]]\+\)$/"average_run_time": \1.0/' config.json.tmp
 mv config.json.tmp config.json
 
 # Create instructions and config files
