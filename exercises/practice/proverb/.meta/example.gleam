@@ -8,13 +8,10 @@ pub fn recite(inputs: List(String)) -> String {
       inputs
       |> list.window_by_2()
       |> list.map(fn(pair) {
-        case pair {
-          #(want, lost) ->
-            "For want of a " <> want <> " the " <> lost <> " was lost."
-        }
+        let #(want, lost) = pair
+        "For want of a " <> want <> " the " <> lost <> " was lost."
       })
       |> list.append(["And all for the want of a " <> subject <> "."])
-      |> list.intersperse("\n")
-      |> string.concat()
+      |> string.join("\n")
   }
 }
