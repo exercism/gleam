@@ -876,6 +876,20 @@
           "custom-type"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "efdf70a3-57e6-474a-9fc2-09f26bb609b6",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "custom-type",
+          "case"
+        ],
+        "difficulty": 4
       }
     ]
   },
