@@ -876,6 +876,20 @@
           "custom-type"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "6e889724-656e-4f0c-aba1-08f103490e9d",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "custom-type",
+          "int"
+        ],
+        "difficulty": 4
       }
     ]
   },
