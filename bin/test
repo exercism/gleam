@@ -74,7 +74,7 @@ function copy_exercise {
 }
 
 function run_all {
-  # create a all_exercises folder
+  # create an all_exercises folder
   mkdir -p all_exercises all_exercises/src all_exercises/test
 
   cat <<EOT > all_exercises/test/all_exercises_test.gleam
@@ -111,7 +111,7 @@ EOT
   done
 
   # Running all tests
-    if ! (cd all_exercises && gleam test)
+  if ! (cd all_exercises && gleam test)
   then
     echo "A solution did not pass the tests"
     exit_code=1
