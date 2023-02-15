@@ -16,7 +16,7 @@
     "highlightjs_language": "rust"
   },
   "test_runner": {
-    "average_run_time": 3
+    "average_run_time": 3.0
   },
   "files": {
     "solution": [
@@ -876,6 +876,19 @@
           "custom-type"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "e9332e6f-a7e5-4f30-825c-64af0a278a70",
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math",
+          "recursion"
+        ],
+        "difficulty": 4
       }
     ]
   },
