@@ -886,6 +886,9 @@
         ],
         "prerequisites": [
           "math",
+          "int",
+          "list",
+          "result",
           "recursion"
         ],
         "difficulty": 4

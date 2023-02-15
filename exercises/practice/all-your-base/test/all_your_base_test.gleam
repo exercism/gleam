@@ -1,6 +1,6 @@
 import gleeunit
 import gleeunit/should
-import all_your_base.{InvalidBase, InvalidDigit}
+import all_your_base.{InvalidBase, InvalidDigitSequence}
 
 pub fn main() {
   gleeunit.main()
@@ -72,17 +72,17 @@ pub fn leading_zeros_test() {
 
 pub fn input_base_is_one_test() {
   all_your_base.rebase(digits: [0], input_base: 1, output_base: 10)
-  |> should.equal(Error(InvalidBase))
+  |> should.equal(Error(InvalidBase(1)))
 }
 
 pub fn input_base_is_zero_test() {
   all_your_base.rebase(digits: [], input_base: 0, output_base: 10)
-  |> should.equal(Error(InvalidBase))
+  |> should.equal(Error(InvalidBase(0)))
 }
 
 pub fn input_base_is_negative_test() {
   all_your_base.rebase(digits: [1], input_base: -2, output_base: 10)
-  |> should.equal(Error(InvalidBase))
+  |> should.equal(Error(InvalidBase(-2)))
 }
 
 pub fn negative_digit_test() {
@@ -91,7 +91,7 @@ pub fn negative_digit_test() {
     input_base: 2,
     output_base: 10,
   )
-  |> should.equal(Error(InvalidDigit))
+  |> should.equal(Error(InvalidDigitSequence(-1)))
 }
 
 pub fn invalid_positive_digit_test() {
@@ -100,7 +100,7 @@ pub fn invalid_positive_digit_test() {
     input_base: 2,
     output_base: 10,
   )
-  |> should.equal(Error(InvalidDigit))
+  |> should.equal(Error(InvalidDigitSequence(2)))
 }
 
 pub fn output_base_is_one_test() {
@@ -109,20 +109,23 @@ pub fn output_base_is_one_test() {
     input_base: 2,
     output_base: 1,
   )
-  |> should.equal(Error(InvalidBase))
+  |> should.equal(Error(InvalidBase(1)))
 }
 
 pub fn output_base_is_zero_test() {
   all_your_base.rebase(digits: [7], input_base: 10, output_base: 0)
-  |> should.equal(Error(InvalidBase))
+  |> should.equal(Error(InvalidBase(0)))
 }
 
 pub fn output_base_is_negative_test() {
   all_your_base.rebase(digits: [1], input_base: 2, output_base: -7)
-  |> should.equal(Error(InvalidBase))
+  |> should.equal(Error(InvalidBase(-7)))
 }
 
 pub fn both_bases_are_negative_test() {
-  all_your_base.rebase(digits: [1], input_base: -2, output_base: -7)
-  |> should.equal(Error(InvalidBase))
+  let output =
+    all_your_base.rebase(digits: [1], input_base: -2, output_base: -7)
+  should.be_true(
+    output == Error(InvalidBase(-2)) || output == Error(InvalidBase(-7)),
+  )
 }

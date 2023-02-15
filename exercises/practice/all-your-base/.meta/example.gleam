@@ -2,8 +2,8 @@ import gleam/list
 import gleam/result
 
 pub type Error {
-  InvalidBase
-  InvalidDigit
+  InvalidBase(Int)
+  InvalidDigitSequence(Int)
 }
 
 pub fn rebase(
@@ -16,22 +16,23 @@ pub fn rebase(
       case get_base_number(digits, input) {
         Ok(0) -> Ok([0])
         Ok(value) -> Ok(get_base_digits(value, output, []))
-        _ -> Error(InvalidDigit)
+        Error(error_detail) -> Error(error_detail)
       }
-    _, _ -> Error(InvalidBase)
+    input, _ if input < 2 -> Error(InvalidBase(input))
+    _, output if output < 2 -> Error(InvalidBase(output))
   }
 }
 
 fn get_base_number(digits: List(Int), base: Int) -> Result(Int, Error) {
-  digits
-  |> list.fold(
+  list.fold(
+    digits,
     Ok(0),
-    fn(acc, cur) {
-      case cur, acc {
-        _, Error(InvalidDigit) -> Error(InvalidDigit)
-        value, acc if value >= 0 && value < base ->
-          result.then(acc, fn(acc_val) { Ok(acc_val * base + value) })
-        _, _ -> Error(InvalidDigit)
+    fn(accumulator, digit) {
+      case digit, accumulator {
+        value, Ok(current) if value >= 0 && value < base ->
+          Ok(current * base + value)
+        value, present_val ->
+          result.then(present_val, fn(_) { Error(InvalidDigitSequence(value)) })
       }
     },
   )

@@ -1,12 +1,12 @@
 pub type Error {
-  InvalidBase
-  InvalidDigit
+  InvalidBase(Int)
+  InvalidDigit(Int)
 }
 
 pub fn rebase(
   digits digits: List(Int),
   input_base input_base: Int,
   output_base output_base: Int,
-) -> Result(List(Int), String) {
+) -> Result(List(Int), Error) {
   todo
 }
