@@ -2,8 +2,6 @@ import gleeunit
 import gleeunit/should
 import knapsack.{Item}
 
-// Depending on the language, the input type can be modified
-
 pub fn main() {
   gleeunit.main()
 }
