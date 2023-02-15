@@ -5,6 +5,7 @@ import gleam/list
 import gleam/int
 import gleam/float
 import gleam/string
+import gleam/result
 import gleam/erlang
 import gleam/erlang/file.{Reason}
 import gleam/json
@@ -41,6 +42,7 @@ type Function {
     arguments: List(Argument),
     return_type: JsonData,
     can_error: Bool,
+    need_labels: Bool,
     order: Int,
   )
 }
@@ -89,6 +91,35 @@ fn json_data_to_gleam_value(data: JsonData) -> String {
 
       "CustomRecordType(" <> args <> ")"
     }
+  }
+}
+
+fn have_same_type(a: JsonData, b: JsonData) -> Bool {
+  case a, b {
+    JsonNull, JsonNull -> True
+    JsonBool(_), JsonBool(_) -> True
+    JsonInt(_), JsonInt(_) -> True
+    JsonFloat(_), JsonFloat(_) -> True
+    JsonString(_), JsonString(_) -> True
+    JsonList([x, ..]), JsonList([y, ..]) -> have_same_type(x, y)
+    JsonObject(x), JsonObject(y) -> {
+      let x: List(#(String, JsonData)) =
+        x
+        |> map.to_list
+        |> list.sort(fn(a, b) { string.compare(a.0, b.0) })
+      let y: List(#(String, JsonData)) =
+        y
+        |> map.to_list
+        |> list.sort(fn(a, b) { string.compare(a.0, b.0) })
+      let comparaison =
+        list.strict_zip(x, y)
+        |> result.map(list.all(_, fn(pair) {
+          let #(#(name_a, type_a), #(name_b, type_b)) = pair
+          name_a == name_b && have_same_type(type_a, type_b)
+        }))
+      comparaison == Ok(True)
+    }
+    _, _ -> False
   }
 }
 
@@ -153,7 +184,8 @@ fn write_solution_files(
     |> map.to_list
     |> list.sort(by: fn(a, b) { int.compare({ a.1 }.order, { b.1 }.order) })
     |> list.map(fn(item) {
-      let #(name, Function(arguments, return_type, can_error, _)) = item
+      let #(name, Function(arguments, return_type, can_error, need_labels, _)) =
+        item
       let return_type = json_data_to_gleam_type(return_type)
 
       let return = case can_error {
@@ -164,13 +196,22 @@ fn write_solution_files(
       let args =
         arguments
         |> list.map(fn(argument) {
-          string.concat([
-            clean_variable(argument.arg_name),
-            " ",
-            clean_variable(argument.arg_name),
-            ": ",
-            json_data_to_gleam_type(argument.arg_type),
-          ])
+          case need_labels {
+            True ->
+              string.concat([
+                clean_variable(argument.arg_name),
+                " ",
+                clean_variable(argument.arg_name),
+                ": ",
+                json_data_to_gleam_type(argument.arg_type),
+              ])
+            False ->
+              string.concat([
+                clean_variable(argument.arg_name),
+                ": ",
+                json_data_to_gleam_type(argument.arg_type),
+              ])
+          }
         })
         |> string.join(", ")
 
@@ -223,14 +264,27 @@ fn check_test_case(
         |> map.to_list
         |> list.map(fn(arg) { Argument(arg.0, arg.1) })
 
+      let need_labels = case args {
+        [] -> False
+        [_] -> False
+        [Argument(_, type_a), Argument(_, type_b)] ->
+          have_same_type(type_a, type_b)
+        _ -> True
+      }
+
       let current_function = case map.get(functions, function) {
-        Ok(func) ->
+        Ok(func) -> {
+          let func =
+            Function(..func, need_labels: func.need_labels || need_labels)
+
           case can_error {
             True -> Function(..func, can_error: True)
             False -> Function(..func, return_type: expected)
           }
+        }
 
-        Error(Nil) -> Function(args, expected, can_error, map.size(functions))
+        Error(Nil) ->
+          Function(args, expected, can_error, need_labels, map.size(functions))
       }
 
       map.insert(functions, function, current_function)
@@ -321,11 +375,17 @@ fn print_test(
         _ -> print_comments(comments)
       }
       let test_name = flatten_description(prefix <> description)
+      assert Ok(Function(need_labels: need_labels, ..)) =
+        map.get(functions, function)
       let input =
         input
         |> map.to_list
         |> list.map(fn(item) {
-          clean_variable(item.0) <> ": " <> json_data_to_gleam_value(item.1)
+          case need_labels {
+            True ->
+              clean_variable(item.0) <> ": " <> json_data_to_gleam_value(item.1)
+            False -> json_data_to_gleam_value(item.1)
+          }
         })
         |> string.join(", ")
       let expected = get_expected_value(function, functions, expected)

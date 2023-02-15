@@ -180,14 +180,9 @@
         "name": "Freelancer Rates",
         "uuid": "fee79e03-1496-476f-964f-e60632cb13dc",
         "difficulty": 4,
-        "practices": [
-          "maths"
-        ],
-        "prerequisites": [
-          "int",
-          "float",
-          "maths"
-        ]
+        "practices": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "anagram",
@@ -700,6 +695,36 @@
         "difficulty": 3
       },
       {
+        "slug": "prime-factors",
+        "name": "Prime Factors",
+        "uuid": "00d1a428-99c4-4175-bee2-e05fc034528f",
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math",
+          "int",
+          "list",
+          "case"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "22298714-cc36-49b7-8e70-cfb91ff42112",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "int",
+          "string",
+          "case",
+          "list"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "grains",
         "name": "Grains",
         "uuid": "b5b9be18-9141-4176-8f8c-3dd14d14bed5",
@@ -710,6 +735,147 @@
           "math"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide count",
+        "uuid": "3b7e1bbf-08b2-4e0e-ba5d-5a887deb4817",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "list",
+          "result",
+          "string",
+          "int",
+          "map"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "64a40995-c380-4233-a7af-98498dbc5c2d",
+        "practices": [
+          "list",
+          "string",
+          "result"
+        ],
+        "prerequisites": [
+          "list",
+          "string",
+          "int",
+          "nil",
+          "result"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "d2288ce0-3ef4-4a79-8e21-bf5624b5ab27",
+        "practices": [
+          "list",
+          "string"
+        ],
+        "prerequisites": [
+          "list",
+          "string"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "af720091-1352-4e07-96d2-0868588601f2",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "int",
+          "result"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "allergies",
+        "name": "Allergies",
+        "uuid": "f829a1af-0eaf-4880-b1d8-cd2cb3753fb0",
+        "practices": [
+          "int",
+          "list",
+          "bitwise",
+          "bit-string"
+        ],
+        "prerequisites": [
+          "int",
+          "list",
+          "bitwise",
+          "case"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "etl",
+        "name": "ETL",
+        "uuid": "1655d9f6-6199-4462-85bd-a5da5f25d30a",
+        "practices": [
+          "map",
+          "list"
+        ],
+        "prerequisites": [
+          "map",
+          "list",
+          "string",
+          "int"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "6d4933cc-0845-4992-93ee-54f79a79fc5a",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "order",
+          "list",
+          "case",
+          "recursion"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "2e7fdb4d-3e75-4dc2-9fb7-ee1a9e1950f9",
+        "practices": [
+          "string",
+          "int"
+        ],
+        "prerequisites": [
+          "string",
+          "int"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "change",
+        "name": "Change",
+        "uuid": "8dc8aceb-fe74-415c-bf4b-956840155272",
+        "practices": [
+          "list",
+          "result"
+        ],
+        "prerequisites": [
+          "list",
+          "result",
+          "int",
+          "custom-type"
+        ],
+        "difficulty": 6
       }
     ]
   },
