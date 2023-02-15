@@ -166,8 +166,6 @@ pub fn testing_for_cats_allergy_allergic_to_everything_test() {
   assert True = allergies.allergic_to(allergies.Cats, 255)
 }
 
-// Given a number, list all things Tom is allergic to
-
 pub fn list_when__no_allergies_test() {
   allergies.list(0)
   |> should.equal([])
