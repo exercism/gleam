@@ -4,10 +4,10 @@
   ],
   "files": {
     "solution": [
-      "src/high_scores.gleam"
+      "src/yacht.gleam"
     ],
     "test": [
-      "test/high_scores_test.gleam"
+      "test/yacht_test.gleam"
     ],
     "example": [
       ".meta/example.gleam"
@@ -17,6 +17,7 @@
       "manifest.toml"
     ]
   },
-  "blurb": "Manage a player's High Score list.",
-  "source": "Tribute to the eighties' arcade game Frogger"
+  "blurb": "Score a single throw of dice in the game Yacht.",
+  "source": "James Kilfiger, using wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)"
 }

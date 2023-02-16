@@ -892,6 +892,36 @@
           "recursion"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "6e889724-656e-4f0c-aba1-08f103490e9d",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "custom-type",
+          "int"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "398c9816-736d-4d19-8937-cc75046f21df",
+        "practices": [
+          "case",
+          "list"
+        ],
+        "prerequisites": [
+          "int",
+          "custom-type",
+          "case",
+          "list"
+        ],
+        "difficulty": 4
       }
     ]
   },

@@ -2,8 +2,6 @@ import gleeunit
 import gleeunit/should
 import rotational_cipher
 
-// The tests are a series of rotation tests: 
-
 pub fn main() {
   gleeunit.main()
 }
