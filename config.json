@@ -878,6 +878,22 @@
         "difficulty": 6
       },
       {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "e9332e6f-a7e5-4f30-825c-64af0a278a70",
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math",
+          "int",
+          "list",
+          "result",
+          "recursion"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "6e889724-656e-4f0c-aba1-08f103490e9d",
