@@ -890,6 +890,22 @@
           "int"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "398c9816-736d-4d19-8937-cc75046f21df",
+        "practices": [
+          "case",
+          "list"
+        ],
+        "prerequisites": [
+          "int",
+          "custom-type",
+          "case",
+          "list"
+        ],
+        "difficulty": 4
       }
     ]
   },
