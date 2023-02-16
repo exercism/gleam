@@ -85,7 +85,7 @@ fn score_yacht(dice: List(Int)) -> Int {
 fn dice_with_count(dice: List(Int)) -> List(#(Int, Int)) {
   dice
   |> list.group(function.identity)
+  |> map.map_values(fn(_, matching_dice) { list.length(matching_dice) })
   |> map.to_list()
-  |> list.map(fn(dice_count) { pair.map_second(dice_count, list.length) })
   |> list.sort(fn(a, b) { int.compare(pair.second(a), pair.second(b)) })
 }
