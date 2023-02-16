@@ -1,9 +1,8 @@
-import gleam/list
-import gleam/result
+import gleam/list.{Continue, Stop}
 
 pub type Error {
   InvalidBase(Int)
-  InvalidDigitSequence(Int)
+  InvalidDigit(Int)
 }
 
 pub fn rebase(
@@ -23,16 +22,14 @@ pub fn rebase(
   }
 }
 
-fn get_base_number(digits: List(Int), base: Int) -> Result(Int, Error) {
-  list.fold(
+pub fn get_base_number(digits: List(Int), base: Int) -> Result(Int, Error) {
+  list.fold_until(
     digits,
     Ok(0),
     fn(accumulator, digit) {
-      case digit, accumulator {
-        value, Ok(current) if value >= 0 && value < base ->
-          Ok(current * base + value)
-        value, present_val ->
-          result.then(present_val, fn(_) { Error(InvalidDigitSequence(value)) })
+      case digit >= 0 && digit < base, accumulator {
+        True, Ok(current_total) -> Continue(Ok(current_total * base + digit))
+        False, _ -> Stop(Error(InvalidDigit(digit)))
       }
     },
   )

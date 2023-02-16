@@ -1,6 +1,6 @@
 import gleeunit
 import gleeunit/should
-import all_your_base.{InvalidBase, InvalidDigitSequence}
+import all_your_base.{InvalidBase, InvalidDigit}
 
 pub fn main() {
   gleeunit.main()
@@ -91,7 +91,7 @@ pub fn negative_digit_test() {
     input_base: 2,
     output_base: 10,
   )
-  |> should.equal(Error(InvalidDigitSequence(-1)))
+  |> should.equal(Error(InvalidDigit(-1)))
 }
 
 pub fn invalid_positive_digit_test() {
@@ -100,7 +100,7 @@ pub fn invalid_positive_digit_test() {
     input_base: 2,
     output_base: 10,
   )
-  |> should.equal(Error(InvalidDigitSequence(2)))
+  |> should.equal(Error(InvalidDigit(2)))
 }
 
 pub fn output_base_is_one_test() {
@@ -125,7 +125,6 @@ pub fn output_base_is_negative_test() {
 pub fn both_bases_are_negative_test() {
   let output =
     all_your_base.rebase(digits: [1], input_base: -2, output_base: -7)
-  should.be_true(
-    output == Error(InvalidBase(-2)) || output == Error(InvalidBase(-7)),
-  )
+  assert True =
+    output == Error(InvalidBase(-2)) || output == Error(InvalidBase(-7))
 }
