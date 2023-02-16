@@ -464,6 +464,23 @@
         "difficulty": 6
       },
       {
+        "slug": "pov",
+        "name": "POV",
+        "uuid": "2012322c-1693-4702-abfe-1f3e7b176035",
+        "practices": [
+          "custom-type"
+        ],
+        "prerequisites": [
+          "list",
+          "result",
+          "recursion",
+          "case",
+          "custom-type",
+          "generics"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "ff4ce860-92cc-4768-a482-ba10cc6d1190",
