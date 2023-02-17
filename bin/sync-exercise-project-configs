@@ -31,8 +31,8 @@ check() {
   project="$1"
   update_config_name "$project"
 
-  if ! diff "$canonical_config" "$project"/gleam.toml && 
-    diff "$canonical_manifest" "$project"/manifest.toml
+  if ! diff "$canonical_config" "$project"/gleam.toml || 
+    ! diff "$canonical_manifest" "$project"/manifest.toml
   then
     echo "ERROR: Config files are out of sync with gleam-test-runner config" 1>&2
     echo "Run \`bin/sync-exercise-project-configs\` to correct this" 1>&2

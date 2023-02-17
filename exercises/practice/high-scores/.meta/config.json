@@ -11,6 +11,10 @@
     ],
     "example": [
       ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
     ]
   },
   "blurb": "Manage a player's High Score list.",
