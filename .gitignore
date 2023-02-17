@@ -4,3 +4,4 @@
 bin/configlet
 bin/configlet.exe
 exercises/practice/*/build
+all_exercises
