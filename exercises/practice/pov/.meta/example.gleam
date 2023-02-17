@@ -26,9 +26,7 @@ pub fn path_to(
   to to: a,
 ) -> Result(List(a), Nil) {
   tree
-  |> to_zipper
-  |> move_to(from)
-  |> result.map(to_rerouted_tree)
+  |> from_pov(from)
   |> result.map(to_zipper)
   |> result.then(move_to(_, to))
   |> result.map(path_to_tree)
@@ -43,19 +41,10 @@ fn move_to(zipper: Zipper(a), target: a) -> Result(Zipper(a), Nil) {
   case tree {
     Tree(a, _) if a == target -> Ok(zipper)
     _ ->
-      zipper
-      |> down
+      down(zipper)
+      |> result.lazy_or(fn() { right(zipper) })
+      |> result.lazy_or(fn() { up_until_right(zipper) })
       |> result.then(move_to(_, target))
-      |> result.lazy_or(fn() {
-        zipper
-        |> right
-        |> result.then(move_to(_, target))
-      })
-      |> result.lazy_or(fn() {
-        zipper
-        |> up_until_right
-        |> result.then(move_to(_, target))
-      })
   }
 }
 
