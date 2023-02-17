@@ -468,7 +468,8 @@
         "name": "POV",
         "uuid": "2012322c-1693-4702-abfe-1f3e7b176035",
         "practices": [
-          "custom-type"
+          "custom-type",
+          "result"
         ],
         "prerequisites": [
           "list",
