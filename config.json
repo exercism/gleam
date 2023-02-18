@@ -994,6 +994,8 @@
           "string"
         ],
         "prerequisites": [
+          "random",
+          "iterator",
           "string",
           "list",
           "int"
