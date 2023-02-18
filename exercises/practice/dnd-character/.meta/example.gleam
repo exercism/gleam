@@ -2,7 +2,6 @@ import gleam/int
 import gleam/iterator
 import gleam/list
 import gleam/float
-import gleam/result
 
 pub type Character {
   Character(
