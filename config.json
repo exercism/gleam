@@ -13,7 +13,7 @@
   "online_editor": {
     "indent_style": "space",
     "indent_size": 2,
-    "highlightjs_language": "rust"
+    "highlightjs_language": "gleam"
   },
   "test_runner": {
     "average_run_time": 3.0
