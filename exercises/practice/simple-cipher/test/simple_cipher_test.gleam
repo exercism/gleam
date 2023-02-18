@@ -1,3 +1,4 @@
+import gleam/iterator
 import gleam/string
 import gleam/regex
 import gleeunit
@@ -52,9 +53,9 @@ pub fn substitution_cipher_can_decode_messages_longer_than_the_key_test() {
 pub fn random_key_cipher_key_is_made_only_of_lowercase_letters_test() {
   assert Ok(re) = regex.from_string("^[a-z]+$")
 
-  simple_cipher.generate_key()
-  |> regex.check(re, _)
-  |> should.be_true()
+  iterator.repeatedly(simple_cipher.generate_key)
+  |> iterator.take(100)
+  |> iterator.all(fn(key) { assert True = regex.check(re, key) })
 }
 
 pub fn random_key_cipher_can_encode_test() {
