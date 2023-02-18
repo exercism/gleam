@@ -952,6 +952,7 @@
         ],
         "prerequisites": [
           "int",
+          "random",
           "custom-type"
         ],
         "difficulty": 4
