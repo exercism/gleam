@@ -955,6 +955,18 @@
           "list"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "ISBN Verifier",
+        "uuid": "d12ac283-8ca4-4b40-919a-9588e1e52d50",
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "string"
+        ],
+        "difficulty": 4
       }
     ]
   },
