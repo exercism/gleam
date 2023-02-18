@@ -851,6 +851,21 @@
         "difficulty": 2
       },
       {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "9caa195e-2273-4096-9aee-26ab5658e7f7",
+        "practices": [
+          "case",
+          "bool"
+        ],
+        "prerequisites": [
+          "case",
+          "bool",
+          "result"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "sublist",
         "name": "Sublist",
         "uuid": "6d4933cc-0845-4992-93ee-54f79a79fc5a",
@@ -954,6 +969,18 @@
           "int",
           "random",
           "custom-type"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "ISBN Verifier",
+        "uuid": "d12ac283-8ca4-4b40-919a-9588e1e52d50",
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "string"
         ],
         "difficulty": 4
       }
