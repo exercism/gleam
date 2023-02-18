@@ -983,6 +983,18 @@
           "string"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "3c850415-92fa-4019-b776-aaab30675680",
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "string"
+        ],
+        "difficulty": 4
       }
     ]
   },
