@@ -957,6 +957,22 @@
         "difficulty": 4
       },
       {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "65d80b55-02f0-4d40-a530-79843553252f",
+        "practices": [
+          "int",
+          "random",
+          "custom-type"
+        ],
+        "prerequisites": [
+          "int",
+          "random",
+          "custom-type"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "isbn-verifier",
         "name": "ISBN Verifier",
         "uuid": "d12ac283-8ca4-4b40-919a-9588e1e52d50",
