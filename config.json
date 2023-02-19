@@ -999,6 +999,21 @@
         "difficulty": 4
       },
       {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "3c850415-92fa-4019-b776-aaab30675680",
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "map",
+          "result"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "space-age",
         "name": "Space Age",
         "uuid": "4bd2232c-1d23-4af8-ac9f-c778676becdf",
