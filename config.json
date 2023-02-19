@@ -999,6 +999,21 @@
         "difficulty": 4
       },
       {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "4bd2232c-1d23-4af8-ac9f-c778676becdf",
+        "practices": [
+          "float",
+          "case"
+        ],
+        "prerequisites": [
+          "float",
+          "case",
+          "custom-type"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "simple-cipher",
         "name": "Simple Cipher",
         "uuid": "37dd415b-1d67-434d-8705-19295d1438b8",
