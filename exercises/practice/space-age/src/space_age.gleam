@@ -9,6 +9,6 @@ pub type Planet {
   Neptune
 }
 
-pub fn age(planet: Planet, seconds: Int) -> Float {
+pub fn age(planet: Planet, seconds: Float) -> Float {
   todo
 }

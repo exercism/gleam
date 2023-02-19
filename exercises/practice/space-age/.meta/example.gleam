@@ -1,4 +1,3 @@
-import gleam/int
 import gleam/float
 
 pub type Planet {
@@ -12,8 +11,8 @@ pub type Planet {
   Neptune
 }
 
-pub fn age(planet: Planet, seconds: Int) -> Float {
-  int.to_float(seconds) /. orbital_period_in_earth_years(planet) /. seconds_in_earth_year
+pub fn age(planet: Planet, seconds: Float) -> Float {
+  seconds /. orbital_period_in_earth_years(planet) /. seconds_in_earth_year
 }
 
 fn orbital_period_in_earth_years(planet: Planet) -> Float {
