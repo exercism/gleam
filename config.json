@@ -1008,7 +1008,8 @@
         "prerequisites": [
           "string",
           "list",
-          "map"
+          "map",
+          "result"
         ],
         "difficulty": 4
       },
