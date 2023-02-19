@@ -1045,6 +1045,23 @@
           "int"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "e2d09419-0136-4f4d-9a1c-02236c2c60a6",
+        "practices": [
+          "list",
+          "recursion",
+          "anonymous-functions"
+        ],
+        "prerequisites": [
+          "list",
+          "anonymous-functions",
+          "bool",
+          "case"
+        ],
+        "difficulty": 2
       }
     ]
   },
