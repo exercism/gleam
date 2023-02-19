@@ -992,7 +992,8 @@
           "string"
         ],
         "prerequisites": [
-          "string"
+          "string",
+          "list"
         ],
         "difficulty": 4
       }
