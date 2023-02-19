@@ -13,7 +13,7 @@
   "online_editor": {
     "indent_style": "space",
     "indent_size": 2,
-    "highlightjs_language": "rust"
+    "highlightjs_language": "gleam"
   },
   "test_runner": {
     "average_run_time": 3.0
@@ -911,6 +911,20 @@
         "difficulty": 6
       },
       {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "efdf70a3-57e6-474a-9fc2-09f26bb609b6",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "custom-type",
+          "case"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "e9332e6f-a7e5-4f30-825c-64af0a278a70",
@@ -996,6 +1010,24 @@
           "list"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "simple-cipher",
+        "name": "Simple Cipher",
+        "uuid": "37dd415b-1d67-434d-8705-19295d1438b8",
+        "practices": [
+          "random",
+          "iterator",
+          "string"
+        ],
+        "prerequisites": [
+          "random",
+          "iterator",
+          "string",
+          "list",
+          "int"
+        ],
+        "difficulty": 5
       }
     ]
   },
