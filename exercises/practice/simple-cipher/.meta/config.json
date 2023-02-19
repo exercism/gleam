@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "erikschierboom"
+  ],
   "files": {
     "solution": [
       "src/simple_cipher.gleam"
