@@ -1007,7 +1007,8 @@
         ],
         "prerequisites": [
           "string",
-          "list"
+          "list",
+          "map"
         ],
         "difficulty": 4
       },
