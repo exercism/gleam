@@ -1012,6 +1012,24 @@
           "custom-type"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "simple-cipher",
+        "name": "Simple Cipher",
+        "uuid": "37dd415b-1d67-434d-8705-19295d1438b8",
+        "practices": [
+          "random",
+          "iterator",
+          "string"
+        ],
+        "prerequisites": [
+          "random",
+          "iterator",
+          "string",
+          "list",
+          "int"
+        ],
+        "difficulty": 5
       }
     ]
   },
