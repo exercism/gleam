@@ -1045,6 +1045,20 @@
           "int"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "house",
+        "name": "House",
+        "uuid": "21421905-a33c-4040-9f09-78726b5d1167",
+        "practices": [
+          "string",
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list"
+        ],
+        "difficulty": 2
       }
     ]
   },
