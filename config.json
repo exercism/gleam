@@ -999,6 +999,20 @@
         "difficulty": 4
       },
       {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "018be77b-d08c-497e-acdc-1b2b4e88e754",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "3c850415-92fa-4019-b776-aaab30675680",
