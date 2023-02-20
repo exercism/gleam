@@ -8,15 +8,17 @@ pub fn encode(
   a a: Int,
   b b: Int,
 ) -> Result(String, Nil) {
-  modular_inverse(a, alphabet_length)
-  |> result.map(fn(_) {
-    plaintext
-    |> translate(fn(index) { a * index + b })
-    |> string.to_graphemes()
-    |> list.sized_chunk(into: 5)
-    |> list.map(string.concat)
-    |> string.join(with: " ")
-  })
+  case modular_inverse(a, alphabet_length) {
+    Ok(_) ->
+      plaintext
+      |> translate(fn(index) { a * index + b })
+      |> string.to_graphemes()
+      |> list.sized_chunk(into: 5)
+      |> list.map(string.concat)
+      |> string.join(with: " ")
+      |> Ok
+    Error(_) -> Error(Nil)
+  }
 }
 
 pub fn decode(
