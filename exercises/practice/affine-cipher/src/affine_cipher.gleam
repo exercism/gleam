@@ -39,7 +39,7 @@ fn translate(input: String, op: fn(Int) -> Int) -> String {
   input
   |> string.lowercase()
   |> string.to_utf_codepoints()
-  |> list.map(fn(char) {
+  |> list.filter_map(fn(char) {
     case list.contains(letters, char) {
       True -> {
         assert Ok(shifted_index) =
@@ -57,7 +57,6 @@ fn translate(input: String, op: fn(Int) -> Int) -> String {
         }
     }
   })
-  |> result.values()
   |> string.from_utf_codepoints()
 }
 
