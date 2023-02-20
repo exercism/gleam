@@ -1045,6 +1045,24 @@
           "int"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "594b6c1a-0a4c-4463-9535-62056c71404e",
+        "practices": [
+          "string",
+          "list",
+          "int",
+          "result"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "int",
+          "result"
+        ],
+        "difficulty": 6
       }
     ]
   },
