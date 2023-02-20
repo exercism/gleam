@@ -1014,6 +1014,20 @@
         "difficulty": 4
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "700f44e5-13a3-4e97-aad5-d383e25f9f9b",
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math",
+          "int",
+          "recursion"
+        ],
+        "difficulty": 4
+     },
+      {
         "slug": "space-age",
         "name": "Space Age",
         "uuid": "4bd2232c-1d23-4af8-ac9f-c778676becdf",
