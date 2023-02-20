@@ -1045,6 +1045,22 @@
           "int"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "34293b12-1d94-43d9-a9cb-27b8bff92d67",
+        "practices": [
+          "int",
+          "list",
+          "result"
+        ],
+        "prerequisites": [
+          "int",
+          "list",
+          "result"
+        ],
+        "difficulty": 3
       }
     ]
   },
