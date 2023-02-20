@@ -1,5 +1,4 @@
 import gleam/string
-import gleam/result
 import gleam/list
 import gleam/int
 
@@ -8,17 +7,15 @@ pub fn encode(
   a a: Int,
   b b: Int,
 ) -> Result(String, Nil) {
-  case modular_inverse(a, alphabet_length) {
-    Ok(_) ->
-      plaintext
-      |> translate(fn(index) { a * index + b })
-      |> string.to_graphemes()
-      |> list.sized_chunk(into: 5)
-      |> list.map(string.concat)
-      |> string.join(with: " ")
-      |> Ok
-    Error(_) -> Error(Nil)
-  }
+  try _ = modular_inverse(a, alphabet_length)
+
+  plaintext
+  |> translate(fn(index) { a * index + b })
+  |> string.to_graphemes()
+  |> list.sized_chunk(into: 5)
+  |> list.map(string.concat)
+  |> string.join(with: " ")
+  |> Ok
 }
 
 pub fn decode(
@@ -26,10 +23,9 @@ pub fn decode(
   a a: Int,
   b b: Int,
 ) -> Result(String, Nil) {
-  result.map(
-    modular_inverse(a, alphabet_length),
-    fn(mmi) { translate(ciphertext, fn(index) { mmi * { index - b } }) },
-  )
+  try mmi = modular_inverse(a, alphabet_length)
+
+  Ok(translate(ciphertext, fn(index) { mmi * { index - b } }))
 }
 
 fn translate(input: String, op: fn(Int) -> Int) -> String {
