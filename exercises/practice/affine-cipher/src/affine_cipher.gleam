@@ -26,10 +26,10 @@ pub fn decode(
   a a: Int,
   b b: Int,
 ) -> Result(String, Nil) {
-  modular_inverse(a, alphabet_length)
-  |> result.map(fn(mmi) {
-    translate(ciphertext, fn(index) { mmi * { index - b } })
-  })
+  result.map(
+    modular_inverse(a, alphabet_length),
+    fn(mmi) { translate(ciphertext, fn(index) { mmi * { index - b } }) },
+  )
 }
 
 fn translate(input: String, op: fn(Int) -> Int) -> String {
