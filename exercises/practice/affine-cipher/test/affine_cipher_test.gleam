@@ -1,6 +1,6 @@
 import gleeunit
 import gleeunit/should
-import affine_cipher
+import affine_cipher.{KeyNotCoprime}
 
 pub fn main() {
   gleeunit.main()
@@ -52,7 +52,7 @@ pub fn encode_all_the_letters_test() {
 
 pub fn encode_with_a_not_coprime_to_m_test() {
   affine_cipher.encode(plaintext: "This is a test.", a: 6, b: 17)
-  |> should.equal(Error(Nil))
+  |> should.equal(Error(KeyNotCoprime(6, 17)))
 }
 
 pub fn decode_exercism_test() {
@@ -99,5 +99,5 @@ pub fn decode_with_too_many_spaces_test() {
 
 pub fn decode_with_a_not_coprime_to_m_test() {
   affine_cipher.decode(ciphertext: "Test", a: 13, b: 5)
-  |> should.equal(Error(Nil))
+  |> should.equal(Error(KeyNotCoprime(13, 5)))
 }
