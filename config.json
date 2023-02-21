@@ -1075,6 +1075,22 @@
         "difficulty": 5
       },
       {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "ad9cc1bd-d99b-4f43-941c-8e09b43801af",
+        "practices": [
+          "int",
+          "string",
+          "custom-type"
+        ],
+        "prerequisites": [
+          "int",
+          "string",
+          "custom-type"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "34293b12-1d94-43d9-a9cb-27b8bff92d67",
