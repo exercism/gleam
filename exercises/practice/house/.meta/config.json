@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "src/house.gleam"
+    ],
+    "test": [
+      "test/house_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Output the nursery rhyme 'This is the House that Jack Built'.",
+  "source": "British nursery rhyme",
+  "source_url": "https://en.wikipedia.org/wiki/This_Is_The_House_That_Jack_Built"
+}
