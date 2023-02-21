@@ -1075,6 +1075,22 @@
         "difficulty": 5
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "594b6c1a-0a4c-4463-9535-62056c71404e",
+        "practices": [
+          "string",
+          "math"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "int",
+          "result"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "house",
         "name": "House",
         "uuid": "21421905-a33c-4040-9f09-78726b5d1167",
