@@ -12,9 +12,7 @@ pub fn encode(
   a a: Int,
   b b: Int,
 ) -> Result(String, Error) {
-  try _ =
-    modular_inverse(a, alphabet_length)
-    |> result.replace_error(KeyNotCoprime(a, b))
+  try _ = modular_inverse(a, alphabet_length)
 
   plaintext
   |> translate(fn(index) { a * index + b })
@@ -30,9 +28,7 @@ pub fn decode(
   a a: Int,
   b b: Int,
 ) -> Result(String, Error) {
-  try mmi =
-    modular_inverse(a, alphabet_length)
-    |> result.replace_error(KeyNotCoprime(a, b))
+  try mmi = modular_inverse(a, alphabet_length)
 
   Ok(translate(ciphertext, fn(index) { mmi * { index - b } }))
 }
@@ -65,10 +61,10 @@ fn translate(input: String, op: fn(Int) -> Int) -> String {
   |> string.from_utf_codepoints()
 }
 
-fn modular_inverse(a: Int, b: Int) -> Result(Int, Nil) {
+fn modular_inverse(a: Int, b: Int) -> Result(Int, Error) {
   case gcd_ext(a, b) {
     #(s, _, 1) -> Ok(s)
-    _ -> Error(Nil)
+    _ -> Error(KeyNotCoprime(a, b))
   }
 }
 
