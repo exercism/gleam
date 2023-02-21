@@ -1,4 +1,6 @@
-// TODO: define a custom 'Clock' type
+pub type Clock {
+  TODO
+}
 
 pub fn create(hour hour: Int, minute minute: Int) -> Clock {
   todo
