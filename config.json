@@ -1040,7 +1040,7 @@
           "recursion"
         ],
         "difficulty": 4
-     },
+      },
       {
         "slug": "space-age",
         "name": "Space Age",
@@ -1119,6 +1119,19 @@
           "custom-type"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "4c6ed017-a02b-4826-a111-ef9733b7d315",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "int"
+        ],
+        "difficulty": 4
       },
       {
         "slug": "largest-series-product",
