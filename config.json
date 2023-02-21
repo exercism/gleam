@@ -999,6 +999,20 @@
         "difficulty": 4
       },
       {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "018be77b-d08c-497e-acdc-1b2b4e88e754",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "3c850415-92fa-4019-b776-aaab30675680",
@@ -1013,6 +1027,20 @@
         ],
         "difficulty": 4
       },
+      {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "700f44e5-13a3-4e97-aad5-d383e25f9f9b",
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math",
+          "int",
+          "recursion"
+        ],
+        "difficulty": 4
+     },
       {
         "slug": "space-age",
         "name": "Space Age",
@@ -1059,6 +1087,38 @@
           "list"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "ad9cc1bd-d99b-4f43-941c-8e09b43801af",
+        "practices": [
+          "int",
+          "string",
+          "custom-type"
+        ],
+        "prerequisites": [
+          "int",
+          "string",
+          "custom-type"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "34293b12-1d94-43d9-a9cb-27b8bff92d67",
+        "practices": [
+          "int",
+          "list",
+          "result"
+        ],
+        "prerequisites": [
+          "int",
+          "list",
+          "result"
+        ],
+        "difficulty": 3
       }
     ]
   },
