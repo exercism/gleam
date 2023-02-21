@@ -1119,6 +1119,25 @@
           "result"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "22461f35-684d-4f75-9399-d07a4f483bdd",
+        "practices": [
+          "int",
+          "list",
+          "bitwise",
+          "bit-string",
+          "custom-type"
+        ],
+        "prerequisites": [
+          "int",
+          "list",
+          "bitwise",
+          "custom-type"
+        ],
+        "difficulty": 2
       }
     ]
   },
