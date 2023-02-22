@@ -2,7 +2,7 @@ import gleam/list
 import gleam/pair
 import gleam/string
 
-const gifts_map = [
+const day_gift_pairs = [
   #("first", "a Partridge in a Pear Tree"),
   #("second", "two Turtle Doves"),
   #("third", "three French Hens"),
@@ -18,23 +18,23 @@ const gifts_map = [
 ]
 
 pub fn verse(number: Int) -> String {
-  let [first_gift, ..gifts] = gifts_map
+  let [first_day_gift_pair, ..remaining_day_gift_pairs] = day_gift_pairs
 
   let #(day, gifts) = case number {
-    1 -> first_gift
+    1 -> first_day_gift_pair
 
     _ -> {
-      let [this_verse_gift, ..rest] =
-        gifts
+      let [this_verse_day_gift_pair, ..previous_verses_day_gift_pairs] =
+        remaining_day_gift_pairs
         |> list.take(number - 1)
         |> list.reverse()
 
       pair.map_second(
-        this_verse_gift,
+        this_verse_day_gift_pair,
         fn(gift) {
-          [gift, ..list.map(rest, pair.second)]
+          [gift, ..list.map(previous_verses_day_gift_pairs, pair.second)]
           |> string.join(", ")
-          |> string.append(", and " <> pair.second(first_gift))
+          |> string.append(", and " <> pair.second(first_day_gift_pair))
         },
       )
     }
