@@ -841,12 +841,11 @@
         "difficulty": 3,
         "practices": [
           "string",
-          "case",
           "list"
         ],
         "prerequisites": [
           "string",
-          "case"
+          "list"
         ]
       },
       {
