@@ -1079,9 +1079,7 @@
         "name": "Crypto Square",
         "uuid": "5bf01e81-b30a-4210-b1ed-1edbf3d28ab1",
         "practices": [
-          "int",
           "float",
-          "list",
           "string"
         ],
         "prerequisites": [
