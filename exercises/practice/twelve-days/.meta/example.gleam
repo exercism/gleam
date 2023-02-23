@@ -8,8 +8,7 @@ pub fn verse(number: Int) -> String {
   let gifts = case number {
     1 -> gift
     _ ->
-      number
-      |> list.range(2)
+      list.range(from: number, to: 2)
       |> list.map(day_gift_pair_for_verse)
       |> list.map(pair.second)
       |> string.join(", ")
