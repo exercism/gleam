@@ -1,7 +1,7 @@
 import gleam/list
 import gleam/string
 
-pub fn convert(number: Int) {
+pub fn convert(number: Int) -> String {
   number
   |> list.repeat("I", _)
   |> string.concat

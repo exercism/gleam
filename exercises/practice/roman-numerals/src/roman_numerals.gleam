@@ -1,3 +1,3 @@
-pub fn convert(number: Int) {
+pub fn convert(number: Int) -> String {
   todo
 }
