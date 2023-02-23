@@ -19,7 +19,10 @@ fn rows(characters: List(String)) -> List(List(String)) {
   characters
   |> list.sized_chunk(into: width)
   |> list.map(fn(row) {
-    list.append(row, list.repeat(" ", width - list.length(row)))
+    row
+    |> string.concat()
+    |> string.pad_right(width, " ")
+    |> string.to_graphemes()
   })
 }
 
@@ -39,8 +42,7 @@ fn square_width(characters: List(String)) -> Int {
   assert Ok(sqrt) =
     characters
     |> list.length()
-    |> int.to_float()
-    |> float.square_root()
+    |> int.square_root()
 
   sqrt
   |> float.ceiling()
