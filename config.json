@@ -835,6 +835,20 @@
         "difficulty": 4
       },
       {
+        "slug": "twelve-days",
+        "name": "Twelve Days",
+        "uuid": "583b74dc-2c5c-48f8-85c2-c90623507682",
+        "difficulty": 3,
+        "practices": [
+          "string",
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list"
+        ]
+      },
+      {
         "slug": "etl",
         "name": "ETL",
         "uuid": "1655d9f6-6199-4462-85bd-a5da5f25d30a",
