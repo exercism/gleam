@@ -56,7 +56,14 @@ echo "Creating Gleam files..."
 mkdir -p ${exercise_dir}/test ${exercise_dir}/src
 
 pushd exercise_generator
-gleam run $SLUG "$(curl https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/${SLUG}/canonical-data.json)"
+canonical_data=$(curl https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/${SLUG}/canonical-data.json)
+
+# Use empty canonical data if none were found
+if [ "${canonical_data}" == "404: Not Found" ]; then
+    canonical_data=$(jq --null-input '{cases: []}')
+fi
+
+gleam run $SLUG "${canonical_data}"
 popd
 gleam format ${exercise_dir}/{.meta,src,test}/*.gleam
 
