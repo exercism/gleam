@@ -419,6 +419,7 @@ fn flatten_description(description: String) -> String {
     }
   })
   |> string.concat
+  |> string.replace(each: "__", with: "_")
 }
 
 fn get_expected_value(
