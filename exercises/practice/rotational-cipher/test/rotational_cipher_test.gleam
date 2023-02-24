@@ -6,7 +6,7 @@ pub fn main() {
   gleeunit.main()
 }
 
-pub fn rotate_a_by_0__same_output_as_input_test() {
+pub fn rotate_a_by_0_same_output_as_input_test() {
   rotational_cipher.rotate(0, "a")
   |> should.equal("a")
 }
@@ -16,7 +16,7 @@ pub fn rotate_a_by_1_test() {
   |> should.equal("b")
 }
 
-pub fn rotate_a_by_26__same_output_as_input_test() {
+pub fn rotate_a_by_26_same_output_as_input_test() {
   rotational_cipher.rotate(26, "a")
   |> should.equal("a")
 }

@@ -7,37 +7,37 @@ pub fn main() {
   gleeunit.main()
 }
 
-pub fn ability_modifier_ability_modifier_for_score_3_is__4_test() {
+pub fn ability_modifier_ability_modifier_for_score_3_is_4_test() {
   dnd_character.modifier(3)
   |> should.equal(-4)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_4_is__3_test() {
+pub fn ability_modifier_ability_modifier_for_score_4_is_3_test() {
   dnd_character.modifier(4)
   |> should.equal(-3)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_5_is__3_test() {
+pub fn ability_modifier_ability_modifier_for_score_5_is_3_test() {
   dnd_character.modifier(5)
   |> should.equal(-3)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_6_is__2_test() {
+pub fn ability_modifier_ability_modifier_for_score_6_is_2_test() {
   dnd_character.modifier(6)
   |> should.equal(-2)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_7_is__2_test() {
+pub fn ability_modifier_ability_modifier_for_score_7_is_2_test() {
   dnd_character.modifier(7)
   |> should.equal(-2)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_8_is__1_test() {
+pub fn ability_modifier_ability_modifier_for_score_8_is_1_test() {
   dnd_character.modifier(8)
   |> should.equal(-1)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_9_is__1_test() {
+pub fn ability_modifier_ability_modifier_for_score_9_is_1_test() {
   dnd_character.modifier(9)
   |> should.equal(-1)
 }
@@ -52,37 +52,37 @@ pub fn ability_modifier_ability_modifier_for_score_11_is_0_test() {
   |> should.equal(0)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_12_is__1_test() {
+pub fn ability_modifier_ability_modifier_for_score_12_is_1_test() {
   dnd_character.modifier(12)
   |> should.equal(1)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_13_is__1_test() {
+pub fn ability_modifier_ability_modifier_for_score_13_is_1_test() {
   dnd_character.modifier(13)
   |> should.equal(1)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_14_is__2_test() {
+pub fn ability_modifier_ability_modifier_for_score_14_is_2_test() {
   dnd_character.modifier(14)
   |> should.equal(2)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_15_is__2_test() {
+pub fn ability_modifier_ability_modifier_for_score_15_is_2_test() {
   dnd_character.modifier(15)
   |> should.equal(2)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_16_is__3_test() {
+pub fn ability_modifier_ability_modifier_for_score_16_is_3_test() {
   dnd_character.modifier(16)
   |> should.equal(3)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_17_is__3_test() {
+pub fn ability_modifier_ability_modifier_for_score_17_is_3_test() {
   dnd_character.modifier(17)
   |> should.equal(3)
 }
 
-pub fn ability_modifier_ability_modifier_for_score_18_is__4_test() {
+pub fn ability_modifier_ability_modifier_for_score_18_is_4_test() {
   dnd_character.modifier(18)
   |> should.equal(4)
 }

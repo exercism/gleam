@@ -26,7 +26,7 @@ pub fn short_word_test() {
   |> should.equal(2)
 }
 
-pub fn short__valuable_word_test() {
+pub fn short_valuable_word_test() {
   scrabble_score.score("zoo")
   |> should.equal(12)
 }
@@ -36,12 +36,12 @@ pub fn medium_word_test() {
   |> should.equal(6)
 }
 
-pub fn medium__valuable_word_test() {
+pub fn medium_valuable_word_test() {
   scrabble_score.score("quirky")
   |> should.equal(22)
 }
 
-pub fn long__mixed_case_word_test() {
+pub fn long_mixed_case_word_test() {
   scrabble_score.score("OxyphenButazone")
   |> should.equal(41)
 }

@@ -168,7 +168,7 @@ pub fn add_minutes_add_across_midnight_test() {
   |> should.equal("00:01")
 }
 
-pub fn add_minutes_add_more_than_one_day__1500_min___25_hrs__test() {
+pub fn add_minutes_add_more_than_one_day_1500_min__25_hrs_test() {
   clock.create(hour: 5, minute: 32)
   |> clock.add(minutes: 1500)
   |> clock.display()
@@ -224,7 +224,7 @@ pub fn subtract_minutes_subtract_more_than_two_hours_with_borrow_test() {
   |> should.equal("03:35")
 }
 
-pub fn subtract_minutes_subtract_more_than_one_day__1500_min___25_hrs__test() {
+pub fn subtract_minutes_subtract_more_than_one_day_1500_min__25_hrs_test() {
   clock.create(hour: 5, minute: 32)
   |> clock.subtract(minutes: 1500)
   |> clock.display()
