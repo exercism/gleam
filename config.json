@@ -1075,6 +1075,22 @@
         "difficulty": 5
       },
       {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "5bf01e81-b30a-4210-b1ed-1edbf3d28ab1",
+        "practices": [
+          "float",
+          "string"
+        ],
+        "prerequisites": [
+          "int",
+          "float",
+          "list",
+          "string"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "594b6c1a-0a4c-4463-9535-62056c71404e",

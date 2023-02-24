@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "src/crypto_square.gleam"
+    ],
+    "test": [
+      "test/crypto_square_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Implement the classic method for composing secret messages called a square code.",
+  "source": "J Dalbey's Programming Practice problems",
+  "source_url": "https://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"
+}
