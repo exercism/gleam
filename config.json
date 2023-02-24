@@ -1167,6 +1167,23 @@
           "custom-type"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "9ba6a56b-77bb-494b-88c2-0b751a1f66a9",
+        "practices": [
+          "async",
+          "map"
+        ],
+        "prerequisites": [
+          "async",
+          "map",
+          "string",
+          "list",
+          "int"
+        ],
+        "difficulty": 4
       }
     ]
   },
