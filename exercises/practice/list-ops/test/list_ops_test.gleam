@@ -71,17 +71,17 @@ pub fn return_a_list_of_elements_whose_values_equal_the_list_value_transformed_b
   |> should.equal([2, 4, 6, 8])
 }
 
-pub fn folds__reduces__the_given_list_from_the_left_with_a_function_empty_list_test() {
+pub fn folds_reduces_the_given_list_from_the_left_with_a_function_empty_list_test() {
   list_ops.foldl(with: fn(acc, el) { el * acc }, from: 2, over: [])
   |> should.equal(2)
 }
 
-pub fn folds__reduces__the_given_list_from_the_left_with_a_function_direction_independent_function_applied_to_non_empty_list_test() {
+pub fn folds_reduces_the_given_list_from_the_left_with_a_function_direction_independent_function_applied_to_non_empty_list_test() {
   list_ops.foldl(with: fn(acc, el) { el + acc }, from: 5, over: [1, 2, 3, 4])
   |> should.equal(15)
 }
 
-pub fn folds__reduces__the_given_list_from_the_left_with_a_function_direction_dependent_function_applied_to_non_empty_list_test() {
+pub fn folds_reduces_the_given_list_from_the_left_with_a_function_direction_dependent_function_applied_to_non_empty_list_test() {
   list_ops.foldl(
     with: fn(acc, el) { el /. acc },
     from: 24.0,
@@ -90,17 +90,17 @@ pub fn folds__reduces__the_given_list_from_the_left_with_a_function_direction_de
   |> should.equal(64.0)
 }
 
-pub fn folds__reduces__the_given_list_from_the_right_with_a_function_empty_list_test() {
+pub fn folds_reduces_the_given_list_from_the_right_with_a_function_empty_list_test() {
   list_ops.foldr(with: fn(acc, el) { el * acc }, from: 2, over: [])
   |> should.equal(2)
 }
 
-pub fn folds__reduces__the_given_list_from_the_right_with_a_function_direction_independent_function_applied_to_non_empty_list_test() {
+pub fn folds_reduces_the_given_list_from_the_right_with_a_function_direction_independent_function_applied_to_non_empty_list_test() {
   list_ops.foldr(with: fn(acc, el) { el + acc }, from: 5, over: [1, 2, 3, 4])
   |> should.equal(15)
 }
 
-pub fn folds__reduces__the_given_list_from_the_right_with_a_function_direction_dependent_function_applied_to_non_empty_list_test() {
+pub fn folds_reduces_the_given_list_from_the_right_with_a_function_direction_dependent_function_applied_to_non_empty_list_test() {
   list_ops.foldr(
     with: fn(acc, el) { el /. acc },
     from: 24.0,

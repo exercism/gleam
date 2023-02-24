@@ -29,7 +29,7 @@ pub fn word_with_duplicated_character_in_mixed_case_test() {
   assert False = isogram.is_isogram(phrase: "Alphabet")
 }
 
-pub fn word_with_duplicated_character_in_mixed_case__lowercase_first_test() {
+pub fn word_with_duplicated_character_in_mixed_case_lowercase_first_test() {
   assert False = isogram.is_isogram(phrase: "alphAbet")
 }
 
