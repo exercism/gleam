@@ -1,7 +1,7 @@
-import gleam/int
+import gleam/float
 import gleam/list
 
-pub fn equilateral(a: Int, b: Int, c: Int) -> Bool {
+pub fn equilateral(a: Float, b: Float, c: Float) -> Bool {
   let is_valid_triangle = is_valid_triangle(a, b, c)
 
   case list.unique([a, b, c]) {
@@ -10,7 +10,7 @@ pub fn equilateral(a: Int, b: Int, c: Int) -> Bool {
   }
 }
 
-pub fn isosceles(a: Int, b: Int, c: Int) -> Bool {
+pub fn isosceles(a: Float, b: Float, c: Float) -> Bool {
   let is_valid_triangle = is_valid_triangle(a, b, c)
 
   case list.unique([a, b, c]) {
@@ -20,7 +20,7 @@ pub fn isosceles(a: Int, b: Int, c: Int) -> Bool {
   }
 }
 
-pub fn scalene(a: Int, b: Int, c: Int) -> Bool {
+pub fn scalene(a: Float, b: Float, c: Float) -> Bool {
   let is_valid_triangle = is_valid_triangle(a, b, c)
 
   case list.unique([a, b, c]) {
@@ -29,8 +29,8 @@ pub fn scalene(a: Int, b: Int, c: Int) -> Bool {
   }
 }
 
-fn is_valid_triangle(a: Int, b: Int, c: Int) -> Bool {
-  let [a, b, c] = list.sort([a, b, c], int.compare)
+fn is_valid_triangle(a: Float, b: Float, c: Float) -> Bool {
+  let [a, b, c] = list.sort([a, b, c], float.compare)
 
-  a > 0 && b > 0 && c > 0 && a + b >= c
+  a >. 0.0 && b >. 0.0 && c >. 0.0 && a +. b >=. c
 }

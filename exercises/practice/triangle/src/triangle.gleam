@@ -1,11 +1,11 @@
-pub fn equilateral(a: Int, b: Int, c: Int) -> Bool {
+pub fn equilateral(a: Float, b: Float, c: Float) -> Bool {
   todo
 }
 
-pub fn isosceles(a: Int, b: Int, c: Int) -> Bool {
+pub fn isosceles(a: Float, b: Float, c: Float) -> Bool {
   todo
 }
 
-pub fn scalene(a: Int, b: Int, c: Int) -> Bool {
+pub fn scalene(a: Float, b: Float, c: Float) -> Bool {
   todo
 }
