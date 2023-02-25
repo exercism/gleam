@@ -510,6 +510,21 @@
         "difficulty": 3
       },
       {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "43dd4c25-81f3-4a59-a809-2908387d3001",
+        "practices": [
+          "case",
+          "bool"
+        ],
+        "prerequisites": [
+          "case",
+          "bool",
+          "list"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "a433d1f6-d8a2-40b9-a7d7-a611420d7164",
