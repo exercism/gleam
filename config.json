@@ -1180,6 +1180,22 @@
         "difficulty": 3
       },
       {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "abbeeb8f-6ec1-4f57-86fc-2e18b3a62e29",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case",
+          "map",
+          "int"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "22461f35-684d-4f75-9399-d07a4f483bdd",
