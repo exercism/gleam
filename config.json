@@ -1179,6 +1179,25 @@
         "difficulty": 4
       },
       {
+        "slug": "wordy",
+        "name": "Wordy",
+        "uuid": "5031033b-bd21-4563-ae18-59ad02f4c489",
+        "practices": [
+          "result"
+        ],
+        "prerequisites": [
+          "result",
+          "string",
+          "case",
+          "list",
+          "bool",
+          "int",
+          "maths",
+          "custom-type"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "34293b12-1d94-43d9-a9cb-27b8bff92d67",
