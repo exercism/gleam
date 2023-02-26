@@ -50,17 +50,18 @@ fn evaluate(tokens: List(Token)) -> Result(Int, Error) {
       tokens,
       [],
       fn(previous_tokens: List(Token), current_token: Token) {
-        case previous_tokens {
-          [Operator(operation), Operand(left_operand)] -> {
-            assert Operand(right_operand) = current_token
+        case previous_tokens, current_token {
+          [], Operand(_) -> Ok([current_token])
 
+          [Operand(_)], Operator(_) -> Ok([current_token, ..previous_tokens])
+
+          [Operator(operation), Operand(left_operand)], Operand(right_operand) ->
             case operation(left_operand, right_operand) {
               Ok(accumulated_result) -> Ok([Operand(accumulated_result)])
               Error(Nil) -> Error(ImpossibleOperation)
             }
-          }
 
-          _ -> Ok([current_token, ..previous_tokens])
+          _, _ -> Error(SyntaxError)
         }
       },
     )
@@ -73,18 +74,9 @@ fn parse_tokens(chunks: List(String)) -> Result(List(Token), Error) {
   |> list.try_fold(
     [],
     fn(tokens: List(Token), chunk: String) {
-      let is_previous_token_an_operand = case tokens {
-        [head, ..] -> is_operand_token(head)
-        _ -> False
-      }
-
-      let is_previous_token_an_operator = !is_previous_token_an_operand
-
       case parse_token(chunk) {
-        Error(error) -> Error(error)
-        Ok(Operand(_)) if is_previous_token_an_operand -> Error(SyntaxError)
-        Ok(Operator(_)) if is_previous_token_an_operator -> Error(SyntaxError)
         Ok(token) -> Ok([token, ..tokens])
+        Error(error) -> Error(error)
       }
     },
   )
@@ -109,11 +101,8 @@ fn parse_operation(chunk: String) -> Result(MathOperation, Nil) {
   }
 }
 
-fn is_operand_token(token: Token) -> Bool {
-  case token {
-    Operand(_) -> True
-    _ -> False
-  }
+fn result_wrapped_operation(fun: fn(Int, Int) -> Int) -> MathOperation {
+  fn(a, b) { Ok(fun(a, b)) }
 }
 
 fn ensure_number_of_tokens_is_correct(
@@ -130,6 +119,9 @@ fn ensure_number_of_tokens_is_correct(
   }
 }
 
-fn result_wrapped_operation(fun: fn(Int, Int) -> Int) -> MathOperation {
-  fn(a, b) { Ok(fun(a, b)) }
+fn is_operand_token(token: Token) -> Bool {
+  case token {
+    Operand(_) -> True
+    _ -> False
+  }
 }
