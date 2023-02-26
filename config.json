@@ -1183,7 +1183,8 @@
         "name": "Wordy",
         "uuid": "5031033b-bd21-4563-ae18-59ad02f4c489",
         "practices": [
-          "result"
+          "result",
+          "string"
         ],
         "prerequisites": [
           "result",
