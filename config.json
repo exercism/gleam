@@ -1247,6 +1247,20 @@
           "custom-type"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "fda0001e-51b5-4041-a08a-2cb7dfef0f1c",
+        "practices": [
+          "int",
+          "iterator",
+          "recursion"
+        ],
+        "prerequisites": [
+          "int"
+        ],
+        "difficulty": 3
       }
     ]
   },
