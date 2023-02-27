@@ -11,13 +11,11 @@ pub fn translate(phrase: String) -> String {
 
 pub fn do_translate(letters: List(String), consonants: String) -> String {
   case letters {
-    ["a", ..]
-    | ["e", ..]
-    | ["i", ..]
-    | ["o", ..]
-    | ["u", ..]
-    | ["y", "t", ..]
-    | ["x", "r", ..] -> string.concat(letters) <> consonants <> "ay"
+    ["a", ..] | ["e", ..] | ["i", ..] | ["o", ..] | ["u", ..] | ["y", "t", ..] | [
+      "x",
+      "r",
+      ..
+    ] -> string.concat(letters) <> consonants <> "ay"
     ["q", "u", ..tail] -> string.concat(tail) <> consonants <> "quay"
     ["y", ..tail] if consonants != "" ->
       "y" <> consonants <> string.concat(tail) <> "ay"
