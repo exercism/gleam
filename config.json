@@ -510,6 +510,21 @@
         "difficulty": 3
       },
       {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "43dd4c25-81f3-4a59-a809-2908387d3001",
+        "practices": [
+          "case",
+          "bool"
+        ],
+        "prerequisites": [
+          "case",
+          "bool",
+          "list"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "a433d1f6-d8a2-40b9-a7d7-a611420d7164",
@@ -1164,6 +1179,26 @@
         "difficulty": 4
       },
       {
+        "slug": "wordy",
+        "name": "Wordy",
+        "uuid": "5031033b-bd21-4563-ae18-59ad02f4c489",
+        "practices": [
+          "result",
+          "string"
+        ],
+        "prerequisites": [
+          "result",
+          "string",
+          "case",
+          "list",
+          "bool",
+          "int",
+          "maths",
+          "custom-type"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "34293b12-1d94-43d9-a9cb-27b8bff92d67",
@@ -1196,6 +1231,21 @@
         "difficulty": 5
       },
       {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "753fff04-5a64-4c3f-afd2-beee7e27efe8",
+        "practices": [
+          "case"
+        ],
+        "prerequisites": [
+          "string",
+          "case",
+          "int",
+          "result"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "22461f35-684d-4f75-9399-d07a4f483bdd",
@@ -1213,6 +1263,20 @@
           "custom-type"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "fda0001e-51b5-4041-a08a-2cb7dfef0f1c",
+        "practices": [
+          "int",
+          "iterator",
+          "recursion"
+        ],
+        "prerequisites": [
+          "int"
+        ],
+        "difficulty": 3
       }
     ]
   },
