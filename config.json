@@ -1197,6 +1197,20 @@
           "custom-type"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "dbc455de-1845-49f9-b5b5-082350e12811",
+        "practices": [
+          "string",
+          "case"
+        ],
+        "prerequisites": [
+          "string",
+          "case"
+        ],
+        "difficulty": 3
       }
     ]
   },
