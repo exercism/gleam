@@ -1283,6 +1283,20 @@
         "difficulty": 2
       },
       {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "dbc455de-1845-49f9-b5b5-082350e12811",
+        "practices": [
+          "string",
+          "case"
+        ],
+        "prerequisites": [
+          "string",
+          "case"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "fda0001e-51b5-4041-a08a-2cb7dfef0f1c",
