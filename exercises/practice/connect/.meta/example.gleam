@@ -22,13 +22,17 @@ pub fn winner(board: String) -> Result(Player, Nil) {
     |> string.trim()
     |> string.split("\n")
 
-  assert [first_row, ..] = rows
-  let size =
-    Size(rows: list.length(rows), columns: string.length(first_row) / 2 + 1)
+  case rows {
+    [] -> Error(Nil)
+    [first_row, ..] -> {
+      let size =
+        Size(rows: list.length(rows), columns: string.length(first_row) / 2 + 1)
 
-  let board = parse(rows)
+      let board = parse(rows)
 
-  result.lazy_or(o_wins(board, size), fn() { x_wins(board, size) })
+      result.lazy_or(o_wins(board, size), fn() { x_wins(board, size) })
+    }
+  }
 }
 
 fn parse(rows: List(String)) -> Map(Position, Player) {
