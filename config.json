@@ -732,10 +732,10 @@
         "name": "Prime Factors",
         "uuid": "00d1a428-99c4-4175-bee2-e05fc034528f",
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
-          "math",
+          "maths",
           "int",
           "list",
           "case"
@@ -762,10 +762,10 @@
         "name": "Grains",
         "uuid": "b5b9be18-9141-4176-8f8c-3dd14d14bed5",
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
-          "math"
+          "maths"
         ],
         "difficulty": 2
       },
@@ -958,10 +958,10 @@
         "name": "All Your Base",
         "uuid": "e9332e6f-a7e5-4f30-825c-64af0a278a70",
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
-          "math",
+          "maths",
           "int",
           "list",
           "result",
@@ -1061,10 +1061,10 @@
         "name": "Square Root",
         "uuid": "700f44e5-13a3-4e97-aad5-d383e25f9f9b",
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
-          "math",
+          "maths",
           "int",
           "recursion"
         ],
@@ -1125,7 +1125,7 @@
         "uuid": "594b6c1a-0a4c-4463-9535-62056c71404e",
         "practices": [
           "string",
-          "math"
+          "maths"
         ],
         "prerequisites": [
           "string",
@@ -1148,6 +1148,24 @@
           "list"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "connect",
+        "name": "Connect",
+        "uuid": "89c6bf7a-5cd8-4254-b3e0-1457a5390b46",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "list",
+          "map",
+          "string",
+          "result",
+          "bool",
+          "case",
+          "maths"
+        ],
+        "difficulty": 7
       },
       {
         "slug": "clock",
