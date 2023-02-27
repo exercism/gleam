@@ -1215,6 +1215,22 @@
         "difficulty": 3
       },
       {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "abbeeb8f-6ec1-4f57-86fc-2e18b3a62e29",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case",
+          "map",
+          "int"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "say",
         "name": "Say",
         "uuid": "753fff04-5a64-4c3f-afd2-beee7e27efe8",
