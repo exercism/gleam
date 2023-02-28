@@ -4,14 +4,11 @@ import gleam/result
 import gleam/string
 
 pub fn valid(value: String) -> Bool {
-  case
-    value
-    |> parse_digits()
-    |> result.then(validate_length)
-  {
-    Ok(digits) -> is_valid_number(digits)
-    _ -> False
-  }
+  value
+  |> parse_digits()
+  |> result.then(validate_length)
+  |> result.map(is_valid_number)
+  |> result.unwrap(False)
 }
 
 fn parse_digits(value: String) -> Result(List(Int), Nil) {
