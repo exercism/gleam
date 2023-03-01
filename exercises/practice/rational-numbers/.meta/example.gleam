@@ -65,12 +65,12 @@ pub fn power_of_rational(
 }
 
 pub fn power_of_real(
-  number base: Int,
+  number base: Float,
   to exponent: RationalNumber,
 ) -> Result(Float, Nil) {
   let RationalNumber(numerator, denominator) = exponent
 
-  try power = int.power(base, int.to_float(numerator))
+  try power = float.power(base, int.to_float(numerator))
 
   nth_root(denominator, of: power)
 }
