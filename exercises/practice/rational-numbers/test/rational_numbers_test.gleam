@@ -173,18 +173,24 @@ pub fn exponentiation_of_a_rational_number_raise_a_negative_rational_number_to_t
 
 pub fn exponentiation_of_a_real_number_to_a_rational_number_raise_a_real_number_to_a_positive_rational_number_test() {
   assert Ok(power) =
-    rational_numbers.power_of_real(number: 8, to: RationalNumber(4, 3))
-  assert True = float.loosely_equals(power, with: 16.0, tolerating: 0.1)
+    rational_numbers.power_of_real(number: 8.0, to: RationalNumber(4, 3))
+
+  assert True = float.loosely_equals(power, with: 16.0, tolerating: 0.001)
 }
 
 pub fn exponentiation_of_a_real_number_to_a_rational_number_raise_a_real_number_to_a_negative_rational_number_test() {
-  assert Ok(0.3333333333333333) =
-    rational_numbers.power_of_real(number: 9, to: RationalNumber(-1, 2))
+  assert Ok(power) =
+    rational_numbers.power_of_real(number: 9.0, to: RationalNumber(-1, 2))
+
+  assert True =
+    float.loosely_equals(power, with: 0.3333333333333333, tolerating: 0.001)
 }
 
 pub fn exponentiation_of_a_real_number_to_a_rational_number_raise_a_real_number_to_a_zero_rational_number_test() {
-  assert Ok(1.0) =
-    rational_numbers.power_of_real(number: 2, to: RationalNumber(0, 1))
+  assert Ok(power) =
+    rational_numbers.power_of_real(number: 2.0, to: RationalNumber(0, 1))
+
+  assert True = float.loosely_equals(power, with: 1.0, tolerating: 0.001)
 }
 
 pub fn reduction_to_lowest_terms_reduce_a_positive_rational_number_to_lowest_terms_test() {

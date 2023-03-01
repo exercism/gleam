@@ -30,7 +30,7 @@ pub fn power_of_rational(
 }
 
 pub fn power_of_real(
-  number base: Int,
+  number base: Float,
   to exponent: RationalNumber,
 ) -> Result(Float, Nil) {
   todo
