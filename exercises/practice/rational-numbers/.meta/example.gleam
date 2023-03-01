@@ -91,7 +91,7 @@ pub fn reduce(r: RationalNumber) -> RationalNumber {
   }
 }
 
-fn power_of_integer(base: Int, to exponent: Int) -> Result(Int, Nil) {
+fn power_of_integer(number base: Int, to exponent: Int) -> Result(Int, Nil) {
   try power = int.power(base, int.to_float(exponent))
 
   Ok(float.round(power))
