@@ -38,7 +38,7 @@ pub fn absolute_value(r: RationalNumber) -> RationalNumber {
 
   RationalNumber(
     numerator: int.absolute_value(numerator),
-    denominator: int.absolute_value(denominator),
+    denominator: denominator,
   )
 }
 
