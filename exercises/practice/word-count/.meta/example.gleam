@@ -5,7 +5,7 @@ import gleam/string
 import gleam/option
 
 pub fn count_words(input: String) -> Map(String, Int) {
-  assert Ok(re) = regex.from_string("[a-z0-9]+('[a-z0-9]+)?")
+  let assert Ok(re) = regex.from_string("[a-z0-9]+('[a-z0-9]+)?")
   input
   |> string.lowercase
   |> regex.scan(re, _)

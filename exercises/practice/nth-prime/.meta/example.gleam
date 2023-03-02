@@ -22,7 +22,7 @@ fn primes() -> Iterator(Int) {
 }
 
 fn is_prime(number: Int) -> Bool {
-  assert Ok(root_float) = int.square_root(number)
+  let assert Ok(root_float) = int.square_root(number)
   let root = float.round(float.floor(root_float))
 
   number == 2 || number == 3 || number == 5 || iterator.range(5, root)
