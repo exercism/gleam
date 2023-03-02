@@ -49,9 +49,9 @@ fn shift_letter(
       string.utf_codepoint_to_int(input) - min_int_code_point,
       string.utf_codepoint_to_int(key) - min_int_code_point,
     )
-  assert Ok(codepoint_int_shift) =
+  let assert Ok(codepoint_int_shift) =
     int.modulo(shifted_codepoint_int, alphabet_length)
-  assert Ok(shifted_codepoint) =
+  let assert Ok(shifted_codepoint) =
     string.utf_codepoint(codepoint_int_shift + min_int_code_point)
 
   shifted_codepoint

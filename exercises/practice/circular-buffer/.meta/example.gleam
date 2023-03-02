@@ -5,7 +5,7 @@ pub opaque type CircularBuffer(t) {
 }
 
 pub fn new(capacity: Int) -> CircularBuffer(t) {
-  assert True = capacity > 0
+  let assert True = capacity > 0
   CircularBuffer(capacity, 0, queue.new())
 }
 

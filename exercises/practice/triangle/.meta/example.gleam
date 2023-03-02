@@ -30,7 +30,7 @@ pub fn scalene(a: Float, b: Float, c: Float) -> Bool {
 }
 
 fn is_valid_triangle(a: Float, b: Float, c: Float) -> Bool {
-  assert [a, b, c] = list.sort([a, b, c], float.compare)
+  let assert [a, b, c] = list.sort([a, b, c], float.compare)
 
   a >. 0.0 && b >. 0.0 && c >. 0.0 && a +. b >=. c
 }

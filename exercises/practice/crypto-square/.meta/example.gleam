@@ -39,7 +39,7 @@ fn characters_to_encode(plaintext: String) -> List(String) {
 }
 
 fn square_width(characters: List(String)) -> Int {
-  assert Ok(sqrt) =
+  let assert Ok(sqrt) =
     characters
     |> list.length()
     |> int.square_root()

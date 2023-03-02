@@ -33,7 +33,7 @@ fn get_team_scores(input: String) -> Map(String, Score) {
   |> list.fold(
     from: map.new(),
     with: fn(scores, match) {
-      assert [team_a, team_b, result] = string.split(match, ";")
+      let assert [team_a, team_b, result] = string.split(match, ";")
       let #(result_a, result_b) = parse_results(result)
 
       scores

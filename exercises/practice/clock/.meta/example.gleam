@@ -6,7 +6,7 @@ pub type Clock {
 }
 
 pub fn create(hour hour: Int, minute minute: Int) -> Clock {
-  assert Ok(minutes) =
+  let assert Ok(minutes) =
     int.modulo(hour * minutes_per_hour + minute, minutes_per_day)
 
   Clock(minutes)
