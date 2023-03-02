@@ -126,7 +126,7 @@ fn have_same_type(a: JsonData, b: JsonData) -> Bool {
 // Main
 
 pub fn main() {
-  assert [slug, canonical_data] = erlang.start_arguments()
+  let assert [slug, canonical_data] = erlang.start_arguments()
 
   case json.decode(from: canonical_data, using: canonical_data_decoder()) {
     Ok(data) -> {
@@ -226,7 +226,7 @@ fn write_solution_files(
       ["..", "exercises", "practice", slug, "src", exercise <> ".gleam"],
       "/",
     )
-  assert Ok(Nil) = file.write(content, solution_path)
+  let assert Ok(Nil) = file.write(content, solution_path)
 
   let example_path =
     string.join(
@@ -234,7 +234,7 @@ fn write_solution_files(
       "/",
     )
 
-  assert Ok(Nil) = file.write(content, example_path)
+  let assert Ok(Nil) = file.write(content, example_path)
 }
 
 fn functions_to_implement(test_cases: List(TestCase)) -> Map(String, Function) {
@@ -322,7 +322,7 @@ fn write_test_file(slug: String, data: CanonicalData) {
       "/",
     )
 
-  assert Ok(Nil) = file.write(content, path)
+  let assert Ok(Nil) = file.write(content, path)
 }
 
 fn print_comments(comments: List(String)) -> String {
@@ -375,7 +375,7 @@ fn print_test(
         _ -> print_comments(comments)
       }
       let test_name = flatten_description(prefix <> description)
-      assert Ok(Function(need_labels: need_labels, ..)) =
+      let assert Ok(Function(need_labels: need_labels, ..)) =
         map.get(functions, function)
       let input =
         input

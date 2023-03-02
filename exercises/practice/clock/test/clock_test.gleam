@@ -239,77 +239,77 @@ pub fn subtract_minutes_subtract_more_than_two_days_test() {
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_same_time_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 15, minute: 37) == clock.create(hour: 15, minute: 37)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_a_minute_apart_test() {
-  assert False =
+  let assert False =
     clock.create(hour: 15, minute: 36) == clock.create(hour: 15, minute: 37)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_an_hour_apart_test() {
-  assert False =
+  let assert False =
     clock.create(hour: 14, minute: 37) == clock.create(hour: 15, minute: 37)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_hour_overflow_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 10, minute: 37) == clock.create(hour: 34, minute: 37)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_hour_overflow_by_several_days_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 3, minute: 11) == clock.create(hour: 99, minute: 11)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_hour_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 22, minute: 40) == clock.create(hour: -2, minute: 40)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_hour_that_wraps_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 17, minute: 3) == clock.create(hour: -31, minute: 3)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_hour_that_wraps_multiple_times_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 13, minute: 49) == clock.create(hour: -83, minute: 49)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_minute_overflow_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 0, minute: 1) == clock.create(hour: 0, minute: 1441)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_minute_overflow_by_several_days_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 2, minute: 2) == clock.create(hour: 2, minute: 4322)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_minute_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 2, minute: 40) == clock.create(hour: 3, minute: -20)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_minute_that_wraps_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 4, minute: 10) == clock.create(hour: 5, minute: -1490)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_minute_that_wraps_multiple_times_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 6, minute: 15) == clock.create(hour: 6, minute: -4305)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_hours_and_minutes_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 7, minute: 32) == clock.create(hour: -12, minute: -268)
 }
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_hours_and_minutes_that_wrap_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 18, minute: 7) == clock.create(
       hour: -54,
       minute: -11_513,
@@ -317,6 +317,6 @@ pub fn compare_two_clocks_for_equality_clocks_with_negative_hours_and_minutes_th
 }
 
 pub fn compare_two_clocks_for_equality_full_clock_and_zeroed_clock_test() {
-  assert True =
+  let assert True =
     clock.create(hour: 24, minute: 0) == clock.create(hour: 0, minute: 0)
 }

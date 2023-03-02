@@ -7,163 +7,163 @@ pub fn main() {
 }
 
 pub fn testing_for_eggs_allergy_not_allergic_to_anything_test() {
-  assert False = allergies.allergic_to(allergies.Eggs, 0)
+  let assert False = allergies.allergic_to(allergies.Eggs, 0)
 }
 
 pub fn testing_for_eggs_allergy_allergic_only_to_eggs_test() {
-  assert True = allergies.allergic_to(allergies.Eggs, 1)
+  let assert True = allergies.allergic_to(allergies.Eggs, 1)
 }
 
 pub fn testing_for_eggs_allergy_allergic_to_eggs_and_something_else_test() {
-  assert True = allergies.allergic_to(allergies.Eggs, 3)
+  let assert True = allergies.allergic_to(allergies.Eggs, 3)
 }
 
 pub fn testing_for_eggs_allergy_allergic_to_something_but_not_eggs_test() {
-  assert False = allergies.allergic_to(allergies.Eggs, 2)
+  let assert False = allergies.allergic_to(allergies.Eggs, 2)
 }
 
 pub fn testing_for_eggs_allergy_allergic_to_everything_test() {
-  assert True = allergies.allergic_to(allergies.Eggs, 255)
+  let assert True = allergies.allergic_to(allergies.Eggs, 255)
 }
 
 pub fn testing_for_peanuts_allergy_not_allergic_to_anything_test() {
-  assert False = allergies.allergic_to(allergies.Peanuts, 0)
+  let assert False = allergies.allergic_to(allergies.Peanuts, 0)
 }
 
 pub fn testing_for_peanuts_allergy_allergic_only_to_peanuts_test() {
-  assert True = allergies.allergic_to(allergies.Peanuts, 2)
+  let assert True = allergies.allergic_to(allergies.Peanuts, 2)
 }
 
 pub fn testing_for_peanuts_allergy_allergic_to_peanuts_and_something_else_test() {
-  assert True = allergies.allergic_to(allergies.Peanuts, 7)
+  let assert True = allergies.allergic_to(allergies.Peanuts, 7)
 }
 
 pub fn testing_for_peanuts_allergy_allergic_to_something_but_not_peanuts_test() {
-  assert False = allergies.allergic_to(allergies.Peanuts, 5)
+  let assert False = allergies.allergic_to(allergies.Peanuts, 5)
 }
 
 pub fn testing_for_peanuts_allergy_allergic_to_everything_test() {
-  assert True = allergies.allergic_to(allergies.Peanuts, 255)
+  let assert True = allergies.allergic_to(allergies.Peanuts, 255)
 }
 
 pub fn testing_for_shellfish_allergy_not_allergic_to_anything_test() {
-  assert False = allergies.allergic_to(allergies.Shellfish, 0)
+  let assert False = allergies.allergic_to(allergies.Shellfish, 0)
 }
 
 pub fn testing_for_shellfish_allergy_allergic_only_to_shellfish_test() {
-  assert True = allergies.allergic_to(allergies.Shellfish, 4)
+  let assert True = allergies.allergic_to(allergies.Shellfish, 4)
 }
 
 pub fn testing_for_shellfish_allergy_allergic_to_shellfish_and_something_else_test() {
-  assert True = allergies.allergic_to(allergies.Shellfish, 14)
+  let assert True = allergies.allergic_to(allergies.Shellfish, 14)
 }
 
 pub fn testing_for_shellfish_allergy_allergic_to_something_but_not_shellfish_test() {
-  assert False = allergies.allergic_to(allergies.Shellfish, 10)
+  let assert False = allergies.allergic_to(allergies.Shellfish, 10)
 }
 
 pub fn testing_for_shellfish_allergy_allergic_to_everything_test() {
-  assert True = allergies.allergic_to(allergies.Shellfish, 255)
+  let assert True = allergies.allergic_to(allergies.Shellfish, 255)
 }
 
 pub fn testing_for_strawberries_allergy_not_allergic_to_anything_test() {
-  assert False = allergies.allergic_to(allergies.Strawberries, 0)
+  let assert False = allergies.allergic_to(allergies.Strawberries, 0)
 }
 
 pub fn testing_for_strawberries_allergy_allergic_only_to_strawberries_test() {
-  assert True = allergies.allergic_to(allergies.Strawberries, 8)
+  let assert True = allergies.allergic_to(allergies.Strawberries, 8)
 }
 
 pub fn testing_for_strawberries_allergy_allergic_to_strawberries_and_something_else_test() {
-  assert True = allergies.allergic_to(allergies.Strawberries, 28)
+  let assert True = allergies.allergic_to(allergies.Strawberries, 28)
 }
 
 pub fn testing_for_strawberries_allergy_allergic_to_something_but_not_strawberries_test() {
-  assert False = allergies.allergic_to(allergies.Strawberries, 20)
+  let assert False = allergies.allergic_to(allergies.Strawberries, 20)
 }
 
 pub fn testing_for_strawberries_allergy_allergic_to_everything_test() {
-  assert True = allergies.allergic_to(allergies.Strawberries, 255)
+  let assert True = allergies.allergic_to(allergies.Strawberries, 255)
 }
 
 pub fn testing_for_tomatoes_allergy_not_allergic_to_anything_test() {
-  assert False = allergies.allergic_to(allergies.Tomatoes, 0)
+  let assert False = allergies.allergic_to(allergies.Tomatoes, 0)
 }
 
 pub fn testing_for_tomatoes_allergy_allergic_only_to_tomatoes_test() {
-  assert True = allergies.allergic_to(allergies.Tomatoes, 16)
+  let assert True = allergies.allergic_to(allergies.Tomatoes, 16)
 }
 
 pub fn testing_for_tomatoes_allergy_allergic_to_tomatoes_and_something_else_test() {
-  assert True = allergies.allergic_to(allergies.Tomatoes, 56)
+  let assert True = allergies.allergic_to(allergies.Tomatoes, 56)
 }
 
 pub fn testing_for_tomatoes_allergy_allergic_to_something_but_not_tomatoes_test() {
-  assert False = allergies.allergic_to(allergies.Tomatoes, 40)
+  let assert False = allergies.allergic_to(allergies.Tomatoes, 40)
 }
 
 pub fn testing_for_tomatoes_allergy_allergic_to_everything_test() {
-  assert True = allergies.allergic_to(allergies.Tomatoes, 255)
+  let assert True = allergies.allergic_to(allergies.Tomatoes, 255)
 }
 
 pub fn testing_for_chocolate_allergy_not_allergic_to_anything_test() {
-  assert False = allergies.allergic_to(allergies.Chocolate, 0)
+  let assert False = allergies.allergic_to(allergies.Chocolate, 0)
 }
 
 pub fn testing_for_chocolate_allergy_allergic_only_to_chocolate_test() {
-  assert True = allergies.allergic_to(allergies.Chocolate, 32)
+  let assert True = allergies.allergic_to(allergies.Chocolate, 32)
 }
 
 pub fn testing_for_chocolate_allergy_allergic_to_chocolate_and_something_else_test() {
-  assert True = allergies.allergic_to(allergies.Chocolate, 112)
+  let assert True = allergies.allergic_to(allergies.Chocolate, 112)
 }
 
 pub fn testing_for_chocolate_allergy_allergic_to_something_but_not_chocolate_test() {
-  assert False = allergies.allergic_to(allergies.Chocolate, 80)
+  let assert False = allergies.allergic_to(allergies.Chocolate, 80)
 }
 
 pub fn testing_for_chocolate_allergy_allergic_to_everything_test() {
-  assert True = allergies.allergic_to(allergies.Chocolate, 255)
+  let assert True = allergies.allergic_to(allergies.Chocolate, 255)
 }
 
 pub fn testing_for_pollen_allergy_not_allergic_to_anything_test() {
-  assert False = allergies.allergic_to(allergies.Pollen, 0)
+  let assert False = allergies.allergic_to(allergies.Pollen, 0)
 }
 
 pub fn testing_for_pollen_allergy_allergic_only_to_pollen_test() {
-  assert True = allergies.allergic_to(allergies.Pollen, 64)
+  let assert True = allergies.allergic_to(allergies.Pollen, 64)
 }
 
 pub fn testing_for_pollen_allergy_allergic_to_pollen_and_something_else_test() {
-  assert True = allergies.allergic_to(allergies.Pollen, 224)
+  let assert True = allergies.allergic_to(allergies.Pollen, 224)
 }
 
 pub fn testing_for_pollen_allergy_allergic_to_something_but_not_pollen_test() {
-  assert False = allergies.allergic_to(allergies.Pollen, 160)
+  let assert False = allergies.allergic_to(allergies.Pollen, 160)
 }
 
 pub fn testing_for_pollen_allergy_allergic_to_everything_test() {
-  assert True = allergies.allergic_to(allergies.Pollen, 255)
+  let assert True = allergies.allergic_to(allergies.Pollen, 255)
 }
 
 pub fn testing_for_cats_allergy_not_allergic_to_anything_test() {
-  assert False = allergies.allergic_to(allergies.Cats, 0)
+  let assert False = allergies.allergic_to(allergies.Cats, 0)
 }
 
 pub fn testing_for_cats_allergy_allergic_only_to_cats_test() {
-  assert True = allergies.allergic_to(allergies.Cats, 128)
+  let assert True = allergies.allergic_to(allergies.Cats, 128)
 }
 
 pub fn testing_for_cats_allergy_allergic_to_cats_and_something_else_test() {
-  assert True = allergies.allergic_to(allergies.Cats, 192)
+  let assert True = allergies.allergic_to(allergies.Cats, 192)
 }
 
 pub fn testing_for_cats_allergy_allergic_to_something_but_not_cats_test() {
-  assert False = allergies.allergic_to(allergies.Cats, 64)
+  let assert False = allergies.allergic_to(allergies.Cats, 64)
 }
 
 pub fn testing_for_cats_allergy_allergic_to_everything_test() {
-  assert True = allergies.allergic_to(allergies.Cats, 255)
+  let assert True = allergies.allergic_to(allergies.Cats, 255)
 }
 
 pub fn list_when_no_allergies_test() {
