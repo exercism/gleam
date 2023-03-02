@@ -34,7 +34,7 @@ pub fn test_creation_of_queens_with_valid_and_invalid_positions_queen_must_have_
 }
 
 pub fn test_the_ability_of_one_queen_to_attack_another_cannot_attack_test() {
-  assert False =
+  let assert False =
     queen_attack.can_attack(
       black_queen: Position(row: 6, column: 6),
       white_queen: Position(row: 2, column: 4),
@@ -42,7 +42,7 @@ pub fn test_the_ability_of_one_queen_to_attack_another_cannot_attack_test() {
 }
 
 pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_same_row_test() {
-  assert True =
+  let assert True =
     queen_attack.can_attack(
       black_queen: Position(row: 2, column: 6),
       white_queen: Position(row: 2, column: 4),
@@ -50,7 +50,7 @@ pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_same_row_te
 }
 
 pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_same_column_test() {
-  assert True =
+  let assert True =
     queen_attack.can_attack(
       black_queen: Position(row: 2, column: 5),
       white_queen: Position(row: 4, column: 5),
@@ -58,7 +58,7 @@ pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_same_column
 }
 
 pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_first_diagonal_test() {
-  assert True =
+  let assert True =
     queen_attack.can_attack(
       black_queen: Position(row: 0, column: 4),
       white_queen: Position(row: 2, column: 2),
@@ -66,7 +66,7 @@ pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_first_diago
 }
 
 pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_second_diagonal_test() {
-  assert True =
+  let assert True =
     queen_attack.can_attack(
       black_queen: Position(row: 3, column: 1),
       white_queen: Position(row: 2, column: 2),
@@ -74,7 +74,7 @@ pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_second_diag
 }
 
 pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_third_diagonal_test() {
-  assert True =
+  let assert True =
     queen_attack.can_attack(
       black_queen: Position(row: 1, column: 1),
       white_queen: Position(row: 2, column: 2),
@@ -82,7 +82,7 @@ pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_third_diago
 }
 
 pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_fourth_diagonal_test() {
-  assert True =
+  let assert True =
     queen_attack.can_attack(
       black_queen: Position(row: 0, column: 6),
       white_queen: Position(row: 1, column: 7),
@@ -90,7 +90,7 @@ pub fn test_the_ability_of_one_queen_to_attack_another_can_attack_on_fourth_diag
 }
 
 pub fn test_the_ability_of_one_queen_to_attack_another_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal_test() {
-  assert False =
+  let assert False =
     queen_attack.can_attack(
       black_queen: Position(row: 2, column: 5),
       white_queen: Position(row: 4, column: 1),

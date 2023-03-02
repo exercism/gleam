@@ -1,5 +1,4 @@
 import gleam/result
-
 import gleam/int
 import gleam/map
 import gleam/order
