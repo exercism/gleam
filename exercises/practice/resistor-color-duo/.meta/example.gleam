@@ -11,10 +11,11 @@ pub type Color {
   White
 }
 
-pub fn value(colors: List(Color)) -> Int {
-  let [color1, color2, ..] = colors
-
-  10 * color_code(color1) + color_code(color2)
+pub fn value(colors: List(Color)) -> Result(Int, String) {
+  case colors {
+    [color1, color2, ..] -> Ok(10 * color_code(color1) + color_code(color2))
+    _ -> Error("the list must contain at least two colors")
+  }
 }
 
 fn color_code(color: Color) -> Int {
