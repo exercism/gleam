@@ -81,8 +81,8 @@ fn has_vertical_walls_between(
 ) -> Bool {
   let #(x1, y1) = position1
   let #(x2, y2) = position2
-  assert True = y1 == y2
-  assert True = x1 < x2
+  let assert True = y1 == y2
+  let assert True = x1 < x2
 
   list.range(x1, x2)
   |> list.map(fn(x) { #(x, y1) })
@@ -102,8 +102,8 @@ fn has_horizontal_walls_between(
 ) -> Bool {
   let #(x1, y1) = position1
   let #(x2, y2) = position2
-  assert True = x1 == x2
-  assert True = y1 < y2
+  let assert True = x1 == x2
+  let assert True = y1 < y2
 
   list.range(y1, y2)
   |> list.map(fn(y) { #(x1, y) })

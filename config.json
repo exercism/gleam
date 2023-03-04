@@ -1197,6 +1197,24 @@
         "difficulty": 4
       },
       {
+        "slug": "luhn",
+        "name": "Luhn",
+        "uuid": "a66bbefd-db5a-44d0-ab4b-73d871756f08",
+        "practices": [
+          "string",
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case",
+          "bool",
+          "int",
+          "result"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "wordy",
         "name": "Wordy",
         "uuid": "5031033b-bd21-4563-ae18-59ad02f4c489",
@@ -1300,6 +1318,23 @@
           "custom-type"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "grade-school",
+        "name": "Grade School",
+        "uuid": "836dddea-2a02-434f-a886-c8e1c429268f",
+        "practices": [
+          "map",
+          "result"
+        ],
+        "prerequisites": [
+          "map",
+          "result",
+          "string",
+          "int",
+          "list"
+        ],
+        "difficulty": 3
       },
       {
         "slug": "pig-latin",

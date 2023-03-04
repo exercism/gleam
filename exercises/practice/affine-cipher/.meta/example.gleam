@@ -1,3 +1,4 @@
+import gleam/result
 import gleam/string
 import gleam/list
 import gleam/int
@@ -11,7 +12,7 @@ pub fn encode(
   a a: Int,
   b b: Int,
 ) -> Result(String, Error) {
-  try _ = modular_inverse(a, alphabet_length)
+  use _ <- result.then(modular_inverse(a, alphabet_length))
 
   plaintext
   |> translate(fn(index) { a * index + b })
@@ -27,7 +28,7 @@ pub fn decode(
   a a: Int,
   b b: Int,
 ) -> Result(String, Error) {
-  try mmi = modular_inverse(a, alphabet_length)
+  use mmi <- result.then(modular_inverse(a, alphabet_length))
 
   Ok(translate(ciphertext, fn(index) { mmi * { index - b } }))
 }
@@ -42,7 +43,7 @@ fn translate(input: String, op: fn(Int) -> Int) -> String {
   |> list.filter_map(fn(char) {
     case list.contains(letters, char) {
       True -> {
-        assert Ok(shifted_index) =
+        let assert Ok(shifted_index) =
           int.modulo(
             op(string.utf_codepoint_to_int(char) - letter_a_int_code_point),
             alphabet_length,

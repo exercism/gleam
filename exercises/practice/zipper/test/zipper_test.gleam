@@ -37,9 +37,9 @@ pub fn left_right_and_value_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.right(zipper)
-  assert Ok(3) = zipper.value(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.right(zipper)
+  let assert Ok(3) = zipper.value(zipper)
 }
 
 pub fn dead_end_test() {
@@ -55,10 +55,10 @@ pub fn dead_end_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Error(Nil) = zipper.left(zipper)
-  assert Error(Nil) = zipper.right(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Error(Nil) = zipper.left(zipper)
+  let assert Error(Nil) = zipper.right(zipper)
 }
 
 pub fn tree_from_deep_focus_test() {
@@ -74,8 +74,8 @@ pub fn tree_from_deep_focus_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.right(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.right(zipper)
   zipper
   |> zipper.to_tree
   |> should.equal(tree)
@@ -94,7 +94,7 @@ pub fn traversing_up_from_top_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Error(Nil) = zipper.up(zipper)
+  let assert Error(Nil) = zipper.up(zipper)
 }
 
 pub fn left_right_and_up_test() {
@@ -110,13 +110,13 @@ pub fn left_right_and_up_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.up(zipper)
-  assert Ok(zipper) = zipper.right(zipper)
-  assert Ok(zipper) = zipper.up(zipper)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.right(zipper)
-  assert Ok(3) = zipper.value(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.up(zipper)
+  let assert Ok(zipper) = zipper.right(zipper)
+  let assert Ok(zipper) = zipper.up(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.right(zipper)
+  let assert Ok(3) = zipper.value(zipper)
 }
 
 pub fn test_ability_to_descend_multiple_levels_and_return_test() {
@@ -132,11 +132,11 @@ pub fn test_ability_to_descend_multiple_levels_and_return_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.right(zipper)
-  assert Ok(zipper) = zipper.up(zipper)
-  assert Ok(zipper) = zipper.up(zipper)
-  assert Ok(1) = zipper.value(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.right(zipper)
+  let assert Ok(zipper) = zipper.up(zipper)
+  let assert Ok(zipper) = zipper.up(zipper)
+  let assert Ok(1) = zipper.value(zipper)
 }
 
 pub fn set_value_test() {
@@ -152,7 +152,7 @@ pub fn set_value_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
 
   zipper
   |> zipper.set_value(5)
@@ -181,9 +181,9 @@ pub fn set_value_after_traversing_up_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.right(zipper)
-  assert Ok(zipper) = zipper.up(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.right(zipper)
+  let assert Ok(zipper) = zipper.up(zipper)
 
   zipper
   |> zipper.set_value(5)
@@ -212,8 +212,8 @@ pub fn set_left_with_leaf_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) =
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) =
     zipper.set_left(zipper, Node(value: 5, left: Leaf, right: Leaf))
 
   zipper
@@ -242,8 +242,8 @@ pub fn set_right_with_null_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.set_right(zipper, Leaf)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.set_right(zipper, Leaf)
 
   zipper
   |> zipper.to_tree
@@ -267,7 +267,7 @@ pub fn set_right_with_subtree_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) =
+  let assert Ok(zipper) =
     zipper.set_right(
       zipper,
       Node(
@@ -307,8 +307,8 @@ pub fn set_value_on_deep_focus_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.right(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.right(zipper)
 
   zipper
   |> zipper.set_value(5)
@@ -337,12 +337,12 @@ pub fn different_paths_to_same_zipper_test() {
     )
 
   let zipper = zipper.to_zipper(tree)
-  assert Ok(zipper) = zipper.left(zipper)
-  assert Ok(zipper) = zipper.up(zipper)
-  assert Ok(zipper) = zipper.right(zipper)
+  let assert Ok(zipper) = zipper.left(zipper)
+  let assert Ok(zipper) = zipper.up(zipper)
+  let assert Ok(zipper) = zipper.right(zipper)
 
   let other_zipper = zipper.to_zipper(tree)
-  assert Ok(other_zipper) = zipper.right(other_zipper)
+  let assert Ok(other_zipper) = zipper.right(other_zipper)
 
   should.equal(zipper, other_zipper)
 }

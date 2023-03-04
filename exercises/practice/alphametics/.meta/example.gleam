@@ -16,7 +16,7 @@ pub fn solve(puzzle: String) -> Result(Map(String, Int), Nil) {
 }
 
 fn parse_puzzle(puzzle: String) -> #(Map(String, Int), Set(String)) {
-  assert [left, right] = string.split(puzzle, " == ")
+  let assert [left, right] = string.split(puzzle, " == ")
   let terms = string.split(left, " + ")
 
   let coefficients =
@@ -119,7 +119,7 @@ fn is_solution(
       over: current_guess,
       from: 0,
       with: fn(sum, letter, value) {
-        assert Ok(coeff) = map.get(coefficients, letter)
+        let assert Ok(coeff) = map.get(coefficients, letter)
         sum + coeff * value
       },
     )

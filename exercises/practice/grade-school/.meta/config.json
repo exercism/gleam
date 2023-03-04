@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "src/grade_school.gleam"
+    ],
+    "test": [
+      "test/grade_school_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Given students' names along with the grade that they are in, create a roster for the school.",
+  "source": "A pairing session with Phil Battos at gSchool"
+}

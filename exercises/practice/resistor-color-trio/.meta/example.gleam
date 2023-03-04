@@ -22,7 +22,7 @@ fn get_label(color: String) -> Int {
 }
 
 pub fn label(colors: List(String)) -> Result(Resistance, Nil) {
-  assert [first_color, second_color, multiplier, ..] = colors
+  let assert [first_color, second_color, multiplier, ..] = colors
 
   let first_color_val = get_label(first_color)
   let second_color_val = get_label(second_color)
@@ -39,7 +39,7 @@ pub fn label(colors: List(String)) -> Result(Resistance, Nil) {
           multiplier_val,
         )
 
-      assert Ok(value) = int.parse(value_string)
+      let assert Ok(value) = int.parse(value_string)
 
       let total_zeros = case second_color_val {
         0 -> multiplier_val + 1
