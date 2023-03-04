@@ -1052,11 +1052,11 @@
         "uuid": "e2d09419-0136-4f4d-9a1c-02236c2c60a6",
         "practices": [
           "list",
-          "recursion",
-          "anonymous-functions"
+          "recursion"
         ],
         "prerequisites": [
           "list",
+          "recursion",
           "anonymous-functions",
           "bool",
           "case"
