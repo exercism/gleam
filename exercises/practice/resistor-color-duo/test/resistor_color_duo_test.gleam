@@ -36,9 +36,11 @@ pub fn black_and_brown_one_digit_test() {
 }
 
 pub fn fails_if_only_one_color_is_provided_test() {
-  let assert Error("the list must contain at least two colors") = resistor_color_duo.value([Black])
+  let assert Error("the list must contain at least two colors") =
+    resistor_color_duo.value([Black])
 }
 
 pub fn fails_if_no_color_is_provided_test() {
-  let assert Error("the list must contain at least two colors") = resistor_color_duo.value([])
+  let assert Error("the list must contain at least two colors") =
+    resistor_color_duo.value([])
 }
