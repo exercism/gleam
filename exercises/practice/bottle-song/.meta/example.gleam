@@ -10,8 +10,8 @@ pub fn recite(
     let current_bottles = pluralise_bottle(amount)
     let remaining_bottles = pluralise_bottle(amount - 1)
 
-    assert Ok(available) = get_phrase(amount)
-    assert Ok(remaining) = get_phrase(amount - 1)
+    let assert Ok(available) = get_phrase(amount)
+    let assert Ok(remaining) = get_phrase(amount - 1)
 
     string.concat([
       string.capitalise(available),

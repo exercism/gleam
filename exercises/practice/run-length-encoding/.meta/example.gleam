@@ -6,12 +6,12 @@ import gleam/result
 import gleam/option.{None, Some}
 
 pub fn encode(plaintext: String) -> String {
-  assert Ok(re) = regex.from_string("(.)\\1*")
+  let assert Ok(re) = regex.from_string("(.)\\1*")
 
   plaintext
   |> regex.scan(re, _)
   |> list.map(fn(m) {
-    assert Ok(letter) = string.first(m.content)
+    let assert Ok(letter) = string.first(m.content)
     case string.length(m.content) {
       1 -> letter
       count -> int.to_string(count) <> letter
@@ -21,7 +21,7 @@ pub fn encode(plaintext: String) -> String {
 }
 
 pub fn decode(ciphertext: String) -> String {
-  assert Ok(re) = regex.from_string("(\\d*)(.)")
+  let assert Ok(re) = regex.from_string("(\\d*)(.)")
 
   ciphertext
   |> regex.scan(re, _)

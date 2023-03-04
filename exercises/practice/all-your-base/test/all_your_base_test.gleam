@@ -125,6 +125,6 @@ pub fn output_base_is_negative_test() {
 pub fn both_bases_are_negative_test() {
   let output =
     all_your_base.rebase(digits: [1], input_base: -2, output_base: -7)
-  assert True =
+  let assert True =
     output == Error(InvalidBase(-2)) || output == Error(InvalidBase(-7))
 }

@@ -59,6 +59,6 @@ fn next_triples(triplet: Triplet) -> List(Triplet) {
 
 fn order_sides(triplet: Triplet) -> Triplet {
   let Triplet(a, b, c) = triplet
-  assert [a, b, c] = list.sort([a, b, c], int.compare)
+  let assert [a, b, c] = list.sort([a, b, c], int.compare)
   Triplet(a, b, c)
 }

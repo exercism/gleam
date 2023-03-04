@@ -11,12 +11,12 @@ pub fn no_items_test() {
   |> should.equal(0)
 }
 
-pub fn one_item__too_heavy_test() {
+pub fn one_item_too_heavy_test() {
   knapsack.maximum_value([Item(value: 1, weight: 100)], 10)
   |> should.equal(0)
 }
 
-pub fn five_items__cannot_be_greedy_by_weight__test() {
+pub fn five_items_cannot_be_greedy_by_weight_test() {
   knapsack.maximum_value(
     [
       Item(value: 5, weight: 2),
@@ -30,7 +30,7 @@ pub fn five_items__cannot_be_greedy_by_weight__test() {
   |> should.equal(21)
 }
 
-pub fn five_items__cannot_be_greedy_by_value__test() {
+pub fn five_items_cannot_be_greedy_by_value_test() {
   knapsack.maximum_value(
     [
       Item(value: 20, weight: 2),

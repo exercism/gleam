@@ -527,6 +527,21 @@
         "difficulty": 3
       },
       {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "43dd4c25-81f3-4a59-a809-2908387d3001",
+        "practices": [
+          "case",
+          "bool"
+        ],
+        "prerequisites": [
+          "case",
+          "bool",
+          "list"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "a433d1f6-d8a2-40b9-a7d7-a611420d7164",
@@ -734,10 +749,10 @@
         "name": "Prime Factors",
         "uuid": "00d1a428-99c4-4175-bee2-e05fc034528f",
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
-          "math",
+          "maths",
           "int",
           "list",
           "case"
@@ -764,10 +779,10 @@
         "name": "Grains",
         "uuid": "b5b9be18-9141-4176-8f8c-3dd14d14bed5",
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
-          "math"
+          "maths"
         ],
         "difficulty": 2
       },
@@ -850,6 +865,20 @@
           "case"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "twelve-days",
+        "name": "Twelve Days",
+        "uuid": "583b74dc-2c5c-48f8-85c2-c90623507682",
+        "difficulty": 3,
+        "practices": [
+          "string",
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list"
+        ]
       },
       {
         "slug": "etl",
@@ -946,10 +975,10 @@
         "name": "All Your Base",
         "uuid": "e9332e6f-a7e5-4f30-825c-64af0a278a70",
         "practices": [
-          "math"
+          "maths"
         ],
         "prerequisites": [
-          "math",
+          "maths",
           "int",
           "list",
           "result",
@@ -1016,6 +1045,20 @@
         "difficulty": 4
       },
       {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "018be77b-d08c-497e-acdc-1b2b4e88e754",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "3c850415-92fa-4019-b776-aaab30675680",
@@ -1027,6 +1070,20 @@
           "list",
           "map",
           "result"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "700f44e5-13a3-4e97-aad5-d383e25f9f9b",
+        "practices": [
+          "maths"
+        ],
+        "prerequisites": [
+          "maths",
+          "int",
+          "recursion"
         ],
         "difficulty": 4
       },
@@ -1062,6 +1119,248 @@
           "int"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "5bf01e81-b30a-4210-b1ed-1edbf3d28ab1",
+        "practices": [
+          "float",
+          "string"
+        ],
+        "prerequisites": [
+          "int",
+          "float",
+          "list",
+          "string"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "594b6c1a-0a4c-4463-9535-62056c71404e",
+        "practices": [
+          "string",
+          "maths"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "int",
+          "result"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "house",
+        "name": "House",
+        "uuid": "21421905-a33c-4040-9f09-78726b5d1167",
+        "practices": [
+          "string",
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "connect",
+        "name": "Connect",
+        "uuid": "89c6bf7a-5cd8-4254-b3e0-1457a5390b46",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "list",
+          "map",
+          "string",
+          "result",
+          "bool",
+          "case",
+          "maths"
+        ],
+        "difficulty": 7
+      },
+      {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "ad9cc1bd-d99b-4f43-941c-8e09b43801af",
+        "practices": [
+          "int",
+          "string",
+          "custom-type"
+        ],
+        "prerequisites": [
+          "int",
+          "string",
+          "custom-type"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "4c6ed017-a02b-4826-a111-ef9733b7d315",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "int"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "luhn",
+        "name": "Luhn",
+        "uuid": "a66bbefd-db5a-44d0-ab4b-73d871756f08",
+        "practices": [
+          "string",
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case",
+          "bool",
+          "int",
+          "result"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "wordy",
+        "name": "Wordy",
+        "uuid": "5031033b-bd21-4563-ae18-59ad02f4c489",
+        "practices": [
+          "result",
+          "string"
+        ],
+        "prerequisites": [
+          "result",
+          "string",
+          "case",
+          "list",
+          "bool",
+          "int",
+          "maths",
+          "custom-type"
+        ],
+        "difficulty": 8
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "34293b12-1d94-43d9-a9cb-27b8bff92d67",
+        "practices": [
+          "int",
+          "list",
+          "result"
+        ],
+        "prerequisites": [
+          "int",
+          "list",
+          "result"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "abbeeb8f-6ec1-4f57-86fc-2e18b3a62e29",
+        "practices": [
+          "map"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "case",
+          "map",
+          "int"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "753fff04-5a64-4c3f-afd2-beee7e27efe8",
+        "practices": [
+          "case"
+        ],
+        "prerequisites": [
+          "string",
+          "case",
+          "int",
+          "result"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "22461f35-684d-4f75-9399-d07a4f483bdd",
+        "practices": [
+          "int",
+          "list",
+          "bitwise",
+          "bit-string",
+          "custom-type"
+        ],
+        "prerequisites": [
+          "int",
+          "list",
+          "bitwise",
+          "custom-type"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "grade-school",
+        "name": "Grade School",
+        "uuid": "836dddea-2a02-434f-a886-c8e1c429268f",
+        "practices": [
+          "map",
+          "result"
+        ],
+        "prerequisites": [
+          "map",
+          "result",
+          "string",
+          "int",
+          "list"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "dbc455de-1845-49f9-b5b5-082350e12811",
+        "practices": [
+          "string",
+          "case"
+        ],
+        "prerequisites": [
+          "string",
+          "case"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "fda0001e-51b5-4041-a08a-2cb7dfef0f1c",
+        "practices": [
+          "int",
+          "iterator",
+          "recursion"
+        ],
+        "prerequisites": [
+          "int"
+        ],
+        "difficulty": 3
       }
     ]
   },
