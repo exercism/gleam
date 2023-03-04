@@ -1,5 +1,6 @@
 import gleam/int
 import gleam/float
+import gleam/result
 
 pub type RationalNumber {
   RationalNumber(numerator: Int, denominator: Int)
@@ -45,7 +46,7 @@ pub fn absolute_value(r: RationalNumber) -> RationalNumber {
 pub fn power_of_rational(
   number base: RationalNumber,
   to exponent: Int,
-) -> Result(RationalNumber, Nil) {
+) -> RationalNumber {
   case base {
     RationalNumber(numerator, denominator) if exponent < 0 ->
       power_of_rational(
@@ -54,12 +55,10 @@ pub fn power_of_rational(
       )
 
     RationalNumber(numerator, denominator) -> {
-      try numerator = power_of_integer(numerator, to: exponent)
-      try denominator = power_of_integer(denominator, to: exponent)
+      let numerator = power_of_integer(numerator, to: exponent)
+      let denominator = power_of_integer(denominator, to: exponent)
 
-      let power = reduce(RationalNumber(numerator, denominator))
-
-      Ok(power)
+      reduce(RationalNumber(numerator, denominator))
     }
   }
 }
@@ -70,7 +69,7 @@ pub fn power_of_real(
 ) -> Result(Float, Nil) {
   let RationalNumber(numerator, denominator) = exponent
 
-  try power = float.power(base, int.to_float(numerator))
+  use power <- result.then(float.power(base, int.to_float(numerator)))
 
   nth_root(denominator, of: power)
 }
@@ -91,10 +90,10 @@ pub fn reduce(r: RationalNumber) -> RationalNumber {
   }
 }
 
-fn power_of_integer(number base: Int, to exponent: Int) -> Result(Int, Nil) {
-  try power = int.power(base, int.to_float(exponent))
+fn power_of_integer(number base: Int, to exponent: Int) -> Int {
+  let assert Ok(power) = int.power(base, int.to_float(exponent))
 
-  Ok(float.round(power))
+  float.round(power)
 }
 
 fn nth_root(n: Int, of p: Float) -> Result(Float, Nil) {
