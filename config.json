@@ -1297,6 +1297,19 @@
         "difficulty": 5
       },
       {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "e1103441-9391-4760-829b-1ec412762fab",
+        "practices": [
+          "list"
+        ],
+        "prerequisites": [
+          "list",
+          "tuple"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "22461f35-684d-4f75-9399-d07a4f483bdd",
