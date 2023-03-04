@@ -25,7 +25,7 @@ pub fn absolute_value(r: RationalNumber) -> RationalNumber {
 pub fn power_of_rational(
   number base: RationalNumber,
   to exponent: Int,
-) -> Result(RationalNumber, Nil) {
+) -> RationalNumber {
   todo
 }
 
