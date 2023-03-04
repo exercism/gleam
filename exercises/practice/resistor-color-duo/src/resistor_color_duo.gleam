@@ -11,6 +11,6 @@ pub type Color {
   White
 }
 
-pub fn value(colors: List(Color)) -> Result(Int, String) {
+pub fn value(colors: List(Color)) -> Result(Int, Nil) {
   todo
 }
