@@ -323,6 +323,23 @@
         "difficulty": 2
       },
       {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "e2d09419-0136-4f4d-9a1c-02236c2c60a6",
+        "practices": [
+          "list",
+          "recursion"
+        ],
+        "prerequisites": [
+          "list",
+          "recursion",
+          "anonymous-functions",
+          "bool",
+          "case"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "0c7a2f06-1e53-4043-9e1a-386e90e945b4",
@@ -1045,23 +1062,6 @@
           "int"
         ],
         "difficulty": 5
-      },
-      {
-        "slug": "strain",
-        "name": "Strain",
-        "uuid": "e2d09419-0136-4f4d-9a1c-02236c2c60a6",
-        "practices": [
-          "list",
-          "recursion"
-        ],
-        "prerequisites": [
-          "list",
-          "recursion",
-          "anonymous-functions",
-          "bool",
-          "case"
-        ],
-        "difficulty": 2
       }
     ]
   },
