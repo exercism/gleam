@@ -1333,6 +1333,22 @@
         "difficulty": 3
       },
       {
+        "slug": "variable-length-quantity",
+        "name": "Variable Length Quantity",
+        "uuid": "f7e33664-ea30-4885-8961-4aa984a1341d",
+        "practices": [
+          "bit-string"
+        ],
+        "prerequisites": [
+          "bit-string",
+          "case",
+          "list",
+          "recursion",
+          "result"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "pig-latin",
         "name": "Pig Latin",
         "uuid": "dbc455de-1845-49f9-b5b5-082350e12811",
