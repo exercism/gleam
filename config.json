@@ -323,6 +323,21 @@
         "difficulty": 2
       },
       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "3f38677b-80cf-4782-b1e6-02f4413c240e",
+        "practices": [
+          "custom-type",
+          "case"
+        ],
+        "prerequisites": [
+          "custom-type",
+          "case",
+          "list"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "0c7a2f06-1e53-4043-9e1a-386e90e945b4",
