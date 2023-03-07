@@ -1362,6 +1362,22 @@
         "difficulty": 5
       },
       {
+        "slug": "ocr-numbers",
+        "name": "OCR Numbers",
+        "uuid": "0ac6ba02-b2c0-4c81-8ca0-31c49a340e23",
+        "practices": [
+          "string",
+          "list"
+        ],
+        "prerequisites": [
+          "string",
+          "list",
+          "result",
+          "case"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "pig-latin",
         "name": "Pig Latin",
         "uuid": "dbc455de-1845-49f9-b5b5-082350e12811",
