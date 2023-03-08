@@ -9,5 +9,5 @@ packages = [
 
 [requirements]
 gleam_bitwise = "~> 1.2"
-gleam_stdlib = "~> 0.26"
+gleam_stdlib = "~> 0.27"
 gleeunit = "~> 0.10"

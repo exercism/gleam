@@ -3,7 +3,7 @@ version = "0.1.0"
 description = "Test and stub file generator for the Exercism Gleam track"
 
 [dependencies]
-gleam_stdlib = "~> 0.26"
+gleam_stdlib = "~> 0.27"
 gleam_erlang = "~> 0.17"
 gleam_json = "~> 0.5"
 

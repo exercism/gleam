@@ -11,4 +11,4 @@ packages = [
 [requirements]
 gleam_erlang = "~> 0.17"
 gleam_json = "~> 0.5"
-gleam_stdlib = "~> 0.26"
+gleam_stdlib = "~> 0.27"
