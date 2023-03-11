@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "natanaelsirqueira"
+  ],
+  "files": {
+    "solution": [
+      "src/custom_set.gleam"
+    ],
+    "test": [
+      "test/custom_set_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Create a custom set type."
+}
