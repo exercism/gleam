@@ -354,6 +354,23 @@
         "difficulty": 4
       },
       {
+        "slug": "custom-set",
+        "name": "Custom Set",
+        "uuid": "70ea5040-42c5-4133-84ec-1a2ae6dde836",
+        "practices": [
+          "custom-type",
+          "generics"
+        ],
+        "prerequisites": [
+          "custom-type",
+          "generics",
+          "bool",
+          "list",
+          "int"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "b62f8574-9bac-4b95-a76c-f13789ae2663",
