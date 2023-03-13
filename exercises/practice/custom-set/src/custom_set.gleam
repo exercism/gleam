@@ -30,17 +30,11 @@ pub fn add(to set: Set(t), this member: t) -> Set(t) {
   todo
 }
 
-pub fn intersection(
-  of first: Set(t),
-  and second: Set(t),
-) -> Set(t) {
+pub fn intersection(of first: Set(t), and second: Set(t)) -> Set(t) {
   todo
 }
 
-pub fn difference(
-  between first: Set(t),
-  and second: Set(t),
-) -> Set(t) {
+pub fn difference(between first: Set(t), and second: Set(t)) -> Set(t) {
   todo
 }
 
