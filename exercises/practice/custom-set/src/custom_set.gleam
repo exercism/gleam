@@ -1,49 +1,49 @@
-pub opaque type CustomSet(t) {
-  CustomSet
+pub opaque type Set(t) {
+  Set
 }
 
-pub fn new(members: List(t)) -> CustomSet(t) {
+pub fn new(members: List(t)) -> Set(t) {
   todo
 }
 
-pub fn is_empty(custom_set: CustomSet(t)) -> Bool {
+pub fn is_empty(set: Set(t)) -> Bool {
   todo
 }
 
-pub fn contains(in custom_set: CustomSet(t), this member: t) -> Bool {
+pub fn contains(in set: Set(t), this member: t) -> Bool {
   todo
 }
 
-pub fn is_subset(first: CustomSet(t), of second: CustomSet(t)) -> Bool {
+pub fn is_subset(first: Set(t), of second: Set(t)) -> Bool {
   todo
 }
 
-pub fn disjoint(first: CustomSet(t), second: CustomSet(t)) -> Bool {
+pub fn disjoint(first: Set(t), second: Set(t)) -> Bool {
   todo
 }
 
-pub fn is_equal(first: CustomSet(t), to second: CustomSet(t)) -> Bool {
+pub fn is_equal(first: Set(t), to second: Set(t)) -> Bool {
   todo
 }
 
-pub fn add(to custom_set: CustomSet(t), this member: t) -> CustomSet(t) {
+pub fn add(to set: Set(t), this member: t) -> Set(t) {
   todo
 }
 
 pub fn intersection(
-  of first: CustomSet(t),
-  and second: CustomSet(t),
-) -> CustomSet(t) {
+  of first: Set(t),
+  and second: Set(t),
+) -> Set(t) {
   todo
 }
 
 pub fn difference(
-  between first: CustomSet(t),
-  and second: CustomSet(t),
-) -> CustomSet(t) {
+  between first: Set(t),
+  and second: Set(t),
+) -> Set(t) {
   todo
 }
 
-pub fn union(of first: CustomSet(t), and second: CustomSet(t)) -> CustomSet(t) {
+pub fn union(of first: Set(t), and second: Set(t)) -> Set(t) {
   todo
 }
