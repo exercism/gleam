@@ -403,6 +403,22 @@
         "difficulty": 2
       },
       {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "e2d09419-0136-4f4d-9a1c-02236c2c60a6",
+        "practices": [
+          "list",
+          "recursion"
+        ],
+        "prerequisites": [
+          "list",
+          "recursion",
+          "bool",
+          "case"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "phone-number",
         "name": "Phone Number",
         "uuid": "3f592a98-3044-48ee-9433-330a2496867b",
