@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "natanaelsirqueira"
+  ],
+  "files": {
+    "solution": [
+      "src/matrix.gleam"
+    ],
+    "test": [
+      "test/matrix_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
+  "source": "Exercise by the JumpstartLab team for students at The Turing School of Software and Design.",
+  "source_url": "https://turing.edu"
+}

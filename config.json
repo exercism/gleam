@@ -1346,6 +1346,22 @@
         "difficulty": 2
       },
       {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "6fc59193-bc31-40af-902a-b13ad926bbb3",
+        "practices": [
+          "list",
+          "string"
+        ],
+        "prerequisites": [
+          "list",
+          "string",
+          "int",
+          "result"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "grade-school",
         "name": "Grade School",
         "uuid": "836dddea-2a02-434f-a886-c8e1c429268f",
