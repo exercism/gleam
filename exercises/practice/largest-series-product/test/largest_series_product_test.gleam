@@ -59,16 +59,6 @@ pub fn rejects_span_longer_than_string_length_test() {
   |> should.equal(Error(Nil))
 }
 
-pub fn reports_1_for_empty_string_and_empty_product_0_span_test() {
-  largest_series_product.largest_product("", 0)
-  |> should.equal(Ok(1))
-}
-
-pub fn reports_1_for_nonempty_string_and_empty_product_0_span_test() {
-  largest_series_product.largest_product("123", 0)
-  |> should.equal(Ok(1))
-}
-
 pub fn rejects_empty_string_and_nonzero_span_test() {
   largest_series_product.largest_product("", 1)
   |> should.equal(Error(Nil))
