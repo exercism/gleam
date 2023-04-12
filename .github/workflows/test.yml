@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3
+        uses: actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247
 
       - uses: erlef/setup-beam@a255120a8298b1d3ebd952d84954db5471801f8f
         with:
