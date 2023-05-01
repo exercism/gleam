@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
 
-      - uses: erlef/setup-beam@a255120a8298b1d3ebd952d84954db5471801f8f
+      - uses: erlef/setup-beam@c2e02f777c158310fc6d3d4e11b36a52d2d52db8
         with:
           otp-version: "25.2"
           gleam-version: "0.27.0"
