@@ -54,11 +54,13 @@
         "difficulty": 1,
         "prerequisites": [
           "custom-types",
-          "case-expressions"
+          "case-expressions",
+          "lists"
         ],
         "practices": [
           "custom-types",
-          "case-expressions"
+          "case-expressions",
+          "lists"
         ]
       },
       {
@@ -92,11 +94,13 @@
         "uuid": "c9f7d06c-a2fb-45c3-a320-b9a93fd88201",
         "difficulty": 3,
         "practices": [
-          "case-expressions"
+          "case-expressions",
+          "strings"
         ],
         "prerequisites": [
           "case-expressions",
-          "strings"
+          "strings",
+          "bools"
         ]
       },
       {
@@ -117,12 +121,16 @@
         "uuid": "d04cd9d6-6494-4336-8e6c-2b9f612eba05",
         "difficulty": 2,
         "practices": [
-          "recursion"
+          "recursion",
+          "higher-order-functions",
+          "generics"
         ],
         "prerequisites": [
           "lists",
           "recursion",
-          "case-expressions"
+          "case-expressions",
+          "higher-order-functions",
+          "generics"
         ]
       },
       {
@@ -145,7 +153,8 @@
         "difficulty": 9,
         "practices": [
           "custom-types",
-          "case-expressions"
+          "case-expressions",
+          "results"
         ],
         "prerequisites": [
           "numbers",
@@ -163,14 +172,19 @@
         "uuid": "1d54b9d2-bf6f-473f-8bf6-668d3c0fd5f3",
         "difficulty": 4,
         "practices": [
+          "bools",
+          "custom-types",
+          "lists",
           "numbers",
-          "bools"
+          "results"
         ],
         "prerequisites": [
           "bools",
-          "lists",
           "case-expressions",
-          "numbers"
+          "custom-types",
+          "lists",
+          "numbers",
+          "results"
         ]
       },
       {
@@ -201,9 +215,11 @@
         "uuid": "a70503ba-f1f3-4583-9226-c3ada98e9500",
         "difficulty": 2,
         "practices": [
+          "sets",
           "strings"
         ],
         "prerequisites": [
+          "sets",
           "bools",
           "strings"
         ]
@@ -252,6 +268,7 @@
         "prerequisites": [
           "case-expressions",
           "lists",
+          "queues",
           "tuples"
         ]
       },
@@ -294,12 +311,17 @@
         "name": "Series",
         "uuid": "4a084cb7-335d-41f1-8148-5d3abbce8ab0",
         "prerequisites": [
+          "custom-types",
+          "results",
           "strings",
           "numbers",
           "lists",
           "bools"
         ],
         "practices": [
+          "custom-types",
+          "strings",
+          "results",
           "lists"
         ],
         "difficulty": 2
@@ -310,10 +332,11 @@
         "uuid": "a68113f8-92be-40e0-a97f-eb4239303ef5",
         "prerequisites": [
           "bools",
-          "numbers",
-          "float"
+          "guards",
+          "numbers"
         ],
         "practices": [
+          "numbers",
           "bools"
         ],
         "difficulty": 2
@@ -324,7 +347,8 @@
         "uuid": "3f38677b-80cf-4782-b1e6-02f4413c240e",
         "practices": [
           "custom-types",
-          "case-expressions"
+          "case-expressions",
+          "lists"
         ],
         "prerequisites": [
           "custom-types",
@@ -354,15 +378,18 @@
         "name": "Custom Set",
         "uuid": "70ea5040-42c5-4133-84ec-1a2ae6dde836",
         "practices": [
+          "opaque-types",
           "custom-types",
           "generics"
         ],
         "prerequisites": [
+          "opaque-types",
           "custom-types",
           "generics",
           "bools",
           "lists",
-          "numbers"
+          "numbers",
+          "maps"
         ],
         "difficulty": 5
       },
@@ -371,11 +398,13 @@
         "name": "Circular Buffer",
         "uuid": "b62f8574-9bac-4b95-a76c-f13789ae2663",
         "practices": [
+          "opaque-types",
           "custom-types",
           "generics",
           "queues"
         ],
         "prerequisites": [
+          "opaque-types",
           "custom-types",
           "results",
           "generics",
@@ -404,13 +433,17 @@
         "uuid": "e2d09419-0136-4f4d-9a1c-02236c2c60a6",
         "practices": [
           "lists",
-          "recursion"
+          "recursion",
+          "higher-order-functions",
+          "generics"
         ],
         "prerequisites": [
           "lists",
           "recursion",
           "bools",
-          "case-expressions"
+          "case-expressions",
+          "higher-order-functions",
+          "generics"
         ],
         "difficulty": 2
       },
@@ -419,12 +452,14 @@
         "name": "Phone Number",
         "uuid": "3f592a98-3044-48ee-9433-330a2496867b",
         "practices": [
+          "strings",
           "results"
         ],
         "prerequisites": [
           "strings",
           "lists",
-          "results"
+          "results",
+          "guards"
         ],
         "difficulty": 4
       },
@@ -446,6 +481,7 @@
         "name": "Binary Search Tree",
         "uuid": "4a3b220f-f978-44b6-9768-ab86e372a42a",
         "practices": [
+          "custom-types",
           "recursion"
         ],
         "prerequisites": [
@@ -462,13 +498,16 @@
         "uuid": "34fa6aa9-c3de-4d59-abfd-cfe1b76d7748",
         "practices": [
           "lists",
-          "recursion"
+          "recursion",
+          "custom-types"
         ],
         "prerequisites": [
           "results",
           "lists",
           "sets",
-          "recursion"
+          "recursion",
+          "custom-types",
+          "generics"
         ],
         "difficulty": 4
       },
@@ -477,6 +516,7 @@
         "name": "Tournament",
         "uuid": "1bf9a89e-a411-4eac-8d61-377290e17101",
         "practices": [
+          "orders",
           "maps",
           "strings"
         ],
@@ -496,14 +536,19 @@
         "name": "Zipper",
         "uuid": "48a708c6-c6dd-419c-8c88-f28fb65dff93",
         "practices": [
-          "custom-types"
+          "generics",
+          "custom-types",
+          "opaque-types",
+          "higher-order-functions"
         ],
         "prerequisites": [
           "custom-types",
+          "opaque-types",
           "lists",
           "results",
           "generics",
-          "case-expressions"
+          "case-expressions",
+          "higher-order-functions"
         ],
         "difficulty": 6
       },
@@ -544,7 +589,8 @@
         "name": "Matching Brackets",
         "uuid": "d1cdd91e-5ed6-4875-bbcc-a8395cdf51ce",
         "practices": [
-          "lists"
+          "lists",
+          "case-expressions"
         ],
         "prerequisites": [
           "lists",
@@ -589,7 +635,8 @@
         "name": "Alphametics",
         "uuid": "5aef7d9d-3939-4014-8102-a7262fdde754",
         "practices": [
-          "numbers"
+          "numbers",
+          "maps"
         ],
         "prerequisites": [
           "lists",
@@ -624,7 +671,8 @@
         "name": "Rectangles",
         "uuid": "68171b71-a9eb-4925-a2f3-df0bc27ce41d",
         "practices": [
-          "maps"
+          "maps",
+          "strings"
         ],
         "prerequisites": [
           "lists",
@@ -640,9 +688,11 @@
         "name": "Acronym",
         "uuid": "21946b94-c304-4a10-a6b6-b9fd5bbe9966",
         "practices": [
+          "strings",
           "regular-expressions"
         ],
         "prerequisites": [
+          "labelled-arguments",
           "regular-expressions",
           "lists",
           "strings"
@@ -659,6 +709,7 @@
         "prerequisites": [
           "maps",
           "lists",
+          "labelled-arguments",
           "case-expressions",
           "strings"
         ],
@@ -689,6 +740,7 @@
           "recursion"
         ],
         "prerequisites": [
+          "results",
           "numbers",
           "bools",
           "numbers",
@@ -704,6 +756,8 @@
           "strings"
         ],
         "prerequisites": [
+          "recursion",
+          "lists",
           "strings"
         ],
         "difficulty": 1
@@ -731,12 +785,15 @@
         "name": "Bottle Song",
         "uuid": "333129cf-8be6-4ce6-b6eb-1d2b12d383f2",
         "practices": [
-          "strings"
+          "strings",
+          "labelled-arguments"
         ],
         "prerequisites": [
-          "strings",
           "lists",
-          "case-expressions"
+          "strings",
+          "results",
+          "case-expressions",
+          "labelled-arguments"
         ],
         "difficulty": 5
       },
@@ -746,12 +803,17 @@
         "uuid": "81458cfe-eb13-4026-93fb-211d1229ce53",
         "practices": [
           "lists",
-          "recursion"
+          "recursion",
+          "generics",
+          "higher-order-functions"
         ],
         "prerequisites": [
+          "bools",
           "lists",
           "recursion",
-          "case-expressions"
+          "case-expressions",
+          "generics",
+          "higher-order-functions"
         ],
         "difficulty": 6
       },
@@ -760,12 +822,14 @@
         "name": "Perfect Numbers",
         "uuid": "f85e087a-355b-49d0-ac8d-3dc0d47fdad6",
         "practices": [
+          "orders",
           "numbers"
         ],
         "prerequisites": [
-          "numbers",
+          "lists",
           "numbers",
           "orders",
+          "results",
           "case-expressions",
           "results"
         ],
@@ -780,8 +844,8 @@
         ],
         "prerequisites": [
           "numbers",
-          "numbers",
           "lists",
+          "bools",
           "case-expressions"
         ],
         "difficulty": 4
@@ -791,13 +855,15 @@
         "name": "Run-Length Encoding",
         "uuid": "22298714-cc36-49b7-8e70-cfb91ff42112",
         "practices": [
-          "lists"
+          "lists",
+          "strings"
         ],
         "prerequisites": [
           "numbers",
           "strings",
           "case-expressions",
-          "lists"
+          "lists",
+          "regular-expressions"
         ],
         "difficulty": 5
       },
@@ -809,7 +875,10 @@
           "numbers"
         ],
         "prerequisites": [
-          "numbers"
+          "numbers",
+          "case-expressions",
+          "results",
+          "custom-types"
         ],
         "difficulty": 2
       },
@@ -818,7 +887,8 @@
         "name": "Nucleotide count",
         "uuid": "3b7e1bbf-08b2-4e0e-ba5d-5a887deb4817",
         "practices": [
-          "maps"
+          "maps",
+          "results"
         ],
         "prerequisites": [
           "lists",
@@ -857,7 +927,8 @@
         ],
         "prerequisites": [
           "lists",
-          "strings"
+          "strings",
+          "case-expressions"
         ],
         "difficulty": 3
       },
@@ -889,7 +960,8 @@
           "numbers",
           "lists",
           "bitwise",
-          "case-expressions"
+          "case-expressions",
+          "custom-types"
         ],
         "difficulty": 4
       },
@@ -904,7 +976,9 @@
         ],
         "prerequisites": [
           "strings",
-          "lists"
+          "lists",
+          "labelled-arguments",
+          "numbers"
         ]
       },
       {
@@ -932,6 +1006,8 @@
           "bools"
         ],
         "prerequisites": [
+          "custom-types",
+          "guards",
           "case-expressions",
           "bools",
           "results"
@@ -949,7 +1025,9 @@
           "orders",
           "lists",
           "case-expressions",
-          "recursion"
+          "recursion",
+          "custom-types",
+          "orders"
         ],
         "difficulty": 5
       },
@@ -963,7 +1041,8 @@
         ],
         "prerequisites": [
           "strings",
-          "numbers"
+          "numbers",
+          "maps"
         ],
         "difficulty": 5
       },
@@ -988,12 +1067,15 @@
         "name": "Flatten Array",
         "uuid": "efdf70a3-57e6-474a-9fc2-09f26bb609b6",
         "practices": [
-          "lists"
+          "lists",
+          "custom-types",
+          "generics"
         ],
         "prerequisites": [
           "lists",
           "custom-types",
-          "case-expressions"
+          "case-expressions",
+          "generics"
         ],
         "difficulty": 4
       },
@@ -1002,13 +1084,15 @@
         "name": "All Your Base",
         "uuid": "e9332e6f-a7e5-4f30-825c-64af0a278a70",
         "practices": [
-          "numbers"
+          "numbers",
+          "labelled-arguments"
         ],
         "prerequisites": [
           "numbers",
           "lists",
           "results",
-          "recursion"
+          "recursion",
+          "labelled-arguments"
         ],
         "difficulty": 4
       },
@@ -1017,12 +1101,14 @@
         "name": "Knapsack",
         "uuid": "6e889724-656e-4f0c-aba1-08f103490e9d",
         "practices": [
-          "lists"
+          "lists",
+          "recursion"
         ],
         "prerequisites": [
           "lists",
           "custom-types",
-          "numbers"
+          "numbers",
+          "recursion"
         ],
         "difficulty": 4
       },
@@ -1031,6 +1117,7 @@
         "name": "Yacht",
         "uuid": "398c9816-736d-4d19-8937-cc75046f21df",
         "practices": [
+          "custom-types",
           "case-expressions",
           "lists"
         ],
@@ -1038,6 +1125,7 @@
           "numbers",
           "custom-types",
           "case-expressions",
+          "tuples",
           "lists"
         ],
         "difficulty": 4
@@ -1066,7 +1154,11 @@
           "strings"
         ],
         "prerequisites": [
-          "strings"
+          "strings",
+          "numbers",
+          "lists",
+          "case-expressions",
+          "results"
         ],
         "difficulty": 4
       },
@@ -1075,12 +1167,14 @@
         "name": "Kindergarten Garden",
         "uuid": "018be77b-d08c-497e-acdc-1b2b4e88e754",
         "practices": [
-          "lists"
+          "lists",
+          "strings"
         ],
         "prerequisites": [
           "strings",
           "lists",
-          "case-expressions"
+          "case-expressions",
+          "custom-types"
         ],
         "difficulty": 3
       },
@@ -1089,7 +1183,8 @@
         "name": "Atbash Cipher",
         "uuid": "3c850415-92fa-4019-b776-aaab30675680",
         "practices": [
-          "strings"
+          "strings",
+          "lists"
         ],
         "prerequisites": [
           "strings",
@@ -1108,8 +1203,9 @@
         ],
         "prerequisites": [
           "numbers",
-          "numbers",
-          "recursion"
+          "bools",
+          "recursion",
+          "case-expressions"
         ],
         "difficulty": 4
       },
@@ -1118,13 +1214,14 @@
         "name": "Space Age",
         "uuid": "4bd2232c-1d23-4af8-ac9f-c778676becdf",
         "practices": [
-          "float",
-          "case-expressions"
+          "case-expressions",
+          "numbers"
         ],
         "prerequisites": [
-          "float",
           "case-expressions",
-          "custom-types"
+          "custom-types",
+          "numbers",
+          "constants"
         ],
         "difficulty": 2
       },
@@ -1134,15 +1231,17 @@
         "uuid": "37dd415b-1d67-434d-8705-19295d1438b8",
         "practices": [
           "random",
-          "iterators",
-          "strings"
+          "strings",
+          "lists",
+          "numbers"
         ],
         "prerequisites": [
           "random",
           "iterators",
           "strings",
           "lists",
-          "numbers"
+          "numbers",
+          "let-assertions"
         ],
         "difficulty": 5
       },
@@ -1151,14 +1250,14 @@
         "name": "Crypto Square",
         "uuid": "5bf01e81-b30a-4210-b1ed-1edbf3d28ab1",
         "practices": [
-          "float",
-          "strings"
+          "strings",
+          "lists"
         ],
         "prerequisites": [
           "numbers",
-          "float",
           "lists",
-          "strings"
+          "strings",
+          "sets"
         ],
         "difficulty": 5
       },
@@ -1168,13 +1267,16 @@
         "uuid": "594b6c1a-0a4c-4463-9535-62056c71404e",
         "practices": [
           "strings",
-          "numbers"
+          "numbers",
+          "lists"
         ],
         "prerequisites": [
           "strings",
           "lists",
           "numbers",
-          "results"
+          "results",
+          "labelled-arguments",
+          "use-expressions"
         ],
         "difficulty": 6
       },
@@ -1188,7 +1290,9 @@
         ],
         "prerequisites": [
           "strings",
-          "lists"
+          "lists",
+          "case-expressions",
+          "labelled-arguments"
         ],
         "difficulty": 2
       },
@@ -1197,7 +1301,11 @@
         "name": "Connect",
         "uuid": "89c6bf7a-5cd8-4254-b3e0-1457a5390b46",
         "practices": [
-          "maps"
+          "maps",
+          "custom-types",
+          "strings",
+          "lists",
+          "results"
         ],
         "prerequisites": [
           "lists",
@@ -1222,7 +1330,8 @@
         "prerequisites": [
           "numbers",
           "strings",
-          "custom-types"
+          "custom-types",
+          "labelled-arguments"
         ],
         "difficulty": 2
       },
@@ -1235,7 +1344,8 @@
         ],
         "prerequisites": [
           "lists",
-          "numbers"
+          "numbers",
+          "labelled-arguments"
         ],
         "difficulty": 4
       },
@@ -1244,6 +1354,7 @@
         "name": "Luhn",
         "uuid": "a66bbefd-db5a-44d0-ab4b-73d871756f08",
         "practices": [
+          "results",
           "strings",
           "lists"
         ],
@@ -1286,6 +1397,8 @@
           "results"
         ],
         "prerequisites": [
+          "case-expressions",
+          "guards",
           "numbers",
           "lists",
           "results"
@@ -1313,13 +1426,16 @@
         "name": "Say",
         "uuid": "753fff04-5a64-4c3f-afd2-beee7e27efe8",
         "practices": [
-          "case-expressions"
+          "case-expressions",
+          "guards"
         ],
         "prerequisites": [
           "strings",
           "case-expressions",
           "numbers",
-          "results"
+          "results",
+          "guards",
+          "constants"
         ],
         "difficulty": 5
       },
@@ -1328,11 +1444,14 @@
         "name": "Saddle Points",
         "uuid": "e1103441-9391-4760-829b-1ec412762fab",
         "practices": [
-          "lists"
+          "lists",
+          "sets"
         ],
         "prerequisites": [
+          "custom-types",
           "lists",
-          "tuples"
+          "tuples",
+          "sets"
         ],
         "difficulty": 4
       },
@@ -1361,7 +1480,8 @@
         "uuid": "6fc59193-bc31-40af-902a-b13ad926bbb3",
         "practices": [
           "lists",
-          "strings"
+          "strings",
+          "results"
         ],
         "prerequisites": [
           "lists",
@@ -1377,14 +1497,17 @@
         "uuid": "836dddea-2a02-434f-a886-c8e1c429268f",
         "practices": [
           "maps",
-          "results"
+          "results",
+          "lists"
         ],
         "prerequisites": [
           "maps",
           "results",
           "strings",
           "numbers",
-          "lists"
+          "lists",
+          "custom-types",
+          "case-expressions"
         ],
         "difficulty": 3
       },
@@ -1409,6 +1532,7 @@
         "name": "OCR Numbers",
         "uuid": "0ac6ba02-b2c0-4c81-8ca0-31c49a340e23",
         "practices": [
+          "custom-types",
           "strings",
           "lists"
         ],
@@ -1416,7 +1540,8 @@
           "strings",
           "lists",
           "results",
-          "case-expressions"
+          "case-expressions",
+          "custom-types"
         ],
         "difficulty": 4
       },
@@ -1430,7 +1555,8 @@
         ],
         "prerequisites": [
           "strings",
-          "case-expressions"
+          "case-expressions",
+          "lists"
         ],
         "difficulty": 3
       },
@@ -1444,7 +1570,9 @@
           "recursion"
         ],
         "prerequisites": [
-          "numbers"
+          "numbers",
+          "iterators",
+          "recursion"
         ],
         "difficulty": 3
       }
