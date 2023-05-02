@@ -743,7 +743,6 @@
           "results",
           "numbers",
           "bools",
-          "numbers",
           "recursion"
         ],
         "difficulty": 3
@@ -830,8 +829,7 @@
           "numbers",
           "orders",
           "results",
-          "case-expressions",
-          "results"
+          "case-expressions"
         ],
         "difficulty": 3
       },
@@ -1022,7 +1020,6 @@
           "lists"
         ],
         "prerequisites": [
-          "orders",
           "lists",
           "case-expressions",
           "recursion",
