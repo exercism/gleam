@@ -25,11 +25,11 @@ pence_to_pounds(106)
 ## 3. Format the price for display on the website
 
 Since Betty's bikes are sold in pounds, prices should be displayed with the symbol "£".
-Your second task is thus to implement the `pounds_to_pence` function, taking an amount of pounds as a `Float` and returning its price displayed as a `String` with the pound symbol prepended.
+Your second task is thus to implement the `pounds_to_string` function, taking an amount of pounds as a `Float` and returning its price displayed as a `String` with the pound symbol prepended.
 
 You should import the `gleam/float` and `gleam/string` modules before using them.
 
-You should also define the type annotation for `pounds_to_pence`.
+You should also define the type annotation for `pounds_to_string`.
 
 ```gleam
 pounds_to_string(1.06)
