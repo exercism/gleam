@@ -1,5 +1,3 @@
-import gleam/float
-
 pub type Planet {
   Mercury
   Venus
