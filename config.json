@@ -1429,6 +1429,11 @@
       "uuid": "d5ac763d-5e44-49ea-9f81-cbd1c7d5e949",
       "slug": "modules",
       "name": "Modules"
+    },
+    {
+      "uuid": "8ff69266-d290-464a-b2f3-565dcc59dd38",
+      "slug": "case-expressions",
+      "name": "Case Expressions"
     }
   ],
   "key_features": [
