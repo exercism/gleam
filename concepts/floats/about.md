@@ -33,5 +33,3 @@ Scientific notation can also be used with floats:
 1.01e3 // -> 1010
 15.1e-3 // -> 0.0151
 ```
-
-
