@@ -65,7 +65,9 @@
         "name": "bettys-bike-shop",
         "uuid": "2935c1ee-57e3-4924-b9c4-3c1d2bc3bc35",
         "concepts": [
-          "modules"
+          "modules",
+          "ints",
+          "floats"
         ],
         "prerequisites": [
           "basics"
@@ -1414,6 +1416,11 @@
       "uuid": "e2318afd-776d-4a16-99e5-d903d9a7bdfe",
       "slug": "ints",
       "name": "Ints"
+    },
+    {
+      "uuid": "65bfcb6a-71a0-49b8-9d73-1a1d4bcfd9ec",
+      "slug": "floats",
+      "name": "Floats"
     },
     {
       "uuid": "d5ac763d-5e44-49ea-9f81-cbd1c7d5e949",
