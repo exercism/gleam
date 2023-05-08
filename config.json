@@ -59,6 +59,18 @@
           "basics"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "bettys-bike-shop",
+        "name": "bettys-bike-shop",
+        "uuid": "2935c1ee-57e3-4924-b9c4-3c1d2bc3bc35",
+        "concepts": [
+          "modules"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [

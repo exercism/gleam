@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/bettys_bike_shop.gleam"
+    ],
+    "test": [
+      "test/bettys_bike_shop_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ]
+  },
+  "blurb": "Learn about modules by helping Betty to display her bikes prices."
+}
