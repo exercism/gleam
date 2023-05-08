@@ -9,12 +9,6 @@ let integer = 3
 # -> 3
 ```
 
-Underscores can also be added to ints for clarity.
-
-```gleam
-1_000_000 // One million
-```
-
 Gleam has several operators that work with ints.
 
 ```gleam

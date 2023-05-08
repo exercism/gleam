@@ -11,12 +11,6 @@ let integer = 3
 # -> 3
 ```
 
-Underscores can also be added to ints for clarity.
-
-```gleam
-1_000_000 // One million
-```
-
 Gleam has several operators that work with ints.
 
 ```gleam
@@ -53,19 +47,6 @@ Floats also have their own set of operators.
 2.0 <. 1.0  // -> False
 2.0 >=. 1.0 // -> True
 2.0 <=. 1.0 // -> False
-```
-
-Underscores can also be added to floats for clarity.
-
-```gleam
-1_000_000.0 // One million
-```
-
-Scientific notation can also be used with floats:
-
-```gleam
-1.01e3 // -> 1010
-15.1e-3 // -> 0.0151
 ```
 
 ## Modules
