@@ -1,0 +1,8 @@
+{
+  "blurb": "Gleam is organised into modules, modules can import public values from each other.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}
