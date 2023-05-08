@@ -1,64 +1,76 @@
 # Introduction
 
-## Basics
+## Modules
 
-### Functions
+### Modules
 
-In Gleam functions are defined using the `pub fn` syntax.
+Gleam code is organised into modules, and each file is one Gleam module.
 
-```gleam
-pub fn add(x: Int, y: Int) -> Int {
-  x + y
-}
-```
-
-This function takes two arguments, both of type `Int`, and returns a value of type `Int`. There is no `return` keyword in Gleam, the value of the last expression in a function is always _implicitly returned_.
-
-The type annotations for arguments and the return type are optional, and Gleam will always fully type check your code. Typically Gleam programmers will give their functions type annotations for clarity, but you may omit them if you wish.
+Up until now we have written functions with the `pub fn` syntax, which defines a function that is publicly available to other modules. Functions defined with `fn` are private to the module they are defined in and cannot be used by other modules.
 
 ```gleam
+// This function is public
 pub fn add(x, y) {
   x + y
 }
-```
 
-A function can be called using the `function_name(argument1, argument2)` syntax.
-
-```gleam
-pub fn double(x: Int) -> Int {
-  // Call the add function defined above
-  add(x, x)
+// This function is private
+fn subtract(x, y) {
+  x - y
 }
 ```
 
-### Variables
+Gleam modules have names, and the name is based on their file path within the `src` or `test` directory.
 
-In Gleam variables are defined using the `let name = expression` syntax.
+For example, a module defined in `src\geometry\rectangle.gleam` (on Windows) `src/geometry/rectangle.gleam` (on UNIX-like operating systems) would be named `geometry/rectangle`.
+
+### Importing functions from other modules
+
+Accessing functions defined in other modules is done via imports.
+All functions within that module that were exposed by it are made accessible when importing that module.
+But how they are accessed varies depending on how the module is imported.
+
+Qualified imports are the default, and accessing a function within such module (for example the `map` function in the `gleam/list` module) is done by prefixing the module name (`list.map`).
 
 ```gleam
-pub fn main() {
-  let count = 1
+// Import the int module
+import gleam/int
 
-  // You may shadow existing variables with the same name
-  let count = "Lots"
+pub fn main(x: Int) -> String {
+  // Use the to_string function from the int module
+  int.to_string(x)
 }
 ```
 
-Variables can be declared with type annotations. Like function arguments these are optional, though most Gleam programmers will omit type annotations for variables.
+By default the name used to refer to the module is the last part of the module name, in this case `int`, but this can be changed by using the `as` keyword.
 
 ```gleam
-pub fn main() {
-  let count: Int = 1
+// Import the int module and refer to it as i
+import gleam/int as i
+
+pub fn main(x: Int) -> String {
+  i.to_string(x)
 }
 ```
 
-### Code comments
-
-Comments can be used to leave notes for other developers reading the source code. Comments in Gleam are single lines preceeded by `//`.
+Unqualified imports enable direct access to the exposed functions within that module, without prefixing.
 
 ```gleam
-pub fn main() {
-  // This is a comment
-  let x = 1
+// Import the to_string function from the int module
+import gleam/int.{to_string}
+
+pub fn main(x: Int) -> String {
+  to_string(x)
 }
 ```
+
+Qualified imports are preferred as they make it clearer to the reader where a function comes from, and to avoid name clashes.
+
+
+### Standard library
+
+Gleam has a rich and well-documented standard library. The documentation is available online at [hexdocs.pm/gleam_stdlib][docs]. Save this link somewhere - you will use it a lot!
+
+Most built-in data types have a corresponding module that offers functions for working with that data type, e.g. there's the `gleam/int` module for ints, `gleam/string` module for strings, `gleam/list` module for lists and so on.
+
+[docs]: https://hexdocs.pm/gleam_stdlib/
