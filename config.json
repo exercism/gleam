@@ -1380,6 +1380,11 @@
       "uuid": "5bd736ed-290d-4d1b-9668-36a704cbe236",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "3057f32c-fcc5-4473-9985-dec899f56ca5",
+      "slug": "bools",
+      "name": "Bools"
     }
   ],
   "key_features": [

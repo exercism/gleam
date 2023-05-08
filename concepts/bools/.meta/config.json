@@ -1,0 +1,8 @@
+{
+  "blurb": "Gleam represents true and false values with the Bool type. Bools can be combined into expressions using boolean operators \"!\", \"||\", and \"&&\".",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}
