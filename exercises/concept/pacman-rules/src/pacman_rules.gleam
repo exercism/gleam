@@ -1,9 +1,19 @@
-// Please define the expected_minutes_in_oven function
+pub fn eat_ghost(power_pellet_active: Bool, touching_ghost: Bool) -> Bool {
+  todo
+}
 
-// Please define the remaining_minutes_in_oven function
+pub fn score(touching_power_pellet: Bool, touching_dot: Bool) -> Bool {
+  todo
+}
 
-// Please define the preparation_time_in_minutes function
+pub fn lose(power_pellet_active: Bool, touching_ghost: Bool) -> Bool {
+  todo
+}
 
-// Please define the total_time_in_minutes function
-
-// Please define the alarm function
+pub fn win(
+  has_eaten_all_dots: Bool,
+  power_pellet_active: Bool,
+  touching_ghost: Bool,
+) -> Bool {
+  todo
+}
