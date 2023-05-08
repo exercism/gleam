@@ -17,7 +17,7 @@ False || True  // -> True
 False || False // -> False
 
 !False // -> True
-!True  // -> True
+!True  // -> False
 ```
 
 The `&&` and `||` operators use short-circuit evaluation, which means that the expression on the right-hand side of the operator is only evaluated if needed.
