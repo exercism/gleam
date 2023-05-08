@@ -19,7 +19,6 @@
       "manifest.toml"
     ]
   },
-  "language_versions": ">=0.28",
   "forked_from": [
     "elixir/lasagna"
   ],
