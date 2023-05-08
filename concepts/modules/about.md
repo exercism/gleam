@@ -20,7 +20,7 @@ fn subtract(x, y) {
 
 Gleam modules have names, and the name is based on their file path within the `src` or `test` directory.
 
-For example, a module defined in `src\geometry\rectangle.gleam` (on Windows) `src/geometry/rectangle.gleam` (on UNIX-like operating systems) would be named `geometry/rectangle`.
+For example, a module defined in `src\geometry\rectangle.gleam` (on Windows) or `src/geometry/rectangle.gleam` (on UNIX-like operating systems) would be named `geometry/rectangle`.
 
 ## Importing functions from other modules
 
