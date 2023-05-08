@@ -1,63 +1,37 @@
 # About
 
-## Functions
-
-In Gleam functions are defined using the `pub fn` syntax.
+Floats are numbers with one or more digits behind the decimal separator. They use the 64-bit double precision floating-point format.
 
 ```gleam
-pub fn add(x: Int, y: Int) -> Int {
-  x + y
-}
+let float = 3.45
+# -> 3.45
 ```
 
-This function takes two arguments, both of type `Int`, and returns a value of type `Int`. There is no `return` keyword in Gleam, the value of the last expression in a function is always _implicitly returned_.
-
-The type annotations for arguments and the return type are optional, and Gleam will always fully type check your code. Typically Gleam programmers will give their functions type annotations for clarity, but you may omit them if you wish.
+Floats also have their own set of operators.
 
 ```gleam
-pub fn add(x, y) {
-  x + y
-}
+1.0 +. 1.4 // -> 2.4
+5.0 -. 1.5 // -> 3.5
+5.0 /. 2.0 // -> 2.5
+3.0 *. 3.1 // -> 9.3
+
+2.0 >. 1.0  // -> True
+2.0 <. 1.0  // -> False
+2.0 >=. 1.0 // -> True
+2.0 <=. 1.0 // -> False
 ```
 
-A function can be called using the `function_name(argument1, argument2)` syntax.
+Underscores can also be added to floats for clarity.
 
 ```gleam
-pub fn double(x: Int) -> Int {
-  // Call the add function defined above
-  add(x, x)
-}
+1_000_000.0 // One million
 ```
 
-## Variables
-
-In Gleam variables are defined using the `let name = expression` syntax.
+Scientific notation can also be used with floats:
 
 ```gleam
-pub fn main() {
-  let count = 1
-
-  // You may shadow existing variables with the same name
-  let count = "Lots"
-}
+1.01e3 // -> 1010
+15.1e-3 // -> 0.0151
 ```
 
-Variables can be declared with type annotations. Like function arguments these are optional, though most Gleam programmers will omit type annotations for variables.
-
-```gleam
-pub fn main() {
-  let count: Int = 1
-}
-```
-
-## Code comments
-
-Comments can be used to leave notes for other developers reading the source code. Comments in Gleam are single lines preceeded by `//`.
-
-```gleam
-pub fn main() {
-  // This is a comment
-  let x = 1
-}
-```
 
