@@ -1411,6 +1411,11 @@
       "name": "Bools"
     },
     {
+      "uuid": "e2318afd-776d-4a16-99e5-d903d9a7bdfe",
+      "slug": "ints",
+      "name": "Ints"
+    },
+    {
       "uuid": "d5ac763d-5e44-49ea-9f81-cbd1c7d5e949",
       "slug": "modules",
       "name": "Modules"
