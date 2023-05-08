@@ -22,5 +22,5 @@
   "forked_from": [
     "elixir/pacman_rules"
   ],
-  "blurb": "Learn about booleans by implementing the rules of the Pac-Man game."
+  "blurb": "Learn about bools by implementing the rules of the Pac-Man game."
 }
