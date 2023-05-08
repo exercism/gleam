@@ -42,7 +42,7 @@ pub fn main() {
 }
 ```
 
-Variables can be declared with type annotations. Like function arguments these are optional, though most Gleam programmers will omit type annotations for variables.
+Variables can be declared with type annotations. Like function arguments these are optional, though most Gleam programmers will omit type annotations for variables for brevity.
 
 ```gleam
 pub fn main() {

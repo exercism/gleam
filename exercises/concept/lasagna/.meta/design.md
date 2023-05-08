@@ -2,7 +2,6 @@
 
 ## Learning objectives
 
-- Know what a variable is.
 - Know how to define a variable.
 - Know how to update a variable.
 - Know that variable definitions can have type annotations.
