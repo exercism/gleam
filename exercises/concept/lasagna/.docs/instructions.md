@@ -42,7 +42,7 @@ total_time_in_minutes(3, 20)
 
 ## 5. Create a notification that the lasagna is ready
 
-Define the `alarm/0` function that does not take any arguments and returns a message indicating that the lasagna is ready to eat.
+Define the `alarm` function that does not take any arguments and returns a message indicating that the lasagna is ready to eat.
 
 ```gleam
 alarm()
