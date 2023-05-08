@@ -28,7 +28,7 @@ Gleam has several operators that work with ints.
 
 ## Floats
 
-Floats are numbers with one or more digits behind the decimal separator. They use the 64-bit double precision floating-point format.
+Floats are numbers with one or more digits behind the decimal separator.
 
 ```gleam
 let float = 3.45
