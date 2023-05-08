@@ -6,6 +6,8 @@
 - Know how to give modules a name when importing them.
 - Know how to import functions from modules in an unqualified manner.
 - Know how to export functions for use by other modules.
+- Know how to convert between Gleam's `Int` and `Float` types.
+- Know how to use Gleam's int and float operators.
 
 ## Out of scope
 
@@ -13,6 +15,8 @@
 ## Concepts
 
 - `modules`
+- `ints`
+- `floats`
 
 ## Prequisites
 
