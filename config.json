@@ -41,7 +41,7 @@
       {
         "slug": "lasagna",
         "name": "Lasagna",
-        "uuid": "c29c6092-9d44-4f21-8138-b873384fd90b",
+        "uuid": "313d98c0-1991-4d15-b292-0355f2e8e3ec",
         "concepts": [
           "basics"
         ],
@@ -1389,7 +1389,7 @@
   },
   "concepts": [
     {
-      "uuid": "5bd736ed-290d-4d1b-9668-36a704cbe236",
+      "uuid": "c91d53e8-a66c-44e5-b21a-56273dbfe58a",
       "slug": "basics",
       "name": "Basics"
     },
