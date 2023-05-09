@@ -73,6 +73,18 @@
           "basics"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "guessing-game",
+        "name": "Guessing Game",
+        "uuid": "9413a321-25aa-4acd-a11e-af865e63cd72",
+        "concepts": [
+          "case-expressions"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
