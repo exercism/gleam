@@ -103,9 +103,10 @@
         "uuid": "ce45a52e-0541-4384-8abf-b787bd49cbf7",
         "difficulty": 1,
         "practices": [
+          "ints"
         ],
         "prerequisites": [
-          "numbers"
+          "ints"
         ]
       },
       {
@@ -139,9 +140,10 @@
         "uuid": "5f8fa8fe-3775-4b34-a602-d5cb47d83d8c",
         "difficulty": 2,
         "practices": [
+          "ints"
         ],
         "prerequisites": [
-          "numbers"
+          "ints"
         ]
       },
       {
@@ -179,7 +181,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "strings",
           "maps",
           "results",
@@ -200,7 +202,7 @@
           "case-expressions",
           "custom-types",
           "lists",
-          "numbers",
+          "ints",
           "results"
         ]
       },
@@ -247,7 +249,7 @@
         ],
         "prerequisites": [
           "strings",
-          "numbers"
+          "ints"
         ]
       },
       {
@@ -301,7 +303,7 @@
           "strings",
           "lists",
           "case-expressions",
-          "numbers"
+          "ints"
         ],
         "difficulty": 8
       },
@@ -315,7 +317,7 @@
           "custom-types",
           "results",
           "strings",
-          "numbers",
+          "ints",
           "lists",
           "bools"
         ],
@@ -328,7 +330,9 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "case-expressions",
+          "guards",
+          "floats",
           "bools"
         ],
         "difficulty": 2
@@ -372,7 +376,6 @@
           "generics",
           "bools",
           "lists",
-          "numbers",
           "maps"
         ],
         "difficulty": 5
@@ -388,7 +391,6 @@
           "custom-types",
           "results",
           "generics",
-          "numbers",
           "tuples",
           "queues"
         ],
@@ -401,8 +403,9 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
-          "strings"
+          "ints",
+          "strings",
+          "case-expressions"
         ],
         "difficulty": 2
       },
@@ -535,7 +538,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "lists",
           "sets"
         ],
@@ -575,7 +578,7 @@
         ],
         "prerequisites": [
           "lists",
-          "numbers",
+          "ints",
           "case-expressions",
           "custom-types",
           "recursion"
@@ -592,7 +595,7 @@
           "lists",
           "sets",
           "maps",
-          "numbers",
+          "ints",
           "strings",
           "options",
           "recursion",
@@ -669,7 +672,7 @@
           "lists",
           "recursion",
           "bools",
-          "numbers"
+          "ints"
         ],
         "difficulty": 3
       },
@@ -681,7 +684,7 @@
         ],
         "prerequisites": [
           "results",
-          "numbers",
+          "ints",
           "bools",
           "recursion"
         ],
@@ -712,7 +715,7 @@
           "strings",
           "custom-types",
           "case-expressions",
-          "numbers"
+          "ints"
         ],
         "difficulty": 3
       },
@@ -755,7 +758,7 @@
         ],
         "prerequisites": [
           "lists",
-          "numbers",
+          "ints",
           "orders",
           "results",
           "case-expressions"
@@ -769,7 +772,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "lists",
           "bools",
           "case-expressions"
@@ -783,7 +786,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "strings",
           "case-expressions",
           "lists",
@@ -798,7 +801,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "case-expressions",
           "results",
           "custom-types"
@@ -815,7 +818,7 @@
           "lists",
           "results",
           "strings",
-          "numbers",
+          "ints",
           "maps"
         ],
         "difficulty": 3
@@ -829,7 +832,7 @@
         "prerequisites": [
           "lists",
           "strings",
-          "numbers",
+          "ints",
           "nil",
           "results"
         ],
@@ -856,7 +859,7 @@
         ],
         "prerequisites": [
           "lists",
-          "numbers",
+          "ints",
           "results"
         ],
         "difficulty": 2
@@ -868,7 +871,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "lists",
           "bitwise",
           "case-expressions",
@@ -887,7 +890,7 @@
           "strings",
           "lists",
           "labelled-arguments",
-          "numbers"
+          "ints"
         ]
       },
       {
@@ -900,7 +903,7 @@
           "maps",
           "lists",
           "strings",
-          "numbers"
+          "ints"
         ],
         "difficulty": 2
       },
@@ -942,7 +945,7 @@
         ],
         "prerequisites": [
           "strings",
-          "numbers",
+          "ints",
           "maps"
         ],
         "difficulty": 5
@@ -956,7 +959,7 @@
         "prerequisites": [
           "lists",
           "results",
-          "numbers",
+          "ints",
           "custom-types"
         ],
         "difficulty": 6
@@ -982,7 +985,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "lists",
           "results",
           "recursion",
@@ -999,7 +1002,7 @@
         "prerequisites": [
           "lists",
           "custom-types",
-          "numbers",
+          "ints",
           "recursion"
         ],
         "difficulty": 4
@@ -1011,7 +1014,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "custom-types",
           "case-expressions",
           "tuples",
@@ -1026,7 +1029,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "random",
           "custom-types"
         ],
@@ -1040,7 +1043,7 @@
         ],
         "prerequisites": [
           "strings",
-          "numbers",
+          "ints",
           "lists",
           "case-expressions",
           "results"
@@ -1083,7 +1086,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "bools",
           "recursion",
           "case-expressions"
@@ -1099,7 +1102,7 @@
         "prerequisites": [
           "case-expressions",
           "custom-types",
-          "numbers",
+          "floats",
           "constants"
         ],
         "difficulty": 2
@@ -1115,7 +1118,7 @@
           "iterators",
           "strings",
           "lists",
-          "numbers",
+          "ints",
           "let-assertions"
         ],
         "difficulty": 5
@@ -1127,7 +1130,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "lists",
           "strings",
           "sets"
@@ -1143,7 +1146,7 @@
         "prerequisites": [
           "strings",
           "lists",
-          "numbers",
+          "ints",
           "results",
           "labelled-arguments",
           "use-expressions",
@@ -1178,7 +1181,7 @@
           "results",
           "bools",
           "case-expressions",
-          "numbers"
+          "ints"
         ],
         "difficulty": 7
       },
@@ -1189,7 +1192,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "strings",
           "custom-types",
           "labelled-arguments"
@@ -1204,7 +1207,7 @@
         ],
         "prerequisites": [
           "lists",
-          "numbers",
+          "ints",
           "labelled-arguments"
         ],
         "difficulty": 4
@@ -1220,7 +1223,7 @@
           "lists",
           "case-expressions",
           "bools",
-          "numbers",
+          "ints",
           "results"
         ],
         "difficulty": 5
@@ -1237,7 +1240,7 @@
           "case-expressions",
           "lists",
           "bools",
-          "numbers",
+          "ints",
           "custom-types"
         ],
         "difficulty": 8
@@ -1251,7 +1254,7 @@
         "prerequisites": [
           "case-expressions",
           "guards",
-          "numbers",
+          "ints",
           "lists",
           "results"
         ],
@@ -1268,7 +1271,7 @@
           "lists",
           "case-expressions",
           "maps",
-          "numbers"
+          "ints"
         ],
         "difficulty": 5
       },
@@ -1281,7 +1284,7 @@
         "prerequisites": [
           "strings",
           "case-expressions",
-          "numbers",
+          "ints",
           "results",
           "guards",
           "constants"
@@ -1321,7 +1324,7 @@
         "prerequisites": [
           "lists",
           "strings",
-          "numbers",
+          "ints",
           "results"
         ],
         "difficulty": 3
@@ -1336,7 +1339,7 @@
           "maps",
           "results",
           "strings",
-          "numbers",
+          "ints",
           "lists",
           "custom-types",
           "case-expressions"
@@ -1393,7 +1396,7 @@
         "practices": [
         ],
         "prerequisites": [
-          "numbers",
+          "ints",
           "iterators",
           "recursion"
         ],
