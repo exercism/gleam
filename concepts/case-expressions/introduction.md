@@ -51,4 +51,4 @@ pub fn describe(number: Int) -> String {
 // No compiler error
 ```
 
-Pattern matching will test a value against each pattern from top to bottom, until it finds a matching pattern and executes the logic associated with that pattern. The order of patterns matters!
+Case expressions will test a value against each pattern from top to bottom, until it finds a matching pattern and executes the logic associated with that pattern. The order of patterns matters!
