@@ -79,13 +79,13 @@ Accessing functions defined in other modules is done via imports.
 All functions within that module that were exposed by it are made accessible when importing that module.
 But how they are accessed varies depending on how the module is imported.
 
-Qualified imports are the default, and accessing a function within such module (for example the `to_string` function in the `gleam/int` module) is done by prefixing the module name (`int.to_string`).
+Qualified imports are the default, and accessing a function within such module (for example the `map` function in the `gleam/list` module) is done by prefixing the module name (`list.map`).
 
 ```gleam
 // Import the int module
 import gleam/int
 
-pub fn main(x: Int) -> String {
+pub fn run(x: Int) -> String {
   // Use the to_string function from the int module
   int.to_string(x)
 }
@@ -97,7 +97,7 @@ By default the name used to refer to the module is the last part of the module n
 // Import the int module and refer to it as i
 import gleam/int as i
 
-pub fn main(x: Int) -> String {
+pub fn run(x: Int) -> String {
   i.to_string(x)
 }
 ```
@@ -108,7 +108,7 @@ Unqualified imports enable direct access to the exposed functions within that mo
 // Import the to_string function from the int module
 import gleam/int.{to_string}
 
-pub fn main(x: Int) -> String {
+pub fn run(x: Int) -> String {
   to_string(x)
 }
 ```
