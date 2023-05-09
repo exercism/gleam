@@ -340,10 +340,10 @@
         "name": "Darts",
         "uuid": "a68113f8-92be-40e0-a97f-eb4239303ef5",
         "practices": [
+          "case-expressions"
         ],
         "prerequisites": [
           "case-expressions",
-          "guards",
           "floats",
           "bools"
         ],
@@ -446,8 +446,7 @@
         "prerequisites": [
           "strings",
           "lists",
-          "results",
-          "guards"
+          "results"
         ],
         "difficulty": 4
       },
@@ -927,7 +926,6 @@
         ],
         "prerequisites": [
           "custom-types",
-          "guards",
           "case-expressions",
           "bools",
           "results"
@@ -1265,7 +1263,6 @@
         ],
         "prerequisites": [
           "case-expressions",
-          "guards",
           "ints",
           "lists",
           "results"
@@ -1298,7 +1295,6 @@
           "case-expressions",
           "ints",
           "results",
-          "guards",
           "constants"
         ],
         "difficulty": 5
