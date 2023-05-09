@@ -34,7 +34,7 @@ Qualified imports are the default, and accessing a function within such module (
 // Import the int module
 import gleam/int
 
-pub fn main(x: Int) -> String {
+pub fn run(x: Int) -> String {
   // Use the to_string function from the int module
   int.to_string(x)
 }
@@ -46,7 +46,7 @@ By default the name used to refer to the module is the last part of the module n
 // Import the int module and refer to it as i
 import gleam/int as i
 
-pub fn main(x: Int) -> String {
+pub fn run(x: Int) -> String {
   i.to_string(x)
 }
 ```
@@ -57,7 +57,7 @@ Unqualified imports enable direct access to the exposed functions within that mo
 // Import the to_string function from the int module
 import gleam/int.{to_string}
 
-pub fn main(x: Int) -> String {
+pub fn run(x: Int) -> String {
   to_string(x)
 }
 ```
