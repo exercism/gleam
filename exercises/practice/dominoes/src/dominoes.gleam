@@ -1,3 +1,3 @@
-pub fn arrange(chain: List(#(Int, Int))) -> List(List(#(Int, Int))) {
+pub fn can_chain(chain: List(#(Int, Int))) -> Bool {
   todo
 }

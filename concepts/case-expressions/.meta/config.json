@@ -1,0 +1,8 @@
+{
+  "blurb": "With case expresions, a value can be tested against one or more patterns. There are several different types of patterns, which makes pattern matching more powerful than a regular if-then-else expression.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "suraj-mandal"
+  ],
+  "files": {
+    "solution": [
+      "src/all_your_base.gleam"
+    ],
+    "test": [
+      "test/all_your_base_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
+}

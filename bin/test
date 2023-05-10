@@ -25,7 +25,7 @@ exit_code=0
 
 function verify_exercise {
   local dir slug implementation_file stub_backup_file module
-  dir=$(realpath "$1")
+  dir="$1"
   slug=$(basename "${dir}")
   module=${slug//-/_}
   implementation_file="${dir}/.meta/example.gleam"
@@ -44,26 +44,80 @@ function verify_exercise {
   mv "${stub_backup_file}" "${stub_file}"
 }
 
+download() {
+  file="$1"
+  url="$2"
+  curl --silent --show-error --fail --retry 3 --max-time 3 \
+    --output "$file" "$url"
+}
+
+function copy_exercise {
+  local dir slug implementation_file stub_backup_file module
+  dir="$1"
+  dest="$2"
+  slug=$(basename "${dir}")
+  module=${slug//-/_}
+
+  implementation_destination="${dest}/src/${module}.gleam"
+  practice_solution="${dir}/.meta/example.gleam"
+  if [ -f "${practice_solution}" ]
+   then cp "${practice_solution}" "${implementation_destination}"
+  fi
+  concept_solution="${dir}/.meta/src/${module}.gleam"
+  if [ -f "${concept_solution}" ]
+   then cp "${concept_solution}" "${implementation_destination}"
+  fi
+
+  test_file="${dir}/test/${module}_test.gleam"
+  test_destination="${dest}/test/${module}_test.gleam"
+  cp "${test_file}" "${test_destination}"
+}
+
 function run_all {
-  # Verify the Concept Exercises
+  # create an all_exercises folder
+  mkdir -p all_exercises all_exercises/src all_exercises/test
+
+  cat <<EOT > all_exercises/test/all_exercises_test.gleam
+import gleeunit
+
+pub fn main() {
+  gleeunit.main()
+}
+EOT
+
+  packages_prefix="https://raw.githubusercontent.com/exercism/gleam-test-runner/main/packages"
+  download all_exercises/gleam.toml "$packages_prefix"/gleam.toml
+  download all_exercises/manifest.toml "$packages_prefix"/manifest.toml
+  sed -i -e "s/name = \".*\"/name = \"all_exercises\"/" all_exercises/gleam.toml
+
+  # Copy the Concept Exercises
   for concept_exercise_dir in ./exercises/concept/*/
   do
     if [ -d "$concept_exercise_dir" ]
     then
-      echo "Checking $(basename "${concept_exercise_dir}") concept exercise..."
-      verify_exercise "${concept_exercise_dir}"
+      echo "Copying $(basename "${concept_exercise_dir}") concept exercise..."
+      copy_exercise "${concept_exercise_dir}" all_exercises
     fi
   done
 
-  # Verify the Practice Exercises
+  # Copy the Practice Exercises
   for practice_exercise_dir in ./exercises/practice/*/
   do
     if [ -d "$practice_exercise_dir" ]
     then
-      echo "Checking $(basename "${practice_exercise_dir}") practice exercise..."
-      verify_exercise "${practice_exercise_dir}"
+      echo "Copying $(basename "${practice_exercise_dir}") practice exercise..."
+      copy_exercise "${practice_exercise_dir}" all_exercises
     fi
   done
+
+  # Running all tests
+  if ! (cd all_exercises && gleam test)
+  then
+    echo "A solution did not pass the tests"
+    exit_code=1
+  fi
+
+  rm -r all_exercises
 }
 
 case $# in

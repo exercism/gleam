@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "suraj-mandal"
+  ],
+  "files": {
+    "solution": [
+      "src/acronym.gleam"
+    ],
+    "test": [
+      "test/acronym_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Convert a long phrase to its acronym.",
+  "source": "Julien Vanier",
+  "source_url": "https://github.com/monkbroc"
+}

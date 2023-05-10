@@ -1,0 +1,8 @@
+{
+  "blurb": "Gleam is a statically typed functional programming language for building scalable concurrent systems. It compiles to Erlang and has straightforward interoperability with other BEAM languages such as Erlang, Elixir, and LFE.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}

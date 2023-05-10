@@ -1,0 +1,9 @@
+name = "robot_simulator"
+version = "0.1.0"
+
+[dependencies]
+gleam_stdlib = "~> 0.26"
+gleam_bitwise = "~> 1.2"
+
+[dev-dependencies]
+gleeunit = "~> 0.10"

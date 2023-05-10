@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "files": {
+    "solution": [
+      "src/protein_translation.gleam"
+    ],
+    "test": [
+      "test/protein_translation_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Translate RNA sequences into proteins.",
+  "source": "Tyler Long"
+}

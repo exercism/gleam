@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
 
-      - uses: erlef/setup-beam@v1.15.0
+      - uses: erlef/setup-beam@c2e02f777c158310fc6d3d4e11b36a52d2d52db8
         with:
-          otp-version: "23.2"
-          gleam-version: "0.24.0"
+          otp-version: "25.2"
+          gleam-version: "0.27.0"
 
       - name: Run tests for all exercises
         run: bin/test

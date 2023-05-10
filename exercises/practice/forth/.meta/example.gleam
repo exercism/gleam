@@ -1,3 +1,4 @@
+import gleam/result
 import gleam/int
 import gleam/map
 import gleam/order
@@ -115,7 +116,7 @@ fn tokenise(ins: List(String), toks: List(ForthTok)) -> List(ForthTok) {
 fn execute(f: Forth, xs: List(ForthTok)) -> Result(Forth, ForthError) {
   case stack_pop(xs) {
     Ok(#(i, rest0)) -> {
-      try f0 = eval_token(f, i)
+      use f0 <- result.then(eval_token(f, i))
       execute(f0, rest0)
     }
     Error(_) -> Ok(f)
@@ -126,9 +127,9 @@ fn binary_op(
   f: Forth,
   op: fn(Int, Int) -> Result(Int, ForthError),
 ) -> Result(Forth, ForthError) {
-  try #(a, rest) = stack_pop(f.stack)
-  try #(b, rest0) = stack_pop(rest)
-  try i = op(b, a)
+  use #(a, rest) <- result.then(stack_pop(f.stack))
+  use #(b, rest0) <- result.then(stack_pop(rest))
+  use i <- result.then(op(b, a))
   // order is important
   Ok(Forth(..f, stack: stack_push(rest0, i)))
 }
@@ -149,27 +150,27 @@ fn execute_builtin(f: Forth, builtin: String) -> Result(Forth, ForthError) {
         },
       )
     "DUP" -> {
-      try #(h, rest0) = stack_pop(f.stack)
+      use #(h, rest0) <- result.then(stack_pop(f.stack))
       let stack =
         stack_push(rest0, h)
         |> stack_push(h)
       Ok(Forth(..f, stack: stack))
     }
     "DROP" -> {
-      try #(_, rest0) = stack_pop(f.stack)
+      use #(_, rest0) <- result.then(stack_pop(f.stack))
       Ok(Forth(..f, stack: rest0))
     }
     "SWAP" -> {
-      try #(a, rest0) = stack_pop(f.stack)
-      try #(b, rest1) = stack_pop(rest0)
+      use #(a, rest0) <- result.then(stack_pop(f.stack))
+      use #(b, rest1) <- result.then(stack_pop(rest0))
       let stack =
         stack_push(rest1, a)
         |> stack_push(b)
       Ok(Forth(..f, stack: stack))
     }
     "OVER" -> {
-      try #(a, rest0) = stack_pop(f.stack)
-      try #(b, rest1) = stack_pop(rest0)
+      use #(a, rest0) <- result.then(stack_pop(f.stack))
+      use #(b, rest1) <- result.then(stack_pop(rest0))
       let stack =
         stack_push(rest1, b)
         |> stack_push(a)

@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "jiegillet"
+  ],
+  "files": {
+    "solution": [
+      "src/connect.gleam"
+    ],
+    "test": [
+      "test/connect_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Compute the result for a game of Hex / Polygon."
+}

@@ -7,12 +7,17 @@ pub fn main() {
   gleeunit.main()
 }
 
-pub fn no_name_test() {
+pub fn no_name_given_test() {
   two_fer(None)
-  |> should.equal("One for you, one for me")
+  |> should.equal("One for you, one for me.")
 }
 
-pub fn with_name_test() {
-  two_fer(Some("Gilberto Barros"))
-  |> should.equal("One for Gilberto Barros, one for me")
+pub fn a_name_given_test() {
+  two_fer(Some("Alice"))
+  |> should.equal("One for Alice, one for me.")
+}
+
+pub fn another_name_given_test() {
+  two_fer(Some("Bob"))
+  |> should.equal("One for Bob, one for me.")
 }

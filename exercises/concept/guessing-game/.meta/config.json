@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/guessing_game.gleam"
+    ],
+    "test": [
+      "test/guessing_game_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "fsharp/guessing-game"
+  ],
+  "blurb": "Learn about case expressions by implementing a simple game in which the player needs to guess a secret number"
+}

@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "files": {
+    "solution": [
+      "src/darts.gleam"
+    ],
+    "test": [
+      "test/darts_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Write a function that returns the earned points in a single toss of a Darts game.",
+  "source": "Inspired by an exercise created by a professor Della Paolera in Argentina"
+}

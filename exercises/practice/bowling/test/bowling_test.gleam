@@ -16,7 +16,7 @@ pub fn all_zeroes_score_test() {
   |> roll_and_check_score(0)
 }
 
-pub fn no_stirkes_or_spares_test() {
+pub fn no_strikes_or_spares_test() {
   let rolls = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]
 
   rolls
@@ -120,7 +120,7 @@ pub fn more_than_10_points_roll_test() {
 }
 
 pub fn more_than_10_points_frame_test() {
-  assert Ok(game) =
+  let assert Ok(game) =
     Game([])
     |> roll(5)
 
@@ -224,7 +224,7 @@ fn roll_and_check_score(rolls: List(Int), correct_score: Int) {
   |> list.fold(
     Game([]),
     fn(game, pins) {
-      assert Ok(new_game) = roll(game, pins)
+      let assert Ok(new_game) = roll(game, pins)
       new_game
     },
   )
@@ -237,7 +237,7 @@ fn roll_and_last_roll_be_error(rolls: List(Int), last_roll: Int, error: Error) {
   |> list.fold(
     Game([]),
     fn(game, pins) {
-      assert Ok(new_game) = roll(game, pins)
+      let assert Ok(new_game) = roll(game, pins)
       new_game
     },
   )
@@ -250,7 +250,7 @@ fn roll_and_score_be_error(rolls: List(Int)) {
   |> list.fold(
     Game([]),
     fn(game, pins) {
-      assert Ok(new_game) = roll(game, pins)
+      let assert Ok(new_game) = roll(game, pins)
       new_game
     },
   )

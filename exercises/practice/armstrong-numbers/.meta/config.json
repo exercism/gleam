@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "suraj-mandal"
+  ],
+  "files": {
+    "solution": [
+      "src/armstrong_numbers.gleam"
+    ],
+    "test": [
+      "test/armstrong_numbers_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Determine if a number is an Armstrong number.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"
+}

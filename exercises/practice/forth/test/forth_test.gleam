@@ -94,21 +94,21 @@ pub fn stack_swap_fail2_test() {
   |> error_with(forth.StackUnderflow)
 }
 
-pub fn stack_over_test1() {
+pub fn stack_over_1_test() {
   run_forth_for("1 2 over", "1 2 1")
 }
 
-pub fn stack_over_test2() {
+pub fn stack_over_2_test() {
   run_forth_for("1 2 3 over", "1 2 3 2")
 }
 
-pub fn stack_over_fail_test1() {
+pub fn stack_over_fail_1_test() {
   forth.new()
   |> forth.eval("1 over")
   |> error_with(forth.StackUnderflow)
 }
 
-pub fn stack_over_fail_test2() {
+pub fn stack_over_fail_2_test() {
   forth.new()
   |> forth.eval("over")
   |> error_with(forth.StackUnderflow)
@@ -131,7 +131,7 @@ pub fn redefine_existing_word_test() {
   |> succeed_with("1 1 1")
 }
 
-pub fn redefining_an_existing_builtin_word() {
+pub fn redefining_an_existing_builtin_word_test() {
   forth.new()
   |> forth.eval(": swap dup ;")
   |> result.then(forth.eval(_, "1 swap"))
@@ -139,17 +139,21 @@ pub fn redefining_an_existing_builtin_word() {
   |> succeed_with("1 1")
 }
 
-pub fn defining_words_with_odd_characters() {
-  run_forth_for(": € 220371 ; €", "220371")
+pub fn defining_words_with_odd_characters_test() {
+  forth.new()
+  |> forth.eval(": € 220371 ;")
+  |> result.then(forth.eval(_, "€"))
+  |> result.map(forth.format_stack)
+  |> succeed_with("220371")
 }
 
-pub fn defining_a_number() {
+pub fn defining_a_number_test() {
   forth.new()
   |> forth.eval(": 1 2 ;")
   |> error_with(forth.InvalidWord)
 }
 
-pub fn calling_a_nonexistent_word() {
+pub fn calling_a_nonexistent_word_test() {
   forth.new()
   |> forth.eval("1 foo")
   |> error_with(forth.UnknownWord)
