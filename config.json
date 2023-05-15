@@ -85,6 +85,22 @@
           "basics"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "tisbury-treasure-hunt",
+        "name": "Tisbury Treasure Hunt",
+        "uuid": "d38ff053-5f25-422b-9d51-fc7e2fef22cc",
+        "concepts": [
+          "tuples"
+        ],
+        "prerequisites": [
+          "basics",
+          "bools",
+          "ints",
+          "case-expressions",
+          "lists"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
