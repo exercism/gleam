@@ -101,6 +101,21 @@
           "lists"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "tracks-on-tracks-on-tracks",
+        "name": "Tracks on Tracks on Tracks",
+        "uuid": "6d115941-dd77-404d-87bb-dc3150bb86df",
+        "concepts": [
+          "lists"
+        ],
+        "prerequisites": [
+          "bools",
+          "case-expressions",
+          "ints",
+          "strings"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
