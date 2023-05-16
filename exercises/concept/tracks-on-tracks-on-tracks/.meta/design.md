@@ -27,5 +27,6 @@
 ## Prerequisites
 
 - `bools`: return a `bool`.
+- `ints`: return an `int`.
 - `strings`: the lists are lists of strings.
 - `case-expressions`: case expressions are used.
