@@ -1,4 +1,6 @@
-# About
+# Introduction
+
+## Lists
 
 A list in Gleam is an immutable collection of zero or more values. The values in a list must all have the same type. As lists are immutable, once a list has been constructed, its value can never change. Any functions/operators that appear to modify a list (such as adding an element), will actually return a new list.
 
@@ -23,7 +25,7 @@ The [`gleam/list`](https://hexdocs.pm/gleam_stdlib/gleam/list.html) module in th
 Lists patterns can be used in case expressions to match on lists and assign contained values to variables:
 
 ```gleam
-pub fn describe(list: List(String)) -> String {
+pub fn describe(list) {
   case list {
     [] -> "Empty list"
     [x] -> "List with one item: " <> x
@@ -36,7 +38,7 @@ pub fn describe(list: List(String)) -> String {
 As well as matching on exact length lists, the spread syntax can be used to match on lists of at-least a certain length:
 
 ```gleam
-pub fn describe(list: List(String)) -> String {
+pub fn describe(list) {
   case list {
     [_, _, ..] -> "List with at least two items"
     [_] -> "List with one item"
@@ -48,7 +50,7 @@ pub fn describe(list: List(String)) -> String {
 The spread syntax can also be used to assign the rest of the list to a variable:
 
 ```gleam
-pub fn remove_first_item(list: List(String)) -> List(String) {
+pub fn remove_first_item(list) {
   case list {
     // Return the list without the first item
     [_, ..rest] -> rest
