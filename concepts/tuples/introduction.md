@@ -1,7 +1,7 @@
 # Introduction
 
 A tuple is an ordered container of values. Like all Gleam data types tuples are immutable.
-Each element of a type can be of a different type -- they can even be other tuples.
+Each element of a tuple can be of a different type -- they can even be other tuples.
 
 Tuples are defined as comma-separated values between `#(` and `)`: `#(1, 2.0, "Three")`.
 
@@ -39,12 +39,12 @@ let person = #("Jordan", 170)
 person.0 // -> "Jordan"
 person.1 // -> 170
 
-// Option 2: pattern matching
+// Option 2: let
 let #(name2, length2) = person
 // -> name2 = "Jordan"
-// -> length2 = 170
+// -> length2 = 52
 
-// Option 3: pattern matching
+// Option 3: case
 case person {
   #(name3, length3) -> {
     name3   // -> "Jordan"
