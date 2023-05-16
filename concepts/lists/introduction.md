@@ -23,7 +23,7 @@ The [`gleam/list`](https://hexdocs.pm/gleam_stdlib/gleam/list.html) module in th
 Lists patterns can be used in case expressions to match on lists and assign contained values to variables:
 
 ```gleam
-pub fn describe(list) {
+pub fn describe(list: List(String)) -> String {
   case list {
     [] -> "Empty list"
     [x] -> "List with one item: " <> x
@@ -36,7 +36,7 @@ pub fn describe(list) {
 As well as matching on exact length lists, the spread syntax can be used to match on lists of at-least a certain length:
 
 ```gleam
-pub fn describe(list) {
+pub fn describe(list: List(String)) -> String {
   case list {
     [_, _, ..] -> "List with at least two items"
     [_] -> "List with one item"
@@ -48,7 +48,7 @@ pub fn describe(list) {
 The spread syntax can also be used to assign the rest of the list to a variable:
 
 ```gleam
-pub fn remove_first_item(list) {
+pub fn remove_first_item(list: List(String)) -> List(String) {
   case list {
     // Return the list without the first item
     [_, ..rest] -> rest
