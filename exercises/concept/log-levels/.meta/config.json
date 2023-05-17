@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/log_levels.gleam"
+    ],
+    "test": [
+      "test/log_levels_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elixir/log-levels"
+  ],
+  "blurb": "Learn about strings by parsing application logs"
+}
