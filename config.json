@@ -1483,6 +1483,11 @@
       "uuid": "e6196d00-551f-464b-98b5-c2d0a09c4125",
       "slug": "lists",
       "name": "Lists"
+    },
+    {
+      "uuid": "b4f7c485-acd1-451f-94e0-57a970a594ae",
+      "slug": "strings",
+      "name": "Strings"
     }
   ],
   "key_features": [
