@@ -15,7 +15,7 @@ three"
 Strings can be joined together using the `<>` operator:
 
 ```gleam
-let name = "Mike
+let name = "Mike"
 "Hello, " <> name <> "!"
 // -> "Hello, Mike!"
 ```
@@ -43,5 +43,6 @@ pub fn profession(name: String) -> String {
     _ -> "I'm not sure what " <> name <> " does"
   }
 }
+```
 
 [stdlib]: https://hexdocs.pm/gleam_stdlib/gleam/string.html

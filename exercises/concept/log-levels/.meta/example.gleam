@@ -5,7 +5,7 @@ pub fn message(log_line: String) -> String {
     "[INFO]:" <> message -> message
     "[ERROR]:" <> message -> message
     "[WARNING]:" <> message -> message
-    _ -> ""
+    _ -> log_line
   }
   |> string.trim
 }
