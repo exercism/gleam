@@ -6,7 +6,7 @@ You have six tasks, which will all involve dealing with lists.
 
 ## 1. Create a new list
 
-To keep track of the languages you want to learn, you'll need to create an new list. Define the `new_list` function that returns a new, empty list.
+To keep track of the languages you want to learn, you'll need to create a new list. Define the `new_list` function that returns a new, empty list.
 
 ```gleam
 new_list()
