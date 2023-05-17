@@ -116,6 +116,19 @@
           "strings"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "log-levels",
+        "name": "Log Levels",
+        "uuid": "66155da0-db56-498a-9b8a-a7219d97b415",
+        "concepts": [
+          "strings"
+        ],
+        "prerequisites": [
+          "basics",
+          "case-expressions"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
