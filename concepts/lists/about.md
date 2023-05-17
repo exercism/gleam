@@ -10,7 +10,7 @@ let singleValue = [5]
 let threeValues = ["a", "b", "c"]
 ```
 
-The most common way to add an element to a list is through the spread syntax:
+The most common way to add an element to a list is to prepend it with the spread syntax:
 
 ```gleam
 let two_to_four = [2, 3, 4]
