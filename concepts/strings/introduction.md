@@ -1,6 +1,6 @@
 # Introduction
 
-Strings in Gleam are immutable text surrounded by double quotes. They are support unicode characters, and can be multi-line.
+Strings in Gleam are immutable text surrounded by double quotes. They support unicode characters, and can be multi-line.
 
 ```gleam
 let greeting = "Hello, Joe! 📞"
