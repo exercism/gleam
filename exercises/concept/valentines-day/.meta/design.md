@@ -21,6 +21,6 @@
 ## Prerequisites
 
 - `basics`: defining functions and scoping and using integers.
-- `pattern-matching`: know how to do pattern matching.
+- `case-expressions`: know how to do pattern matching.
 - `modules`: know how to import functions.
 - `string`: know how to concat strings.
