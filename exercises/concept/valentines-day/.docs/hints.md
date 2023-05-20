@@ -6,7 +6,7 @@
 
 ## 4. Define the activity
 
-- Custom types can be defined containing data the `pub type Name { Variant1(SomeType) }` syntax.
+- Custom types containing data can be defined using the `pub type Name { Variant1(SomeType) }` syntax.
 
 ## 5. Rate the activity
 

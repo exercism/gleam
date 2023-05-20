@@ -12,7 +12,7 @@
 - Labelled fields.
 - Record updates.
 - Record accessors.
-- Splat patterns. 
+- Spread patterns. 
 
 ## Concepts
 

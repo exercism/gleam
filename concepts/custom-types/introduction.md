@@ -30,6 +30,13 @@ let integerTwo = SomeInt(2)
 
 Custom types, along with everything in Gleam, have _structural equality_, which means that two values of the same variant and with the same data are equivalent.
 
+```gleam
+Spring == Spring // -> True
+Spring == Autumn // -> False
+SomeInt(2) == SomeInt(2) // -> True
+SomeInt(2) == SomeFloat(2.0) // -> False
+```
+
 Custom type variants can be pattern matched on using case expressions.
 
 ```gleam
