@@ -35,9 +35,8 @@ pub fn root_for_team(team: Team) -> Bool {
     Team(name: "Chicago Bulls", ..) -> True
     Team(coach: Coach(name: "Gregg Popovich", ..), ..) -> True
     Team(coach: Coach(former_player: True, ..), ..) -> True
-    Team(stats: Stats(wins: wins, losses: losses), ..) -> {
+    Team(stats: Stats(wins: wins, losses: losses), ..) ->
       wins > losses || wins >= 60
-    }
     _ -> False
   }
 }

@@ -144,6 +144,20 @@
           "string"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "bandwagoner",
+        "name": "Bandwagoner",
+        "uuid": "d16c5fd8-5b6d-493b-9ef2-3125b42a00df",
+        "concepts": [
+          "labelled-fields"
+        ],
+        "prerequisites": [
+          "basics",
+          "custom-types",
+          "case-expressions"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
