@@ -1501,6 +1501,11 @@
       "uuid": "b4f7c485-acd1-451f-94e0-57a970a594ae",
       "slug": "strings",
       "name": "Strings"
+    },
+    {
+      "uuid": "db6f250f-3a2e-42f2-a8ce-487a2f21beab",
+      "slug": "custom-types",
+      "name": "Custom Types"
     }
   ],
   "key_features": [
