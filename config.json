@@ -129,6 +129,21 @@
           "case-expressions"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "valentines-day",
+        "name": "Valentine's Day",
+        "uuid": "57988e11-7847-4f70-943c-2b3290ad1abe",
+        "concepts": [
+          "custom-types"
+        ],
+        "prerequisites": [
+          "basics",
+          "case-expressions",
+          "modules",
+          "string"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
