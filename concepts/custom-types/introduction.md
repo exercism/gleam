@@ -11,7 +11,7 @@ pub type Season {
 }
 ```
 
-Each case of a custom type can optionally hold some data, and different cases can have different types of data.
+Each case of a custom type can optionally hold some data, and different cases can have different types of data. When a variant holds data it is called a _record_.
 
 ```gleam
 pub type Number {

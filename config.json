@@ -1521,6 +1521,11 @@
       "uuid": "db6f250f-3a2e-42f2-a8ce-487a2f21beab",
       "slug": "custom-types",
       "name": "Custom Types"
+    },
+    {
+      "uuid": "43eb0672-b116-44d8-978f-ce44415c43e8",
+      "slug": "labelled-fields",
+      "name": "Labelled Fields"
     }
   ],
   "key_features": [
