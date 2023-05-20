@@ -1575,6 +1575,7 @@
     }
   ],
   "tags": [
+    "paradigm/declarative",
     "paradigm/functional",
     "typing/static",
     "typing/strong",
@@ -1582,6 +1583,12 @@
     "platform/windows",
     "platform/mac",
     "platform/linux",
-    "runtime/beam"
+    "platform/web",
+    "runtime/beam",
+    "used_for/backends",
+    "used_for/frontends",
+    "used_for/games",
+    "used_for/scripts",
+    "used_for/web_development"
   ]
 }
