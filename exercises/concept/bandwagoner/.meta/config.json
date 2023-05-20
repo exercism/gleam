@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/bandwagoner.gleam"
+    ],
+    "test": [
+      "test/bandwagoner_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "fsharp/bandwagoner"
+  ],
+  "blurb": "Learn about labelled fields by keeping a history of basketball statistics"
+}
