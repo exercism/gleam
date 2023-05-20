@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/valentines_day.gleam"
+    ],
+    "test": [
+      "test/valentines_day_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "fsharp/valentines_day"
+  ],
+  "blurb": "Learn usage of Custom Types while deciding what to do for Valentines Day"
+}
