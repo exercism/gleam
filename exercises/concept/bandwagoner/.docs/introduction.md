@@ -24,7 +24,7 @@ pub type Rectangle {
 }
 ```
 
-Labelled can be used to give arguments in any order to the constructor of a record.
+Labels can be used to give arguments in any order to the constructor of a record.
 
 ```gleam
 let a = Rectangle(height: 10.0, width: 20.0)

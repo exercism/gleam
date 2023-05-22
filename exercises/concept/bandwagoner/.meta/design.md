@@ -19,6 +19,6 @@
 
 ## Prerequisites
 
-- `basics`: know what and int and a string is.
+- `basics`: know what an int and a string is.
 - `custom-types`: know what custom types are.
 - `case-expressions`: know how to do pattern matching with case expressions.
