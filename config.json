@@ -158,6 +158,21 @@
           "case-expressions"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "bird-count",
+        "name": "Bird Count",
+        "uuid": "29a9697e-f369-4cce-bf04-ffc5ee6d4558",
+        "concepts": [
+          "recursion"
+        ],
+        "prerequisites": [
+          "lists",
+          "case-expressions",
+          "ints",
+          "guards"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
