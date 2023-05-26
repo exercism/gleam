@@ -173,6 +173,21 @@
           "guards"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "pizza-pricing",
+        "name": "Pizza Pricing",
+        "uuid": "cf59568d-2984-4688-a83b-835f58371002",
+        "concepts": [
+          "tail-call-optimisation"
+        ],
+        "prerequisites": [
+          "recursion",
+          "pattern-matching",
+          "lists",
+          "ints"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
