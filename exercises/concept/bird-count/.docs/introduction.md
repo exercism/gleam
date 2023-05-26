@@ -37,3 +37,7 @@ pub type RussianDoll {
   Mother(RussianDoll) // Recursive case
 }
 ```
+```gleam
+let very_big_doll = Mother(Mother(Mother(Child)))
+let small_doll = Mother(Child)
+```
