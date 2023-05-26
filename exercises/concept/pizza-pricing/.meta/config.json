@@ -6,10 +6,10 @@
   ],
   "files": {
     "solution": [
-      "src/pizza-pricing.gleam"
+      "src/pizza_pricing.gleam"
     ],
     "test": [
-      "test/pizza-pricing_test.gleam"
+      "test/pizza_pricing_test.gleam"
     ],
     "exemplar": [
       ".meta/example.gleam"
