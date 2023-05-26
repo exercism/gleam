@@ -1560,6 +1560,11 @@
       "uuid": "9f1a9dab-7223-412d-a8b9-a36bc4857d38",
       "slug": "recursion",
       "name": "Recursion"
+    },
+    {
+      "uuid": "9c9c5d50-bf4c-46e8-be7f-b410f700e4ab",
+      "slug": "tail-call-optimisation",
+      "name": "Tail Call Optimisation"
     }
   ],
   "key_features": [
