@@ -1580,6 +1580,11 @@
       "uuid": "9c9c5d50-bf4c-46e8-be7f-b410f700e4ab",
       "slug": "tail-call-optimisation",
       "name": "Tail Call Optimisation"
+    },
+    {
+      "uuid": "f399bcb7-d0d6-450b-b874-fb4c6fab7dc8",
+      "slug": "anonymous-functions",
+      "name": "Anonymous Functions"
     }
   ],
   "key_features": [
