@@ -188,6 +188,19 @@
           "ints"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "secrets",
+        "name": "Secrets",
+        "uuid": "39459ebd-14bb-4864-94bb-1064ec044b31",
+        "concepts": [
+          "anonymous-functions"
+        ],
+        "prerequisites": [
+          "basics",
+          "ints"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
