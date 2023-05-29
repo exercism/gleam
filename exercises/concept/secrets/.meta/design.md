@@ -5,6 +5,7 @@
 After completing this exercise, the student should:
 
 - Know how to write anonymous functions.
+- Know how to write a function type.
 - Know how to return a function from a function.
 - Know that anonymous functions can reference variables in scope when they were defined.
 - Know about the function capture syntax.
