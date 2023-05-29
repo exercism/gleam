@@ -32,6 +32,12 @@ f(1) // -> 2
 f(2) // -> 3
 ```
 
+The type of a function is written using a similar syntax to anonymous functions. The type of a function that takes an `Int` and a `Float` and returns an `Int` is written like this:
+
+```gleam
+fn(Int, Float) -> Int
+```
+
 Anonymous functions can reference variables that were in scope when they were defined, making them _closures_.
 
 ```gleam
