@@ -6,6 +6,12 @@ pub fn main() {
   gleeunit.main()
 }
 
+pub fn empty_rna_sequence_results_in_no_proteins_test() {
+  ""
+  |> protein_translation.proteins
+  |> should.equal(Ok([]))
+}
+
 pub fn methione_rna_sequence_test() {
   "AUG"
   |> protein_translation.proteins
@@ -172,4 +178,10 @@ pub fn translation_stops_if_stop_codon_in_middle_of_six_codon_sequence_test() {
   "UGGUGUUAUUAAUGGUUU"
   |> protein_translation.proteins
   |> should.equal(Ok(["Tryptophan", "Cysteine", "Tyrosine"]))
+}
+
+pub fn incomplete_rna_sequence_can_translate_if_valid_until_a_stop_codon_test() {
+  "UUCUUCUAAUGGU"
+  |> protein_translation.proteins
+  |> should.equal(Ok(["Phenylalanine", "Phenylalanine"]))
 }

@@ -11,7 +11,6 @@
 
 [2c44f7bf-ba20-43f7-a3bf-f2219c0c3f98]
 description = "Empty RNA sequence results in no proteins"
-include = false
 
 [96d3d44f-34a2-4db4-84cd-fff523e069be]
 description = "Methionine RNA sequence"
@@ -99,4 +98,3 @@ description = "Incomplete RNA sequence can't translate"
 
 [43945cf7-9968-402d-ab9f-b8a28750b050]
 description = "Incomplete RNA sequence can translate if valid until a STOP codon"
-include = false
