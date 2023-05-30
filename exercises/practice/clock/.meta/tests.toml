@@ -105,6 +105,9 @@ description = "Subtract minutes -> subtract more than an hour"
 [8b04bb6a-3d33-4e6c-8de9-f5de6d2c70d6]
 description = "Subtract minutes -> subtract across midnight"
 
+[07c3bbf7-ce4d-4658-86e8-4a77b7a5ccd9]
+description = "Subtract minutes -> subtract more than two hours"
+
 [90ac8a1b-761c-4342-9c9c-cdc3ed5db097]
 description = "Subtract minutes -> subtract more than two hours with borrow"
 
