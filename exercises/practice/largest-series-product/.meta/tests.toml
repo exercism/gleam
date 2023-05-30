@@ -41,11 +41,9 @@ description = "rejects span longer than string length"
 
 [06bc8b90-0c51-4c54-ac22-3ec3893a079e]
 description = "reports 1 for empty string and empty product (0 span)"
-include = false
 
 [3ec0d92e-f2e2-4090-a380-70afee02f4c0]
 description = "reports 1 for nonempty string and empty product (0 span)"
-include = false
 
 [6d96c691-4374-4404-80ee-2ea8f3613dd4]
 description = "rejects empty string and nonzero span"
@@ -56,6 +54,7 @@ description = "rejects invalid character in digits"
 [5fe3c0e5-a945-49f2-b584-f0814b4dd1ef]
 description = "rejects negative span"
 include = false
+comment = "not included because reimplemented by c859f34a-9bfe-4897-9c2f-6d7f8598e7f0"
 
 [c859f34a-9bfe-4897-9c2f-6d7f8598e7f0]
 description = "rejects negative span"
