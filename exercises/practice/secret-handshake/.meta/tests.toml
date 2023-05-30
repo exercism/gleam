@@ -24,6 +24,9 @@ description = "jump for 1000"
 [40499fb4-e60c-43d7-8b98-0de3ca44e0eb]
 description = "combine two actions"
 
+[9730cdd5-ef27-494b-afd3-5c91ad6c3d9d]
+description = "reverse two actions"
+
 [0b828205-51ca-45cd-90d5-f2506013f25f]
 description = "reversing one action gives the same action"
 
