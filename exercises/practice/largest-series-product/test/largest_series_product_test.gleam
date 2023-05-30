@@ -44,6 +44,16 @@ pub fn can_get_the_largest_product_of_a_big_number_test() {
   |> should.equal(Ok(23_520))
 }
 
+pub fn reports_one_for_empty_string_and_empty_products() {
+  largest_series_product.largest_product("", 0)
+  |> should.equal(Ok(1))
+}
+
+pub fn reports_one_for_nonempty_string_and_empty_products() {
+  largest_series_product.largest_product("123", 0)
+  |> should.equal(Ok(1))
+}
+
 pub fn reports_zero_if_the_only_digits_are_zero_test() {
   largest_series_product.largest_product("0000", 2)
   |> should.equal(Ok(0))
