@@ -13,7 +13,7 @@ pub fn roster_is_empty_when_no_student_is_added_test() {
   |> should.equal([])
 }
 
-pub fn add_a_student() {
+pub fn add_a_student_test() {
   grade_school.create()
   |> grade_school.add(student: "Aimee", grade: 2)
   |> result.map(grade_school.roster)
@@ -27,7 +27,7 @@ pub fn student_is_added_to_the_roster_test() {
   |> should.equal(Ok(["Aimee"]))
 }
 
-pub fn adding_multiple_students_in_the_same_grade_in_the_roster() {
+pub fn adding_multiple_students_in_the_same_grade_in_the_roster_test() {
   grade_school.create()
   |> grade_school.add(student: "Blair", grade: 2)
   |> result.then(grade_school.add(to: _, student: "James", grade: 2))

@@ -219,7 +219,7 @@ pub fn rolling_after_bonus_rolls_after_strike_test() {
   |> roll_and_last_roll_be_error(2, GameComplete)
 }
 
-pub fn last_two_strikes_followed_by_only_last_bonus_non_strike_points() {
+pub fn last_two_strikes_followed_by_only_last_bonus_non_strike_points_test() {
   let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 1]
 
   rolls
