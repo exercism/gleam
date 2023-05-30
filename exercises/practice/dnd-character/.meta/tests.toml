@@ -66,3 +66,4 @@ description = "random character is valid"
 [2ca77b9b-c099-46c3-a02c-0d0f68ffa0fe]
 description = "each ability is only calculated once"
 include = false
+comment = "gleam is immutable so an ability can not change once the character is created"
