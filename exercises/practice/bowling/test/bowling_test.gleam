@@ -219,6 +219,13 @@ pub fn rolling_after_bonus_rolls_after_strike_test() {
   |> roll_and_last_roll_be_error(2, GameComplete)
 }
 
+pub fn last_two_strikes_followed_by_only_last_bonus_non_strike_points() {
+  let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 1]
+
+  rolls
+  |> roll_and_check_score(31)
+}
+
 fn roll_and_check_score(rolls: List(Int), correct_score: Int) {
   rolls
   |> list.fold(
