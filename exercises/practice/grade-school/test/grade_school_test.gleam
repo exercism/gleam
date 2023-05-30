@@ -13,11 +13,27 @@ pub fn roster_is_empty_when_no_student_is_added_test() {
   |> should.equal([])
 }
 
+pub fn add_a_student() {
+  grade_school.create()
+  |> grade_school.add(student: "Aimee", grade: 2)
+  |> result.map(grade_school.roster)
+  |> should.be_ok
+}
+
 pub fn student_is_added_to_the_roster_test() {
   grade_school.create()
   |> grade_school.add(student: "Aimee", grade: 2)
   |> result.map(grade_school.roster)
   |> should.equal(Ok(["Aimee"]))
+}
+
+pub fn adding_multiple_students_in_the_same_grade_in_the_roster() {
+  grade_school.create()
+  |> grade_school.add(student: "Blair", grade: 2)
+  |> result.then(grade_school.add(to: _, student: "James", grade: 2))
+  |> result.then(grade_school.add(to: _, student: "Paul", grade: 2))
+  |> result.map(grade_school.roster)
+  |> should.be_ok
 }
 
 pub fn multiple_students_in_the_same_grade_are_added_to_the_roster_test() {
