@@ -5,6 +5,7 @@ import gleam/order
 import gleam/list
 import gleam/string
 import gleam/string_builder
+import gleam/io
 
 pub type ForthWordDef {
   UserDef(List(ForthTok))
@@ -45,14 +46,6 @@ pub fn new() -> Forth {
   Forth(stack: [], env: stdlib())
 }
 
-fn intercalate(x: a, xs: List(a)) -> List(a) {
-  case xs {
-    [] -> []
-    [h] -> [h]
-    [h, ..t] -> [h, x, ..intercalate(x, t)]
-  }
-}
-
 // Trivial pattern for a function. But if types change or we need to handle other things then having
 // a separate function is nice.
 fn stack_push(s: List(a), i) -> List(a) {
@@ -70,68 +63,68 @@ pub fn format_stack(f: Forth) -> String {
   f.stack
   |> list.reverse
   |> list.map(int.to_string)
-  |> intercalate(" ", _)
+  |> list.intersperse(with: " ")
   |> string_builder.from_strings
   |> string_builder.to_string
 }
 
-fn toke_word(w: String, t: List(String)) -> #(ForthTok, List(String)) {
-  case w {
+fn tokenise_word(word: String, rest: List(String)) -> #(ForthTok, List(String)) {
+  case word {
     ":" -> {
-      let #([w, ..def], [_, ..rest]) =
-        list.split_while(
-          t,
-          fn(c) {
-            case string.compare(c, ";") {
-              order.Eq -> False
-              _ -> True
-            }
-          },
-        )
-      #(WordDef(string.uppercase(w), UserDef(tokenise(def, []))), rest)
+      let #([first_word, ..instructions], [_, ..rest]) =
+        list.split_while(rest, fn(c) { c != ";" })
+      #(
+        io.debug(WordDef(
+          string.uppercase(first_word),
+          UserDef(tokenise(instructions)),
+        )),
+        rest,
+      )
     }
-
-    v ->
-      case int.parse(v) {
-        Ok(i) -> #(Value(i), t)
-        Error(_) -> #(Word(string.uppercase(v)), t)
+    _ ->
+      case int.parse(word) {
+        Ok(i) -> #(Value(i), rest)
+        Error(_) -> #(Word(string.uppercase(word)), rest)
       }
   }
 }
 
-fn tokenise(ins: List(String), toks: List(ForthTok)) -> List(ForthTok) {
-  case ins {
-    [] -> toks
-    [w] -> {
-      let #(t, _) = toke_word(w, [])
-      [t, ..toks]
-    }
-    [h, ..t] -> {
-      let #(tok, ts) = toke_word(h, t)
-      tokenise(ts, [tok, ..toks])
+fn tokenise(instructions: List(String)) -> List(ForthTok) {
+  do_tokenise(instructions, [])
+}
+
+fn do_tokenise(
+  instructions: List(String),
+  acc: List(ForthTok),
+) -> List(ForthTok) {
+  case instructions {
+    [] -> list.reverse(acc)
+    [word, ..rest] -> {
+      let #(token, rest) = tokenise_word(word, rest)
+      do_tokenise(rest, [token, ..acc])
     }
   }
 }
 
-fn execute(f: Forth, xs: List(ForthTok)) -> Result(Forth, ForthError) {
-  case stack_pop(xs) {
-    Ok(#(i, rest0)) -> {
-      use f0 <- result.then(eval_token(f, i))
-      execute(f0, rest0)
+fn execute(forth: Forth, tokens: List(ForthTok)) -> Result(Forth, ForthError) {
+  case stack_pop(tokens) {
+    Ok(#(token, rest)) -> {
+      use new_forth <- result.then(eval_token(forth, token))
+      execute(new_forth, rest)
     }
-    Error(_) -> Ok(f)
+    Error(_) -> Ok(forth)
   }
 }
 
 fn binary_op(
-  f: Forth,
+  forth: Forth,
   op: fn(Int, Int) -> Result(Int, ForthError),
 ) -> Result(Forth, ForthError) {
-  use #(a, rest) <- result.then(stack_pop(f.stack))
-  use #(b, rest0) <- result.then(stack_pop(rest))
+  use #(a, new_stack) <- result.then(stack_pop(forth.stack))
+  use #(b, new_stack) <- result.then(stack_pop(new_stack))
   use i <- result.then(op(b, a))
   // order is important
-  Ok(Forth(..f, stack: stack_push(rest0, i)))
+  Ok(Forth(..forth, stack: stack_push(new_stack, i)))
 }
 
 fn execute_builtin(f: Forth, builtin: String) -> Result(Forth, ForthError) {
@@ -203,7 +196,6 @@ fn eval_token(f: Forth, tok: ForthTok) -> Result(Forth, ForthError) {
 
 pub fn eval(f: Forth, prog: String) -> Result(Forth, ForthError) {
   string.split(prog, on: " ")
-  |> tokenise([])
-  |> list.reverse
+  |> tokenise
   |> execute(f, _)
 }
