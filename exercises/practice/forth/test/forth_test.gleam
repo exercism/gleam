@@ -231,6 +231,14 @@ pub fn calling_a_nonexistent_word_test() {
   |> error_with(forth.UnknownWord)
 }
 
+pub fn user_defined_words_execute_in_the_right_order_test() {
+  forth.new()
+  |> forth.eval(": countup 1 2 3 ;")
+  |> result.then(forth.eval(_, "countup"))
+  |> result.map(forth.format_stack)
+  |> succeed_with("1 2 3")
+}
+
 pub fn user_defined_words_can_override_builtin_operators_test() {
   forth.new()
   |> forth.eval(": + * ;")
