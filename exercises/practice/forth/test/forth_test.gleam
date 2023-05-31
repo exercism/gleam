@@ -247,6 +247,25 @@ pub fn user_defined_words_can_override_builtin_operators_test() {
   |> succeed_with("12")
 }
 
+pub fn user_defined_words_can_use_different_words_with_the_same_name_test() {
+  forth.new()
+  |> forth.eval(": foo 5 ;")
+  |> result.then(forth.eval(_, ": bar foo ;"))
+  |> result.then(forth.eval(_, ": foo 6 ;"))
+  |> result.then(forth.eval(_, "bar foo"))
+  |> result.map(forth.format_stack)
+  |> succeed_with("5 6")
+}
+
+pub fn user_defined_words_can_define_word_that_uses_word_with_the_same_name_test() {
+  forth.new()
+  |> forth.eval(": foo 10 ;")
+  |> result.then(forth.eval(_, ": foo foo 1 + ;"))
+  |> result.then(forth.eval(_, "foo"))
+  |> result.map(forth.format_stack)
+  |> succeed_with("11")
+}
+
 pub fn user_defined_words_cannot_redefine_non_negative_numbers_test() {
   forth.new()
   |> forth.eval(": 1 2 ;")
