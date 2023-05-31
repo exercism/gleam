@@ -5,7 +5,6 @@ import gleam/order
 import gleam/list
 import gleam/string
 import gleam/string_builder
-import gleam/io
 
 pub type ForthWordDef {
   UserDef(List(ForthTok))
@@ -74,10 +73,7 @@ fn tokenise_word(word: String, rest: List(String)) -> #(ForthTok, List(String)) 
       let #([first_word, ..instructions], [_, ..rest]) =
         list.split_while(rest, fn(c) { c != ";" })
       #(
-        io.debug(WordDef(
-          string.uppercase(first_word),
-          UserDef(tokenise(instructions)),
-        )),
+        WordDef(string.uppercase(first_word), UserDef(tokenise(instructions))),
         rest,
       )
     }
@@ -173,15 +169,15 @@ fn execute_builtin(f: Forth, builtin: String) -> Result(Forth, ForthError) {
   }
 }
 
-fn eval_token(f: Forth, tok: ForthTok) -> Result(Forth, ForthError) {
-  case tok {
-    Value(v) -> Ok(Forth(..f, stack: stack_push(f.stack, v)))
+fn eval_token(forth: Forth, token: ForthTok) -> Result(Forth, ForthError) {
+  case token {
+    Value(v) -> Ok(Forth(..forth, stack: stack_push(forth.stack, v)))
     Word(w) ->
       // load word and evaluate with stack
-      case map.get(f.env, w) {
+      case map.get(forth.env, w) {
         // You're on your own when you redefine a built in. :)
-        Ok(UserDef(body)) -> execute(f, body)
-        Ok(BuiltIn(bin)) -> execute_builtin(f, bin)
+        Ok(UserDef(body)) -> execute(forth, body)
+        Ok(BuiltIn(bin)) -> execute_builtin(forth, bin)
         Error(_) -> Error(UnknownWord)
       }
     WordDef(w, def) ->
@@ -189,8 +185,54 @@ fn eval_token(f: Forth, tok: ForthTok) -> Result(Forth, ForthError) {
       case int.parse(w) {
         // room for improvement here, but this is sufficent for our needs.
         Ok(_) -> Error(InvalidWord)
-        Error(_) -> Ok(Forth(..f, env: map.insert(f.env, w, def)))
+        Error(_) -> {
+          // All the words in the definition need to be looked up in the environment
+          use updated_def <- result.then(resolve_def(def, forth.env))
+          Ok(Forth(..forth, env: map.insert(forth.env, w, updated_def)))
+        }
       }
+  }
+}
+
+fn resolve_def(
+  definition_body: ForthWordDef,
+  env: map.Map(String, ForthWordDef),
+) -> Result(ForthWordDef, ForthError) {
+  case definition_body {
+    BuiltIn(_) -> Ok(definition_body)
+    UserDef(tokens) ->
+      tokens
+      |> list.map(lookup_token(_, env))
+      |> flatten_results
+      |> result.map(list.flatten)
+      |> result.map(UserDef)
+  }
+}
+
+fn lookup_token(
+  token: ForthTok,
+  env: map.Map(String, ForthWordDef),
+) -> Result(List(ForthTok), ForthError) {
+  case token {
+    Word(w) ->
+      case map.get(env, w) {
+        Ok(UserDef(tokens)) -> Ok(tokens)
+        Ok(BuiltIn(body)) -> Ok([Word(body)])
+        Error(_) -> Error(UnknownWord)
+      }
+    _ -> Ok([token])
+  }
+}
+
+fn flatten_results(list: List(Result(a, b))) -> Result(List(a), b) {
+  do_flatten_results(list, [])
+}
+
+fn do_flatten_results(list: List(Result(a, b)), acc: List(a)) {
+  case list {
+    [] -> Ok(list.reverse(acc))
+    [Ok(result), ..rest] -> do_flatten_results(rest, [result, ..acc])
+    [Error(error), ..] -> Error(error)
   }
 }
 
