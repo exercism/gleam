@@ -201,6 +201,21 @@
           "ints"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "high-school-sweetheart",
+        "name": "High School Sweetheart",
+        "uuid": "26535ccf-9d94-4e43-94b1-49586e570dd7",
+        "concepts": [
+          "pipe-operator"
+        ],
+        "prerequisites": [
+          "strings",
+          "modules",
+          "results",
+          "lists"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
