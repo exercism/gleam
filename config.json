@@ -1618,6 +1618,11 @@
       "uuid": "339a98fa-3b02-490b-822c-19c03718badd",
       "slug": "pipe-operator",
       "name": "Pipe Operator"
+    },
+    {
+      "uuid": "387d2262-107f-4568-9320-e7fec515d6ba",
+      "slug": "generics",
+      "name": "Generics"
     }
   ],
   "key_features": [
