@@ -216,6 +216,19 @@
           "lists"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "treasure-chest",
+        "name": "Treasure Chest",
+        "uuid": "8c1ba902-712d-42a2-b94e-f6ed1b299520",
+        "concepts": [
+          "generics"
+        ],
+        "prerequisites": [
+          "custom-types",
+          "case-expressions"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [

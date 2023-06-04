@@ -11,9 +11,8 @@ pub fn get_treasure(
   chest: TreasureChest(treasure),
   password: String,
 ) -> UnlockResult(treasure) {
-  let TreasureChest(set, treasure) = chest
-  case set == password {
-    True -> Unlocked(treasure)
-    False -> WrongPassword
+  case chest {
+    TreasureChest(set_pw, treasure) if password == set_pw -> Unlocked(treasure)
+    _ -> WrongPassword
   }
 }
