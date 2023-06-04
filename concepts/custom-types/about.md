@@ -51,3 +51,15 @@ pub fn describe(number: Number) -> String {
   }
 }
 ```
+
+If a custom type has only one variant it can be pattern matched on with `let`.
+
+```gleam
+pub type Person {
+  Person(String)
+}
+
+pub fn get_name(person: Person) -> String {
+  let Person(name) = person
+}
+```

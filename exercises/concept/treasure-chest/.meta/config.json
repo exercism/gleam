@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/treaure_chest.gleam"
+    ],
+    "test": [
+      "test/treaure_chest_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elm/treaure-chest"
+  ],
+  "blurb": "Learn about generics in Gleam by creating a treasure chest"
+}
