@@ -21,13 +21,18 @@ The pipe operator will either pass the value as the first argument to the functi
 
 ```gleam
 100
-|> some_function(1, 2)
+|> function_that_takes_two_arguments(1)
 
-// Insert as first argument
-some_function(100, 1, 2)
+// Is equivalent to
+function_that_takes_two_arguments(100, 1)
+```
 
-// Use as only argument
-some_function(1, 2)(100)
+```gleam
+100
+|> function_that_returns_a_function(1)
+
+// Is equivalent to
+function_that_returns_a_function(1)(100)
 ```
 
 Sometimes we want to pass the value into another position, in this case the `_` placeholder can be used to indicate where the value should be inserted.
