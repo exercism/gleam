@@ -6,10 +6,10 @@
   ],
   "files": {
     "solution": [
-      "src/treaure_chest.gleam"
+      "src/treasure_chest.gleam"
     ],
     "test": [
-      "test/treaure_chest_test.gleam"
+      "test/treasure_chest_test.gleam"
     ],
     "exemplar": [
       ".meta/example.gleam"
@@ -20,7 +20,7 @@
     ]
   },
   "forked_from": [
-    "elm/treaure-chest"
+    "elm/treasure-chest"
   ],
   "blurb": "Learn about generics in Gleam by creating a treasure chest"
 }
