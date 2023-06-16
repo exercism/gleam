@@ -601,6 +601,7 @@
         "name": "Strain",
         "uuid": "e2d09419-0136-4f4d-9a1c-02236c2c60a6",
         "practices": [
+          "tail-call-optimisation",
           "anonymous-functions",
           "generics"
         ],
@@ -610,6 +611,7 @@
           "bools",
           "case-expressions",
           "anonymous-functions",
+          "tail-call-optimisation",
           "generics"
         ],
         "difficulty": 2
@@ -750,6 +752,7 @@
         "name": "Matching Brackets",
         "uuid": "d1cdd91e-5ed6-4875-bbcc-a8395cdf51ce",
         "practices": [
+          "strings"
         ],
         "prerequisites": [
           "lists",
@@ -777,6 +780,8 @@
         "name": "Pythagorean Triplet",
         "uuid": "a433d1f6-d8a2-40b9-a7d7-a611420d7164",
         "practices": [
+          "int",
+          "recursion"
         ],
         "prerequisites": [
           "lists",
@@ -826,6 +831,7 @@
         "name": "Rectangles",
         "uuid": "68171b71-a9eb-4925-a2f3-df0bc27ce41d",
         "practices": [
+          "maps"
         ],
         "prerequisites": [
           "lists",
@@ -855,6 +861,7 @@
         "name": "Scrabble Score",
         "uuid": "109a8a3e-cc3f-4f2a-a385-c12f9e9865cf",
         "practices": [
+          "maps"
         ],
         "prerequisites": [
           "maps",
@@ -870,9 +877,12 @@
         "name": "Armstrong Numbers",
         "uuid": "f89958c7-da81-43de-9450-3ccc558b7bc2",
         "practices": [
+          "ints",
+          "recursion"
         ],
         "prerequisites": [
           "lists",
+          "results",
           "recursion",
           "bools",
           "ints"
@@ -884,6 +894,8 @@
         "name": "Collatz Conjecture",
         "uuid": "576c4a50-6aef-4b28-a7b4-0e682004a690",
         "practices": [
+          "results",
+          "recursion"
         ],
         "prerequisites": [
           "results",
@@ -912,6 +924,7 @@
         "name": "Resistor Color Trio",
         "uuid": "a35a95b5-e8ea-4c0a-8ca8-621c6f3501be",
         "practices": [
+          "case-expressions"
         ],
         "prerequisites": [
           "maps",
@@ -928,11 +941,12 @@
         "name": "Bottle Song",
         "uuid": "333129cf-8be6-4ce6-b6eb-1d2b12d383f2",
         "practices": [
+          "strings",
+          "labelled-arguments"
         ],
         "prerequisites": [
           "lists",
           "strings",
-          "results",
           "case-expressions",
           "labelled-arguments"
         ],
@@ -943,6 +957,7 @@
         "name": "List Ops",
         "uuid": "81458cfe-eb13-4026-93fb-211d1229ce53",
         "practices": [
+          "tail-call-optimisation"
         ],
         "prerequisites": [
           "bools",
@@ -958,6 +973,7 @@
         "name": "Perfect Numbers",
         "uuid": "f85e087a-355b-49d0-ac8d-3dc0d47fdad6",
         "practices": [
+          "orders"
         ],
         "prerequisites": [
           "lists",
