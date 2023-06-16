@@ -1,30 +1,20 @@
 import gleam/string
 import gleam/list
+import gleam/bool
 
 pub fn slices(input: String, size: Int) -> Result(List(String), Error) {
-  use <- require(input != "", EmptySeries)
-  use <- require(size != 0, SliceLengthZero)
-  use <- require(size >= 0, SliceLengthNegative)
+  use <- bool.guard(input == "", Error(EmptySeries))
+  use <- bool.guard(size == 0, Error(SliceLengthZero))
+  use <- bool.guard(size < 0, Error(SliceLengthNegative))
 
   let characters = string.to_graphemes(input)
   let length = list.length(characters)
-  use <- require(size <= length, SliceLengthTooLarge)
+  use <- bool.guard(size > length, Error(SliceLengthTooLarge))
 
   characters
   |> list.window(size)
   |> list.map(string.concat)
   |> Ok
-}
-
-fn require(
-  condition: Bool,
-  error: Error,
-  next: fn() -> Result(t, Error),
-) -> Result(t, Error) {
-  case condition {
-    True -> next()
-    False -> Error(error)
-  }
 }
 
 pub type Error {

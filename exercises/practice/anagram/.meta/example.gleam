@@ -1,14 +1,12 @@
 import gleam/list
 import gleam/string
-import gleam/string_builder
 
 fn normalize(word: String) {
   word
   |> string.lowercase
   |> string.to_graphemes
   |> list.sort(string.compare)
-  |> string_builder.from_strings
-  |> string_builder.to_string
+  |> string.concat
 }
 
 fn is_anagram(normalized_word: String, candidate: String) {
