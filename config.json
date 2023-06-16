@@ -764,6 +764,7 @@
         "name": "Robot Simulator",
         "uuid": "21ad5280-6acd-42cb-ba8c-fe8b4bbe485e",
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "custom-types",
@@ -1166,6 +1167,7 @@
         "name": "Yacht",
         "uuid": "398c9816-736d-4d19-8937-cc75046f21df",
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "ints",
@@ -1209,6 +1211,7 @@
         "name": "Kindergarten Garden",
         "uuid": "018be77b-d08c-497e-acdc-1b2b4e88e754",
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "strings",
@@ -1252,6 +1255,7 @@
         "name": "Space Age",
         "uuid": "4bd2232c-1d23-4af8-ac9f-c778676becdf",
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "case-expressions",
