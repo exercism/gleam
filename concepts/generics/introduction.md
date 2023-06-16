@@ -38,3 +38,7 @@ pub fn twice(value: a, f: fn(a) -> b) -> b {
   f(value)
 }
 ```
+```gleam
+// The type is fn(String, fn(String) -> Nil) -> Nil
+twice("Hello, Joe!", io.println)
+```
