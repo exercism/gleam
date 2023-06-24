@@ -10,14 +10,14 @@ This will execute the test file found in the `test` subfolder -- a file ending i
 
 ## Test functions
 
-The tests use a Gleam test framework named [Gleeunit](https://github.com/lpil/gleeunit).
-Any public function in the `test` directory with a name ending in `_test` will be considered a test by Gleeunit.
+The tests use a [custom test framework](https://github.com/exercism/gleam-test-runner/tree/main/runner).
+Any public function in the `test` directory with a name ending in `_test` will be considered a test by the test framework.
 
 For example:
 
 ```gleam
 import bob
-import gleeunit/should
+import exercism/should
 
 pub fn shouting_test {
   bob.hey("WATCH OUT!")

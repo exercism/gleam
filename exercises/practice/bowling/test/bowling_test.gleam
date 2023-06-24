@@ -1,12 +1,12 @@
 import bowling.{
   Error, Game, GameComplete, GameNotComplete, InvalidPinCount, roll, score,
 }
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import gleam/list
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn all_zeroes_score_test() {

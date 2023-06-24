@@ -1,11 +1,11 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import queen_attack.{
   ColumnTooLarge, ColumnTooSmall, Position, RowTooLarge, RowTooSmall,
 }
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn test_creation_of_queens_with_valid_and_invalid_positions_queen_with_a_valid_position_test() {

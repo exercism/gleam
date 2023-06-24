@@ -1,8 +1,8 @@
-import gleeunit
+import exercism/test_runner
 import armstrong_numbers
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn zero_is_an_armstrong_number_test() {

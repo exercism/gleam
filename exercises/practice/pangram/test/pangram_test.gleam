@@ -1,8 +1,8 @@
 import pangram.{is_pangram}
-import gleeunit
+import exercism/test_runner
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn empty_sentence_test() {

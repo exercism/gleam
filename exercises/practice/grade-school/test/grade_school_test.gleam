@@ -1,10 +1,10 @@
 import gleam/result
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import grade_school
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn roster_is_empty_when_no_student_is_added_test() {

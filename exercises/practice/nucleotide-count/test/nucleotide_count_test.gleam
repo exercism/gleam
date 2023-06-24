@@ -1,10 +1,10 @@
 import gleam/map
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import nucleotide_count
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn empty_strand_test() {

@@ -1,10 +1,10 @@
 import gleam/iterator
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import dnd_character
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn ability_modifier_ability_modifier_for_score_3_is_4_test() {

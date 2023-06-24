@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import largest_series_product
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn finds_the_largest_product_if_span_equals_length_test() {

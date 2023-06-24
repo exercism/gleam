@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import crypto_square
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn empty_plaintext_results_in_an_empty_ciphertext_test() {

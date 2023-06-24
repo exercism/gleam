@@ -1,8 +1,8 @@
-import gleeunit
+import exercism/test_runner
 import isogram
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn empty_string_test() {

@@ -1,12 +1,12 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import pov.{Tree}
 import gleam/list
 import gleam/result
 import gleam/string
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_results_in_the_same_tree_if_the_input_tree_is_a_singleton_test() {

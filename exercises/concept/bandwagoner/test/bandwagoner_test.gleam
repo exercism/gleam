@@ -1,9 +1,9 @@
 import bandwagoner.{Coach, Stats, Team}
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn create_coach_that_was_a_former_player_test() {

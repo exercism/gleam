@@ -1,8 +1,8 @@
-import gleeunit
+import exercism/test_runner
 import matching_brackets
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn paired_square_brackets_test() {

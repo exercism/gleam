@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import grains.{InvalidSquare}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn returns_the_number_of_grains_on_the_square_grains_on_square_1_test() {

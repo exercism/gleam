@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import twelve_days.{lyrics, verse}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn first_verse_test() {

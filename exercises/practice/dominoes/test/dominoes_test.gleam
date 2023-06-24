@@ -1,8 +1,8 @@
 import dominoes.{can_chain}
-import gleeunit
+import exercism/test_runner
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn empty_input_empty_output_test() {

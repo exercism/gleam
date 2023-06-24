@@ -1,11 +1,11 @@
 import resistor_color.{
   Black, Blue, Brown, Green, Grey, Orange, Red, Violet, White, Yellow,
 }
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn black_test() {

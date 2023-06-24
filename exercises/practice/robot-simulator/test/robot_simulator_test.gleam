@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import robot_simulator.{East, North, Position, Robot, South, West}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn create_robot_at_origin_facing_north_test() {

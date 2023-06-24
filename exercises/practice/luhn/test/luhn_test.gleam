@@ -1,8 +1,8 @@
-import gleeunit
+import exercism/test_runner
 import luhn
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn single_digit_strings_can_not_be_valid_test() {

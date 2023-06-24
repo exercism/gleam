@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import clock
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn create_a_new_clock_with_an_initial_time_on_the_hour_test() {

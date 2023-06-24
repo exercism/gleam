@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import tournament
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn just_the_header_if_no_input_test() {

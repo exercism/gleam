@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import secret_handshake.{CloseYourEyes, DoubleBlink, Jump, Wink}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn wink_for_1_test() {

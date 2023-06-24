@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import collatz_conjecture.{NonPositiveNumber}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn zero_steps_for_one_test() {

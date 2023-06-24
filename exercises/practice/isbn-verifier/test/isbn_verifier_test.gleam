@@ -1,8 +1,8 @@
-import gleeunit
+import exercism/test_runner
 import isbn_verifier
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn valid_isbn_test() {

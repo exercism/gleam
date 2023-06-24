@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import list_ops
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn append_entries_to_a_list_and_return_the_new_list_empty_lists_test() {

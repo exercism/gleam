@@ -1,9 +1,9 @@
 import protein_translation
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn empty_rna_sequence_results_in_no_proteins_test() {

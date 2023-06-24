@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import triangle
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn equilateral_triangle_all_sides_are_equal_test() {

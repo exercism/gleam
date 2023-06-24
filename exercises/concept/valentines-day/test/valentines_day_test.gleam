@@ -2,11 +2,11 @@ import valentines_day.{
   BoardGame, Chill, Crime, Horror, Korean, Maybe, Movie, No, Restaurant, Romance,
   Thriller, Turkish, Walk, Yes,
 }
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn rate_board_game_test() {

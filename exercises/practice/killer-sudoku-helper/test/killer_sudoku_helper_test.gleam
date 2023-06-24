@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import killer_sudoku_helper
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn trivial_1_digit_cages_1_test() {

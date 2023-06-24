@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import matrix
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn extract_row_from_one_number_matrix_test() {
