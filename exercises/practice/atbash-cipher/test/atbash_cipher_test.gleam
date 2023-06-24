@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import atbash_cipher
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn encode_encode_yes_test() {

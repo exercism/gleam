@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import connect.{O, X}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn an_empty_board_has_no_winner_test() {

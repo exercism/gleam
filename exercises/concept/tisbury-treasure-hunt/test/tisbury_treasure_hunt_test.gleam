@@ -1,9 +1,9 @@
 import tisbury_treasure_hunt
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn place_location_to_treasure_location_test() {

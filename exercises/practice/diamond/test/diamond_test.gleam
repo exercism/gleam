@@ -1,10 +1,10 @@
 import diamond
 import gleam/string
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn degenerate_case_with_a_single_a_row_test() {

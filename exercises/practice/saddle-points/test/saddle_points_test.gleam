@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import saddle_points.{Position}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn can_identify_single_saddle_point_test() {

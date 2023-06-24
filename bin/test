@@ -78,10 +78,10 @@ function run_all {
   mkdir -p all_exercises all_exercises/src all_exercises/test
 
   cat <<EOT > all_exercises/test/all_exercises_test.gleam
-import gleeunit
+import exercism/test_runner
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 EOT
 

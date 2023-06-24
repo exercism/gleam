@@ -1,9 +1,9 @@
 import roman_numerals.{convert}
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn number_1_is_i_test() {

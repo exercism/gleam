@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import custom_set
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn returns_true_if_the_set_contains_no_elements_sets_with_no_elements_are_empty_test() {

@@ -1,9 +1,9 @@
 import bird_count
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn today_returns_0_if_no_birds_were_seen_test() {

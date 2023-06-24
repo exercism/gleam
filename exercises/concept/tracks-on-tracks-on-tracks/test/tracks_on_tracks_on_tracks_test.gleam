@@ -1,9 +1,9 @@
 import tracks_on_tracks_on_tracks
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn new_list_test() {

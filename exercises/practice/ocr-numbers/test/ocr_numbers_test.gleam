@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import ocr_numbers.{Digit, InvalidLineNumber, InvalidRowNumber, List, Unknown}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn recognizes_0_test() {

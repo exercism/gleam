@@ -1,10 +1,10 @@
 import pizza_pricing.{Caprese, ExtraSauce, ExtraToppings, Formaggio, Margherita}
 import gleam/list
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn price_for_pizza_margherita_test() {

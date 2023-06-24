@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import all_your_base.{InvalidBase, InvalidDigit}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn single_bit_one_to_decimal_test() {

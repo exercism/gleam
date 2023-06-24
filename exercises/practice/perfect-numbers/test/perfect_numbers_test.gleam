@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import perfect_numbers.{Abundant, Deficient, NonPositiveInt, Perfect}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn perfect_numbers_smallest_perfect_number_is_classified_correctly_test() {

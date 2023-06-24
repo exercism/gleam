@@ -1,10 +1,10 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import alphametics
 import gleam/map
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn puzzle_with_three_letters_test() {

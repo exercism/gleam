@@ -1,11 +1,11 @@
 import pascals_triangle
 import gleam/list
 import gleam/result
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn zero_rows_test() {

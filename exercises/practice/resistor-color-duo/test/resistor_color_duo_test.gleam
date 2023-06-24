@@ -1,10 +1,10 @@
-import gleeunit
+import exercism/test_runner
 import resistor_color_duo.{
   Black, Blue, Brown, Green, Grey, Orange, Red, Violet, White, Yellow,
 }
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn brown_and_black_test() {

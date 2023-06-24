@@ -1,8 +1,8 @@
 import circular_buffer
-import gleeunit
+import exercism/test_runner
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn reading_an_empty_buffer_should_fail_test() {

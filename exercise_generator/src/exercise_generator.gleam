@@ -300,14 +300,14 @@ fn write_test_file(slug: String, data: CanonicalData) {
 
   let content =
     "
-  import gleeunit
-  import gleeunit/should
+  import exercism/test_runner
+  import exercism/should
   import <exercise>
 
   <comments>
 
   pub fn main() {
-    gleeunit.main()
+    test_runner.main()
   }
 
   <test_cases>
