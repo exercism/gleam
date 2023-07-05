@@ -1,3 +1,3 @@
 pub fn rows(n: Int) -> List(List(Int)) {
-  todo("Implement this function")
+  todo as "Implement this function"
 }
