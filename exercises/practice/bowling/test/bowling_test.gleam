@@ -108,25 +108,16 @@ pub fn all_strikes_test() {
 }
 
 pub fn negative_point_roll_test() {
-  Game([])
-  |> roll(-1)
-  |> should.be_error()
+  let assert Error(_) = roll(Game([]), -1)
 }
 
 pub fn more_than_10_points_roll_test() {
-  Game([])
-  |> roll(11)
-  |> should.be_error()
+  let assert Error(_) = roll(Game([]), 11)
 }
 
 pub fn more_than_10_points_frame_test() {
-  let assert Ok(game) =
-    Game([])
-    |> roll(5)
-
-  game
-  |> roll(6)
-  |> should.be_error()
+  let assert Ok(game) = roll(Game([]), 5)
+  let assert Error(_) = roll(game, 6)
 }
 
 pub fn bonus_roll_after_strike_in_last_frame_test() {
@@ -165,9 +156,7 @@ pub fn two_bonus_rolls_after_strike_in_last_frame_and_first_one_is_strike_test()
 }
 
 pub fn trying_to_score_unstarted_game_test() {
-  Game([])
-  |> score()
-  |> should.be_error()
+  let assert Error(_) = score(Game([]))
 }
 
 pub fn trying_to_score_incomplete_game_test() {

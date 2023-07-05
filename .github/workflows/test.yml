@@ -18,6 +18,7 @@ jobs:
         with:
           otp-version: "25.2"
           gleam-version: "0.29.0"
+          elixir-version: "1.15.0"
 
       - name: Run tests for all exercises
         run: bin/test
