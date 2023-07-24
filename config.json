@@ -3,7 +3,7 @@
   "slug": "gleam",
   "active": true,
   "status": {
-    "concept_exercises": false,
+    "concept_exercises": true,
     "test_runner": true,
     "representer": false,
     "analyzer": false
@@ -46,7 +46,7 @@
           "basics"
         ],
         "prerequisites": [],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "pacman-rules",
@@ -58,7 +58,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "bettys-bike-shop",
@@ -72,7 +72,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "guessing-game",
@@ -86,7 +86,7 @@
           "ints",
           "bools"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "tisbury-treasure-hunt",
@@ -102,7 +102,7 @@
           "case-expressions",
           "lists"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "tracks-on-tracks-on-tracks",
@@ -118,7 +118,7 @@
           "strings",
           "generics"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "log-levels",
@@ -132,7 +132,7 @@
           "case-expressions",
           "modules"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "valentines-day",
@@ -147,7 +147,7 @@
           "modules",
           "string"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "bandwagoner",
@@ -161,7 +161,7 @@
           "custom-types",
           "case-expressions"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "bird-count",
@@ -176,7 +176,7 @@
           "ints",
           "guards"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "pizza-pricing",
@@ -191,7 +191,7 @@
           "lists",
           "ints"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "secrets",
@@ -204,7 +204,7 @@
           "basics",
           "ints"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "high-school-sweetheart",
@@ -219,7 +219,7 @@
           "results",
           "lists"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "treasure-chest",
@@ -232,7 +232,7 @@
           "custom-types",
           "case-expressions"
         ],
-        "status": "wip"
+        "status": "active"
       }
     ],
     "practice": [
