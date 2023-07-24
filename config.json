@@ -145,7 +145,7 @@
           "basics",
           "case-expressions",
           "modules",
-          "string"
+          "strings"
         ],
         "status": "active"
       },
@@ -173,8 +173,7 @@
         "prerequisites": [
           "lists",
           "case-expressions",
-          "ints",
-          "guards"
+          "ints"
         ],
         "status": "active"
       },
@@ -187,7 +186,7 @@
         ],
         "prerequisites": [
           "recursion",
-          "pattern-matching",
+          "case-expressions",
           "lists",
           "ints"
         ],
@@ -216,7 +215,6 @@
         "prerequisites": [
           "strings",
           "modules",
-          "results",
           "lists"
         ],
         "status": "active"
