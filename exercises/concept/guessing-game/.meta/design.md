@@ -20,4 +20,5 @@
 
 ## Prerequisites
 
-- `ints`: use to pattern match on.
+- `ints`: ints are matched on.
+- `basics`: string literals are used.
