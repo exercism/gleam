@@ -30,3 +30,4 @@
 - `ints`: return an `int`.
 - `strings`: the lists are lists of strings.
 - `case-expressions`: case expressions are used.
+- `generics`: lists are generic data structures.

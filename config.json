@@ -83,6 +83,7 @@
         ],
         "prerequisites": [
           "basics",
+          "ints",
           "bools"
         ],
         "status": "wip"
@@ -114,7 +115,8 @@
           "bools",
           "case-expressions",
           "ints",
-          "strings"
+          "strings",
+          "generics"
         ],
         "status": "wip"
       },
