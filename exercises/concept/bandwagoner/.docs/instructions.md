@@ -10,19 +10,19 @@ You have seven tasks to help you develop your proprietary _root-for-a-team_ algo
 
 Define the `Coach` record with the following two fields:
 
-- `Name`: the coach's name, of type `String`.
-- `FormerPlayer`: indicates if the coach was a former player, of type `Bool`.
+- `name`: the coach's name, of type `String`.
+- `former_player`: indicates if the coach was a former player, of type `Bool`.
 
 Define the `Stats` record with the following two fields:
 
-- `Wins`: the number of wins, of type `Int`.
-- `Losses`: the number of losses, of type `Int`.
+- `wins`: the number of wins, of type `Int`.
+- `losses`: the number of losses, of type `Int`.
 
 Define the `Team` record with the following three fields:
 
-- `Name`: the team's name, of type `String`.
-- `Coach`: the team's coach, of type `coach`.
-- `Stats`: the team's stats, of type `Stats`.
+- `name`: the team's name, of type `String`.
+- `coach`: the team's coach, of type `Coach`.
+- `stats`: the team's stats, of type `Stats`.
 
 ## 2. Create a team's coach
 
