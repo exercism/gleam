@@ -6,7 +6,7 @@ Ints are whole numbers.
 
 ```gleam
 let integer = 3
-# -> 3
+// -> 3
 ```
 
 Underscores can also be added to ints for clarity.

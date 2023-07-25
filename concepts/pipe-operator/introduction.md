@@ -6,7 +6,7 @@ The `|>` operator is called the pipe operator. It can be used to chain function 
 "hello"
 |> string.uppercase
 |> string.append("?!")
-# -> "HELLO?!"
+// -> "HELLO?!"
 ```
 
 The above code is equivalent to the following:

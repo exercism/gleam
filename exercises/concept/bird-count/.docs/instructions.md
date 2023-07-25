@@ -12,7 +12,7 @@ Implement the `bird_count.today` function. It should take a list of daily bird c
 
 ```gleam
 bird_count.today([2, 5, 1])
-# -> 2
+// -> 2
 ```
 
 ## 2. Increment today's count
@@ -21,7 +21,7 @@ Implement the `bird_count.increment_day_count` function. It should take a list o
 
 ```gleam
 bird_count.increment_day_count([4, 0, 2])
-# -> [5, 0, 2]
+// -> [5, 0, 2]
 ```
 
 ## 3. Check if there was a day with no visiting birds
@@ -30,10 +30,10 @@ Implement the `bird_count.has_day_without_birds` function. It should take a list
 
 ```gleam
 bird_count.has_day_without_birds([2, 0, 4])
-# -> true
+// -> true
 
 bird_count.has_day_without_birds([3, 8, 1, 5])
-# -> false
+// -> false
 ```
 
 ## 4. Calculate the total number of visiting birds
@@ -42,7 +42,7 @@ Implement the `bird_count.total` function. It should take a list of daily bird c
 
 ```gleam
 bird_count.total([4, 0, 9, 0, 5])
-# -> 18
+// -> 18
 ```
 
 ## 5. Calculate the number of busy days
@@ -53,5 +53,5 @@ Implement the `bird_count.busy_days` function. It should take a list of daily bi
 
 ```gleam
 bird_count.busy_days([4, 5, 0, 0, 6])
-# -> 2
+// -> 2
 ```

@@ -12,7 +12,7 @@ Define the `eat_ghost` function that takes two arguments (_if Pac-Man has a powe
 
 ```gleam
 eat_ghost(False, True)
-# -> False
+// -> False
 ```
 
 ## 2. Define if Pac-Man scores
@@ -21,7 +21,7 @@ Define the `score` function that takes two arguments (_if Pac-Man is touching a 
 
 ```gleam
 score(True, True)
-# -> True
+// -> True
 ```
 
 ## 3. Define if Pac-Man loses
@@ -30,7 +30,7 @@ Define the `lose` function that takes two arguments (_if Pac-Man has a power pel
 
 ```gleam
 lose(False, True)
-# -> True
+// -> True
 ```
 
 ## 4. Define if Pac-Man wins
@@ -39,5 +39,5 @@ Define the `win` function that takes three arguments (_if Pac-Man has eaten all 
 
 ```gleam
 win(False, True, False)
-# -> False
+// -> False
 ```

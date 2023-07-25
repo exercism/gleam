@@ -8,7 +8,7 @@ Ints are whole numbers.
 
 ```gleam
 let integer = 3
-# -> 3
+// -> 3
 ```
 
 Gleam has several operators that work with ints.
@@ -32,7 +32,7 @@ Floats are numbers with one or more digits behind the decimal separator.
 
 ```gleam
 let float = 3.45
-# -> 3.45
+// -> 3.45
 ```
 
 Floats also have their own set of operators.

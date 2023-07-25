@@ -6,7 +6,7 @@ Ints are whole numbers.
 
 ```gleam
 let integer = 3
-# -> 3
+// -> 3
 ```
 
 Gleam has several operators that work with ints.
