@@ -25,7 +25,7 @@ Implement the `first_letter` function. It should take a name and return its firs
 
 ```gleam
 first_letter("Jane")
-# -> "J"
+// -> "J"
 ```
 
 ## 2. Format the first letter as an initial
@@ -34,7 +34,7 @@ Implement the `initial` function. It should take a name and return its first let
 
 ```gleam
 initial("Robert")
-# -> "R."
+// -> "R."
 ```
 
 ## 3. Split the full name into the first name and the last name
@@ -43,7 +43,7 @@ Implement the `initials` function. It should take a full name, consisting of a f
 
 ```gleam
 initials("Lance Green")
-# -> "L. G."
+// -> "L. G."
 ```
 
 ## 4. Put the initials inside of the heart
@@ -52,20 +52,20 @@ Implement the `pair/2` function. It should take two full names and return the in
 
 ```gleam
 pair("Blake Miller", "Riley Lewis")
-# -> "
-#      ******       ******
-#    **      **   **      **
-#  **         ** **         **
-# **            *            **
-# **                         **
-# **     B. M.  +  R. L.     **
-#  **                       **
-#    **                   **
-#      **               **
-#        **           **
-#          **       **
-#            **   **
-#              ***
-#               *
-# "
+// -> "
+//      ******       ******
+//    **      **   **      **
+//  **         ** **         **
+// **            *            **
+// **                         **
+// **     B. M.  +  R. L.     **
+//  **                       **
+//    **                   **
+//      **               **
+//        **           **
+//          **       **
+//            **   **
+//              ***
+//               *
+// "
 ```
