@@ -231,6 +231,20 @@
           "case-expressions"
         ],
         "status": "active"
+      },
+      {
+        "slug": "go",
+        "name": "Go",
+        "uuid": "fd330139-2cb4-44a4-80a6-1fb7a99e36f1",
+        "concepts": [
+          "results"
+        ],
+        "prerequisites": [
+          "custom-types",
+          "generics",
+          "pipe-operator"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
