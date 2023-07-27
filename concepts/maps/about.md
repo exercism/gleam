@@ -1,4 +1,4 @@
-# Introduction
+# About
 
 Maps in Gleam are the data structure for storing information in key-value pairs. In other languages, these might also be known as associative arrays, hashes, or dictionaries.
 
@@ -23,4 +23,5 @@ let map3 = map.insert(map2, "website", "https://gleam.run")
 
 // Get a value from a map
 let name = map.get(map3, "name")
+// -> Ok("Gleam")
 ```
