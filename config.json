@@ -245,6 +245,21 @@
           "pipe-operator"
         ],
         "status": "active"
+      },
+      {
+        "slug": "high-score-board",
+        "name": "High Score Board",
+        "uuid": "3c916f03-d843-4e5f-88dd-1c422880b235",
+        "concepts": [
+          "type-aliases",
+          "maps"
+        ],
+        "prerequisites": [
+          "generics",
+          "tuples",
+          "lists"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
