@@ -23,4 +23,5 @@ let map3 = map.insert(map2, "website", "https://gleam.run")
 
 // Get a value from a map
 let name = map.get(map3, "name")
+// -> Ok("Gleam")
 ```
