@@ -1727,6 +1727,11 @@
       "uuid": "2dfd4e7c-7596-4b89-8f58-34b3948526d3",
       "slug": "maps",
       "name": "Maps"
+    },
+    {
+      "uuid": "2dfd4e7c-7596-4b89-8f58-34b3948526d3",
+      "slug": "type-aliases",
+      "name": "Type Aliases"
     }
   ],
   "key_features": [
