@@ -2,6 +2,7 @@
 
 ## Learning objectives
 
+- What type aliases are.
 - What maps are.
 - How to create create maps with `map.new` and `map.from_list`.
 - How to add, remove and map entries in a map.
@@ -15,7 +16,8 @@
 
 The Concepts this exercise unlocks are:
 
-- `objects`
+- `maps`
+- `type-aliases`
 
 ## Prerequisites
 
