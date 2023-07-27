@@ -21,13 +21,12 @@ The `result.map` function can be used to call a function on the value inside a r
 
 ```gleam
 Ok(1)
-|> result.map(add_one)
+|> result.map(fn(x) { x + 1 })
 // -> Ok(2)
 
 Error("Oh no!")
-|> result.map(add_one)
+|> result.map(fn(x) { x + 1 })
 // -> Error("Oh no!")
-
 ```
 
 The `result.try` function is similar, but the callback function is expected to return a result. This is useful for chaining together multiple functions that return results.
