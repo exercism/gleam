@@ -1722,6 +1722,11 @@
       "uuid": "ac1c147c-191f-4bbf-a62f-07443e4ba326",
       "slug": "results",
       "name": "Results"
+    },
+    {
+      "uuid": "2dfd4e7c-7596-4b89-8f58-34b3948526d3",
+      "slug": "maps",
+      "name": "Maps"
     }
   ],
   "key_features": [
