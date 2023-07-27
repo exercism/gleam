@@ -19,6 +19,7 @@ pub fn html_headers() -> Headers {
 ```
 
 When written with `pub type` the alias can be used outside of the module it is defined in. If `pub` is omitted then the alias is private and cannot be referenced in other modules.
+
 ## Maps
 
 Maps in Gleam are the data structure for storing information in key-value pairs. In other languages, these might also be known as associative arrays, hashes, or dictionaries.
