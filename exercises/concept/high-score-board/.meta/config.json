@@ -20,7 +20,7 @@
     ]
   },
   "forked_from": [
-    "javascript/high_score_board"
+    "javascript/high-score-board"
   ],
   "blurb": "Practice Gleam maps by tracking high scores of an arcade game."
 }
