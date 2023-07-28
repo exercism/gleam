@@ -272,7 +272,7 @@
         "prerequisites": [
           "floats",
           "lists",
-          "anonymous-functions"
+          "anonymous-functions",
           "custom-types"
         ],
         "status": "active"
