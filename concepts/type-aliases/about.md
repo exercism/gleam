@@ -2,7 +2,7 @@
 
 ## Type aliases
 
-A type alias can use used in Gleam to give a convenient name for an existing type that would be otherwise cumbersome to write.
+A type alias can be used in Gleam to give a convenient name for an existing type that would be otherwise cumbersome to write.
 
 ```gleam
 pub type Headers =
