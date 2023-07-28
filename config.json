@@ -260,6 +260,22 @@
           "lists"
         ],
         "status": "active"
+      },
+      {
+        "slug": "weather-ranking",
+        "name": "Weather Ranking",
+        "uuid": "a238f396-c508-4064-bf61-0902cf47724f",
+        "concepts": [
+          "constants",
+          "orders"
+        ],
+        "prerequisites": [
+          "floats",
+          "lists",
+          "anonymous-functions"
+          "custom-types"
+        ],
+        "status": "active"
       }
     ],
     "practice": [

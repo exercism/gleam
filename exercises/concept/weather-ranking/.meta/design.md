@@ -22,6 +22,7 @@
 
 - `floats`
 - `lists`
-- `higher-order-functions`
+- `anonymous-functions`
+- `custom-types`
 
 ## Analyzer
