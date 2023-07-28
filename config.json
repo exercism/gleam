@@ -1752,6 +1752,11 @@
       "uuid": "f48ac727-52b3-419f-8291-9c85279930e2",
       "slug": "orders",
       "name": "Orders"
+    },
+    {
+      "uuid": "4a884025-b5e3-4af8-a6d1-dcfd7dd8e5aa",
+      "slug": "constants",
+      "name": "Constants"
     }
   ],
   "key_features": [
