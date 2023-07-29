@@ -1,13 +1,46 @@
 # About
 
-Constants in Gleam are a way to give names to values. They are defined using the `const` keyword.
+Strings in Gleam are immutable text surrounded by double quotes. They support unicode characters, and can be multi-line.
 
 ```gleam
-pub const pi: Float = 3.14159
+let greeting = "Hello, Joe! 📞"
 
-pub fn circle_area(radius: Float) -> Float {
-  radius *. radius *. pi
+let multi_line_string = "one
+two
+three"
+```
+
+Strings can be joined together using the `<>` operator:
+
+```gleam
+let name = "Mike"
+"Hello, " <> name <> "!"
+// -> "Hello, Mike!"
+```
+
+The [`gleam/string`][stdlib] module in the standard library provides functions for working with strings.
+
+Strings can be matched upon in case expressions:
+
+```gleam
+pub fn on_an_excellent_adventure(name: String) -> Bool {
+  case name {
+    "Bill" -> True
+    "Ted" -> True
+    _ -> False
+  }
 }
 ```
 
-When defined with the `pub` keyword module constants can be accessed from other modules, otherwise they can only be accessed from within the module they are defined in.
+If you want to match on the beginning of a string and assign the rest to a variable you can use the `<>` operator pattern:
+
+```gleam
+pub fn profession(name: String) -> String {
+  case name {
+    "Dr " <> rest -> rest <> " is a doctor"
+    _ -> "I'm not sure what " <> name <> " does"
+  }
+}
+```
+
+[stdlib]: https://hexdocs.pm/gleam_stdlib/gleam/string.html
