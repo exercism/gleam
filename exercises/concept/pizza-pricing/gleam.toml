@@ -6,4 +6,4 @@ gleam_stdlib = "~> 0.30"
 gleam_bitwise = "~> 1.2"
 
 [dev-dependencies]
-exercism_test_runner = "~> 1.3"
+exercism_test_runner = "~> 1.4"
