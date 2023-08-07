@@ -6,7 +6,7 @@ For example, this `Box` type has the type parameter `a` (written with lowercase 
 
 ```gleam
 pub type Box(a) {
-  Box(item: a)
+  Box(a)
 }
 ```
 
@@ -22,7 +22,7 @@ A type can have multiple type parameters by separating them with commas.
 
 ```gleam
 pub type Pair(a, b) {
-  Pair(first: a, second: b)
+  Pair(a, b)
 }
 ```
 
