@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/wine_cellar.gleam"
+    ],
+    "test": [
+      "test/wine_cellar_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elixir/wine-cellar"
+  ],
+  "blurb": "Learn about labelled arguments by providing wine suggestions to the customers in your restaurant."
+}
