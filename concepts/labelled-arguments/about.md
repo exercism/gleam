@@ -30,3 +30,24 @@ Labels are always optional. Even if a function has labelled arguments they can s
 replace("🍔🍔🍔", "🍔", "🍕")
 ```
 
+When defining a function with labelled arguments all arguments after the first labelled argument must also be labelled.
+
+```gleam
+// This function is valid
+pub fn valid(
+  x: Int,
+  label1 y: Int,
+  label2 z: Int
+) -> Int {
+  // ...
+}
+
+// This function is invalid
+pub invalid(
+  x: Int,
+  label1 y: Int,
+  z: Int
+) -> Int {
+  // ...
+}
+```
