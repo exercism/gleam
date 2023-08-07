@@ -276,6 +276,19 @@
           "custom-types"
         ],
         "status": "active"
+      },
+      {
+        "slug": "wine-cellar",
+        "name": "Wine Cellar",
+        "uuid": "062084b3-b9ab-4787-bea0-04369df3b2a6",
+        "concepts": [
+          "keyword-arguments"
+        ],
+        "prerequisites": [
+          "lists",
+          "custom-types"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
