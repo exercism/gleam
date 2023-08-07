@@ -433,7 +433,6 @@
         "uuid": "093aa488-077f-4180-9d8c-59d0ad8837da",
         "difficulty": 3,
         "practices": [
-          "strings",
           "lists"
         ],
         "prerequisites": [
@@ -534,7 +533,7 @@
         "name": "Series",
         "uuid": "4a084cb7-335d-41f1-8148-5d3abbce8ab0",
         "practices": [
-          "result"
+          "results"
         ],
         "prerequisites": [
           "custom-types",
@@ -825,7 +824,7 @@
         "name": "Pythagorean Triplet",
         "uuid": "a433d1f6-d8a2-40b9-a7d7-a611420d7164",
         "practices": [
-          "int",
+          "ints",
           "recursion"
         ],
         "prerequisites": [
