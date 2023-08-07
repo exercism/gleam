@@ -282,7 +282,7 @@
         "name": "Wine Cellar",
         "uuid": "062084b3-b9ab-4787-bea0-04369df3b2a6",
         "concepts": [
-          "keyword-arguments"
+          "labelled-arguments"
         ],
         "prerequisites": [
           "lists",
