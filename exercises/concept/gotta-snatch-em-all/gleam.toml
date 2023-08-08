@@ -1,0 +1,9 @@
+name = "gotta_snatch_em_all"
+version = "0.1.0"
+
+[dependencies]
+gleam_stdlib = "~> 0.30"
+gleam_bitwise = "~> 1.2"
+
+[dev-dependencies]
+exercism_test_runner = "~> 1.4"

@@ -1,6 +1,6 @@
 # Introduction
 
-A set is an unordered collection of unique values. All items in a set have to be of the same type.
+A set is an immutable and unordered collection of unique values. All items in a set have to be of the same type.
 
 The `gleam/set` module defines the `Set` type and provides functions for working with sets.
 
