@@ -23,7 +23,7 @@ The concepts this exercise unlock are:
 
 ## Prerequisites
 
-- booleans
+- bools
 - tuples
 - lists
 - strings
