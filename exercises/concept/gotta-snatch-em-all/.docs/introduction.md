@@ -1,4 +1,6 @@
-# About
+# Introduction
+
+## Sets
 
 A set is an immutable and unordered collection of unique values. All items in a set have to be of the same type.
 
@@ -66,4 +68,3 @@ let is_small = fn(n) { x <= 3 }
 set.filter(b, is_small)
 // -> set.from_list([1, 2, 3])
 ```
-
