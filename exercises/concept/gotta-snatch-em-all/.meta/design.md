@@ -19,7 +19,7 @@ The Goal is to learn how to use sets.
 
 The concepts this exercise unlock are:
 
-- set
+- sets
 
 ## Prerequisites
 
