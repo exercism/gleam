@@ -289,6 +289,21 @@
           "custom-types"
         ],
         "status": "active"
+      },
+      {
+        "slug": "gotta-snatch-em-all",
+        "name": "Gotta Snatch 'Em All",
+        "uuid": "9c33bde5-71b3-43e5-92b3-2c69b9cda7be",
+        "concepts": [
+          "sets"
+        ],
+        "prerequisites": [
+          "bools",
+          "tuples",
+          "lists",
+          "strings"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
