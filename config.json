@@ -304,6 +304,21 @@
           "strings"
         ],
         "status": "active"
+      },
+      {
+        "slug": "role-playing-game",
+        "name": "Role Playing Game",
+        "uuid": "689d8109-d230-45cd-82f6-5f91e56a3fcf",
+        "concepts": [
+          "options"
+        ],
+        "prerequisites": [
+          "generics",
+          "custom-types",
+          "case-expressions",
+          "strings"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
