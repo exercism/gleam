@@ -6,10 +6,10 @@
   ],
   "files": {
     "solution": [
-      "src/lasagna.gleam"
+      "src/role_playing_game.gleam"
     ],
     "test": [
-      "test/lasagna_test.gleam"
+      "test/role_playing_game_test.gleam"
     ],
     "exemplar": [
       ".meta/example.gleam"
@@ -20,7 +20,7 @@
     ]
   },
   "forked_from": [
-    "elixir/lasagna"
+    "elm/role-playing-game"
   ],
-  "blurb": "Learn about the basics of Gleam by following a lasagna recipe."
+  "blurb": "Learn the Option type by designing game mechanics"
 }
