@@ -20,7 +20,7 @@ You can create and populate sets with `set.new`, `set.insert` and `set.delete`.
 set.new()
 // -> set.from_list([])
 
-let eighty_eight = set.from_list(88)
+let eighty_eight = set.from_list([88])
 
 set.insert(eighty_eight, 88)
 // -> set.from_list([88])

@@ -56,16 +56,16 @@ boring_cards([set.from_list(["Scientuna"]), set.from_list(["Newthree", "Scientun
 
 Do you and your friends collectively own all of the Blorkemon™️ cards?
 
-Implement `totalCards`, which takes a list of collections and returns the total number of different cards in the all of the collections.
+Implement `totalCards`, which takes a list of collections and returns the total number of different cards in all of the collections.
 
-```elm
+```gleam
 totalCards [set.from_list(["Scientuna"]), set.from_list(["Newthree", "Scientuna"])]
 // -> 2
 ```
 
 ## 6. Shiny for the win
 
-You nephew is coming to visit you soon, and you feel like impressing him.
+Your nephew is coming to visit you soon, and you feel like impressing him.
 Kids like shiny things right?
 Blorkemon™️ cards can be shiny!
 
