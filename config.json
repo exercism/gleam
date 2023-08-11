@@ -1830,6 +1830,11 @@
       "uuid": "44999f5a-20bf-4456-8d45-6f245f7d957c",
       "slug": "options",
       "name": "Options"
+    },
+    {
+      "uuid": "85ab7ae3-1958-44de-88ec-bf936a388b32",
+      "slug": "let-assertions",
+      "name": "Let Assertions"
     }
   ],
   "key_features": [
