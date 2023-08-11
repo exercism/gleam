@@ -1,6 +1,6 @@
 # Introduction
 
-The `Option` type is used to represent values that are either be absent or present.
+The `Option` type is used to represent values that can either be absent or present.
 
 It is defined in the `gleam/option` module as follows:
 
@@ -11,12 +11,12 @@ type Option(a) {
 }
 ```
 
-The `Some` constructor is used to wrap a value when it present, and the `None` constructor is used to represent the absence of a value.
+The `Some` constructor is used to wrap a value when it's present, and the `None` constructor is used to represent the absence of a value.
 
 Accessing the content of a `Option` is often done via pattern matching.
 
 ```gleam
-import gleam/option.{Option}
+import gleam/option.{Option, Some, None}
 
 pub fn say_hello(person: Option(String)) -> String {
   case person {
