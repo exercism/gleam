@@ -319,6 +319,20 @@
           "strings"
         ],
         "status": "active"
+      },
+      {
+        "slug": "spring-cleaning",
+        "name": "Spring Cleaning",
+        "uuid": "4a54646d-02df-463a-8f23-92c88473e8a9",
+        "concepts": [
+          "let-assertions"
+        ],
+        "prerequisites": [
+          "results",
+          "strings",
+          "lists"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
