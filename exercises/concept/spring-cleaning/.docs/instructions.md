@@ -1,6 +1,6 @@
 # Instructions
 
-Mika the events organise has got a promotion at work, and as part of her new responsibilities she is in charge of the events database. She quickly noticed that a lot of the data is stored in ways that make it hard to work with, so you're teaming up to clean it up with a one-off script.
+Mika the events organiser has got a promotion at work, and as part of her new responsibilities she is in charge of the events database. She quickly noticed that a lot of the data is stored in ways that make it hard to work with, so you're teaming up to clean it up with a one-off script.
 
 Because the script is only going to be run once, and you are confident about the structure of the data, you feel this is a good place to use Gleam's _let assertions_.
 
