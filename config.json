@@ -1849,6 +1849,11 @@
       "uuid": "85ab7ae3-1958-44de-88ec-bf936a388b32",
       "slug": "let-assertions",
       "name": "Let Assertions"
+    },
+    {
+      "uuid": "8a61a160-c08d-4565-88ba-cab37fc90945",
+      "slug": "bit-strings",
+      "name": "Bit Strings"
     }
   ],
   "key_features": [
