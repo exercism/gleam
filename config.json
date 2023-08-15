@@ -333,6 +333,20 @@
           "lists"
         ],
         "status": "active"
+      },
+      {
+        "slug": "dna-encoding",
+        "name": "DNA Encoding",
+        "uuid": "e8b77421-e3da-4875-9f9d-8d263df019f2",
+        "concepts": [
+          "bit-strings"
+        ],
+        "prerequisites": [
+          "lists",
+          "results",
+          "custom-types"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
