@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/dna_encoding.gleam"
+    ],
+    "test": [
+      "test/dna_encoding_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elixir/dna-encoding"
+  ],
+  "blurb": "Learn about bit strings by encoding DNA sequences as binary data."
+}
