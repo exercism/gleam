@@ -9,13 +9,13 @@ pub fn item_names(items: Iterator(Item)) -> Iterator(String) {
 }
 
 pub fn cheap(items: Iterator(Item)) -> Iterator(Item) {
-  todo
+  iterator.filter(items, fn(item) { item.price < 30 })
 }
 
 pub fn out_of_stock(items: Iterator(Item)) -> Iterator(Item) {
-  todo
+  iterator.filter(items, fn(item) { item.quantity == 0 })
 }
 
 pub fn total_stock(items: Iterator(Item)) -> Int {
-  todo
+  iterator.fold(items, 0, fn(total, item) { total + item.quantity })
 }
