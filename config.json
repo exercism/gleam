@@ -1377,7 +1377,8 @@
         "prerequisites": [
           "ints",
           "random",
-          "custom-types"
+          "custom-types",
+          "iterators"
         ],
         "difficulty": 4
       },
