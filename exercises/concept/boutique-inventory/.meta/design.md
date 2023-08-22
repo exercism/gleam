@@ -10,7 +10,7 @@
 
 ## Out of scope
 
-- Replaying iterators.
+- Replaying iterators that have side effects and side causes.
 - The implementation of iterators.
 
 ## Concepts
