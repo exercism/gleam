@@ -16,7 +16,7 @@ pub fn item_names_test() {
   |> iterator.from_list
   |> boutique_inventory.item_names
   |> iterator.to_list
-  |> should.equal(["Black Short Skirt", "Red Brown Dress", "Red Short Skirt"])
+  |> should.equal(["Red Brown Dress", "Red Short Skirt", "Black Short Skirt"])
 }
 
 pub fn item_names_does_not_consume_iterator_test() {
