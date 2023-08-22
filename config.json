@@ -347,6 +347,18 @@
           "custom-types"
         ],
         "status": "active"
+      },
+      {
+        "slug": "boutique-inventory",
+        "name": "Boutique Inventory",
+        "uuid": "72b14411-7d65-446e-a07e-ecf282b8818a",
+        "concepts": [
+          "iterators"
+        ],
+        "prerequisites": [
+          "lists"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
