@@ -37,3 +37,5 @@ iterator.unfold(#(0, 1), fn(pair) {
 |> iterator.to_list
 // -> [1, 2, 3, 5, 8, 13]
 ```
+
+The sequence here is infinite, so the `take` function is used to make it finite before collecting the values into a list. If `to_list` is called on an infinite iterator the program will run until the program runs out of memory and crashes.
