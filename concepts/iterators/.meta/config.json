@@ -1,0 +1,8 @@
+{
+  "blurb": "Iterators in Gleam are lazily evaluated sequences.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}
