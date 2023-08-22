@@ -20,6 +20,6 @@
 
 ## 4. Decode a DNA bitstring
 
-- The binary int syncax can be used within a bit string pattern.
-- Return `Error(Nil)` the remaining bit string is not long enough to contain a
-  nucleotide.
+- The binary int syntax can be used within a bit string pattern.
+- Return `Error(Nil)` if the remaining bit string is not long enough to contain
+  a nucleotide.
