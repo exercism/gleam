@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/boutique_inventory.gleam"
+    ],
+    "test": [
+      "test/boutique_inventory_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "ruby/boutique-inventory"
+  ],
+  "blurb": "Learn about iterators by preparing an online fashion boutique for its big annual sale."
+}
