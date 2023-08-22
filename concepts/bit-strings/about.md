@@ -7,9 +7,17 @@ Bit string literals are defined using the `<<>>` syntax. When defining a bit str
 ```gleam
 // This defines a bit string with three segments of a single bit each
 <<0:1, 1:1, 0:1>>
+
+// This defines a bit string with three segments of 8 bits each
+<<0, 1, 0>>
 ```
 
 Specifying the type as `:1` is a shorthand for writing `:size(1)`. You need to use the longer syntax if the bit size comes from a variable.
+
+```gleam
+let segment_size = 1
+<<0:size(segment_size), 1:size(segment_size), 0:size(segment_size)>>
+```
 
 ## Binary
 
@@ -31,7 +39,7 @@ If the value of the segment overflows the capacity of the segment's type, it wil
 
 ## Prepending and appending
 
-You can both prepend and append to an existing bit string using the bit string syntax. The `:bit_string` annotation must be used on the existing bit string if it's of variable size.
+You can both prepend and append to an existing bit string using the bit string syntax. The `:bit_string` annotation must be used for the existing bit string.
 
 ```gleam
 let value = <<0b110:3, 0b001:3>>
@@ -52,7 +60,7 @@ let concatenated = <<first:bit_string, second:bit_string>>
 
 ## Pattern matching
 
-Pattern matching can also be done to obtain values from the syntax. You have to know the number of bits for each fragment you want to capture, with one exception: the `:bit_string` annotation can be used to pattern match on a bit string of an unknown size, but this can only be used for the last fragment.
+Pattern matching can also be done to obtain values from the bit string. You have to know the number of bits for each fragment you want to capture, with one exception: the `:bit_string` annotation can be used to pattern match on a bit string of an unknown size, but this can only be used for the last fragment.
 
 ```gleam
 let assert <<value:4, rest:bit_string>> = <<0b01101001:8>>
