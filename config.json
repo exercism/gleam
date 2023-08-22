@@ -1868,6 +1868,11 @@
       "uuid": "8a61a160-c08d-4565-88ba-cab37fc90945",
       "slug": "bit-strings",
       "name": "Bit Strings"
+    },
+    {
+      "uuid": "6e5cd6a5-9fd8-4d16-9500-99850894fad9",
+      "slug": "iterators",
+      "name": "Iterators"
     }
   ],
   "key_features": [
