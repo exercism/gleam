@@ -12,7 +12,7 @@
 
 ## Concepts
 
-- `keyword-arguments`
+- `labelled-arguments`
 
 ## Prerequisites
 
