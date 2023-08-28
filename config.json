@@ -359,6 +359,19 @@
           "lists"
         ],
         "status": "active"
+      },
+      {
+        "slug": "newsletter",
+        "name": "Newsletter",
+        "uuid": "83b38de6-ae48-444b-bb18-3cd190eb8569",
+        "concepts": [
+          "io",
+          "nil"
+        ],
+        "prerequisites": [
+          "results"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
@@ -847,7 +860,7 @@
         "name": "POV",
         "uuid": "2012322c-1693-4702-abfe-1f3e7b176035",
         "practices": [
-          "result",
+          "results",
           "generics"
         ],
         "prerequisites": [
