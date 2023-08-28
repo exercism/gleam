@@ -13,7 +13,7 @@ Values in Gleam are not "nil-able" or "nullable" like in some other languages. A
 
 ## IO
 
-Like most programming language Gleam has "side effects", so functions can read with and change the state of the world, as well as returning a value.
+Like most programming language Gleam has "side effects", so functions can read and change the state of the world, as well as returning a value.
 
 The `gleam/io` module in the Gleam standard library provides functions for printing strings to the console.
 
