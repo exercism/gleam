@@ -1,6 +1,6 @@
 # Instructions
 
-Boris is a big model train enthusiast and has decided to share their passion with the world by starting a newsletter. They'll start by sending the first issue of the newsletter to friends and acquaintances that share the hobby, their email addresses stored in a text file.
+Boris is a big model train enthusiast and has decided to share their passion with the world by starting a newsletter. They'll start by sending the first issue of the newsletter to friends and acquaintances that share the hobby, their email addresses are stored in a text file.
 
 ## 1. Read email addresses from a file
 
