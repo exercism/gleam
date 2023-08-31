@@ -7,7 +7,7 @@ pub type City {
 }
 
 pub type Temperature {
-  Celcius(Float)
+  Celsius(Float)
   Fahrenheit(Float)
 }
 
@@ -17,7 +17,7 @@ pub fn fahrenheit_to_celsius(f: Float) -> Float {
 
 fn convert(temperature: Temperature) -> Float {
   case temperature {
-    Celcius(c) -> c
+    Celsius(c) -> c
     Fahrenheit(f) -> fahrenheit_to_celsius(f)
   }
 }

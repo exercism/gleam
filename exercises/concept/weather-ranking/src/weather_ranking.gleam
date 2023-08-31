@@ -5,7 +5,7 @@ pub type City {
 }
 
 pub type Temperature {
-  Celcius(Float)
+  Celsius(Float)
   Fahrenheit(Float)
 }
 

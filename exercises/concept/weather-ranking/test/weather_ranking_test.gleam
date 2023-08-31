@@ -1,4 +1,4 @@
-import weather_ranking.{Celcius, City, Fahrenheit}
+import weather_ranking.{Celsius, City, Fahrenheit}
 import gleam/order
 import exercism/test_runner
 import exercism/should
@@ -19,8 +19,8 @@ pub fn fahrenheit_to_celsius_body_equal_test() {
   |> should_approximately_equal(37.0)
 }
 
-pub fn compare_temperature_both_celcius_test() {
-  weather_ranking.compare_temperature(Celcius(27.3), Celcius(31.8))
+pub fn compare_temperature_both_celsius_test() {
+  weather_ranking.compare_temperature(Celsius(27.3), Celsius(31.8))
   |> should.equal(order.Lt)
 }
 
@@ -30,23 +30,23 @@ pub fn compare_temperature_both_fahrenheit_test() {
 }
 
 pub fn compare_temperature_equal_test() {
-  weather_ranking.compare_temperature(Celcius(31.1), Celcius(31.1))
+  weather_ranking.compare_temperature(Celsius(31.1), Celsius(31.1))
   |> should.equal(order.Eq)
 }
 
 pub fn sort_cities_by_temperature_test() {
   [
-    City("Barcelona", Celcius(31.8)),
-    City("Delhi", Celcius(41.0)),
-    City("Manchester", Celcius(27.3)),
+    City("Barcelona", Celsius(31.8)),
+    City("Delhi", Celsius(41.0)),
+    City("Manchester", Celsius(27.3)),
     City("Provo", Fahrenheit(88.1)),
   ]
   |> weather_ranking.sort_cities_by_temperature
   |> should.equal([
-    City("Manchester", Celcius(27.3)),
+    City("Manchester", Celsius(27.3)),
     City("Provo", Fahrenheit(88.1)),
-    City("Barcelona", Celcius(31.8)),
-    City("Delhi", Celcius(41.0)),
+    City("Barcelona", Celsius(31.8)),
+    City("Delhi", Celsius(41.0)),
   ])
 }
 
