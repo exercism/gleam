@@ -71,7 +71,7 @@ treasure_location_matches_place_location(#("C", 1) #(2, "C"))
 Implement the `count_place_treasures` function, that takes a place (such as `#("Aqua Lagoon (Island of Mystery)", #("F", 1))`), and the list of treasures, and returns the number of treasures that can be found there.
 
 ```gleam
-let place = ("Aqua Lagoon (Island of Mystery)", ("F", 1))
+let place = #("Aqua Lagoon (Island of Mystery)", #("F", 1))
 
 count_place_treasures(place, treasures)
 // -> 2
