@@ -1,4 +1,6 @@
-# About
+# Introduction
+
+## Queues
 
 The Gleam standard library implements a `Queue` type in the `gleam/queue` module. It is similar to the `List` type, but with a few key differences:
 
@@ -42,7 +44,7 @@ queue.to_list(one_to_four)
 // -> [1, 2, 3, 4]
 ```
 
-## Queue equality
+### Queue equality
 
 Due to how queues are implemented, two queues with the same elements in the same order may not be equal according to the `==` operator, which compares values structurally. For example:
 
@@ -60,4 +62,3 @@ If you need to compare two queues for equality use can use the `queue.is_logical
 queue.is_logically_equal(a, b, fn(x, y) { x == y })))
 // -> True
 ```
-
