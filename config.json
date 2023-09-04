@@ -372,6 +372,19 @@
           "results"
         ],
         "status": "active"
+      },
+      {
+        "slug": "secure-treasure-chest",
+        "name": "Secure Treasure Chest",
+        "uuid": "832f4e76-4bbf-4974-8795-ad60b6d78fac",
+        "concepts": [
+          "opaque-types"
+        ],
+        "prerequisites": [
+          "results",
+          "custom-types"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
