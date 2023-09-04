@@ -1927,6 +1927,11 @@
       "uuid": "328caf36-eefb-4db9-bdcd-bfe0ef00ded8",
       "slug": "opaque-types",
       "name": "Opaque Types"
+    },
+    {
+      "uuid": "5e1bda5f-368e-44a7-bfed-592cf0e859c8",
+      "slug": "queues",
+      "name": "Queues"
     }
   ],
   "key_features": [
