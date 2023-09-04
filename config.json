@@ -1909,6 +1909,11 @@
       "uuid": "2ab801ca-3e72-4fd6-9acf-2d1c06505322",
       "slug": "io",
       "name": "IO"
+    },
+    {
+      "uuid": "328caf36-eefb-4db9-bdcd-bfe0ef00ded8",
+      "slug": "opaque-types",
+      "name": "Opaque Types"
     }
   ],
   "key_features": [
