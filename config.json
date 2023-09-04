@@ -385,6 +385,18 @@
           "custom-types"
         ],
         "status": "active"
+      },
+      {
+        "slug": "magician-in-training",
+        "name": "Magician in Training",
+        "uuid": "d7a5dc48-3a0f-4953-a450-67f5f169efba",
+        "concepts": [
+          "queues"
+        ],
+        "prerequisites": [
+          "opaque-types"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
