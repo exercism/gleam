@@ -1,0 +1,8 @@
+{
+  "blurb": "Lists in Gleam are immutable sequences of values that can be accessed quickly from the front or the back.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}
