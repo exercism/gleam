@@ -172,7 +172,7 @@ pub fn root_for_team_with_coach_is_former_player_and_losing_stats_test() {
   let assert True = bandwagoner.root_for_team(team)
 }
 
-pub fn root_for_favorite_team_and_winning_stats() {
+pub fn root_for_favorite_team_and_winning_stats_test() {
   let stats = bandwagoner.create_stats(61, 21)
   let coach = bandwagoner.create_coach("Phil Jackson", True)
   let team = bandwagoner.create_team("Chicago Bulls", coach, stats)
@@ -180,7 +180,7 @@ pub fn root_for_favorite_team_and_winning_stats() {
   let assert True = bandwagoner.root_for_team(team)
 }
 
-pub fn root_for_favorite_team_and_losing_stats() {
+pub fn root_for_favorite_team_and_losing_stats_test() {
   let stats = bandwagoner.create_stats(24, 58)
   let coach = bandwagoner.create_coach("Dick Motta", False)
   let team = bandwagoner.create_team("Chicago Bulls", coach, stats)
@@ -188,7 +188,7 @@ pub fn root_for_favorite_team_and_losing_stats() {
   let assert True = bandwagoner.root_for_team(team)
 }
 
-pub fn root_for_team_with_sixty_or_more_wins_and_former_player_coach() {
+pub fn root_for_team_with_sixty_or_more_wins_and_former_player_coach_test() {
   let stats = bandwagoner.create_stats(65, 17)
   let coach = bandwagoner.create_coach("Billy Cunningham", True)
   let team = bandwagoner.create_team("Philadelphia 76'ers", coach, stats)
@@ -196,7 +196,7 @@ pub fn root_for_team_with_sixty_or_more_wins_and_former_player_coach() {
   let assert True = bandwagoner.root_for_team(team)
 }
 
-pub fn root_for_team_with_sixty_or_more_wins_and_non_former_player_coach() {
+pub fn root_for_team_with_sixty_or_more_wins_and_non_former_player_coach_test() {
   let stats = bandwagoner.create_stats(60, 22)
   let coach = bandwagoner.create_coach("Mike Budenholzer", False)
   let team = bandwagoner.create_team("Milwaukee Bucks", coach, stats)
@@ -204,7 +204,7 @@ pub fn root_for_team_with_sixty_or_more_wins_and_non_former_player_coach() {
   let assert True = bandwagoner.root_for_team(team)
 }
 
-pub fn root_for_team_with_more_losses_than_wins_and_former_player_coach() {
+pub fn root_for_team_with_more_losses_than_wins_and_former_player_coach_test() {
   let stats = bandwagoner.create_stats(40, 42)
   let coach = bandwagoner.create_coach("Wes Unseld", True)
   let team = bandwagoner.create_team("Washington Bullets", coach, stats)
@@ -212,7 +212,7 @@ pub fn root_for_team_with_more_losses_than_wins_and_former_player_coach() {
   let assert True = bandwagoner.root_for_team(team)
 }
 
-pub fn root_for_team_with_more_losses_than_wins_and_non_former_player_coach() {
+pub fn root_for_team_with_more_losses_than_wins_and_non_former_player_coach_test() {
   let stats = bandwagoner.create_stats(29, 43)
   let coach = bandwagoner.create_coach("Kenny Atkinson", False)
   let team = bandwagoner.create_team("Rochester Royals", coach, stats)
@@ -220,7 +220,7 @@ pub fn root_for_team_with_more_losses_than_wins_and_non_former_player_coach() {
   let assert True = bandwagoner.root_for_team(team)
 }
 
-pub fn dont_root_for_team_not_matching_criteria() {
+pub fn dont_root_for_team_not_matching_criteria_test() {
   let stats = bandwagoner.create_stats(51, 31)
   let coach = bandwagoner.create_coach("Frank Layden", False)
   let team = bandwagoner.create_team("Utah Jazz", coach, stats)
