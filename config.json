@@ -1944,6 +1944,11 @@
       "uuid": "5e1bda5f-368e-44a7-bfed-592cf0e859c8",
       "slug": "queues",
       "name": "Queues"
+    },
+    {
+      "uuid": "620ad3f3-f35f-48c3-b87e-cc781f156361",
+      "slug": "phantom-types",
+      "name": "Phantom Types"
     }
   ],
   "key_features": [
