@@ -34,6 +34,9 @@ queue.pop_back(one_to_four)
 
 queue.pop_front(one_to_four)
 // -> Ok(#(1, queue.from_list([2, 3, 4])))
+
+queue.pop_front(queue.new())
+// -> Error(Nil)
 ```
 
 A queue can be converted into a list using the `queue.to_list` function:
