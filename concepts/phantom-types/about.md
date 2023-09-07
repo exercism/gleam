@@ -5,44 +5,44 @@ Phantom types are types are type parameters of a custom type that are not used i
 That's a little abstract, so here is an example:
 
 ```gleam
-pub type Money(currency) {
-  Money(quantity: Float)
+pub type Length(unit) {
+  Length(amount: Float)
 }
 ```
 
-In this example the `currency` type parameter is not used in the `Money` value constructor, so it is a phantom type.
+In this example the `unit` type parameter is not used in the `Length` value constructor, so `unit` is a phantom type.
 
-This unused type parameter may seem useless, but it can be used to add further restrictions on how `Money` values can be used.
+This unused type parameter may seem useless, but it can be used to add further restrictions on how `Length` values can be used.
 
-For example, we could have a function `apply_interest`, which multiplies the amount of money. It works with money of any currency, so the type parameter is a generic type variable.
+For example, we could have a function `double`, which multiplies the length. It works with lengths of any unit, so the type parameter is a generic type variable.
 
 ```gleam
-// This function accepts all Money values
-pub fn apply_interest(money: Money(currency)) -> Money(currency) {
-  Money(money.quantity *. 1.1)
+// This function accepts all Length values
+pub fn double(length: Length(unit)) -> Length(unit) {
+  Length(length.amount *. 2.0)
 }
 ```
 
-We could also have a function `buy_tea`, which only works if the money is in British pounds.
+We could also have a function `add_inch`, which only works if the length is in inches.
 
 ```gleam
-// A type for the British currency. It is never constructed so we don't
+// A unit type for inches. It is never constructed so we don't
 // define any constructors for it.
-pub type PoundsSterling
+pub type Inches
 
-pub fn buy_tea(money: Money(PoundsSterling)) -> Money(PoundsSterling) {
-  Money(money.quantity -. 1.5)
+pub fn add_inch(length: Length(Inches)) -> Length(Inches) {
+  Length(length.amount +. 1.0)
 }
 ```
 
-The `buy_tea` function will not accept money of any other currency parameter, the phantom type has been used to ensure only the correct currency is used.
+The `add_inch` function will not accept lengths of any other unit parameter, the phantom type has been used to ensure only the correct unit is used.
 
-A function can also be written to ensure that two money values are of the same currency, by using the same type variable for both.
+A function can also be written to ensure that two length values are of the same unit, by using the same type variable for both.
 
 ```gleam
-pub fn add(a: Money(currency), b: Money(currency)) -> Money(currency) {
-  Money(a.quantity +. b.quantity)
+pub fn add(a: Length(unit), b: Length(unit)) -> Length(unit) {
+  Length(a.amount +. b.amount)
 }
 ```
 
-Phantom types can work well with opaque types. If other modules cannot construct `Money` values then we can ensure they are not constructed with an invalid currency type, and that only the functions defined above can be used with them.
+Phantom types can work well with opaque types. If other modules cannot construct `Length` values then we can ensure they are not constructed with an invalid unit type, and that only the functions defined above can be used with them.
