@@ -397,6 +397,18 @@
           "opaque-types"
         ],
         "status": "active"
+      },
+      {
+        "slug": "sticker-shop",
+        "name": "Sticker Shop",
+        "uuid": "4fe4df6d-dd44-42d0-bc0c-641afa836b17",
+        "concepts": [
+          "phantom-types"
+        ],
+        "prerequisites": [
+          "opaque-types"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
