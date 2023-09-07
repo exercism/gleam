@@ -17,7 +17,7 @@ insert_top(queue.from_list([5, 9, 7, 1]), 8)
 
 Implement the function `remove_top_card` that returns a copy of the stack which has had the card at the top of the stack removed. If the given stack is empty, the original stack should be returned, unchanged.
 
-```swift
+```gleam
 remove_top_card(queue.from_list([3, 2, 6, 4, 8]))
 // -> queue.from_list([3, 2, 6, 4])
 ```
@@ -35,7 +35,7 @@ insert_bottom(queue.from_list([5, 9, 7, 1]), 8)
 
 Implement the function `remove_bottom_card` that returns a copy of the stack which has had the card at the bottom of the stack removed. If the given stack is empty, the original stack should be returned, unchanged.
 
-```swift
+```gleam
 remove_bottom_card(queue.from_list([8, 5, 9, 7, 1]))
 // -> queue.from_list([5, 9, 7, 1])
 ```
@@ -44,7 +44,7 @@ remove_bottom_card(queue.from_list([8, 5, 9, 7, 1]))
 
 Implement the function `check_size_of_stack` that checks whether the size of the stack is equal to a given `stack_size` or not.
 
-```swift
+```gleam
 check_size_of_stack(queue.from_list([3, 2, 6, 4, 8]), 4)
 // -> False
 ```
