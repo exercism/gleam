@@ -14,7 +14,7 @@
 
 ## 4. Remove a card from the bottom of the stack
 
-- The [`queue.pop_back` function][pop-back] can be used to remove from the back of a queue.
+- The [`queue.pop_front` function][pop-front] can be used to remove from the back of a queue.
 
 ## 5. Check size of the stack
 
