@@ -1,6 +1,6 @@
 # Introduction
 
-Phantom types are types are type parameters of a custom type that are not used in any of the value constructors of that type.
+Phantom types are type parameters of a custom type that are not used in any of the value constructors of that type.
 
 That's a little abstract, so here is an example:
 
@@ -43,6 +43,16 @@ A function can also be written to ensure that two length values are of the same 
 pub fn add(a: Length(unit), b: Length(unit)) -> Length(unit) {
   Length(a.amount +. b.amount)
 }
+```
+```gleam
+let two_meters: Length(Meters) = Length(2.0)
+let two_inches: Length(Inches) = Length(2.0)
+
+add(two_meters, two_meters)
+// -> Length(4.0): Length(Meters)
+
+add(two_meters, two_inches)
+// Type error! The unit type parameters do not match.
 ```
 
 Phantom types can work well with opaque types. If other modules cannot construct `Length` values then we can ensure they are not constructed with an invalid unit type, and that only the functions defined above can be used with them.
