@@ -23,6 +23,6 @@ Define the `dollar`, `euro`, and `yen` functions that take an `Int` argument and
 Define the `total` function which takes a list of `Money` values and returns the total amount of money in the list.
 
 ```gleam
-total([euro(120), euro(200), yen(145)])
+total([euro(120), euro(200), euro(145)])
 // -> euro(465)
 ```

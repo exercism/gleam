@@ -6,7 +6,7 @@
 
 ## 2. Define the `Money` type.
 
-- The `Money` type should have a type parameter for the currency.
+- The `Money` type should have a phantom type parameter for the currency.
 
 ## 3. Define `dollar`, `euro`, and `yen` functions
 
