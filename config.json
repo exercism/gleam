@@ -1961,6 +1961,11 @@
       "uuid": "620ad3f3-f35f-48c3-b87e-cc781f156361",
       "slug": "phantom-types",
       "name": "Phantom Types"
+    },
+    {
+      "uuid": "c4b81d7a-29ed-4df4-8c32-af74e75fd517",
+      "slug": "regular-expressions",
+      "name": "Regular Expressions"
     }
   ],
   "key_features": [
