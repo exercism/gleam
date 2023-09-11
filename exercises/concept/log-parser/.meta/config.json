@@ -6,10 +6,10 @@
   ],
   "files": {
     "solution": [
-      "src/lasagna.gleam"
+      "src/log_parser.gleam"
     ],
     "test": [
-      "test/lasagna_test.gleam"
+      "test/log_parser_test.gleam"
     ],
     "exemplar": [
       ".meta/example.gleam"
@@ -20,7 +20,7 @@
     ]
   },
   "forked_from": [
-    "elixir/lasagna"
+    "elixir/log-parser"
   ],
-  "blurb": "Learn about the basics of Gleam by following a lasagna recipe."
+  "blurb": "Learn about regular expressions by parsing logs."
 }
