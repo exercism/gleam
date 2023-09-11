@@ -409,6 +409,18 @@
           "opaque-types"
         ],
         "status": "active"
+      },
+      {
+        "slug": "log-parser",
+        "name": "Log Parser",
+        "uuid": "0f35ac7e-c86d-4a54-8953-1597dc5534bc",
+        "concepts": [
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "options"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
