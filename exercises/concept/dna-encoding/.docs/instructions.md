@@ -34,7 +34,7 @@ decode_nucleotide(0b01)
 
 Implement `encode` to accept a list of nucleotides and return a bit string of the encoded data.
 
-```elixir
+```gleam
 encode([Adenine, Cytosine, Guanine, Thymine])
 // -> <<27>>
 ```
