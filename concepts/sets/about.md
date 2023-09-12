@@ -28,10 +28,10 @@ set.insert(eighty_eight, 88)
 set.insert(eighty_eight, 89)
 // -> set.from_list([88, 89])
 
-set.remove(eighty_eight, 88)
+set.delete(eighty_eight, 88)
 // -> set.from_list([])
 
-set.remove(eighty_eight, 89)
+set.delete(eighty_eight, 89)
 // -> set.from_list([88])
 ```
 

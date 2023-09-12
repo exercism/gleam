@@ -24,12 +24,6 @@ pub fn trade_card(
   #(possible, collection)
 }
 
-pub fn remove_duplicates(collection: List(String)) -> List(String) {
-  collection
-  |> set.from_list
-  |> set.to_list
-}
-
 pub fn boring_cards(collections: List(Set(String))) -> List(String) {
   let all = list.fold(collections, set.new(), set.union)
   collections
