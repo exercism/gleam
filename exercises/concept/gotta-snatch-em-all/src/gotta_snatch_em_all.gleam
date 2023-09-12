@@ -16,10 +16,6 @@ pub fn trade_card(
   todo
 }
 
-pub fn remove_duplicates(collection: List(String)) -> List(String) {
-  todo
-}
-
 pub fn boring_cards(collections: List(Set(String))) -> List(String) {
   todo
 }
