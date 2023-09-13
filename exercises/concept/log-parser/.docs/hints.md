@@ -2,7 +2,7 @@
 
 ## General
 
-- Review regular expression patterns from the introduction. Remember, when creating the pattern a string, you must escape some characters.
+- Review regular expression patterns from the introduction. Remember, when creating the pattern from a string, you must escape some characters.
 - Check out this website about regular expressions: [Regular-Expressions.info][website-regex-info].
 - Check out this website about regular expressions: [Rex Egg - The world's most tyrannosauical regex tutorial][website-rexegg].
 - Check out this website about regular expressions: [RegexOne - Learn Regular Expressions with simple, interactive exercises][website-regexone].
@@ -11,18 +11,18 @@
 
 ## 1. Identify garbled log lines
 
-- The [`regex.from_string` function][from-string] function can be used to compile a regular expression.
-- The [`regex.check` function][check] function can be used to test whether a regular expression matches a string.
+- The [`regex.from_string` function][from-string] can be used to compile a regular expression.
+- The [`regex.check` function][check] can be used to test whether a regular expression matches a string.
 - Don't forget to escape characters that have special meaning in regular expressions.
 
 ## 2. Split the log line
 
-- The [`regex.split` function][split] function can be used to split a string using a regular expression.
+- The [`regex.split` function][split] can be used to split a string using a regular expression.
 - Don't forget to escape characters that have special meaning in regular expressions.
 
 ## 3. Tag lines with user names
 
-- The [`regex.scan` function][scan] function can be used used to capture parts of a string using a regular expression.
+- The [`regex.scan` function][scan] can be used used to capture parts of a string using a regular expression.
 - Don't forget to escape characters that have special meaning in regular expressions.
 
 [website-regex-info]: https://www.regular-expressions.info

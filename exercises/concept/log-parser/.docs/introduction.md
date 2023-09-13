@@ -9,7 +9,7 @@ The `gleam/regex` module offers functions for working with regular expressions.
 ~~~~exercism/note
 This exercise assumes that you already know regular expression syntax, including character classes, quantifiers, groups, and captures.
 
-If you need a refresh your regular expression knowledge, check out one of those sources: [Regular-Expressions.info](https://www.regular-expressions.info), [Rex Egg](https://www.rexegg.com/), [RegexOne](https://regexone.com/), [Regular Expressions 101](https://regex101.com/), [RegExr](https://regexr.com/).
+if you need to refresh your regular expression knowledge, check out one of those sources: [Regular-Expressions.info](https://www.regular-expressions.info), [Rex Egg](https://www.rexegg.com/), [RegexOne](https://regexone.com/), [Regular Expressions 101](https://regex101.com/), [RegExr](https://regexr.com/).
 ~~~~
 
 The most common way to create regular expressions is using the `regex.from_string` function.
