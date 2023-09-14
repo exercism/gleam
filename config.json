@@ -1981,6 +1981,11 @@
       "uuid": "b6631661-19d7-4cc2-8859-9848244bd38e",
       "slug": "external-functions",
       "name": "External Functions"
+    },
+    {
+      "uuid": "6b3a8671-4fef-4e72-ab58-2fc12893d9ae",
+      "slug": "external-types",
+      "name": "External Types"
     }
   ],
   "key_features": [
