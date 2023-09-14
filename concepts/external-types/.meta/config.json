@@ -1,0 +1,8 @@
+{
+  "blurb": "External types can be used in Gleam to refer to types defined in other languages.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}
