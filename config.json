@@ -1438,7 +1438,6 @@
         ],
         "prerequisites": [
           "ints",
-          "random",
           "custom-types",
           "iterators"
         ],
@@ -1525,7 +1524,6 @@
         "practices": [
         ],
         "prerequisites": [
-          "random",
           "iterators",
           "strings",
           "lists",

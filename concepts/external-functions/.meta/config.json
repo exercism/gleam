@@ -1,0 +1,8 @@
+{
+  "blurb": "External types and external functions enable Gleam programs to use code written in other languages.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}
