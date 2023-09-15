@@ -4,6 +4,6 @@ External types can be used to refer to data types defined in other languages, su
 
 To define an external function declare a type but do not provide any constructors. This can then be used in the same way as any other type.
 
-```rust
+```gleam
 pub type OrderedDictionary(element)
 ```
