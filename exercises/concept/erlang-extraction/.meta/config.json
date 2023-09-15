@@ -12,6 +12,7 @@
       "test/erlang_extraction_test.gleam"
     ],
     "exemplar": [
+      ".meta/example.gleam"
     ],
     "invalidator": [
       "gleam.toml",

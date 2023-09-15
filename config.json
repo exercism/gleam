@@ -1295,7 +1295,6 @@
         "prerequisites": [
           "ints",
           "lists",
-          "bitwise",
           "case-expressions",
           "custom-types"
         ],
