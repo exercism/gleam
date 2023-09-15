@@ -13,7 +13,7 @@ pub fn reverse_list(x: List(a)) -> List(a)
 
 This can then be called as a normal Gleam function:
 
-```rust
+```gleam
 let reversed = reverse_list([1, 2, 3])
 // -> [3, 2, 1]
 ```
