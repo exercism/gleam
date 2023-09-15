@@ -421,6 +421,20 @@
           "options"
         ],
         "status": "active"
+      },
+      {
+        "slug": "erlang-extraction",
+        "name": "Erlang Extraction",
+        "uuid": "1ba3d119-a973-4b54-ac6e-b86979783175",
+        "concepts": [
+          "external-functions",
+          "external-types"
+        ],
+        "prerequisites": [
+          "custom-types",
+          "maps"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
