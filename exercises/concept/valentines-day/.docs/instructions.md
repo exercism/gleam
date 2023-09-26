@@ -40,7 +40,7 @@ Define the `Activity` custom type to represent these activity types:
 - `Chill`: no associated data.
 - `Movie`: has its `Genre` as associated data.
 - `Restaurant`: has its `Cuisine` as associated data.
-- `Walk`: has an `int` representing the number of kilometers to walk as associated data.
+- `Walk`: has an `Int` representing the number of kilometers to walk as associated data.
 
 ## 5. Rate the activity
 
