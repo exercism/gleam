@@ -1,0 +1,25 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/expert_experiments.gleam"
+    ],
+    "test": [
+      "test/expert_experiments_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+  ],
+  "blurb": "Learn about use expressions by conducting some experiments"
+}
