@@ -435,6 +435,19 @@
           "maps"
         ],
         "status": "active"
+      },
+      {
+        "slug": "expert-experiments",
+        "name": "Expert Experiments",
+        "uuid": "481133be-f550-4639-8e26-4f03fe292d1c",
+        "concepts": [
+          "use-expressions"
+        ],
+        "prerequisites": [
+          "results",
+          "anonymous-functions"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
