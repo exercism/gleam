@@ -4,7 +4,7 @@
 
 In Gleam it is common to write and use higher order functions, that is functions that take other functions as arguments. Sometimes when using many higher order functions at once the code can become difficult to read, with many layers of indentation.
 
-For example, here is a function that calls several functions that return `Result(Int, Nil)`, and sums the values if all three are successful.
+For example, here is a function that calls several functions that return `Result(Int, Nil)`, and sums the values if all four are successful.
 
 ```gleam
 import gleam/result
@@ -36,7 +36,7 @@ pub fn main() -> Result(Int, Nil) {
 }
 ```
 
-A `use` expression collects all the following statements in the block into and passes it as a callback function as the final argument to the function call. The variables between the `use` keyword and the `<-` symbol are the names of the arguments that will be passed to the callback function.
+A `use` expression collects all the following statements in the block and passes it as a callback function as the final argument to the function call. The variables between the `use` keyword and the `<-` symbol are the names of the arguments that will be passed to the callback function.
 
 ```gleam
 // This use expression
