@@ -4,7 +4,7 @@ Daphne has been working on a system to run and record the results of her experim
 
 ## 1. Define the `with_retry` function
 
-Sometimes experiments can fail due to a one-off mistake, so if an experiment fails Daphne want to retry it again to see if it works the second time.
+Sometimes experiments can fail due to a one-off mistake, so if an experiment fails Daphne wants to retry it again to see if it works the second time.
 
 Define the `with_retry` function that takes a result returning function as an argument.
 
