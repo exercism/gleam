@@ -34,7 +34,7 @@ If the value of the segment overflows the capacity of the segment's type, it wil
 
 ```gleam
 <<0b1011:3>> == <<0b0011:3>>
-// -> true
+// -> True
 ```
 
 ## Prepending and appending

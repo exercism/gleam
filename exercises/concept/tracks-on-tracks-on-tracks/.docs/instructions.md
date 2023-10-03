@@ -60,5 +60,5 @@ Implement the `exciting_list` function to check if a list of languages is exciti
 
 ```gleam
 exciting_list(["Lua", "Gleam"])
-// -> true
+// -> True
 ```

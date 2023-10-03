@@ -36,7 +36,7 @@ If the value of the segment overflows the capacity of the segment's type, it wil
 
 ```gleam
 <<0b1011:3>> == <<0b0011:3>>
-// -> true
+// -> True
 ```
 
 ### Prepending and appending
@@ -67,7 +67,7 @@ Pattern matching can also be done to obtain values from the bit string. You have
 ```gleam
 let assert <<value:4, rest:bit_string>> = <<0b01101001:8>>
 value == 0b0110
-// -> true
+// -> True
 ```
 
 ### Inspecting bit strings
