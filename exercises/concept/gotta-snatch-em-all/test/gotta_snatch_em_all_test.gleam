@@ -47,7 +47,7 @@ pub fn trade_card_trading_a_card_i_have_for_a_card_i_have_test() {
     "Gyros",
     set.from_list(["Charilord", "Gyros"]),
   )
-  |> should.equal(#(True, set.from_list(["Gyros"])))
+  |> should.equal(#(False, set.from_list(["Gyros"])))
 }
 
 pub fn trade_card_trading_a_card_i_have_for_a_card_i_dont_have_test() {

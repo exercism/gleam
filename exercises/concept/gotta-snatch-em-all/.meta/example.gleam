@@ -17,11 +17,12 @@ pub fn trade_card(
   collection: Set(String),
 ) -> #(Bool, Set(String)) {
   let possible = set.contains(collection, my_card)
+  let worthwhile = !set.contains(collection, their_card)
   let collection =
     collection
     |> set.delete(my_card)
     |> set.insert(their_card)
-  #(possible, collection)
+  #(possible && worthwhile, collection)
 }
 
 pub fn boring_cards(collections: List(Set(String))) -> List(String) {
