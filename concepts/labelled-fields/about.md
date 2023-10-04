@@ -29,7 +29,7 @@ let a = Rectangle(height: 10.0, width: 20.0)
 let b = Rectangle(width: 20.0, height: 10.0)
 
 a == b
-// -> true
+// -> True
 ```
 
 When a custom type has only one variant then the `.label` accessor syntax can be used to get the fields of a record.

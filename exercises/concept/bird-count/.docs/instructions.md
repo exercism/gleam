@@ -26,14 +26,14 @@ bird_count.increment_day_count([4, 0, 2])
 
 ## 3. Check if there was a day with no visiting birds
 
-Implement the `bird_count.has_day_without_birds` function. It should take a list of daily bird counts. It should return `true` if there was at least one day when no birds visited the garden, and `false` otherwise.
+Implement the `bird_count.has_day_without_birds` function. It should take a list of daily bird counts. It should return `True` if there was at least one day when no birds visited the garden, and `False` otherwise.
 
 ```gleam
 bird_count.has_day_without_birds([2, 0, 4])
-// -> true
+// -> True
 
 bird_count.has_day_without_birds([3, 8, 1, 5])
-// -> false
+// -> False
 ```
 
 ## 4. Calculate the total number of visiting birds
