@@ -84,7 +84,6 @@ Implement the `total_stock` function which calculates the total amount of items 
 ]
 |> iterator.from_list
 |> total_stock
-|> iterator.to_list
 
 // -> 19
 ```
