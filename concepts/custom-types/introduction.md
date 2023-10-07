@@ -43,10 +43,10 @@ Custom type variants can be pattern matched on using case expressions.
 import gleam/int
 import gleam/float
 
-pub fn describe(number: Number) -> String {
-  case flexibleNumber {
-    SomeFloat(f) -> "Float: " ++ float.to_string(f)
-    SomeInt(i) -> "Int: " ++ int.to_string(i)
+pub fn describe(flexible_number: Number) -> String {
+  case flexible_number {
+    SomeFloat(f) -> "Float: " <> float.to_string(f)
+    SomeInt(i) -> "Int: " <> int.to_string(i)
     Invalid -> "Neither a float nor an int"
   }
 }
