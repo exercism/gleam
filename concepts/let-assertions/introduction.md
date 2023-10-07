@@ -12,7 +12,7 @@ pub fn get_first_element_or_crash(items: List(e)) -> e {
 }
 ```
 
-Most the time in Gleam programs we want to handle every possible case, but in some programs such as prototypes and quick scripts we may want to focus only on the happy path and not write code for other cases. This is where Gleam's `let assert` comes in.
+Most of the time in Gleam programs we want to handle every possible case, but in some programs such as prototypes and quick scripts we may want to focus only on the happy path and not write code for other cases. This is where Gleam's `let assert` comes in.
 
 With let assertions a pattern can match only some of the possible values of a type, and if the pattern does not match a value the program will crash. Using `let assert` we can write the above function like this:
 
@@ -23,4 +23,4 @@ pub fn get_first_element_or_crash(items: List(e)) -> e {
 }
 ```
 
-Gleam libraries should never use let assertions as they can crash the program, instead they should use the `Result` type and let the application developer decide how to handle errors.
+Gleam libraries should never use let assertions as they can crash the program. Instead, they should use the `Result` type and let the application developer decide how to handle errors.
