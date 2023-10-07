@@ -4,7 +4,7 @@ Tori is a climate journalist and she wants to write an article about the weather
 
 ## 1. Convert Fahrenheit to Celsius
 
-Define a the `fahrenheit_to_celsius` function that takes a temperature in Fahrenheit as an argument and returns the temperature in Celsius.
+Define the `fahrenheit_to_celsius` function that takes a temperature in Fahrenheit as an argument and returns the temperature in Celsius.
 
 To convert Fahrenheit to Celsius subtract 32 from the Fahrenheit value, and then divide the result by 1.8.
 
