@@ -13,7 +13,7 @@ Customers can also choose two additional options for a small additional fee:
 1. Extra sauce: \$1
 1. Extra toppings: \$2
 
-When customers place and order, an additional fee is added if they only order one or two pizzas:
+When customers place an order, an additional fee is added if they only order one or two pizzas:
 
 - 1 pizza: \$3
 - 2 pizzas: \$2
