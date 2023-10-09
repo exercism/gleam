@@ -1,11 +1,16 @@
 import pascals_triangle
 import gleam/list
 import gleam/result
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
+}
+
+pub fn zero_rows_test() {
+  pascals_triangle.rows(0)
+  |> should.equal([])
 }
 
 pub fn one_row_test() {
@@ -21,6 +26,34 @@ pub fn two_rows_test() {
 pub fn three_rows_test() {
   pascals_triangle.rows(3)
   |> should.equal([[1], [1, 1], [1, 2, 1]])
+}
+
+pub fn six_rows_test() {
+  pascals_triangle.rows(6)
+  |> should.equal([
+    [1],
+    [1, 1],
+    [1, 2, 1],
+    [1, 3, 3, 1],
+    [1, 4, 6, 4, 1],
+    [1, 5, 10, 10, 5, 1],
+  ])
+}
+
+pub fn ten_rows_test() {
+  pascals_triangle.rows(10)
+  |> should.equal([
+    [1],
+    [1, 1],
+    [1, 2, 1],
+    [1, 3, 3, 1],
+    [1, 4, 6, 4, 1],
+    [1, 5, 10, 10, 5, 1],
+    [1, 6, 15, 20, 15, 6, 1],
+    [1, 7, 21, 35, 35, 21, 7, 1],
+    [1, 8, 28, 56, 70, 56, 28, 8, 1],
+    [1, 9, 36, 84, 126, 126, 84, 36, 9, 1],
+  ])
 }
 
 pub fn fourth_row_test() {

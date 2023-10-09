@@ -1,0 +1,27 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/bird_count.gleam"
+    ],
+    "test": [
+      "test/bird_count_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elixir/bird-count",
+    "fsharp/pizza-pricing"
+  ],
+  "blurb": "Learn about recursion by keeping track of how many birds visit your garden each day."
+}

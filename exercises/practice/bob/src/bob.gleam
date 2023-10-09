@@ -1,3 +1,3 @@
 pub fn hey(remark: String) -> String {
-  todo("Implement this function")
+  todo as "Implement this function"
 }

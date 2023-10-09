@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import house
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn verse_one_the_house_that_jack_built_test() {

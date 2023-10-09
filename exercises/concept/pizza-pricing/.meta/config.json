@@ -1,0 +1,27 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/pizza_pricing.gleam"
+    ],
+    "test": [
+      "test/pizza_pricing_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "fsharp/pizza-pricing",
+    "elixir/dna-encoding"
+  ],
+  "blurb": "Learn about tail call optimisation by implementing a pizza-pricing algorithm"
+}

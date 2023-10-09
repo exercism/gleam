@@ -56,8 +56,8 @@ The screenshots above have been generated using [F-Puzzles.com](https://www.f-pu
 
 [sudoku-rules]: https://masteringsudoku.com/sudoku-rules-beginners/
 [killer-guide]: https://masteringsudoku.com/killer-sudoku/
-[one-solution-img]: https://media.githubusercontent.com/media/exercism/v3-files/main/julia/killer-sudoku-helper/example1.png
-[four-solutions-img]: https://media.githubusercontent.com/media/exercism/v3-files/main/julia/killer-sudoku-helper/example2.png
-[not-possible-img]: https://media.githubusercontent.com/media/exercism/v3-files/main/julia/killer-sudoku-helper/example3.png
+[one-solution-img]: https://assets.exercism.org/images/exercises/killer-sudoku-helper/example1.png
+[four-solutions-img]: https://assets.exercism.org/images/exercises/killer-sudoku-helper/example2.png
+[not-possible-img]: https://assets.exercism.org/images/exercises/killer-sudoku-helper/example3.png
 [clover-puzzle]: https://app.crackingthecryptic.com/sudoku/HqTBn3Pr6R
 [goodliffe-video]: https://youtu.be/c_NjEbFEeW0?t=1180

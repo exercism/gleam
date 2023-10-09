@@ -38,9 +38,6 @@ In Gleam variables are defined using the `let name = expression` syntax.
 ```gleam
 pub fn main() {
   let count = 1
-
-  // You may shadow existing variables with the same name
-  let count = "Lots"
 }
 ```
 
@@ -49,6 +46,16 @@ Variables can be declared with type annotations. Like function arguments these a
 ```gleam
 pub fn main() {
   let count: Int = 1
+}
+```
+
+### String literals
+
+In Gleam strings are written using double quotes.
+
+```gleam
+pub fn greeting() {
+  "Hello, world!"
 }
 ```
 

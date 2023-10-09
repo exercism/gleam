@@ -1,10 +1,10 @@
 import gleam/result
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import grade_school
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn roster_is_empty_when_no_student_is_added_test() {
@@ -13,11 +13,27 @@ pub fn roster_is_empty_when_no_student_is_added_test() {
   |> should.equal([])
 }
 
+pub fn add_a_student_test() {
+  let assert Ok(_) =
+    grade_school.create()
+    |> grade_school.add(student: "Aimee", grade: 2)
+    |> result.map(grade_school.roster)
+}
+
 pub fn student_is_added_to_the_roster_test() {
   grade_school.create()
   |> grade_school.add(student: "Aimee", grade: 2)
   |> result.map(grade_school.roster)
   |> should.equal(Ok(["Aimee"]))
+}
+
+pub fn adding_multiple_students_in_the_same_grade_in_the_roster_test() {
+  let assert Ok(_) =
+    grade_school.create()
+    |> grade_school.add(student: "Blair", grade: 2)
+    |> result.then(grade_school.add(to: _, student: "James", grade: 2))
+    |> result.then(grade_school.add(to: _, student: "Paul", grade: 2))
+    |> result.map(grade_school.roster)
 }
 
 pub fn multiple_students_in_the_same_grade_are_added_to_the_roster_test() {
@@ -38,21 +54,21 @@ pub fn students_in_multiple_grades_are_added_to_the_roster_test() {
 }
 
 pub fn student_cant_be_added_to_same_grade_in_the_roster_more_than_once_test() {
-  grade_school.create()
-  |> grade_school.add(student: "Blair", grade: 2)
-  |> result.then(grade_school.add(to: _, student: "James", grade: 2))
-  |> result.then(grade_school.add(to: _, student: "James", grade: 2))
-  |> result.then(grade_school.add(to: _, student: "Paul", grade: 2))
-  |> should.be_error()
+  let assert Error(_) =
+    grade_school.create()
+    |> grade_school.add(student: "Blair", grade: 2)
+    |> result.then(grade_school.add(to: _, student: "James", grade: 2))
+    |> result.then(grade_school.add(to: _, student: "James", grade: 2))
+    |> result.then(grade_school.add(to: _, student: "Paul", grade: 2))
 }
 
 pub fn student_cant_be_added_to_multiple_grades_in_the_roster_test() {
-  grade_school.create()
-  |> grade_school.add(student: "Blair", grade: 2)
-  |> result.then(grade_school.add(to: _, student: "James", grade: 2))
-  |> result.then(grade_school.add(to: _, student: "James", grade: 3))
-  |> result.then(grade_school.add(to: _, student: "Paul", grade: 2))
-  |> should.be_error()
+  let assert Error(_) =
+    grade_school.create()
+    |> grade_school.add(student: "Blair", grade: 2)
+    |> result.then(grade_school.add(to: _, student: "James", grade: 2))
+    |> result.then(grade_school.add(to: _, student: "James", grade: 3))
+    |> result.then(grade_school.add(to: _, student: "Paul", grade: 2))
 }
 
 pub fn students_are_sorted_by_grades_in_the_roster_test() {

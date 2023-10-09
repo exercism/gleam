@@ -1,3 +1,3 @@
-pub fn score(x x: Float, y y: Float) -> Int {
+pub fn score(x: Float, y: Float) -> Int {
   todo
 }

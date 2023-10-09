@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/newsletter.gleam"
+    ],
+    "test": [
+      "test/newsletter_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elixir/newsletter"
+  ],
+  "blurb": "Learn about IO by sending out a newsletter."
+}

@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import rotational_cipher
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn rotate_a_by_0_same_output_as_input_test() {

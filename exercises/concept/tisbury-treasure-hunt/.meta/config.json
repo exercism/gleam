@@ -1,0 +1,27 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/tisbury_treasure_hunt.gleam"
+    ],
+    "test": [
+      "test/tisbury_treasure_hunt_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elm/tisbury-treasure-hunt",
+    "fsharp/tisbury-treasure-hunt"
+  ],
+  "blurb": "Learn usage of Tuples by designing a pirate treasure game"
+}

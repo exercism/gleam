@@ -1,10 +1,10 @@
 import word_count
 import gleam/map
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn count_one_word_test() {

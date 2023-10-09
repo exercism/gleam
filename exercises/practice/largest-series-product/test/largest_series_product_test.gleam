@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import largest_series_product
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn finds_the_largest_product_if_span_equals_length_test() {
@@ -42,6 +42,16 @@ pub fn can_get_the_largest_product_of_a_big_number_test() {
     6,
   )
   |> should.equal(Ok(23_520))
+}
+
+pub fn reports_one_for_empty_string_and_empty_products_test() {
+  largest_series_product.largest_product("", 0)
+  |> should.equal(Ok(1))
+}
+
+pub fn reports_one_for_nonempty_string_and_empty_products_test() {
+  largest_series_product.largest_product("123", 0)
+  |> should.equal(Ok(1))
 }
 
 pub fn reports_zero_if_the_only_digits_are_zero_test() {

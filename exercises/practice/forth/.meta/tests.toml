@@ -14,62 +14,48 @@ description = "parsing and numbers -> numbers just get pushed onto the stack"
 
 [fd7a8da2-6818-4203-a866-fed0714e7aa0]
 description = "parsing and numbers -> pushes negative numbers onto the stack"
-include = false
 
 [9e69588e-a3d8-41a3-a371-ea02206c1e6e]
 description = "addition -> can add two numbers"
-include = false
 
 [52336dd3-30da-4e5c-8523-bdf9a3427657]
 description = "addition -> errors if there is nothing on the stack"
-include = false
 
 [06efb9a4-817a-435e-b509-06166993c1b8]
 description = "addition -> errors if there is only one value on the stack"
-include = false
 
 [09687c99-7bbc-44af-8526-e402f997ccbf]
 description = "subtraction -> can subtract two numbers"
-include = false
 
 [5d63eee2-1f7d-4538-b475-e27682ab8032]
 description = "subtraction -> errors if there is nothing on the stack"
-include = false
 
 [b3cee1b2-9159-418a-b00d-a1bb3765c23b]
 description = "subtraction -> errors if there is only one value on the stack"
-include = false
 
 [5df0ceb5-922e-401f-974d-8287427dbf21]
 description = "multiplication -> can multiply two numbers"
-include = false
 
 [9e004339-15ac-4063-8ec1-5720f4e75046]
 description = "multiplication -> errors if there is nothing on the stack"
-include = false
 
 [8ba4b432-9f94-41e0-8fae-3b3712bd51b3]
 description = "multiplication -> errors if there is only one value on the stack"
-include = false
 
 [e74c2204-b057-4cff-9aa9-31c7c97a93f5]
 description = "division -> can divide two numbers"
-include = false
 
 [54f6711c-4b14-4bb0-98ad-d974a22c4620]
 description = "division -> performs integer division"
-include = false
 
 [a5df3219-29b4-4d2f-b427-81f82f42a3f1]
 description = "division -> errors if dividing by zero"
 
 [1d5bb6b3-6749-4e02-8a79-b5d4d334cb8a]
 description = "division -> errors if there is nothing on the stack"
-include = false
 
 [d5547f43-c2ff-4d5c-9cb0-2a4f6684c20d]
 description = "division -> errors if there is only one value on the stack"
-include = false
 
 [ee28d729-6692-4a30-b9be-0d830c52a68c]
 description = "combined arithmetic -> addition and subtraction"
@@ -124,7 +110,6 @@ description = "user-defined words -> can consist of built-in words"
 
 [2726ea44-73e4-436b-bc2b-5ff0c6aa014b]
 description = "user-defined words -> execute in the right order"
-include = false
 
 [9e53c2d0-b8ef-4ad8-b2c9-a559b421eb33]
 description = "user-defined words -> can override other user-defined words"
@@ -134,51 +119,41 @@ description = "user-defined words -> can override built-in words"
 
 [588de2f0-c56e-4c68-be0b-0bb1e603c500]
 description = "user-defined words -> can override built-in operators"
-include = false
 
 [ac12aaaf-26c6-4a10-8b3c-1c958fa2914c]
 description = "user-defined words -> can use different words with the same name"
-include = false
 
 [53f82ef0-2750-4ccb-ac04-5d8c1aefabb1]
 description = "user-defined words -> can define word that uses word with the same name"
-include = false
 
 [35958cee-a976-4a0f-9378-f678518fa322]
 description = "user-defined words -> cannot redefine non-negative numbers"
 
 [df5b2815-3843-4f55-b16c-c3ed507292a7]
 description = "user-defined words -> cannot redefine negative numbers"
-include = false
 
 [5180f261-89dd-491e-b230-62737e09806f]
 description = "user-defined words -> errors if executing a non-existent word"
-include = false
 
 [3c8bfef3-edbb-49c1-9993-21d4030043cb]
 description = "user-defined words -> only defines locally"
 include = false
+comment = "not included because Gleam is immutable, there is no global state that could be shared by different Forth interpreters"
 
 [7b83bb2e-b0e8-461f-ad3b-96ee2e111ed6]
 description = "case-insensitivity -> DUP is case-insensitive"
-include = false
 
 [339ed30b-f5b4-47ff-ab1c-67591a9cd336]
 description = "case-insensitivity -> DROP is case-insensitive"
-include = false
 
 [ee1af31e-1355-4b1b-bb95-f9d0b2961b87]
 description = "case-insensitivity -> SWAP is case-insensitive"
-include = false
 
 [acdc3a49-14c8-4cc2-945d-11edee6408fa]
 description = "case-insensitivity -> OVER is case-insensitive"
-include = false
 
 [5934454f-a24f-4efc-9fdd-5794e5f0c23c]
 description = "case-insensitivity -> user-defined words are case-insensitive"
-include = false
 
 [037d4299-195f-4be7-a46d-f07ca6280a06]
 description = "case-insensitivity -> definitions are case-insensitive"
-include = false

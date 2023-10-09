@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import prime_factors
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn no_factors_test() {

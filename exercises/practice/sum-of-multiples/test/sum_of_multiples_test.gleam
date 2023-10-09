@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import sum_of_multiples
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn no_multiples_within_limit_test() {

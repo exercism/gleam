@@ -1,0 +1,7 @@
+{
+  "blurb": "Lists in Gleam are immutable sequences of values.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": []
+}

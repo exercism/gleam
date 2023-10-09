@@ -3,7 +3,7 @@
   "slug": "gleam",
   "active": true,
   "status": {
-    "concept_exercises": false,
+    "concept_exercises": true,
     "test_runner": true,
     "representer": false,
     "analyzer": false
@@ -16,7 +16,7 @@
     "highlightjs_language": "gleam"
   },
   "test_runner": {
-    "average_run_time": 3.0
+    "average_run_time": 3
   },
   "files": {
     "solution": [
@@ -46,7 +46,7 @@
           "basics"
         ],
         "prerequisites": [],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "pacman-rules",
@@ -58,7 +58,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "bettys-bike-shop",
@@ -72,7 +72,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "active"
       },
       {
         "slug": "guessing-game",
@@ -82,9 +82,372 @@
           "case-expressions"
         ],
         "prerequisites": [
-          "basics"
+          "basics",
+          "ints",
+          "bools"
         ],
-        "status": "wip"
+        "status": "active"
+      },
+      {
+        "slug": "tisbury-treasure-hunt",
+        "name": "Tisbury Treasure Hunt",
+        "uuid": "d38ff053-5f25-422b-9d51-fc7e2fef22cc",
+        "concepts": [
+          "tuples"
+        ],
+        "prerequisites": [
+          "basics",
+          "bools",
+          "ints",
+          "case-expressions",
+          "lists"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "tracks-on-tracks-on-tracks",
+        "name": "Tracks on Tracks on Tracks",
+        "uuid": "6d115941-dd77-404d-87bb-dc3150bb86df",
+        "concepts": [
+          "lists"
+        ],
+        "prerequisites": [
+          "bools",
+          "case-expressions",
+          "ints",
+          "strings",
+          "generics"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "log-levels",
+        "name": "Log Levels",
+        "uuid": "66155da0-db56-498a-9b8a-a7219d97b415",
+        "concepts": [
+          "strings"
+        ],
+        "prerequisites": [
+          "basics",
+          "case-expressions",
+          "modules"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "valentines-day",
+        "name": "Valentine's Day",
+        "uuid": "57988e11-7847-4f70-943c-2b3290ad1abe",
+        "concepts": [
+          "custom-types"
+        ],
+        "prerequisites": [
+          "basics",
+          "case-expressions",
+          "modules",
+          "strings"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "bandwagoner",
+        "name": "Bandwagoner",
+        "uuid": "d16c5fd8-5b6d-493b-9ef2-3125b42a00df",
+        "concepts": [
+          "labelled-fields"
+        ],
+        "prerequisites": [
+          "basics",
+          "custom-types",
+          "case-expressions"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "bird-count",
+        "name": "Bird Count",
+        "uuid": "29a9697e-f369-4cce-bf04-ffc5ee6d4558",
+        "concepts": [
+          "recursion"
+        ],
+        "prerequisites": [
+          "lists",
+          "case-expressions",
+          "ints"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "pizza-pricing",
+        "name": "Pizza Pricing",
+        "uuid": "cf59568d-2984-4688-a83b-835f58371002",
+        "concepts": [
+          "tail-call-optimisation"
+        ],
+        "prerequisites": [
+          "recursion",
+          "case-expressions",
+          "lists",
+          "ints"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "secrets",
+        "name": "Secrets",
+        "uuid": "39459ebd-14bb-4864-94bb-1064ec044b31",
+        "concepts": [
+          "anonymous-functions"
+        ],
+        "prerequisites": [
+          "basics",
+          "ints"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "high-school-sweetheart",
+        "name": "High School Sweetheart",
+        "uuid": "26535ccf-9d94-4e43-94b1-49586e570dd7",
+        "concepts": [
+          "pipe-operator"
+        ],
+        "prerequisites": [
+          "strings",
+          "modules",
+          "lists"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "treasure-chest",
+        "name": "Treasure Chest",
+        "uuid": "8c1ba902-712d-42a2-b94e-f6ed1b299520",
+        "concepts": [
+          "generics"
+        ],
+        "prerequisites": [
+          "custom-types",
+          "case-expressions"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "go",
+        "name": "Go",
+        "uuid": "fd330139-2cb4-44a4-80a6-1fb7a99e36f1",
+        "concepts": [
+          "results"
+        ],
+        "prerequisites": [
+          "custom-types",
+          "generics",
+          "pipe-operator"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "high-score-board",
+        "name": "High Score Board",
+        "uuid": "3c916f03-d843-4e5f-88dd-1c422880b235",
+        "concepts": [
+          "type-aliases",
+          "maps"
+        ],
+        "prerequisites": [
+          "generics",
+          "tuples",
+          "lists"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "weather-ranking",
+        "name": "Weather Ranking",
+        "uuid": "a238f396-c508-4064-bf61-0902cf47724f",
+        "concepts": [
+          "constants",
+          "orders"
+        ],
+        "prerequisites": [
+          "floats",
+          "lists",
+          "anonymous-functions",
+          "custom-types"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "wine-cellar",
+        "name": "Wine Cellar",
+        "uuid": "062084b3-b9ab-4787-bea0-04369df3b2a6",
+        "concepts": [
+          "labelled-arguments"
+        ],
+        "prerequisites": [
+          "lists",
+          "custom-types"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "gotta-snatch-em-all",
+        "name": "Gotta Snatch 'Em All",
+        "uuid": "9c33bde5-71b3-43e5-92b3-2c69b9cda7be",
+        "concepts": [
+          "sets"
+        ],
+        "prerequisites": [
+          "bools",
+          "tuples",
+          "lists",
+          "strings"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "role-playing-game",
+        "name": "Role Playing Game",
+        "uuid": "689d8109-d230-45cd-82f6-5f91e56a3fcf",
+        "concepts": [
+          "options"
+        ],
+        "prerequisites": [
+          "generics",
+          "custom-types",
+          "case-expressions",
+          "strings"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "spring-cleaning",
+        "name": "Spring Cleaning",
+        "uuid": "4a54646d-02df-463a-8f23-92c88473e8a9",
+        "concepts": [
+          "let-assertions"
+        ],
+        "prerequisites": [
+          "results",
+          "strings",
+          "lists"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "dna-encoding",
+        "name": "DNA Encoding",
+        "uuid": "e8b77421-e3da-4875-9f9d-8d263df019f2",
+        "concepts": [
+          "bit-strings"
+        ],
+        "prerequisites": [
+          "lists",
+          "results",
+          "custom-types"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "boutique-inventory",
+        "name": "Boutique Inventory",
+        "uuid": "72b14411-7d65-446e-a07e-ecf282b8818a",
+        "concepts": [
+          "iterators"
+        ],
+        "prerequisites": [
+          "lists"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "newsletter",
+        "name": "Newsletter",
+        "uuid": "83b38de6-ae48-444b-bb18-3cd190eb8569",
+        "concepts": [
+          "io",
+          "nil"
+        ],
+        "prerequisites": [
+          "results"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "secure-treasure-chest",
+        "name": "Secure Treasure Chest",
+        "uuid": "832f4e76-4bbf-4974-8795-ad60b6d78fac",
+        "concepts": [
+          "opaque-types"
+        ],
+        "prerequisites": [
+          "results",
+          "custom-types"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "magician-in-training",
+        "name": "Magician in Training",
+        "uuid": "d7a5dc48-3a0f-4953-a450-67f5f169efba",
+        "concepts": [
+          "queues"
+        ],
+        "prerequisites": [
+          "opaque-types"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "sticker-shop",
+        "name": "Sticker Shop",
+        "uuid": "4fe4df6d-dd44-42d0-bc0c-641afa836b17",
+        "concepts": [
+          "phantom-types"
+        ],
+        "prerequisites": [
+          "opaque-types"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "log-parser",
+        "name": "Log Parser",
+        "uuid": "0f35ac7e-c86d-4a54-8953-1597dc5534bc",
+        "concepts": [
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "options"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "erlang-extraction",
+        "name": "Erlang Extraction",
+        "uuid": "1ba3d119-a973-4b54-ac6e-b86979783175",
+        "concepts": [
+          "external-functions",
+          "external-types"
+        ],
+        "prerequisites": [
+          "custom-types",
+          "maps"
+        ],
+        "status": "active"
+      },
+      {
+        "slug": "expert-experiments",
+        "name": "Expert Experiments",
+        "uuid": "481133be-f550-4639-8e26-4f03fe292d1c",
+        "concepts": [
+          "use-expressions"
+        ],
+        "prerequisites": [
+          "results",
+          "anonymous-functions"
+        ],
+        "status": "active"
       }
     ],
     "practice": [
@@ -102,6 +465,7 @@
         "uuid": "6bc57e73-1629-4a18-b2f0-0b93ef4f3b8c",
         "difficulty": 1,
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "custom-types",
@@ -127,6 +491,8 @@
         "uuid": "b0a6f0d2-0bba-4f8f-89ad-a41995a4b87d",
         "difficulty": 1,
         "practices": [
+          "strings",
+          "options"
         ],
         "prerequisites": [
           "strings",
@@ -139,6 +505,7 @@
         "uuid": "c9f7d06c-a2fb-45c3-a320-b9a93fd88201",
         "difficulty": 3,
         "practices": [
+          "strings"
         ],
         "prerequisites": [
           "case-expressions",
@@ -164,12 +531,13 @@
         "uuid": "d04cd9d6-6494-4336-8e6c-2b9f612eba05",
         "difficulty": 2,
         "practices": [
+          "lists",
+          "recursion"
         ],
         "prerequisites": [
           "lists",
           "recursion",
           "case-expressions",
-          "higher-order-functions",
           "generics"
         ]
       },
@@ -179,10 +547,12 @@
         "uuid": "b6459bf2-1e93-42ea-a743-628548b79e2f",
         "difficulty": 4,
         "practices": [
+          "lists"
         ],
         "prerequisites": [
           "lists",
-          "case-expressions"
+          "results",
+          "tuples"
         ]
       },
       {
@@ -206,8 +576,10 @@
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "1d54b9d2-bf6f-473f-8bf6-668d3c0fd5f3",
-        "difficulty": 4,
+        "difficulty": 6,
         "practices": [
+          "lists",
+          "custom-types"
         ],
         "prerequisites": [
           "bools",
@@ -233,6 +605,7 @@
         "uuid": "093aa488-077f-4180-9d8c-59d0ad8837da",
         "difficulty": 3,
         "practices": [
+          "lists"
         ],
         "prerequisites": [
           "strings",
@@ -245,6 +618,8 @@
         "uuid": "a70503ba-f1f3-4583-9226-c3ada98e9500",
         "difficulty": 2,
         "practices": [
+          "sets",
+          "strings"
         ],
         "prerequisites": [
           "sets",
@@ -258,6 +633,8 @@
         "uuid": "de777d9f-7963-4a1f-a923-9fa0aad4eac8",
         "difficulty": 3,
         "practices": [
+          "strings",
+          "ints"
         ],
         "prerequisites": [
           "strings",
@@ -273,7 +650,7 @@
         "prerequisites": [
           "strings",
           "lists",
-          "case-expressions"
+          "results"
         ],
         "difficulty": 3
       },
@@ -283,6 +660,7 @@
         "uuid": "b59b630e-8648-4498-b8d8-fcfaf261ece3",
         "difficulty": 7,
         "practices": [
+          "queues"
         ],
         "prerequisites": [
           "case-expressions",
@@ -296,6 +674,7 @@
         "name": "RNA Transcription",
         "uuid": "3a015501-58bf-427c-8c4c-2197321f4a34",
         "practices": [
+          "results"
         ],
         "prerequisites": [
           "lists",
@@ -310,6 +689,8 @@
         "name": "Diamond",
         "uuid": "736a470f-412c-41fc-b92d-9bd59ef3bcce",
         "practices": [
+          "strings",
+          "lists"
         ],
         "prerequisites": [
           "strings",
@@ -324,6 +705,7 @@
         "name": "Series",
         "uuid": "4a084cb7-335d-41f1-8148-5d3abbce8ab0",
         "practices": [
+          "results"
         ],
         "prerequisites": [
           "custom-types",
@@ -344,6 +726,7 @@
         ],
         "prerequisites": [
           "case-expressions",
+          "results",
           "floats",
           "bools"
         ],
@@ -354,10 +737,12 @@
         "name": "Resistor Color Duo",
         "uuid": "3f38677b-80cf-4782-b1e6-02f4413c240e",
         "practices": [
+          "results"
         ],
         "prerequisites": [
           "custom-types",
           "case-expressions",
+          "results",
           "lists"
         ],
         "difficulty": 2
@@ -367,6 +752,7 @@
         "name": "Word Count",
         "uuid": "0c7a2f06-1e53-4043-9e1a-386e90e945b4",
         "practices": [
+          "maps"
         ],
         "prerequisites": [
           "lists",
@@ -381,6 +767,7 @@
         "name": "Custom Set",
         "uuid": "70ea5040-42c5-4133-84ec-1a2ae6dde836",
         "practices": [
+          "maps"
         ],
         "prerequisites": [
           "opaque-types",
@@ -397,6 +784,7 @@
         "name": "Circular Buffer",
         "uuid": "b62f8574-9bac-4b95-a76c-f13789ae2663",
         "practices": [
+          "queues"
         ],
         "prerequisites": [
           "opaque-types",
@@ -413,6 +801,9 @@
         "name": "Raindrops",
         "uuid": "4522b139-6f0c-4172-a4fa-6a6adef33a9e",
         "practices": [
+          "ints",
+          "strings",
+          "case-expressions"
         ],
         "prerequisites": [
           "ints",
@@ -426,13 +817,17 @@
         "name": "Strain",
         "uuid": "e2d09419-0136-4f4d-9a1c-02236c2c60a6",
         "practices": [
+          "tail-call-optimisation",
+          "anonymous-functions",
+          "generics"
         ],
         "prerequisites": [
           "lists",
           "recursion",
           "bools",
           "case-expressions",
-          "higher-order-functions",
+          "anonymous-functions",
+          "tail-call-optimisation",
           "generics"
         ],
         "difficulty": 2
@@ -442,6 +837,7 @@
         "name": "Phone Number",
         "uuid": "3f592a98-3044-48ee-9433-330a2496867b",
         "practices": [
+          "results"
         ],
         "prerequisites": [
           "strings",
@@ -455,6 +851,7 @@
         "name": "Isogram",
         "uuid": "ed2c7e78-9443-4e1e-941c-0bae1322dd3b",
         "practices": [
+          "strings"
         ],
         "prerequisites": [
           "strings",
@@ -467,6 +864,8 @@
         "name": "Binary Search Tree",
         "uuid": "4a3b220f-f978-44b6-9768-ab86e372a42a",
         "practices": [
+          "custom-types",
+          "recursion"
         ],
         "prerequisites": [
           "custom-types",
@@ -481,6 +880,9 @@
         "name": "Satellite",
         "uuid": "34fa6aa9-c3de-4d59-abfd-cfe1b76d7748",
         "practices": [
+          "custom-types",
+          "recursion",
+          "sets"
         ],
         "prerequisites": [
           "results",
@@ -497,6 +899,8 @@
         "name": "Tournament",
         "uuid": "1bf9a89e-a411-4eac-8d61-377290e17101",
         "practices": [
+          "options",
+          "orders"
         ],
         "prerequisites": [
           "maps",
@@ -514,6 +918,8 @@
         "name": "Zipper",
         "uuid": "48a708c6-c6dd-419c-8c88-f28fb65dff93",
         "practices": [
+          "opaque-types",
+          "generics"
         ],
         "prerequisites": [
           "custom-types",
@@ -521,8 +927,7 @@
           "lists",
           "results",
           "generics",
-          "case-expressions",
-          "higher-order-functions"
+          "case-expressions"
         ],
         "difficulty": 6
       },
@@ -531,6 +936,8 @@
         "name": "POV",
         "uuid": "2012322c-1693-4702-abfe-1f3e7b176035",
         "practices": [
+          "results",
+          "generics"
         ],
         "prerequisites": [
           "lists",
@@ -547,11 +954,12 @@
         "name": "Sum of Multiples",
         "uuid": "ff4ce860-92cc-4768-a482-ba10cc6d1190",
         "practices": [
+          "lists",
+          "ints"
         ],
         "prerequisites": [
           "ints",
-          "lists",
-          "sets"
+          "lists"
         ],
         "difficulty": 4
       },
@@ -560,6 +968,7 @@
         "name": "Matching Brackets",
         "uuid": "d1cdd91e-5ed6-4875-bbcc-a8395cdf51ce",
         "practices": [
+          "strings"
         ],
         "prerequisites": [
           "lists",
@@ -573,10 +982,11 @@
         "name": "Triangle",
         "uuid": "43dd4c25-81f3-4a59-a809-2908387d3001",
         "practices": [
+          "floats",
+          "lists"
         ],
         "prerequisites": [
-          "case-expressions",
-          "bools",
+          "floats",
           "lists"
         ],
         "difficulty": 2
@@ -586,6 +996,8 @@
         "name": "Pythagorean Triplet",
         "uuid": "a433d1f6-d8a2-40b9-a7d7-a611420d7164",
         "practices": [
+          "ints",
+          "recursion"
         ],
         "prerequisites": [
           "lists",
@@ -620,6 +1032,7 @@
         "name": "Robot Simulator",
         "uuid": "21ad5280-6acd-42cb-ba8c-fe8b4bbe485e",
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "custom-types",
@@ -634,6 +1047,7 @@
         "name": "Rectangles",
         "uuid": "68171b71-a9eb-4925-a2f3-df0bc27ce41d",
         "practices": [
+          "maps"
         ],
         "prerequisites": [
           "lists",
@@ -663,6 +1077,7 @@
         "name": "Scrabble Score",
         "uuid": "109a8a3e-cc3f-4f2a-a385-c12f9e9865cf",
         "practices": [
+          "maps"
         ],
         "prerequisites": [
           "maps",
@@ -678,9 +1093,12 @@
         "name": "Armstrong Numbers",
         "uuid": "f89958c7-da81-43de-9450-3ccc558b7bc2",
         "practices": [
+          "ints",
+          "recursion"
         ],
         "prerequisites": [
           "lists",
+          "results",
           "recursion",
           "bools",
           "ints"
@@ -692,6 +1110,8 @@
         "name": "Collatz Conjecture",
         "uuid": "576c4a50-6aef-4b28-a7b4-0e682004a690",
         "practices": [
+          "results",
+          "recursion"
         ],
         "prerequisites": [
           "results",
@@ -706,6 +1126,7 @@
         "name": "Reverse String",
         "uuid": "c10a4881-6605-4ce9-83ec-96b4c12f679a",
         "practices": [
+          "strings"
         ],
         "prerequisites": [
           "recursion",
@@ -719,6 +1140,7 @@
         "name": "Resistor Color Trio",
         "uuid": "a35a95b5-e8ea-4c0a-8ca8-621c6f3501be",
         "practices": [
+          "case-expressions"
         ],
         "prerequisites": [
           "maps",
@@ -735,11 +1157,12 @@
         "name": "Bottle Song",
         "uuid": "333129cf-8be6-4ce6-b6eb-1d2b12d383f2",
         "practices": [
+          "strings",
+          "labelled-arguments"
         ],
         "prerequisites": [
           "lists",
           "strings",
-          "results",
           "case-expressions",
           "labelled-arguments"
         ],
@@ -750,14 +1173,14 @@
         "name": "List Ops",
         "uuid": "81458cfe-eb13-4026-93fb-211d1229ce53",
         "practices": [
+          "tail-call-optimisation"
         ],
         "prerequisites": [
           "bools",
           "lists",
           "recursion",
           "case-expressions",
-          "generics",
-          "higher-order-functions"
+          "generics"
         ],
         "difficulty": 6
       },
@@ -766,6 +1189,7 @@
         "name": "Perfect Numbers",
         "uuid": "f85e087a-355b-49d0-ac8d-3dc0d47fdad6",
         "practices": [
+          "orders"
         ],
         "prerequisites": [
           "lists",
@@ -884,7 +1308,6 @@
         "prerequisites": [
           "ints",
           "lists",
-          "bitwise",
           "case-expressions",
           "custom-types"
         ],
@@ -1022,6 +1445,7 @@
         "name": "Yacht",
         "uuid": "398c9816-736d-4d19-8937-cc75046f21df",
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "ints",
@@ -1040,8 +1464,8 @@
         ],
         "prerequisites": [
           "ints",
-          "random",
-          "custom-types"
+          "custom-types",
+          "iterators"
         ],
         "difficulty": 4
       },
@@ -1065,6 +1489,7 @@
         "name": "Kindergarten Garden",
         "uuid": "018be77b-d08c-497e-acdc-1b2b4e88e754",
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "strings",
@@ -1108,6 +1533,7 @@
         "name": "Space Age",
         "uuid": "4bd2232c-1d23-4af8-ac9f-c778676becdf",
         "practices": [
+          "custom-types"
         ],
         "prerequisites": [
           "case-expressions",
@@ -1124,7 +1550,6 @@
         "practices": [
         ],
         "prerequisites": [
-          "random",
           "iterators",
           "strings",
           "lists",
@@ -1442,6 +1867,156 @@
       "uuid": "8ff69266-d290-464a-b2f3-565dcc59dd38",
       "slug": "case-expressions",
       "name": "Case Expressions"
+    },
+    {
+      "uuid": "80ded752-2511-4c34-afde-7133579be80a",
+      "slug": "tuples",
+      "name": "Tuples"
+    },
+    {
+      "uuid": "e6196d00-551f-464b-98b5-c2d0a09c4125",
+      "slug": "lists",
+      "name": "Lists"
+    },
+    {
+      "uuid": "b4f7c485-acd1-451f-94e0-57a970a594ae",
+      "slug": "strings",
+      "name": "Strings"
+    },
+    {
+      "uuid": "db6f250f-3a2e-42f2-a8ce-487a2f21beab",
+      "slug": "custom-types",
+      "name": "Custom Types"
+    },
+    {
+      "uuid": "43eb0672-b116-44d8-978f-ce44415c43e8",
+      "slug": "labelled-fields",
+      "name": "Labelled Fields"
+    },
+    {
+      "uuid": "9f1a9dab-7223-412d-a8b9-a36bc4857d38",
+      "slug": "recursion",
+      "name": "Recursion"
+    },
+    {
+      "uuid": "9c9c5d50-bf4c-46e8-be7f-b410f700e4ab",
+      "slug": "tail-call-optimisation",
+      "name": "Tail Call Optimisation"
+    },
+    {
+      "uuid": "f399bcb7-d0d6-450b-b874-fb4c6fab7dc8",
+      "slug": "anonymous-functions",
+      "name": "Anonymous Functions"
+    },
+    {
+      "uuid": "339a98fa-3b02-490b-822c-19c03718badd",
+      "slug": "pipe-operator",
+      "name": "Pipe Operator"
+    },
+    {
+      "uuid": "387d2262-107f-4568-9320-e7fec515d6ba",
+      "slug": "generics",
+      "name": "Generics"
+    },
+    {
+      "uuid": "ac1c147c-191f-4bbf-a62f-07443e4ba326",
+      "slug": "results",
+      "name": "Results"
+    },
+    {
+      "uuid": "2dfd4e7c-7596-4b89-8f58-34b3948526d3",
+      "slug": "maps",
+      "name": "Maps"
+    },
+    {
+      "uuid": "1dbc9485-8d2d-447d-822a-2342905c8990",
+      "slug": "type-aliases",
+      "name": "Type Aliases"
+    },
+    {
+      "uuid": "f48ac727-52b3-419f-8291-9c85279930e2",
+      "slug": "orders",
+      "name": "Orders"
+    },
+    {
+      "uuid": "4a884025-b5e3-4af8-a6d1-dcfd7dd8e5aa",
+      "slug": "constants",
+      "name": "Constants"
+    },
+    {
+      "uuid": "88a20975-8e2a-4337-ac5d-04d84b6cbeec",
+      "slug": "labelled-arguments",
+      "name": "Labelled Arguments"
+    },
+    {
+      "uuid": "8f32ea00-766d-47d2-98e5-2a52a0eee05c",
+      "slug": "sets",
+      "name": "Sets"
+    },
+    {
+      "uuid": "44999f5a-20bf-4456-8d45-6f245f7d957c",
+      "slug": "options",
+      "name": "Options"
+    },
+    {
+      "uuid": "85ab7ae3-1958-44de-88ec-bf936a388b32",
+      "slug": "let-assertions",
+      "name": "Let Assertions"
+    },
+    {
+      "uuid": "8a61a160-c08d-4565-88ba-cab37fc90945",
+      "slug": "bit-strings",
+      "name": "Bit Strings"
+    },
+    {
+      "uuid": "6e5cd6a5-9fd8-4d16-9500-99850894fad9",
+      "slug": "iterators",
+      "name": "Iterators"
+    },
+    {
+      "uuid": "1d9ef9bb-c2e9-4bfb-b284-b8191bc52f2c",
+      "slug": "nil",
+      "name": "Nil"
+    },
+    {
+      "uuid": "2ab801ca-3e72-4fd6-9acf-2d1c06505322",
+      "slug": "io",
+      "name": "IO"
+    },
+    {
+      "uuid": "328caf36-eefb-4db9-bdcd-bfe0ef00ded8",
+      "slug": "opaque-types",
+      "name": "Opaque Types"
+    },
+    {
+      "uuid": "5e1bda5f-368e-44a7-bfed-592cf0e859c8",
+      "slug": "queues",
+      "name": "Queues"
+    },
+    {
+      "uuid": "620ad3f3-f35f-48c3-b87e-cc781f156361",
+      "slug": "phantom-types",
+      "name": "Phantom Types"
+    },
+    {
+      "uuid": "c4b81d7a-29ed-4df4-8c32-af74e75fd517",
+      "slug": "regular-expressions",
+      "name": "Regular Expressions"
+    },
+    {
+      "uuid": "b6631661-19d7-4cc2-8859-9848244bd38e",
+      "slug": "external-functions",
+      "name": "External Functions"
+    },
+    {
+      "uuid": "6b3a8671-4fef-4e72-ab58-2fc12893d9ae",
+      "slug": "external-types",
+      "name": "External Types"
+    },
+    {
+      "uuid": "e33cc76d-a5c5-47cb-ab91-aa1f2da988b9",
+      "slug": "use-expressions",
+      "name": "Use Expressions"
     }
   ],
   "key_features": [
@@ -1477,6 +2052,7 @@
     }
   ],
   "tags": [
+    "paradigm/declarative",
     "paradigm/functional",
     "typing/static",
     "typing/strong",
@@ -1484,6 +2060,12 @@
     "platform/windows",
     "platform/mac",
     "platform/linux",
-    "runtime/beam"
+    "platform/web",
+    "runtime/beam",
+    "used_for/backends",
+    "used_for/frontends",
+    "used_for/games",
+    "used_for/scripts",
+    "used_for/web_development"
   ]
 }

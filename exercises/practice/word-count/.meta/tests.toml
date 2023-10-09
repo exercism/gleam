@@ -36,6 +36,7 @@ description = "normalize case"
 [4185a902-bdb0-4074-864c-f416e42a0f19]
 description = "with apostrophes"
 include = false
+comment = "not included because reimplemented by 4ff6c7d7-fcfc-43ef-b8e7-34ff1837a2d3"
 
 [4ff6c7d7-fcfc-43ef-b8e7-34ff1837a2d3]
 description = "with apostrophes"

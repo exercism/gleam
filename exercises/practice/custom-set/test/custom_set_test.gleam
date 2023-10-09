@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import custom_set
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn returns_true_if_the_set_contains_no_elements_sets_with_no_elements_are_empty_test() {
@@ -161,7 +161,7 @@ pub fn unique_elements_can_be_added_to_a_set_add_to_empty_set_test() {
   let actual = custom_set.add(to: set, this: 3)
   let expected = custom_set.new([3])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn unique_elements_can_be_added_to_a_set_add_to_non_empty_set_test() {
@@ -170,7 +170,7 @@ pub fn unique_elements_can_be_added_to_a_set_add_to_non_empty_set_test() {
   let actual = custom_set.add(to: set, this: 3)
   let expected = custom_set.new([1, 2, 3, 4])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn unique_elements_can_be_added_to_a_set_adding_an_existing_element_does_not_change_the_set_test() {
@@ -179,7 +179,7 @@ pub fn unique_elements_can_be_added_to_a_set_adding_an_existing_element_does_not
   let actual = custom_set.add(to: set, this: 3)
   let expected = custom_set.new([1, 2, 3])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_two_empty_sets_is_an_empty_set_test() {
@@ -189,7 +189,7 @@ pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_two_emp
   let actual = custom_set.intersection(of: set1, and: set2)
   let expected = custom_set.new([])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set_test() {
@@ -199,7 +199,7 @@ pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_an_empt
   let actual = custom_set.intersection(of: set1, and: set2)
   let expected = custom_set.new([])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set_test() {
@@ -209,7 +209,7 @@ pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_a_non_e
   let actual = custom_set.intersection(of: set1, and: set2)
   let expected = custom_set.new([])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set_test() {
@@ -219,7 +219,7 @@ pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_two_set
   let actual = custom_set.intersection(of: set1, and: set2)
   let expected = custom_set.new([])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements_test() {
@@ -229,7 +229,7 @@ pub fn intersection_returns_a_set_of_all_shared_elements_intersection_of_two_set
   let actual = custom_set.intersection(of: set1, and: set2)
   let expected = custom_set.new([2, 3])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn difference_or_complement_of_a_set_is_a_set_of_all_elements_that_are_only_in_the_first_set_difference_of_two_empty_sets_is_an_empty_set_test() {
@@ -239,7 +239,7 @@ pub fn difference_or_complement_of_a_set_is_a_set_of_all_elements_that_are_only_
   let actual = custom_set.difference(between: set1, and: set2)
   let expected = custom_set.new([])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn difference_or_complement_of_a_set_is_a_set_of_all_elements_that_are_only_in_the_first_set_difference_of_empty_set_and_non_empty_set_is_an_empty_set_test() {
@@ -249,7 +249,7 @@ pub fn difference_or_complement_of_a_set_is_a_set_of_all_elements_that_are_only_
   let actual = custom_set.difference(between: set1, and: set2)
   let expected = custom_set.new([])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn difference_or_complement_of_a_set_is_a_set_of_all_elements_that_are_only_in_the_first_set_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set_test() {
@@ -259,7 +259,7 @@ pub fn difference_or_complement_of_a_set_is_a_set_of_all_elements_that_are_only_
   let actual = custom_set.difference(between: set1, and: set2)
   let expected = custom_set.new([1, 2, 3, 4])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn difference_or_complement_of_a_set_is_a_set_of_all_elements_that_are_only_in_the_first_set_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set_test() {
@@ -269,7 +269,7 @@ pub fn difference_or_complement_of_a_set_is_a_set_of_all_elements_that_are_only_
   let actual = custom_set.difference(between: set1, and: set2)
   let expected = custom_set.new([1, 3])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn union_returns_a_set_of_all_elements_in_either_set_union_of_empty_sets_is_an_empty_set_test() {
@@ -279,7 +279,7 @@ pub fn union_returns_a_set_of_all_elements_in_either_set_union_of_empty_sets_is_
   let actual = custom_set.union(of: set1, and: set2)
   let expected = custom_set.new([])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn union_returns_a_set_of_all_elements_in_either_set_union_of_an_empty_set_and_non_empty_set_is_the_non_empty_set_test() {
@@ -289,7 +289,7 @@ pub fn union_returns_a_set_of_all_elements_in_either_set_union_of_an_empty_set_a
   let actual = custom_set.union(of: set1, and: set2)
   let expected = custom_set.new([2])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn union_returns_a_set_of_all_elements_in_either_set_union_of_a_non_empty_set_and_empty_set_is_the_non_empty_set_test() {
@@ -299,7 +299,7 @@ pub fn union_returns_a_set_of_all_elements_in_either_set_union_of_a_non_empty_se
   let actual = custom_set.union(of: set1, and: set2)
   let expected = custom_set.new([1, 3])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }
 
 pub fn union_returns_a_set_of_all_elements_in_either_set_union_of_non_empty_sets_contains_all_unique_elements_test() {
@@ -309,5 +309,5 @@ pub fn union_returns_a_set_of_all_elements_in_either_set_union_of_non_empty_sets
   let actual = custom_set.union(of: set1, and: set2)
   let expected = custom_set.new([3, 2, 1])
 
-  should.equal(actual, expected)
+  let assert True = custom_set.is_equal(actual, expected)
 }

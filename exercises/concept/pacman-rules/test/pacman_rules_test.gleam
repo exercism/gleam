@@ -1,8 +1,8 @@
 import pacman_rules
-import gleeunit
+import exercism/test_runner
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn ghost_gets_eaten_test() {

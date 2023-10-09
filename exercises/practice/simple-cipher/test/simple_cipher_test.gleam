@@ -1,12 +1,12 @@
 import gleam/iterator
 import gleam/string
 import gleam/regex
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import simple_cipher
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn substitution_cipher_can_encode_test() {
@@ -55,7 +55,9 @@ pub fn random_key_cipher_key_is_made_only_of_lowercase_letters_test() {
 
   iterator.repeatedly(simple_cipher.generate_key)
   |> iterator.take(100)
-  |> iterator.all(fn(key) { let assert True = regex.check(re, key) })
+  |> iterator.all(fn(key) {
+    let assert True = regex.check(re, key)
+  })
 }
 
 pub fn random_key_cipher_can_encode_test() {

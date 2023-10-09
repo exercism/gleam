@@ -1,0 +1,8 @@
+{
+  "blurb": "Functions in Gleam can have side effects, and change things about the world when run.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "blurb": "A function call is a tail-call if it is the last thing executed by the. Tail-calls are optimised to avoid adding a new stack frame for the function call.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}

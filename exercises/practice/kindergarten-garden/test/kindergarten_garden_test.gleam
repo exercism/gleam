@@ -1,12 +1,12 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import kindergarten_garden.{
   Alice, Bob, Charlie, Clover, David, Eve, Fred, Ginny, Grass, Harriet, Ileana,
   Joseph, Kincaid, Larry, Radishes, Violets,
 }
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn partial_garden_garden_with_single_student_test() {

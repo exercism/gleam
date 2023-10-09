@@ -11,7 +11,6 @@
 
 [9920ce55-9629-46d5-85d6-4201f4a4234d]
 description = "zero rows"
-include = false
 
 [70d643ce-a46d-4e93-af58-12d88dd01f21]
 description = "single row"
@@ -30,8 +29,6 @@ description = "five rows"
 
 [c3912965-ddb4-46a9-848e-3363e6b00b13]
 description = "six rows"
-include = false
 
 [6cb26c66-7b57-4161-962c-81ec8c99f16b]
 description = "ten rows"
-include = false

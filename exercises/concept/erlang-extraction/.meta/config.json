@@ -1,0 +1,25 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/erlang_extraction.gleam"
+    ],
+    "test": [
+      "test/erlang_extraction_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+  ],
+  "blurb": "Learn about external types and functions by using an Erlang library"
+}

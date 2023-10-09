@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import pig_latin
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn ay_is_added_to_words_that_start_with_vowels_word_beginning_with_a_test() {

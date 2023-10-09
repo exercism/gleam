@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import allergies
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn testing_for_eggs_allergy_not_allergic_to_anything_test() {

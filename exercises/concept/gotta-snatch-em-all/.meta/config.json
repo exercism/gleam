@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/gotta_snatch_em_all.gleam"
+    ],
+    "test": [
+      "test/gotta_snatch_em_all_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elm/gotta-snatch-em-all"
+  ],
+  "blurb": "Learn to use sets by playing a trading card game"
+}

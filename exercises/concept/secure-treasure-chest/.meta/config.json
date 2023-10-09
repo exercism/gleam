@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/secure_treasure_chest.gleam"
+    ],
+    "test": [
+      "test/secure_treasure_chest_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elm/secure-treasure-chest"
+  ],
+  "blurb": "Learn about opaque types by making a more secure treasure chest"
+}

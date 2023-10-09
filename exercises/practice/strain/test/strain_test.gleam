@@ -1,11 +1,11 @@
-import gleeunit
+import exercism/test_runner
 import gleam/int
 import gleam/list
 import gleam/string
 import strain
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn keep_on_empty_list_returns_empty_list_test() {

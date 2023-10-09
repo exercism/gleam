@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import sublist.{Equal, Sublist, Superlist, Unequal}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn empty_lists_test() {

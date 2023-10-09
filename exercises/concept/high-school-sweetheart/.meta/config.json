@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/high_school_sweetheart.gleam"
+    ],
+    "test": [
+      "test/high_school_sweetheart_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elixir/high-school-sweetheart"
+  ],
+  "blurb": "Learn about the pipe operator by helping high school sweethearts profess their love on social media via ASCII art."
+}

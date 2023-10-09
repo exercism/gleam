@@ -15,13 +15,13 @@ pub fn describe(number: Int) -> String {
 }
 ```
 
-While this may look like `switch` statements in other languages, pattern matching starts to shine when also using other patterns. One such pattern is the _variable pattern_, which allows one to capture a value:
+While this may look like `switch` statements in other languages, pattern matching starts to shine when also using other patterns. One such pattern is the _variable pattern_, which allows one to assign a value to a variable. In this example, the variable `i` will be assigned the value of `number` if it is not `0`:
 
 ```gleam
 pub fn describe(number: Int) -> String {
   case number {
     0 -> "Zero"
-    i -> "Non zero: " <> int.to_string(i)
+    i -> "Non zero"
   }
 }
 ```

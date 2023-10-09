@@ -14,14 +14,12 @@ description = "Roster is empty when no student is added"
 
 [9337267f-7793-4b90-9b4a-8e3978408824]
 description = "Add a student"
-include = false
 
 [6d0a30e4-1b4e-472e-8e20-c41702125667]
 description = "Student is added to the roster"
 
 [73c3ca75-0c16-40d7-82f5-ed8fe17a8e4a]
 description = "Adding multiple students in the same grade in the roster"
-include = false
 
 [233be705-dd58-4968-889d-fb3c7954c9cc]
 description = "Multiple students in the same grade are added to the roster"
@@ -32,6 +30,7 @@ description = "Cannot add student to same grade in the roster more than once"
 [c125dab7-2a53-492f-a99a-56ad511940d8]
 description = "A student can't be in two different grades"
 include = false
+comment = "not included because reimplemented by a0c7b9b8-0e89-47f8-8b4a-c50f885e79d1"
 
 [a0c7b9b8-0e89-47f8-8b4a-c50f885e79d1]
 description = "A student can only be added to the same grade in the roster once"

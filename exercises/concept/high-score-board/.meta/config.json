@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/high_score_board.gleam"
+    ],
+    "test": [
+      "test/high_score_board_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "javascript/high-score-board"
+  ],
+  "blurb": "Practice Gleam maps by tracking high scores of an arcade game."
+}

@@ -1,17 +1,17 @@
-import gleam/list.{fold}
-import gleam/regex.{from_string, split}
-import gleam/string.{capitalise, first}
+import gleam/list
+import gleam/regex
+import gleam/string
 
 pub fn abbreviate(phrase phrase: String) -> String {
-  let assert Ok(re) = from_string("[ +\\-/;_]+")
-  split(with: re, content: phrase)
-  |> fold(
+  let assert Ok(re) = regex.from_string("[ +\\-/;_]+")
+  regex.split(with: re, content: phrase)
+  |> list.fold(
     "",
     fn(acc, val) {
       let assert Ok(letter) =
         val
-        |> capitalise
-        |> first
+        |> string.capitalise
+        |> string.first
       acc <> letter
     },
   )

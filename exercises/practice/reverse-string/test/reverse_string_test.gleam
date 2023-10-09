@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import reverse_string
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn an_empty_string_test() {

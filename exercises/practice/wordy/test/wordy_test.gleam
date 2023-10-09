@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import wordy.{ImpossibleOperation, SyntaxError, UnknownOperation}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn just_a_number_test() {

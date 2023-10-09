@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "src/role_playing_game.gleam"
+    ],
+    "test": [
+      "test/role_playing_game_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elm/role-playing-game"
+  ],
+  "blurb": "Learn the Option type by designing game mechanics"
+}

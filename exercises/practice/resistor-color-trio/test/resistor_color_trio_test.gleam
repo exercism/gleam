@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import resistor_color_trio.{Resistance, label}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn orange_and_orange_and_black_test() {

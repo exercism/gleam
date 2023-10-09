@@ -19,7 +19,7 @@ While this may look like `switch` statements in other languages, pattern matchin
 pub fn describe(number: Int) -> String {
   case number {
     0 -> "Zero"
-    i -> "Non zero: " <> int.to_string(i)
+    i -> "Non zero"
   }
 }
 ```

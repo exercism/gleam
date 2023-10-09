@@ -1,9 +1,9 @@
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import variable_length_quantity.{IncompleteSequence}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn encode_a_series_of_integers_producing_a_series_of_bytes_zero_test() {

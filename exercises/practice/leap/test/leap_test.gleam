@@ -1,8 +1,8 @@
 import leap
-import gleeunit
+import exercism/test_runner
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn year_not_divisible_by_4_in_common_year_test() {

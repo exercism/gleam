@@ -1,9 +1,9 @@
 import gleam/float
-import gleeunit
+import exercism/test_runner
 import space_age.{Earth, Jupiter, Mars, Mercury, Neptune, Saturn, Uranus, Venus}
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn age_on_earth_test() {

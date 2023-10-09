@@ -1,12 +1,12 @@
 import bowling.{
   Error, Game, GameComplete, GameNotComplete, InvalidPinCount, roll, score,
 }
-import gleeunit
-import gleeunit/should
+import exercism/test_runner
+import exercism/should
 import gleam/list
 
 pub fn main() {
-  gleeunit.main()
+  test_runner.main()
 }
 
 pub fn all_zeroes_score_test() {
@@ -108,25 +108,16 @@ pub fn all_strikes_test() {
 }
 
 pub fn negative_point_roll_test() {
-  Game([])
-  |> roll(-1)
-  |> should.be_error()
+  let assert Error(_) = roll(Game([]), -1)
 }
 
 pub fn more_than_10_points_roll_test() {
-  Game([])
-  |> roll(11)
-  |> should.be_error()
+  let assert Error(_) = roll(Game([]), 11)
 }
 
 pub fn more_than_10_points_frame_test() {
-  let assert Ok(game) =
-    Game([])
-    |> roll(5)
-
-  game
-  |> roll(6)
-  |> should.be_error()
+  let assert Ok(game) = roll(Game([]), 5)
+  let assert Error(_) = roll(game, 6)
 }
 
 pub fn bonus_roll_after_strike_in_last_frame_test() {
@@ -165,9 +156,7 @@ pub fn two_bonus_rolls_after_strike_in_last_frame_and_first_one_is_strike_test()
 }
 
 pub fn trying_to_score_unstarted_game_test() {
-  Game([])
-  |> score()
-  |> should.be_error()
+  let assert Error(_) = score(Game([]))
 }
 
 pub fn trying_to_score_incomplete_game_test() {
@@ -217,6 +206,13 @@ pub fn rolling_after_bonus_rolls_after_strike_test() {
 
   rolls
   |> roll_and_last_roll_be_error(2, GameComplete)
+}
+
+pub fn last_two_strikes_followed_by_only_last_bonus_non_strike_points_test() {
+  let rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 1]
+
+  rolls
+  |> roll_and_check_score(31)
 }
 
 fn roll_and_check_score(rolls: List(Int), correct_score: Int) {
