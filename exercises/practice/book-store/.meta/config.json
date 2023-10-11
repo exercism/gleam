@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "massivefermion"
+  ],
   "files": {
     "solution": [
       "src/book_store.gleam"
