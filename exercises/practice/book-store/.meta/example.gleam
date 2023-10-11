@@ -3,7 +3,7 @@ import gleam/list
 import gleam/float
 
 pub fn lowest_price(books: List(Int)) -> Float {
-  let [a, b, c, d, e] =
+  let assert [a, b, c, d, e] =
     books
     |> list.fold(
       [#(1, 0), #(2, 0), #(3, 0), #(4, 0), #(5, 0)],
