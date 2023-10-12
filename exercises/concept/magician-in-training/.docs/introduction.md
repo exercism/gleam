@@ -30,7 +30,7 @@ Elements can be removed from the queue using the `queue.pop_front` and `queue.po
 let one_to_four = queue.from_list([1, 2, 3, 4])
 
 queue.pop_back(one_to_four)
-// -> Ok(#(3, queue.from_list([1, 2, 3])))
+// -> Ok(#(4, queue.from_list([1, 2, 3])))
 
 queue.pop_front(one_to_four)
 // -> Ok(#(1, queue.from_list([2, 3, 4])))
