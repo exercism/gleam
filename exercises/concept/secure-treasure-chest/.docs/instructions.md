@@ -22,7 +22,7 @@ This function takes two arguments:
 
 The function returns a `TreasureChest` containing the password and the value.
 
-If the password is shorter than 8 characters then the function should return an error.
+If the password is shorter than 8 characters then the function should return an error saying `Password must be at least 8 characters long`.
 
 ## 3. Define `open` function.
 
@@ -31,4 +31,4 @@ This function takes two arguments:
 - A `TreasureChest`.
 - A password `String`.
 
-If the password matches the password in the `TreasureChest` then the function should return the treasure, otherwise it should return an error.
+If the password matches the password in the `TreasureChest` then the function should return the treasure, otherwise it should return an error saying `Incorrect password`.
