@@ -48,7 +48,7 @@ Define the `run_experiment` function that takes four arguments:
 - The name of the experiment as a `String`.
 - A setup function which takes no arguments and returns a result.
 - An action function which takes the `Ok` value of the setup function as an argument and returns a result.
-- A recording function which takes the `Ok` value of the setup and functions as an arguments and returns a result.
+- A recording function which takes the `Ok` value of the setup and action functions as arguments and returns a result.
 
 If all three functions succeed then `run_experiment` should return `Ok(#(experiment_name, recording_data))`.
 
