@@ -30,6 +30,8 @@ Define the `Pizza` custom type to represent the different types of pizzas and op
 - `ExtraSauce`
 - `ExtraToppings`
 
+`ExtraSauce` and `ExtraToppings` should wrap the `Pizza` type.
+
 ## 2. Calculate the price of pizza
 
 Implement the `pizza_price` function to calculate a pizza's price:
