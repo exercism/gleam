@@ -1840,8 +1840,17 @@
         "name": "Book Store",
         "uuid": "f45f7c07-465a-4fec-b7ed-263d770d580c",
         "practices": [
+          "ints",
+          "lists",
+          "recursion",
+          "case-expressions"
         ],
-        "prerequisites": [],
+        "prerequisites": [
+          "ints",
+          "lists",
+          "recursion",
+          "case-expressions"
+        ],
         "difficulty": 5
       }
     ]
