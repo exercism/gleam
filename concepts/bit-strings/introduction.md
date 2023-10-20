@@ -2,7 +2,7 @@
 
 Working with binary data can be tricky, so Gleam provides a `BitString` type and accompanying syntax to construct and to pattern match on binary data.
 
-Bit string literals are defined using the `<<>>` syntax. When defining a bit string literal, it is defined in segments. Each segment has a value and and annotation, separated by a `:`. The annotation specifies how many bits will be used to encode the value, and can be omitted completely, which will default to a 8-bit integer value.
+Bit string literals are defined using the `<<>>` syntax. When defining a bit string literal, it is defined in segments. Each segment has a value and annotation, separated by a `:`. The annotation specifies how many bits will be used to encode the value, and can be omitted completely, which will default to a 8-bit integer value.
 
 ```gleam
 // This defines a bit string with three segments of a single bit each
