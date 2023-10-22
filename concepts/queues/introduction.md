@@ -3,9 +3,9 @@
 The Gleam standard library implements a `Queue` type in the `gleam/queue` module. It is similar to the `List` type, but with a few key differences:
 
 - The `Queue` type doesn't have a literal syntax that can be used to construct queues or pattern match on them.
-- Elements can be type can be efficiently added and removed from both the front and back of the `Queue` type, while the `List` type can only efficiently add and remove elements from the front.
+- Elements can be efficiently added and removed from both the front and back of the `Queue` type, while the `List` type can only efficiently add and remove elements from the front.
 
-Most the time you will want to use the `List` type, but when you need to be able to add and remove from the end of a collection, the `Queue` type is a good choice.
+Most of the time you will want to use the `List` type, but when you need to be able to add and remove from the end of a collection, the `Queue` type is a good choice.
 
 Queues can be created using the `queue.new` and `queue.from_list` functions:
 
