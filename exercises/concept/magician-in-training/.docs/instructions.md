@@ -4,6 +4,8 @@ As a magician-to-be, Elyse needs to practice some basics. She has a stack of car
 
 To make things a bit easier she only uses the cards 1 to 10.
 
+The stack of cards is represented by a `queue`, with the bottom of the stack at the front of the queue, and the top of the stack at the back.
+
 ## 1. Insert a card at the of top the stack
 
 Implement the function `insert_top` that returns a copy of the stack with the new card provided added to the top of the stack.
@@ -15,7 +17,7 @@ insert_top(queue.from_list([5, 9, 7, 1]), 8)
 
 ## 2. Remove the top card from the stack
 
-Implement the function `remove_top_card` that returns a copy of the stack which has had the card at the top of the stack removed. If the given stack is empty, the original stack should be returned, unchanged.
+Implement the function `remove_top_card` that returns a copy of the stack having had its top card removed. If the given stack is empty, the original stack should be returned, unchanged.
 
 ```gleam
 remove_top_card(queue.from_list([3, 2, 6, 4, 8]))
@@ -33,7 +35,7 @@ insert_bottom(queue.from_list([5, 9, 7, 1]), 8)
 
 ## 4. Remove a card from the bottom of the stack
 
-Implement the function `remove_bottom_card` that returns a copy of the stack which has had the card at the bottom of the stack removed. If the given stack is empty, the original stack should be returned, unchanged.
+Implement the function `remove_bottom_card` that returns a copy of the stack having had its bottom card removed. If the given stack is empty, the original stack should be returned, unchanged.
 
 ```gleam
 remove_bottom_card(queue.from_list([8, 5, 9, 7, 1]))
