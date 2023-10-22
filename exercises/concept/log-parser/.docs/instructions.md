@@ -27,7 +27,7 @@ log_parser.valid_line("Network Failure")
 
 Shortly after starting the log parsing project, you realize that one application's logs aren't split into lines like the others. In this project, what should have been separate lines, is instead on a single line, connected by fancy arrows such as `<--->` or `<*~*~>`.
 
-In fact, any string that has a first character of `<`, a last character of `>`, and any combination of the following characters `~`, `*`, `=`, and `-` in between can be used as a separator in this project's logs.
+In fact, any string that has a first character of `<`, a last character of `>`, and zero or more of the following characters `~`, `*`, `=`, and `-` in between can be used as a separator in this project's logs.
 
 Implement the `split_line` function that takes a line and returns a list of strings.
 
