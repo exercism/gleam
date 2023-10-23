@@ -16,7 +16,7 @@ The most common way to create regular expressions is using the `regex.from_strin
 let assert Ok(re) = regex.from_string("test")
 ```
 
-The regular expression creation functions an error if the regular expression syntax is invalid, so a let-assertion has been used here to ensure the regular expression is valid.
+The `regex.from_string` function yields an `Error` if the regular expression syntax is invalid, so a let-assertion has been used here to ensure the regular expression is valid.
 
 The `regex.check` function can be used to check if a regular expression matches a string.
 
@@ -33,7 +33,7 @@ regex.check(re, "this is too")
 
 ## Captures
 
-If you wish to capture substrings using a regular expression the `regex.scan` function can be used to return a list of matches.
+If you wish to capture substrings using a regular expression, the `regex.scan` function can be used to return a list of matches.
 
 ```gleam
 let assert Ok(re) = regex.from_string("[oi]n a (\\w+)")
