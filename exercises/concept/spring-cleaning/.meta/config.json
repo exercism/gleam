@@ -2,8 +2,6 @@
   "authors": [
     "lpil"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "src/spring_cleaning.gleam"
@@ -19,7 +17,5 @@
       "manifest.toml"
     ]
   },
-  "forked_from": [
-  ],
   "blurb": "Learn about let assertions by cleaning some poorly organised data."
 }
