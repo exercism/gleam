@@ -2,8 +2,6 @@
   "authors": [
     "lpil"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "src/tracks_on_tracks_on_tracks.gleam"

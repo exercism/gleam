@@ -2,8 +2,6 @@
   "authors": [
     "lpil"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "src/magician_in_training.gleam"

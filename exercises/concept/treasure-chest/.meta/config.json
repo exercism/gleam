@@ -2,8 +2,6 @@
   "authors": [
     "lpil"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "src/treasure_chest.gleam"

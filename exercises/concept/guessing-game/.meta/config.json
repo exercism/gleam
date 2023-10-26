@@ -2,8 +2,6 @@
   "authors": [
     "lpil"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "src/guessing_game.gleam"

@@ -2,8 +2,6 @@
   "authors": [
     "lpil"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "src/weather_ranking.gleam"
@@ -19,7 +17,5 @@
       "manifest.toml"
     ]
   },
-  "forked_from": [
-  ],
   "blurb": "Learn about the Order type by ranking weather conditions"
 }
