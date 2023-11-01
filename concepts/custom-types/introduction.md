@@ -25,7 +25,7 @@ Creating a value for a specific case can be done by referring to its name if it 
 
 ```gleam
 let spring = Spring
-let integerTwo = SomeInt(2)
+let integer_two = SomeInt(2)
 ```
 
 Custom types, along with everything in Gleam, have _structural equality_, which means that two values of the same variant and with the same data are equivalent.
