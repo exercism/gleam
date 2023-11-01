@@ -25,7 +25,7 @@ Creating a value for a specific case can be done by referring to its name if it 
 
 ```gleam
 let spring = Spring
-let integerTwo = SomeInt(2)
+let integer_two = SomeInt(2)
 ```
 
 Custom types, along with everything in Gleam, have _structural equality_, which means that two values of the same variant and with the same data are equivalent.
@@ -43,10 +43,10 @@ Custom type variants can be pattern matched on using case expressions.
 import gleam/int
 import gleam/float
 
-pub fn describe(number: Number) -> String {
-  case flexibleNumber {
-    SomeFloat(f) -> "Float: " ++ float.to_string(f)
-    SomeInt(i) -> "Int: " ++ int.to_string(i)
+pub fn describe(flexible_number: Number) -> String {
+  case flexible_number {
+    SomeFloat(f) -> "Float: " <> float.to_string(f)
+    SomeInt(i) -> "Int: " <> int.to_string(i)
     Invalid -> "Neither a float nor an int"
   }
 }
