@@ -1852,6 +1852,19 @@
           "case-expressions"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "pop-count",
+        "name": "Eliud's Eggs",
+        "uuid": "2af8d672-a825-4699-a77e-771d5d48a5d1",
+        "practices": [
+          "ints"
+        ],
+        "prerequisites": [
+          "basics",
+          "ints"
+        ],
+        "difficulty": 2
       }
     ]
   },
