@@ -1,4 +1,4 @@
-import gleam/map.{Map}
+import gleam/map.{type Map}
 import gleam/list
 import gleam/regex
 import gleam/string

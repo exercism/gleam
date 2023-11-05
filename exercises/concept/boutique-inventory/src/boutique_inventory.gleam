@@ -1,4 +1,4 @@
-import gleam/iterator.{Iterator}
+import gleam/iterator.{type Iterator}
 
 pub type Item {
   Item(name: String, price: Int, quantity: Int)

@@ -1,4 +1,4 @@
-import go.{Black, Game, White}
+import go.{type Game, Black, Game, White}
 import exercism/test_runner
 import exercism/should
 

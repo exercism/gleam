@@ -13,10 +13,10 @@ pub fn decode_nucleotide(nucleotide: Int) -> Result(Nucleotide, Nil) {
   todo
 }
 
-pub fn encode(dna: List(Nucleotide)) -> BitString {
+pub fn encode(dna: List(Nucleotide)) -> BitArray {
   todo
 }
 
-pub fn decode(dna: BitString) -> Result(List(Nucleotide), Nil) {
+pub fn decode(dna: BitArray) -> Result(List(Nucleotide), Nil) {
   todo
 }

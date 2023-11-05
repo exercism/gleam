@@ -1,6 +1,6 @@
 import gleam/list
 import gleam/string
-import gleam/map.{Map}
+import gleam/map.{type Map}
 
 type Wall {
   Corner

@@ -1,4 +1,4 @@
-import gleam/order.{Order}
+import gleam/order.{type Order}
 import gleam/float
 import gleam/list
 

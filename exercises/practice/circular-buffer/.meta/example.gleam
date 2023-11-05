@@ -1,4 +1,4 @@
-import gleam/queue.{Queue}
+import gleam/queue.{type Queue}
 
 pub opaque type CircularBuffer(t) {
   CircularBuffer(capacity: Int, size: Int, queue: Queue(t))

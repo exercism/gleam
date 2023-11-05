@@ -1,7 +1,7 @@
 import gleam/result
 import gleam/list
 import gleam/int
-import gleam/map.{Map}
+import gleam/map.{type Map}
 
 pub type Error {
   ImpossibleTarget

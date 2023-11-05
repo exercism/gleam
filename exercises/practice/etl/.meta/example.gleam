@@ -1,5 +1,5 @@
 import gleam/string
-import gleam/map.{Map}
+import gleam/map.{type Map}
 import gleam/list
 
 pub fn transform(legacy: Map(Int, List(String))) -> Map(String, Int) {

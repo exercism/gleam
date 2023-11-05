@@ -1,4 +1,4 @@
-import gleam/string.{to_graphemes}
+import gleam/string
 
 pub fn reverse_accumulate(
   graphemes_list: List(String),
@@ -12,6 +12,6 @@ pub fn reverse_accumulate(
 
 pub fn reverse(value: String) -> String {
   value
-  |> to_graphemes
+  |> string.to_graphemes
   |> reverse_accumulate("")
 }

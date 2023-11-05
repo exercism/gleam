@@ -1,4 +1,4 @@
-import gleam/map.{Map}
+import gleam/map.{type Map}
 
 pub type ScoreBoard =
   Map(String, Int)

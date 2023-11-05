@@ -1,4 +1,4 @@
-import gleam/order.{Order}
+import gleam/order.{type Order}
 
 pub type City {
   City(name: String, temperature: Temperature)

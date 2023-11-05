@@ -1,9 +1,9 @@
 import gleam/string
 import gleam/list
 import gleam/int
-import gleam/map.{Map}
-import gleam/option.{None, Option, Some}
-import gleam/order.{Eq, Gt, Lt, Order}
+import gleam/map.{type Map}
+import gleam/option.{type Option, None, Some}
+import gleam/order.{type Order, Eq, Gt, Lt}
 
 pub fn tally(input: String) -> String {
   case input {

@@ -1,7 +1,7 @@
 import gleam/result
 import gleam/string
 import gleam/list
-import gleam/map.{Map}
+import gleam/map.{type Map}
 
 pub fn encode(phrase: String) -> String {
   let encode_map = encoding_map()

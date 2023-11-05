@@ -2,7 +2,7 @@ import exercism/should
 import exercism/test_runner
 import gleam/string
 import simplifile
-import sticker_shop.{Eur, Jpy, Money, Usd}
+import sticker_shop.{type Eur, type Jpy, type Money, type Usd}
 
 pub fn main() {
   test_runner.main()

@@ -1,5 +1,5 @@
 import gleam/io
-import gleam/map.{Map}
+import gleam/map.{type Map}
 import gleam/function
 import gleam/list
 import gleam/int
@@ -7,9 +7,9 @@ import gleam/float
 import gleam/string
 import gleam/result
 import gleam/erlang
-import gleam/erlang/file.{Reason}
+import gleam/erlang/file.{type Reason}
 import gleam/json
-import gleam/dynamic.{DecodeError, Dynamic}
+import gleam/dynamic.{type DecodeError, type Dynamic}
 
 // Types
 
