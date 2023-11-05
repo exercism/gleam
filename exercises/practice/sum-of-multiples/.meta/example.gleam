@@ -1,4 +1,4 @@
-import gleam/set.{Set}
+import gleam/set.{type Set}
 import gleam/list
 import gleam/int
 

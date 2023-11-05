@@ -1,4 +1,4 @@
-import erlang_extraction.{GbTree}
+import erlang_extraction.{type GbTree}
 import exercism/test_runner
 import exercism/should
 

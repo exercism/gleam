@@ -1,9 +1,9 @@
-import gleam/map.{Map}
+import gleam/map.{type Map}
 import gleam/string
 import gleam/list
 import gleam/int
 import gleam/option
-import gleam/set.{Set}
+import gleam/set.{type Set}
 
 pub fn solve(puzzle: String) -> Result(Map(String, Int), Nil) {
   let #(coefficients, leading_digits) = parse_puzzle(puzzle)

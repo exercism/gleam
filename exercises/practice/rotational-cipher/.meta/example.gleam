@@ -1,6 +1,6 @@
 import gleam/string
 import gleam/list
-import gleam/map.{Map}
+import gleam/map.{type Map}
 import gleam/result
 
 fn shift_map(shift_key: Int, text: String) -> Map(String, String) {

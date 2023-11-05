@@ -1,4 +1,4 @@
-import gleam/set.{Set}
+import gleam/set.{type Set}
 
 pub fn new_collection(card: String) -> Set(String) {
   todo

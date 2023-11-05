@@ -1,6 +1,6 @@
 import gleam/bool
 import gleam/list
-import gleam/map.{Map}
+import gleam/map.{type Map}
 
 pub opaque type Set(t) {
   Set(map: Map(t, Bool))

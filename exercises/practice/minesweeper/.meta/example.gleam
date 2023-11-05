@@ -2,7 +2,7 @@ import gleam/string
 import gleam/int
 import gleam/list
 import gleam/pair
-import gleam/map.{Map}
+import gleam/map.{type Map}
 
 type Position {
   Position(Int, Int)

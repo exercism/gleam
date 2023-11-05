@@ -1,4 +1,4 @@
-import gleam/option.{None, Option, Some}
+import gleam/option.{type Option, None, Some}
 import gleam/int
 
 pub type Player {

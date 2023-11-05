@@ -1,4 +1,4 @@
-import gleam/queue.{Queue}
+import gleam/queue.{type Queue}
 
 pub fn insert_top(queue: Queue(Int), card: Int) {
   queue.push_back(queue, card)

@@ -1,6 +1,6 @@
 import exercism/test_runner
 import exercism/should
-import pov.{Tree}
+import pov.{type Tree, Tree}
 import gleam/list
 import gleam/result
 import gleam/string
