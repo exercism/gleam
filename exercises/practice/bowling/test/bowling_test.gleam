@@ -1,6 +1,5 @@
 import bowling.{
-  type Error, Error, Game, GameComplete, GameNotComplete, InvalidPinCount, roll,
-  score,
+  type Error, Game, GameComplete, GameNotComplete, InvalidPinCount, roll, score,
 }
 import exercism/test_runner
 import exercism/should
