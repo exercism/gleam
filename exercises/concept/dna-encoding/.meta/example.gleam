@@ -34,7 +34,7 @@ fn do_encode(dna: List(Nucleotide), acc: BitString) -> BitString {
   case dna {
     [] -> acc
     [nucleotide, ..rest] ->
-      do_encode(rest, <<acc:bit_string, encode_nucleotide(nucleotide):2>>)
+      do_encode(rest, <<acc:bits, encode_nucleotide(nucleotide):2>>)
   }
 }
 
@@ -48,10 +48,10 @@ fn do_decode(
 ) -> Result(List(Nucleotide), Nil) {
   case dna {
     <<>> -> Ok(list.reverse(acc))
-    <<0b00:2, rest:bit_string>> -> do_decode(rest, [Adenine, ..acc])
-    <<0b01:2, rest:bit_string>> -> do_decode(rest, [Cytosine, ..acc])
-    <<0b10:2, rest:bit_string>> -> do_decode(rest, [Guanine, ..acc])
-    <<0b11:2, rest:bit_string>> -> do_decode(rest, [Thymine, ..acc])
+    <<0b00:2, rest:bits>> -> do_decode(rest, [Adenine, ..acc])
+    <<0b01:2, rest:bits>> -> do_decode(rest, [Cytosine, ..acc])
+    <<0b10:2, rest:bits>> -> do_decode(rest, [Guanine, ..acc])
+    <<0b11:2, rest:bits>> -> do_decode(rest, [Thymine, ..acc])
     _ -> Error(Nil)
   }
 }

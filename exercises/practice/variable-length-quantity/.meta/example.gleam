@@ -36,9 +36,8 @@ fn do_decode(string: BitString, acc: Int) -> Result(List(Int), Error) {
   case string {
     <<>> -> Ok([])
     <<1:1, _:7>> -> Error(IncompleteSequence)
-    <<1:1, large_bits:7, rest:bit_string>> ->
-      do_decode(rest, 128 * acc + large_bits)
-    <<0:1, last_bits:7, rest:bit_string>> -> {
+    <<1:1, large_bits:7, rest:bits>> -> do_decode(rest, 128 * acc + large_bits)
+    <<0:1, last_bits:7, rest:bits>> -> {
       use integers <- result.then(do_decode(rest, 0))
       Ok([128 * acc + last_bits, ..integers])
     }
