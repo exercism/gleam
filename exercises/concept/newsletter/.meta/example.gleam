@@ -20,9 +20,7 @@ pub fn create_log_file(path: String) -> Result(Nil, Nil) {
 }
 
 pub fn log_sent_email(path: String, email: String) -> Result(Nil, Nil) {
-  email
-  |> string.append("\n")
-  |> simplifile.append(path)
+  simplifile.append(path, email <> "\n")
   |> result.nil_error
 }
 
