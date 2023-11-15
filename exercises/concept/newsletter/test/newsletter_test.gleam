@@ -13,7 +13,7 @@ pub fn read_emails_test() {
 thomas@example.com
 sid@example.com
 "
-  let assert Ok(_) = simplifile.write(emails, "emails.txt")
+  let assert Ok(_) = simplifile.write("emails.txt", emails)
   let assert Ok(emails) = newsletter.read_emails("emails.txt")
   emails
   |> should.equal(["lucy@example.com", "thomas@example.com", "sid@example.com"])
@@ -50,7 +50,7 @@ pub fn send_newsletter_test() {
 abdi@example.com
 bell@example.com
 "
-  let assert Ok(Nil) = simplifile.write(emails, "emails.txt")
+  let assert Ok(Nil) = simplifile.write("emails.txt", emails)
 
   let send_email = fn(email) {
     case email {
