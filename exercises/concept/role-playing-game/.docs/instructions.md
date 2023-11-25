@@ -55,6 +55,6 @@ If the player does not even have a mana pool, attempting to cast the spell must 
 let wizard = Player(name: None, level: 18, health: 123, mana: Some(30))
 let #(wizard, damage) = cast_spell(wizard, 14)
 
-wizard.mana // -> Just 16
+wizard.mana // -> Some 16
 damage      // -> 28
 ```
