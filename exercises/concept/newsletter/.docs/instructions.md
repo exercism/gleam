@@ -2,6 +2,8 @@
 
 Boris is a big model train enthusiast and has decided to share their passion with the world by starting a newsletter. They'll start by sending the first issue of the newsletter to friends and acquaintances that share the hobby, their email addresses are stored in a text file.
 
+Hint: Use the [simplifile](https://hexdocs.pm/simplifile/simplifile.html) module for file operations.
+
 ## 1. Read email addresses from a file
 
 Implement the `read_emails` function. It takes a path string to a text file that contains email addresses separated by newlines, and returns a list of the email addresses from the file.
