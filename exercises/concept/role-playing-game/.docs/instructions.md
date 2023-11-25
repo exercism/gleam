@@ -50,6 +50,7 @@ It returns the updated player, as well as the amount of damage that the cast spe
 A successful spell cast does damage equal to two times the mana cost of the spell.
 However, if the player has insufficient mana, nothing happens, the player is unchanged and no damage is done.
 If the player does not even have a mana pool, attempting to cast the spell must decrease their health by the mana cost of the spell and does no damage.
+Be aware that the players health cannot be below zero (0).
 
 ```gleam
 let wizard = Player(name: None, level: 18, health: 123, mana: Some(30))
