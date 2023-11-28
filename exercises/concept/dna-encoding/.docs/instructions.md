@@ -32,16 +32,16 @@ decode_nucleotide(0b01)
 
 ## 3. Encode a DNA list
 
-Implement `encode` to accept a list of nucleotides and return a bit string of the encoded data.
+Implement `encode` to accept a list of nucleotides and return a bit array of the encoded data.
 
 ```gleam
 encode([Adenine, Cytosine, Guanine, Thymine])
 // -> <<27>>
 ```
 
-## 4. Decode a DNA bitstring
+## 4. Decode a DNA bit array
 
-Implement `decode` to accept a bit string representing nucleic acid and return the decoded data as a charlist.
+Implement `decode` to accept a bit array representing nucleic acid and return the decoded data as a list of nucleotides.
 
 ```gleam
 decode(<<27>>)
