@@ -17,7 +17,7 @@ new_collection("Newthree")
 
 ## 2. Grow the collection
 
-Once you have a collection, it takes a life of its owm and must grow.
+Once you have a collection, it takes a life of its own and must grow.
 
 Implement `add_card`, which takes a card and a collection, and returns a tuple with two values: a `Bool` that indicates if the card was already in the collection, and the collection with the card added.
 
