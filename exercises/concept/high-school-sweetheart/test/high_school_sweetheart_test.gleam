@@ -36,7 +36,7 @@ pub fn initials_test() {
   |> should.equal("L. M.")
 }
 
-pub fn paid_test() {
+pub fn pair_test() {
   high_school_sweetheart.pair("Avery Bryant", "Charlie Dixon")
   |> should.equal(
     "
