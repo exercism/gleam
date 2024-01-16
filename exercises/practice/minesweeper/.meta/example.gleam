@@ -30,7 +30,7 @@ fn parse(minefield: String) -> Dict(Position, Cell) {
     |> list.index_map(fn(char, col) {
       case char {
         "_" -> #(Position(row, col), Empty)
-        "*" -> #(Position(row, col), Bomb)
+        _star -> #(Position(row, col), Bomb)
       }
     })
   })

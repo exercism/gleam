@@ -1,4 +1,4 @@
-import gleam/bit_string
+import gleam/bit_array
 import gleam/list
 import gleam/result
 
@@ -6,13 +6,13 @@ pub type Error {
   IncompleteSequence
 }
 
-pub fn encode(integers: List(Int)) -> BitString {
+pub fn encode(integers: List(Int)) -> BitArray {
   integers
   |> list.map(encode_one(_, True))
-  |> bit_string.concat
+  |> bit_array.concat
 }
 
-fn encode_one(integer: Int, is_first_call: Bool) -> BitString {
+fn encode_one(integer: Int, is_first_call: Bool) -> BitArray {
   let leading_bit = case is_first_call {
     True -> 0
     False -> 1
@@ -25,14 +25,14 @@ fn encode_one(integer: Int, is_first_call: Bool) -> BitString {
     0 -> <<>>
     large_bits -> encode_one(large_bits, False)
   }
-  bit_string.append(larger_bytes, small_byte)
+  bit_array.append(larger_bytes, small_byte)
 }
 
-pub fn decode(string: BitString) -> Result(List(Int), Error) {
+pub fn decode(string: BitArray) -> Result(List(Int), Error) {
   do_decode(string, 0)
 }
 
-fn do_decode(string: BitString, acc: Int) -> Result(List(Int), Error) {
+fn do_decode(string: BitArray, acc: Int) -> Result(List(Int), Error) {
   case string {
     <<>> -> Ok([])
     <<1:1, _:7>> -> Error(IncompleteSequence)

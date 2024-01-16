@@ -22,5 +22,6 @@ pub fn do_translate(letters: List(String), consonants: String) -> String {
     ["y", ..tail] if consonants != "" ->
       "y" <> consonants <> string.concat(tail) <> "ay"
     [hd, ..tail] -> do_translate(tail, consonants <> hd)
+    _ -> string.concat(letters)
   }
 }
