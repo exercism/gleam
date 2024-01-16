@@ -12,7 +12,7 @@ pub fn decode(ciphertext ciphertext: String, key key: String) -> String {
 }
 
 pub fn generate_key() -> String {
-  iterator.repeatedly(fn() { int.random(0, alphabet_length) })
+  iterator.repeatedly(fn() { int.random(alphabet_length) })
   |> iterator.map(fn(shift) { string.utf_codepoint(min_int_code_point + shift) })
   |> iterator.take(up_to: 100)
   |> iterator.to_list()

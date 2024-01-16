@@ -86,7 +86,7 @@ fn ones(number: Int) -> String {
     16 -> "sixteen"
     17 -> "seventeen"
     18 -> "eighteen"
-    19 -> "nineteen"
+    _19 -> "nineteen"
   }
 }
 
@@ -99,6 +99,6 @@ fn tens(number: Int) -> String {
     6 -> "sixty"
     7 -> "seventy"
     8 -> "eighty"
-    9 -> "ninety"
+    _9 -> "ninety"
   }
 }

@@ -27,6 +27,6 @@ fn verse(number: Int) -> String {
     9 -> "priest all shaven and shorn that married"
     10 -> "rooster that crowed in the morn that woke"
     11 -> "farmer sowing his corn that kept"
-    12 -> "horse and the hound and the horn that belonged to"
+    _12 -> "horse and the hound and the horn that belonged to"
   }
 }
