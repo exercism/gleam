@@ -21,10 +21,9 @@ fn parse_puzzle(puzzle: String) -> #(Dict(String, Int), Set(String)) {
 
   let coefficients =
     terms
-    |> list.fold(
-      from: dict.new(),
-      with: fn(coefficients, term) { add_term(coefficients, term, int.add) },
-    )
+    |> list.fold(from: dict.new(), with: fn(coefficients, term) {
+      add_term(coefficients, term, int.add)
+    })
     |> add_term(right, int.subtract)
 
   let leading_digits =
@@ -43,18 +42,11 @@ fn add_term(
   term
   |> string.to_graphemes
   |> list.reverse
-  |> list.index_fold(
-    from: coefficients,
-    with: fn(coefficients, letter, index) {
-      dict.update(
-        coefficients,
-        letter,
-        fn(maybe_coeff) {
-          operator(option.unwrap(maybe_coeff, 0), pow(10, index))
-        },
-      )
-    },
-  )
+  |> list.index_fold(from: coefficients, with: fn(coefficients, letter, index) {
+    dict.update(coefficients, letter, fn(maybe_coeff) {
+      operator(option.unwrap(maybe_coeff, 0), pow(10, index))
+    })
+  })
 }
 
 fn pow(base: Int, exp: Int) -> Int {
@@ -77,25 +69,22 @@ fn solve_puzzle(
       possible_values
       |> maybe_remove_zero(letter, leading_digits)
       |> set.to_list
-      |> list.fold_until(
-        from: Error(Nil),
-        with: fn(_, value) {
-          let possible_values = set.delete(possible_values, value)
-          let current_guess = dict.insert(current_guess, letter, value)
-          case
-            solve_puzzle(
-              rest,
-              possible_values,
-              current_guess,
-              coefficients,
-              leading_digits,
-            )
-          {
-            Ok(solution) -> list.Stop(Ok(solution))
-            Error(Nil) -> list.Continue(Error(Nil))
-          }
-        },
-      )
+      |> list.fold_until(from: Error(Nil), with: fn(_, value) {
+        let possible_values = set.delete(possible_values, value)
+        let current_guess = dict.insert(current_guess, letter, value)
+        case
+          solve_puzzle(
+            rest,
+            possible_values,
+            current_guess,
+            coefficients,
+            leading_digits,
+          )
+        {
+          Ok(solution) -> list.Stop(Ok(solution))
+          Error(Nil) -> list.Continue(Error(Nil))
+        }
+      })
   }
 }
 
@@ -115,14 +104,10 @@ fn is_solution(
   coefficients: Dict(String, Int),
 ) -> Result(Dict(String, Int), Nil) {
   let sum =
-    dict.fold(
-      over: current_guess,
-      from: 0,
-      with: fn(sum, letter, value) {
-        let assert Ok(coeff) = dict.get(coefficients, letter)
-        sum + coeff * value
-      },
-    )
+    dict.fold(over: current_guess, from: 0, with: fn(sum, letter, value) {
+      let assert Ok(coeff) = dict.get(coefficients, letter)
+      sum + coeff * value
+    })
   case sum == 0 {
     True -> Ok(current_guess)
     False -> Error(Nil)

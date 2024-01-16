@@ -99,8 +99,9 @@ pub fn students_are_sorted_by_grades_and_then_by_name_in_the_roster_test() {
   |> result.then(grade_school.add(to: _, student: "Jim", grade: 3))
   |> result.then(grade_school.add(to: _, student: "Charlie", grade: 1))
   |> result.map(grade_school.roster)
-  |> should.equal(Ok(["Anna",
-    "Barb", "Charlie", "Alex", "Peter", "Zoe", "Jim"]))
+  |> should.equal(
+    Ok(["Anna", "Barb", "Charlie", "Alex", "Peter", "Zoe", "Jim"]),
+  )
 }
 
 pub fn grade_is_empty_if_no_students_in_the_roster_test() {

@@ -45,10 +45,11 @@ fn tokenize(question: String) -> Result(List(Token), Error) {
 }
 
 fn evaluate(tokens: List(Token)) -> Result(Int, Error) {
-  use [Operand(result)] <- result.then(list.try_fold(
-    tokens,
-    [],
-    fn(previous_tokens: List(Token), current_token: Token) {
+  use [Operand(result)] <- result.then(
+    list.try_fold(tokens, [], fn(
+      previous_tokens: List(Token),
+      current_token: Token,
+    ) {
       case previous_tokens, current_token {
         [], Operand(_) -> Ok([current_token])
 
@@ -62,23 +63,20 @@ fn evaluate(tokens: List(Token)) -> Result(Int, Error) {
 
         _, _ -> Error(SyntaxError)
       }
-    },
-  ))
+    }),
+  )
 
   Ok(result)
 }
 
 fn parse_tokens(chunks: List(String)) -> Result(List(Token), Error) {
   chunks
-  |> list.try_fold(
-    [],
-    fn(tokens: List(Token), chunk: String) {
-      case parse_token(chunk) {
-        Ok(token) -> Ok([token, ..tokens])
-        Error(error) -> Error(error)
-      }
-    },
-  )
+  |> list.try_fold([], fn(tokens: List(Token), chunk: String) {
+    case parse_token(chunk) {
+      Ok(token) -> Ok([token, ..tokens])
+      Error(error) -> Error(error)
+    }
+  })
   |> result.map(list.reverse)
 }
 

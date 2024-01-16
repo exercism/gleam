@@ -30,17 +30,14 @@ const header = "Team                           | MP |  W |  D |  L |  P"
 fn get_team_scores(input: String) -> Dict(String, Score) {
   input
   |> string.split("\n")
-  |> list.fold(
-    from: dict.new(),
-    with: fn(scores, match) {
-      let assert [team_a, team_b, result] = string.split(match, ";")
-      let #(result_a, result_b) = parse_results(result)
+  |> list.fold(from: dict.new(), with: fn(scores, match) {
+    let assert [team_a, team_b, result] = string.split(match, ";")
+    let #(result_a, result_b) = parse_results(result)
 
-      scores
-      |> dict.update(team_a, increase(_, result_a))
-      |> dict.update(team_b, increase(_, result_b))
-    },
-  )
+    scores
+    |> dict.update(team_a, increase(_, result_a))
+    |> dict.update(team_b, increase(_, result_b))
+  })
 }
 
 fn parse_results(result: String) -> #(Result, Result) {

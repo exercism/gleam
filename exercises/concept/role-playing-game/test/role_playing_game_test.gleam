@@ -34,12 +34,9 @@ pub fn reviving_a_low_level_player_resets_its_health_to_100_test() {
 pub fn reviving_a_high_level_player_resets_both_its_health_and_mana_test() {
   Player(name: None, level: 10, health: 0, mana: Some(14))
   |> role_playing_game.revive
-  |> should.equal(Some(Player(
-    name: None,
-    level: 10,
-    health: 100,
-    mana: Some(100),
-  )))
+  |> should.equal(
+    Some(Player(name: None, level: 10, health: 100, mana: Some(100))),
+  )
 }
 
 pub fn cast_spell_causes_damage_of_double_the_mana_test() {

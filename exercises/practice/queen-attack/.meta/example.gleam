@@ -35,7 +35,8 @@ pub fn can_attack(
   let same_diag = row_b - column_b == row_w - column_w
   let same_anti_diag = row_b + column_b == row_w + column_w
 
-  valid_b && valid_w && distinct && {
-    same_row || same_column || same_diag || same_anti_diag
-  }
+  valid_b
+  && valid_w
+  && distinct
+  && { same_row || same_column || same_diag || same_anti_diag }
 }

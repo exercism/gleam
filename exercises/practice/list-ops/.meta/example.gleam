@@ -14,16 +14,12 @@ pub fn concat(lists: List(List(a))) -> List(a) {
 }
 
 pub fn filter(list: List(a), function: fn(a) -> Bool) -> List(a) {
-  foldr(
-    over: list,
-    from: [],
-    with: fn(list, a) {
-      case function(a) {
-        True -> prepend(list, a)
-        False -> list
-      }
-    },
-  )
+  foldr(over: list, from: [], with: fn(list, a) {
+    case function(a) {
+      True -> prepend(list, a)
+      False -> list
+    }
+  })
 }
 
 pub fn length(list: List(a)) -> Int {

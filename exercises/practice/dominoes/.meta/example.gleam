@@ -21,28 +21,27 @@ pub fn can_chain(chain: List(#(Int, Int))) -> Bool {
 
 fn check(chain: List(#(Int, Int))) -> Bool {
   let checked_chain =
-    list.fold_until(
-      chain,
-      queue.new(),
-      fn(acc: queue.Queue(#(Int, Int)), tile) {
-        case queue.pop_back(acc) {
-          Ok(#(last_tile, _)) ->
-            case
-              last_tile.0 == tile.0 || last_tile.0 == tile.1 || last_tile.1 == tile.0 || last_tile.1 == tile.1
-            {
-              True ->
-                acc
-                |> queue.push_back(tile)
-                |> list.Continue
-              False -> list.Stop(acc)
-            }
-          Error(Nil) ->
-            acc
-            |> queue.push_back(tile)
-            |> list.Continue
-        }
-      },
-    )
+    list.fold_until(chain, queue.new(), fn(acc: queue.Queue(#(Int, Int)), tile) {
+      case queue.pop_back(acc) {
+        Ok(#(last_tile, _)) ->
+          case
+            last_tile.0 == tile.0
+            || last_tile.0 == tile.1
+            || last_tile.1 == tile.0
+            || last_tile.1 == tile.1
+          {
+            True ->
+              acc
+              |> queue.push_back(tile)
+              |> list.Continue
+            False -> list.Stop(acc)
+          }
+        Error(Nil) ->
+          acc
+          |> queue.push_back(tile)
+          |> list.Continue
+      }
+    })
 
   case queue.length(checked_chain) == list.length(chain) {
     True ->
