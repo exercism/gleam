@@ -1,28 +1,28 @@
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 import gleam/string
 import gleam/list
 import gleam/int
 import gleam/option
 import gleam/set.{type Set}
 
-pub fn solve(puzzle: String) -> Result(Map(String, Int), Nil) {
+pub fn solve(puzzle: String) -> Result(Dict(String, Int), Nil) {
   let #(coefficients, leading_digits) = parse_puzzle(puzzle)
-  let letters = map.keys(coefficients)
+  let letters = dict.keys(coefficients)
   let values =
     list.range(0, 9)
     |> set.from_list
-  let guess = map.new()
+  let guess = dict.new()
   solve_puzzle(letters, values, guess, coefficients, leading_digits)
 }
 
-fn parse_puzzle(puzzle: String) -> #(Map(String, Int), Set(String)) {
+fn parse_puzzle(puzzle: String) -> #(Dict(String, Int), Set(String)) {
   let assert [left, right] = string.split(puzzle, " == ")
   let terms = string.split(left, " + ")
 
   let coefficients =
     terms
     |> list.fold(
-      from: map.new(),
+      from: dict.new(),
       with: fn(coefficients, term) { add_term(coefficients, term, int.add) },
     )
     |> add_term(right, int.subtract)
@@ -36,17 +36,17 @@ fn parse_puzzle(puzzle: String) -> #(Map(String, Int), Set(String)) {
 }
 
 fn add_term(
-  coefficients: Map(String, Int),
+  coefficients: Dict(String, Int),
   term: String,
   operator: fn(Int, Int) -> Int,
-) -> Map(String, Int) {
+) -> Dict(String, Int) {
   term
   |> string.to_graphemes
   |> list.reverse
   |> list.index_fold(
     from: coefficients,
     with: fn(coefficients, letter, index) {
-      map.update(
+      dict.update(
         coefficients,
         letter,
         fn(maybe_coeff) {
@@ -67,10 +67,10 @@ fn pow(base: Int, exp: Int) -> Int {
 fn solve_puzzle(
   letters_to_assign: List(String),
   possible_values: Set(Int),
-  current_guess: Map(String, Int),
-  coefficients: Map(String, Int),
+  current_guess: Dict(String, Int),
+  coefficients: Dict(String, Int),
   leading_digits: Set(String),
-) -> Result(Map(String, Int), Nil) {
+) -> Result(Dict(String, Int), Nil) {
   case letters_to_assign {
     [] -> is_solution(current_guess, coefficients)
     [letter, ..rest] ->
@@ -81,7 +81,7 @@ fn solve_puzzle(
         from: Error(Nil),
         with: fn(_, value) {
           let possible_values = set.delete(possible_values, value)
-          let current_guess = map.insert(current_guess, letter, value)
+          let current_guess = dict.insert(current_guess, letter, value)
           case
             solve_puzzle(
               rest,
@@ -111,15 +111,15 @@ fn maybe_remove_zero(
 }
 
 fn is_solution(
-  current_guess: Map(String, Int),
-  coefficients: Map(String, Int),
-) -> Result(Map(String, Int), Nil) {
+  current_guess: Dict(String, Int),
+  coefficients: Dict(String, Int),
+) -> Result(Dict(String, Int), Nil) {
   let sum =
-    map.fold(
+    dict.fold(
       over: current_guess,
       from: 0,
       with: fn(sum, letter, value) {
-        let assert Ok(coeff) = map.get(coefficients, letter)
+        let assert Ok(coeff) = dict.get(coefficients, letter)
         sum + coeff * value
       },
     )

@@ -20,129 +20,117 @@ pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_can_reroot_a_tree_wi
     "x",
   )
   |> result.map(normalize)
-  |> should.equal(Ok(Tree(
-    label: "x",
-    children: [Tree(label: "parent", children: [Tree("sibling", [])])],
-  )))
+  |> should.equal(
+    Ok(
+      Tree(label: "x", children: [
+        Tree(label: "parent", children: [Tree("sibling", [])]),
+      ]),
+    ),
+  )
 }
 
 pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_can_reroot_a_tree_with_a_parent_and_many_siblings_test() {
   pov.from_pov(
-    Tree(
-      label: "parent",
-      children: [Tree("a", []), Tree("b", []), Tree("c", []), Tree("x", [])],
-    ),
+    Tree(label: "parent", children: [
+      Tree("a", []),
+      Tree("b", []),
+      Tree("c", []),
+      Tree("x", []),
+    ]),
     "x",
   )
   |> result.map(normalize)
-  |> should.equal(Ok(Tree(
-    label: "x",
-    children: [
-      Tree(
-        label: "parent",
-        children: [Tree("a", []), Tree("b", []), Tree("c", [])],
-      ),
-    ],
-  )))
+  |> should.equal(
+    Ok(
+      Tree(label: "x", children: [
+        Tree(label: "parent", children: [
+          Tree("a", []),
+          Tree("b", []),
+          Tree("c", []),
+        ]),
+      ]),
+    ),
+  )
 }
 
 pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_can_reroot_a_tree_with_new_root_deeply_nested_in_tree_test() {
   pov.from_pov(
-    Tree(
-      label: "level-0",
-      children: [
-        Tree(
-          label: "level-1",
-          children: [
-            Tree(
-              label: "level-2",
-              children: [Tree(label: "level-3", children: [Tree("x", [])])],
-            ),
-          ],
-        ),
-      ],
-    ),
+    Tree(label: "level-0", children: [
+      Tree(label: "level-1", children: [
+        Tree(label: "level-2", children: [
+          Tree(label: "level-3", children: [Tree("x", [])]),
+        ]),
+      ]),
+    ]),
     "x",
   )
   |> result.map(normalize)
-  |> should.equal(Ok(Tree(
-    label: "x",
-    children: [
-      Tree(
-        label: "level-3",
-        children: [
-          Tree(
-            label: "level-2",
-            children: [Tree(label: "level-1", children: [Tree("level-0", [])])],
-          ),
-        ],
-      ),
-    ],
-  )))
+  |> should.equal(
+    Ok(
+      Tree(label: "x", children: [
+        Tree(label: "level-3", children: [
+          Tree(label: "level-2", children: [
+            Tree(label: "level-1", children: [Tree("level-0", [])]),
+          ]),
+        ]),
+      ]),
+    ),
+  )
 }
 
 pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_moves_children_of_the_new_root_to_same_level_as_former_parent_test() {
   pov.from_pov(
-    Tree(
-      label: "parent",
-      children: [
-        Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
-      ],
-    ),
+    Tree(label: "parent", children: [
+      Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
+    ]),
     "x",
   )
   |> result.map(normalize)
-  |> should.equal(Ok(Tree(
-    label: "x",
-    children: [Tree("kid-0", []), Tree("kid-1", []), Tree("parent", [])],
-  )))
+  |> should.equal(
+    Ok(
+      Tree(label: "x", children: [
+        Tree("kid-0", []),
+        Tree("kid-1", []),
+        Tree("parent", []),
+      ]),
+    ),
+  )
 }
 
 pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_can_reroot_a_complex_tree_with_cousins_test() {
   pov.from_pov(
-    Tree(
-      label: "grandparent",
-      children: [
-        Tree(
-          label: "parent",
-          children: [
-            Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
-            Tree("sibling-0", []),
-            Tree("sibling-1", []),
-          ],
-        ),
-        Tree(
-          label: "uncle",
-          children: [Tree("cousin-0", []), Tree("cousin-1", [])],
-        ),
-      ],
-    ),
+    Tree(label: "grandparent", children: [
+      Tree(label: "parent", children: [
+        Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
+        Tree("sibling-0", []),
+        Tree("sibling-1", []),
+      ]),
+      Tree(label: "uncle", children: [
+        Tree("cousin-0", []),
+        Tree("cousin-1", []),
+      ]),
+    ]),
     "x",
   )
   |> result.map(normalize)
-  |> should.equal(Ok(Tree(
-    label: "x",
-    children: [
-      Tree("kid-0", []),
-      Tree("kid-1", []),
-      Tree(
-        label: "parent",
-        children: [
-          Tree(
-            label: "grandparent",
-            children: [
-              Tree(
-                label: "uncle",
-                children: [Tree("cousin-0", []), Tree("cousin-1", [])],
-              ),
-            ],
-          ),
+  |> should.equal(
+    Ok(
+      Tree(label: "x", children: [
+        Tree("kid-0", []),
+        Tree("kid-1", []),
+        Tree(label: "parent", children: [
+          Tree(label: "grandparent", children: [
+            Tree(label: "uncle", children: [
+              Tree("cousin-0", []),
+              Tree("cousin-1", []),
+            ]),
+          ]),
           Tree("sibling-0", []),
           Tree("sibling-1", []),
-        ],
-      ),
-    ],
-  )))
+        ]),
+      ]),
+    ),
+  )
 }
 
 pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_errors_if_target_does_not_exist_in_a_singleton_tree_test() {
@@ -152,14 +140,11 @@ pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_errors_if_target_doe
 
 pub fn reroot_a_tree_so_that_its_root_is_the_specified_node_errors_if_target_does_not_exist_in_a_large_tree_test() {
   pov.from_pov(
-    Tree(
-      label: "parent",
-      children: [
-        Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
-        Tree("sibling-0", []),
-        Tree("sibling-1", []),
-      ],
-    ),
+    Tree(label: "parent", children: [
+      Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
+      Tree("sibling-0", []),
+      Tree("sibling-1", []),
+    ]),
     "nonexistent",
   )
   |> should.equal(Error(Nil))
@@ -176,10 +161,12 @@ pub fn given_two_nodes_find_the_path_between_them_can_find_path_to_parent_test()
 
 pub fn given_two_nodes_find_the_path_between_them_can_find_path_to_sibling_test() {
   pov.path_to(
-    tree: Tree(
-      label: "parent",
-      children: [Tree("a", []), Tree("x", []), Tree("b", []), Tree("c", [])],
-    ),
+    tree: Tree(label: "parent", children: [
+      Tree("a", []),
+      Tree("x", []),
+      Tree("b", []),
+      Tree("c", []),
+    ]),
     from: "x",
     to: "b",
   )
@@ -188,23 +175,17 @@ pub fn given_two_nodes_find_the_path_between_them_can_find_path_to_sibling_test(
 
 pub fn given_two_nodes_find_the_path_between_them_can_find_path_to_cousin_test() {
   pov.path_to(
-    tree: Tree(
-      label: "grandparent",
-      children: [
-        Tree(
-          label: "parent",
-          children: [
-            Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
-            Tree("sibling-0", []),
-            Tree("sibling-1", []),
-          ],
-        ),
-        Tree(
-          label: "uncle",
-          children: [Tree("cousin-0", []), Tree("cousin-1", [])],
-        ),
-      ],
-    ),
+    tree: Tree(label: "grandparent", children: [
+      Tree(label: "parent", children: [
+        Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
+        Tree("sibling-0", []),
+        Tree("sibling-1", []),
+      ]),
+      Tree(label: "uncle", children: [
+        Tree("cousin-0", []),
+        Tree("cousin-1", []),
+      ]),
+    ]),
     from: "x",
     to: "cousin-1",
   )
@@ -213,19 +194,13 @@ pub fn given_two_nodes_find_the_path_between_them_can_find_path_to_cousin_test()
 
 pub fn given_two_nodes_find_the_path_between_them_can_find_path_not_involving_root_test() {
   pov.path_to(
-    tree: Tree(
-      label: "grandparent",
-      children: [
-        Tree(
-          label: "parent",
-          children: [
-            Tree("x", []),
-            Tree("sibling-0", []),
-            Tree("sibling-1", []),
-          ],
-        ),
-      ],
-    ),
+    tree: Tree(label: "grandparent", children: [
+      Tree(label: "parent", children: [
+        Tree("x", []),
+        Tree("sibling-0", []),
+        Tree("sibling-1", []),
+      ]),
+    ]),
     from: "x",
     to: "sibling-1",
   )
@@ -234,10 +209,12 @@ pub fn given_two_nodes_find_the_path_between_them_can_find_path_not_involving_ro
 
 pub fn given_two_nodes_find_the_path_between_them_can_find_path_from_nodes_other_than_x_test() {
   pov.path_to(
-    tree: Tree(
-      label: "parent",
-      children: [Tree("a", []), Tree("x", []), Tree("b", []), Tree("c", [])],
-    ),
+    tree: Tree(label: "parent", children: [
+      Tree("a", []),
+      Tree("x", []),
+      Tree("b", []),
+      Tree("c", []),
+    ]),
     from: "a",
     to: "c",
   )
@@ -246,14 +223,11 @@ pub fn given_two_nodes_find_the_path_between_them_can_find_path_from_nodes_other
 
 pub fn given_two_nodes_find_the_path_between_them_errors_if_destination_does_not_exist_test() {
   pov.path_to(
-    tree: Tree(
-      label: "parent",
-      children: [
-        Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
-        Tree("sibling-0", []),
-        Tree("sibling-1", []),
-      ],
-    ),
+    tree: Tree(label: "parent", children: [
+      Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
+      Tree("sibling-0", []),
+      Tree("sibling-1", []),
+    ]),
     from: "x",
     to: "nonexistent",
   )
@@ -262,14 +236,11 @@ pub fn given_two_nodes_find_the_path_between_them_errors_if_destination_does_not
 
 pub fn given_two_nodes_find_the_path_between_them_errors_if_source_does_not_exist_test() {
   pov.path_to(
-    tree: Tree(
-      label: "parent",
-      children: [
-        Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
-        Tree("sibling-0", []),
-        Tree("sibling-1", []),
-      ],
-    ),
+    tree: Tree(label: "parent", children: [
+      Tree(label: "x", children: [Tree("kid-0", []), Tree("kid-1", [])]),
+      Tree("sibling-0", []),
+      Tree("sibling-1", []),
+    ]),
     from: "nonexistent",
     to: "x",
   )

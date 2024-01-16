@@ -1,5 +1,5 @@
 import gleam/list
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 import gleam/string
 import gleam/result
 
@@ -35,7 +35,7 @@ pub fn winner(board: String) -> Result(Player, Nil) {
   }
 }
 
-fn parse(rows: List(String)) -> Map(Position, Player) {
+fn parse(rows: List(String)) -> Dict(Position, Player) {
   rows
   |> list.index_map(fn(row, line) {
     line
@@ -50,25 +50,25 @@ fn parse(rows: List(String)) -> Map(Position, Player) {
     |> list.flatten
   })
   |> list.flatten
-  |> map.from_list
+  |> dict.from_list
 }
 
-fn o_wins(board: Map(Position, Player), size: Size) -> Result(Player, Nil) {
+fn o_wins(board: Dict(Position, Player), size: Size) -> Result(Player, Nil) {
   let start_positions =
-    map.filter(board, fn(pos, player) { player == O && pos.row == 0 })
+    dict.filter(board, fn(pos, player) { player == O && pos.row == 0 })
 
   let end_positions =
-    map.filter(
+    dict.filter(
       board,
       fn(pos, player) { player == O && pos.row == size.rows - 1 },
     )
 
-  case map.size(start_positions) > 0 && map.size(end_positions) > 0 {
+  case dict.size(start_positions) > 0 && dict.size(end_positions) > 0 {
     False -> Error(Nil)
     True ->
       traverse_board(
         board,
-        map.keys(start_positions),
+        dict.keys(start_positions),
         start_positions,
         end_positions,
         O,
@@ -76,24 +76,24 @@ fn o_wins(board: Map(Position, Player), size: Size) -> Result(Player, Nil) {
   }
 }
 
-fn x_wins(board: Map(Position, Player), size: Size) -> Result(Player, Nil) {
+fn x_wins(board: Dict(Position, Player), size: Size) -> Result(Player, Nil) {
   let start_positions =
-    map.filter(board, fn(pos, player) { player == X && pos.row == pos.column })
+    dict.filter(board, fn(pos, player) { player == X && pos.row == pos.column })
 
   let end_positions =
-    map.filter(
+    dict.filter(
       board,
       fn(pos, player) {
         player == X && pos.column - pos.row == 2 * size.columns - 2
       },
     )
 
-  case map.size(start_positions) > 0 && map.size(end_positions) > 0 {
+  case dict.size(start_positions) > 0 && dict.size(end_positions) > 0 {
     False -> Error(Nil)
     True ->
       traverse_board(
         board,
-        map.keys(start_positions),
+        dict.keys(start_positions),
         start_positions,
         end_positions,
         X,
@@ -102,28 +102,28 @@ fn x_wins(board: Map(Position, Player), size: Size) -> Result(Player, Nil) {
 }
 
 fn traverse_board(
-  board: Map(Position, Player),
+  board: Dict(Position, Player),
   current: List(Position),
-  explored: Map(Position, Player),
-  target: Map(Position, Player),
+  explored: Dict(Position, Player),
+  target: Dict(Position, Player),
   player: Player,
 ) -> Result(Player, Nil) {
   case current {
     [] -> Error(Nil)
     [position, ..rest] ->
-      case map.has_key(target, position) {
+      case dict.has_key(target, position) {
         True -> Ok(player)
         False -> {
           let next_positions =
             board
             |> get_next_positions(position, player)
-            |> list.filter(fn(pos) { !map.has_key(explored, pos) })
+            |> list.filter(fn(pos) { !dict.has_key(explored, pos) })
 
           let explored =
             list.fold(
               over: next_positions,
               from: explored,
-              with: fn(explored, pos) { map.insert(explored, pos, player) },
+              with: fn(explored, pos) { dict.insert(explored, pos, player) },
             )
           traverse_board(
             board,
@@ -138,7 +138,7 @@ fn traverse_board(
 }
 
 fn get_next_positions(
-  board: Map(Position, Player),
+  board: Dict(Position, Player),
   position: Position,
   player: Player,
 ) -> List(Position) {
@@ -152,5 +152,5 @@ fn get_next_positions(
     Position(row - 1, col - 1),
   ]
 
-  list.filter(neighbors, fn(pos) { map.get(board, pos) == Ok(player) })
+  list.filter(neighbors, fn(pos) { dict.get(board, pos) == Ok(player) })
 }

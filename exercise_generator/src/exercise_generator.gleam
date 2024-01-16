@@ -1,5 +1,5 @@
 import gleam/io
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 import gleam/function
 import gleam/list
 import gleam/int
@@ -28,7 +28,7 @@ type TestData {
     reimplements: Result(String, Nil),
     description: String,
     function: String,
-    input: Map(String, JsonData),
+    input: Dict(String, JsonData),
     expected: JsonData,
   )
 }
@@ -54,7 +54,7 @@ type JsonData {
   JsonFloat(Float)
   JsonString(String)
   JsonList(List(JsonData))
-  JsonObject(Map(String, JsonData))
+  JsonObject(Dict(String, JsonData))
 }
 
 fn json_data_to_gleam_type(data: JsonData) -> String {
@@ -83,7 +83,7 @@ fn json_data_to_gleam_value(data: JsonData) -> String {
     JsonObject(map) -> {
       let args =
         map
-        |> map.to_list
+        |> dict.to_list
         |> list.map(fn(arg) {
           clean_variable(arg.0) <> ": " <> json_data_to_gleam_value(arg.1)
         })
@@ -105,11 +105,11 @@ fn have_same_type(a: JsonData, b: JsonData) -> Bool {
     JsonObject(x), JsonObject(y) -> {
       let x: List(#(String, JsonData)) =
         x
-        |> map.to_list
+        |> dict.to_list
         |> list.sort(fn(a, b) { string.compare(a.0, b.0) })
       let y: List(#(String, JsonData)) =
         y
-        |> map.to_list
+        |> dict.to_list
         |> list.sort(fn(a, b) { string.compare(a.0, b.0) })
       let comparaison =
         list.strict_zip(x, y)
@@ -181,7 +181,7 @@ fn write_solution_files(
 
   let content =
     functions
-    |> map.to_list
+    |> dict.to_list
     |> list.sort(by: fn(a, b) { int.compare({ a.1 }.order, { b.1 }.order) })
     |> list.map(fn(item) {
       let #(name, Function(arguments, return_type, can_error, need_labels, _)) =
@@ -215,7 +215,13 @@ fn write_solution_files(
         })
         |> string.join(", ")
 
-      "pub fn " <> clean_variable(name) <> "(" <> args <> ") -> " <> return <> " {\n todo \n}"
+      "pub fn "
+      <> clean_variable(name)
+      <> "("
+      <> args
+      <> ") -> "
+      <> return
+      <> " {\n todo \n}"
     })
     |> string.join("\n")
 
@@ -237,14 +243,14 @@ fn write_solution_files(
   let assert Ok(Nil) = file.write(content, example_path)
 }
 
-fn functions_to_implement(test_cases: List(TestCase)) -> Map(String, Function) {
-  list.fold(over: test_cases, from: map.new(), with: check_test_case)
+fn functions_to_implement(test_cases: List(TestCase)) -> Dict(String, Function) {
+  list.fold(over: test_cases, from: dict.new(), with: check_test_case)
 }
 
 fn check_test_case(
-  functions: Map(String, Function),
+  functions: Dict(String, Function),
   test_case: TestCase,
-) -> Map(String, Function) {
+) -> Dict(String, Function) {
   case test_case {
     TestGroup(cases: cases, ..) ->
       list.fold(over: cases, from: functions, with: check_test_case)
@@ -255,13 +261,13 @@ fn check_test_case(
       ..,
     )) -> {
       let can_error = case expected {
-        JsonObject(object) -> map.has_key(object, "error")
+        JsonObject(object) -> dict.has_key(object, "error")
         _ -> False
       }
 
       let args =
         input
-        |> map.to_list
+        |> dict.to_list
         |> list.map(fn(arg) { Argument(arg.0, arg.1) })
 
       let need_labels = case args {
@@ -272,7 +278,7 @@ fn check_test_case(
         _ -> True
       }
 
-      let current_function = case map.get(functions, function) {
+      let current_function = case dict.get(functions, function) {
         Ok(func) -> {
           let func =
             Function(..func, need_labels: func.need_labels || need_labels)
@@ -284,10 +290,10 @@ fn check_test_case(
         }
 
         Error(Nil) ->
-          Function(args, expected, can_error, need_labels, map.size(functions))
+          Function(args, expected, can_error, need_labels, dict.size(functions))
       }
 
-      map.insert(functions, function, current_function)
+      dict.insert(functions, function, current_function)
     }
   }
 }
@@ -334,7 +340,7 @@ fn print_comments(comments: List(String)) -> String {
 fn print_tests(
   slug: String,
   prefix: String,
-  functions: Map(String, Function),
+  functions: Dict(String, Function),
   tests: List(TestCase),
 ) -> String {
   tests
@@ -345,7 +351,7 @@ fn print_tests(
 fn print_test(
   slug: String,
   prefix: String,
-  functions: Map(String, Function),
+  functions: Dict(String, Function),
   test: TestCase,
 ) -> String {
   case test {
@@ -368,7 +374,9 @@ fn print_test(
           [
             "This test reimplements the test with uuid " <> uuid,
             "Please identify that test and remove it. Link:",
-            "https://github.com/exercism/problem-specifications/blob/main/exercises/" <> slug <> "/canonical-data.json",
+            "https://github.com/exercism/problem-specifications/blob/main/exercises/"
+            <> slug
+            <> "/canonical-data.json",
           ]
           |> list.append(comments)
           |> print_comments()
@@ -376,10 +384,10 @@ fn print_test(
       }
       let test_name = flatten_description(prefix <> description)
       let assert Ok(Function(need_labels: need_labels, ..)) =
-        map.get(functions, function)
+        dict.get(functions, function)
       let input =
         input
-        |> map.to_list
+        |> dict.to_list
         |> list.map(fn(item) {
           case need_labels {
             True ->
@@ -424,14 +432,14 @@ fn flatten_description(description: String) -> String {
 
 fn get_expected_value(
   function: String,
-  functions: Map(String, Function),
+  functions: Dict(String, Function),
   expected: JsonData,
 ) {
-  case map.get(functions, function) {
+  case dict.get(functions, function) {
     Ok(Function(can_error: True, ..)) ->
       case expected {
         JsonObject(map) ->
-          case map.get(map, "error") {
+          case dict.get(map, "error") {
             Ok(value) -> "Error(" <> json_data_to_gleam_value(value) <> ")"
             Error(Nil) -> "Ok(" <> json_data_to_gleam_value(expected) <> ")"
           }

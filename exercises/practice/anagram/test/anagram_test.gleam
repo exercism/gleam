@@ -27,10 +27,9 @@ pub fn detects_anagram_test() {
 }
 
 pub fn detects_three_anagrams_test() {
-  find_anagrams(
-    "allergy",
-    ["gallery", "ballerina", "regally", "clergy", "largely", "leading"],
-  )
+  find_anagrams("allergy", [
+    "gallery", "ballerina", "regally", "clergy", "largely", "leading",
+  ])
   |> should.equal(["gallery", "regally", "largely"])
 }
 

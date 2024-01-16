@@ -1,7 +1,7 @@
 import gleam/list
 import gleam/int
 import gleam/function
-import gleam/map
+import gleam/dict
 import gleam/pair
 
 pub type Category {
@@ -85,7 +85,7 @@ fn score_yacht(dice: List(Int)) -> Int {
 fn dice_with_count(dice: List(Int)) -> List(#(Int, Int)) {
   dice
   |> list.group(function.identity)
-  |> map.map_values(fn(_, matching_dice) { list.length(matching_dice) })
-  |> map.to_list()
+  |> dict.map_values(fn(_, matching_dice) { list.length(matching_dice) })
+  |> dict.to_list()
   |> list.sort(fn(a, b) { int.compare(pair.second(a), pair.second(b)) })
 }

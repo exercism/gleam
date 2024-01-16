@@ -217,39 +217,30 @@ pub fn last_two_strikes_followed_by_only_last_bonus_non_strike_points_test() {
 
 fn roll_and_check_score(rolls: List(Int), correct_score: Int) {
   rolls
-  |> list.fold(
-    Game([]),
-    fn(game, pins) {
-      let assert Ok(new_game) = roll(game, pins)
-      new_game
-    },
-  )
+  |> list.fold(Game([]), fn(game, pins) {
+    let assert Ok(new_game) = roll(game, pins)
+    new_game
+  })
   |> score()
   |> should.equal(Ok(correct_score))
 }
 
 fn roll_and_last_roll_be_error(rolls: List(Int), last_roll: Int, error: Error) {
   rolls
-  |> list.fold(
-    Game([]),
-    fn(game, pins) {
-      let assert Ok(new_game) = roll(game, pins)
-      new_game
-    },
-  )
+  |> list.fold(Game([]), fn(game, pins) {
+    let assert Ok(new_game) = roll(game, pins)
+    new_game
+  })
   |> roll(last_roll)
   |> should.equal(Error(error))
 }
 
 fn roll_and_score_be_error(rolls: List(Int)) {
   rolls
-  |> list.fold(
-    Game([]),
-    fn(game, pins) {
-      let assert Ok(new_game) = roll(game, pins)
-      new_game
-    },
-  )
+  |> list.fold(Game([]), fn(game, pins) {
+    let assert Ok(new_game) = roll(game, pins)
+    new_game
+  })
   |> score()
   |> should.equal(Error(GameNotComplete))
 }

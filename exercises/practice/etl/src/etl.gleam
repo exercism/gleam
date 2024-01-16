@@ -1,5 +1,5 @@
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 
-pub fn transform(legacy: Map(Int, List(String))) -> Map(String, Int) {
+pub fn transform(legacy: Dict(Int, List(String))) -> Dict(String, Int) {
   todo
 }

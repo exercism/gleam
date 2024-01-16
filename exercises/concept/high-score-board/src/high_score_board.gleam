@@ -1,7 +1,7 @@
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 
 pub type ScoreBoard =
-  Map(String, Int)
+  Dict(String, Int)
 
 pub fn create_score_board() -> ScoreBoard {
   todo

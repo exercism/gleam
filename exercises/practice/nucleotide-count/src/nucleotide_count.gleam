@@ -1,5 +1,5 @@
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 
-pub fn nucleotide_count(dna: String) -> Result(Map(String, Int), Nil) {
+pub fn nucleotide_count(dna: String) -> Result(Dict(String, Int), Nil) {
   todo
 }

@@ -310,10 +310,8 @@ pub fn compare_two_clocks_for_equality_clocks_with_negative_hours_and_minutes_te
 
 pub fn compare_two_clocks_for_equality_clocks_with_negative_hours_and_minutes_that_wrap_test() {
   let assert True =
-    clock.create(hour: 18, minute: 7) == clock.create(
-      hour: -54,
-      minute: -11_513,
-    )
+    clock.create(hour: 18, minute: 7)
+    == clock.create(hour: -54, minute: -11_513)
 }
 
 pub fn compare_two_clocks_for_equality_full_clock_and_zeroed_clock_test() {

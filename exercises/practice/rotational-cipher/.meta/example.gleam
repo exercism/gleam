@@ -1,9 +1,9 @@
 import gleam/string
 import gleam/list
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 import gleam/result
 
-fn shift_map(shift_key: Int, text: String) -> Map(String, String) {
+fn shift_map(shift_key: Int, text: String) -> Dict(String, String) {
   let graphemes = string.to_graphemes(text)
   let shifted =
     list.append(
@@ -11,11 +11,11 @@ fn shift_map(shift_key: Int, text: String) -> Map(String, String) {
       list.take(graphemes, shift_key),
     )
   list.zip(graphemes, shifted)
-  |> map.from_list
+  |> dict.from_list
 }
 
-fn shift_letters(shift_key: Int) -> Map(String, String) {
-  map.merge(
+fn shift_letters(shift_key: Int) -> Dict(String, String) {
+  dict.merge(
     shift_map(shift_key, "abcdefghijklmnopqrstuvwxyz"),
     shift_map(shift_key, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
   )
@@ -27,7 +27,7 @@ pub fn rotate(shift_key: Int, text: String) -> String {
   text
   |> string.to_graphemes()
   |> list.map(fn(letter) {
-    map.get(letter_map, letter)
+    dict.get(letter_map, letter)
     |> result.unwrap(letter)
   })
   |> string.concat

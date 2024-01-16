@@ -33,9 +33,9 @@ pub fn change_with_lower_elbonia_coins_test() {
 
 pub fn large_target_values_test() {
   change.find_fewest_coins([1, 2, 5, 10, 20, 50, 100], 999)
-  |> should.equal(Ok([
-    2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100,
-  ]))
+  |> should.equal(
+    Ok([2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100]),
+  )
 }
 
 pub fn possible_change_without_unit_coins_available_test() {

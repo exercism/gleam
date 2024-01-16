@@ -1,5 +1,5 @@
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 
-pub fn count_words(input: String) -> Map(String, Int) {
+pub fn count_words(input: String) -> Dict(String, Int) {
   todo
 }

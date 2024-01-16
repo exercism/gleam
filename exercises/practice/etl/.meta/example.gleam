@@ -1,17 +1,17 @@
 import gleam/string
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 import gleam/list
 
-pub fn transform(legacy: Map(Int, List(String))) -> Map(String, Int) {
-  map.fold(
+pub fn transform(legacy: Dict(Int, List(String))) -> Dict(String, Int) {
+  dict.fold(
     over: legacy,
-    from: map.new(),
+    from: dict.new(),
     with: fn(transformed, score, letters) {
       list.fold(
         over: letters,
         from: transformed,
         with: fn(transformed, letter) {
-          map.insert(transformed, string.lowercase(letter), score)
+          dict.insert(transformed, string.lowercase(letter), score)
         },
       )
     },

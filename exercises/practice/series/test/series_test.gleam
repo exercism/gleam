@@ -39,9 +39,9 @@ pub fn slices_can_include_duplicates_test() {
 pub fn slices_of_a_long_series_test() {
   "918493904243"
   |> series.slices(5)
-  |> should.equal(Ok([
-    "91849", "18493", "84939", "49390", "93904", "39042", "90424", "04243",
-  ]))
+  |> should.equal(
+    Ok(["91849", "18493", "84939", "49390", "93904", "39042", "90424", "04243"]),
+  )
 }
 
 pub fn slice_length_is_too_large_test() {
