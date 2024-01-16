@@ -31,6 +31,6 @@ pub fn busy_days(days: List(Int)) -> Int {
   case days {
     [] -> 0
     [today, ..rest] if today > 4 -> busy_days(rest) + 1
-    [today, ..rest] -> busy_days(rest)
+    [_today, ..rest] -> busy_days(rest)
   }
 }
