@@ -68,17 +68,21 @@ pub fn recognizes_110101100_test() {
   |  ||_|  ||_|  |  ||_||_|
                            ",
   )
-  |> should.equal(Ok(List([
-    Digit(1),
-    Digit(1),
-    Digit(0),
-    Digit(1),
-    Digit(0),
-    Digit(1),
-    Digit(1),
-    Digit(0),
-    Digit(0),
-  ])))
+  |> should.equal(
+    Ok(
+      List([
+        Digit(1),
+        Digit(1),
+        Digit(0),
+        Digit(1),
+        Digit(0),
+        Digit(1),
+        Digit(1),
+        Digit(0),
+        Digit(0),
+      ]),
+    ),
+  )
 }
 
 pub fn garbled_numbers_in_a_string_are_replaced_with_test() {
@@ -89,17 +93,21 @@ pub fn garbled_numbers_in_a_string_are_replaced_with_test() {
   |  | _|  ||_|  |  ||_||_|
                            ",
   )
-  |> should.equal(Ok(List([
-    Digit(1),
-    Digit(1),
-    Unknown,
-    Digit(1),
-    Digit(0),
-    Unknown,
-    Digit(1),
-    Unknown,
-    Digit(0),
-  ])))
+  |> should.equal(
+    Ok(
+      List([
+        Digit(1),
+        Digit(1),
+        Unknown,
+        Digit(1),
+        Digit(0),
+        Unknown,
+        Digit(1),
+        Unknown,
+        Digit(0),
+      ]),
+    ),
+  )
 }
 
 pub fn recognizes_2_test() {
@@ -198,18 +206,22 @@ pub fn recognizes_string_of_decimal_numbers_test() {
   ||_  _|  | _||_|  ||_| _||_|
                               ",
   )
-  |> should.equal(Ok(List([
-    Digit(1),
-    Digit(2),
-    Digit(3),
-    Digit(4),
-    Digit(5),
-    Digit(6),
-    Digit(7),
-    Digit(8),
-    Digit(9),
-    Digit(0),
-  ])))
+  |> should.equal(
+    Ok(
+      List([
+        Digit(1),
+        Digit(2),
+        Digit(3),
+        Digit(4),
+        Digit(5),
+        Digit(6),
+        Digit(7),
+        Digit(8),
+        Digit(9),
+        Digit(0),
+      ]),
+    ),
+  )
 }
 
 pub fn numbers_separated_by_empty_lines_are_recognized_lines_are_joined_by_commas_test() {
@@ -228,9 +240,13 @@ pub fn numbers_separated_by_empty_lines_are_recognized_lines_are_joined_by_comma
   ||_| _|
          ",
   )
-  |> should.equal(Ok(List([
-    List([Digit(1), Digit(2), Digit(3)]),
-    List([Digit(4), Digit(5), Digit(6)]),
-    List([Digit(7), Digit(8), Digit(9)]),
-  ])))
+  |> should.equal(
+    Ok(
+      List([
+        List([Digit(1), Digit(2), Digit(3)]),
+        List([Digit(4), Digit(5), Digit(6)]),
+        List([Digit(7), Digit(8), Digit(9)]),
+      ]),
+    ),
+  )
 }

@@ -82,11 +82,9 @@ pub fn folds_reduces_the_given_list_from_the_left_with_a_function_direction_inde
 }
 
 pub fn folds_reduces_the_given_list_from_the_left_with_a_function_direction_dependent_function_applied_to_non_empty_list_test() {
-  list_ops.foldl(
-    with: fn(acc, el) { el /. acc },
-    from: 24.0,
-    over: [1.0, 2.0, 3.0, 4.0],
-  )
+  list_ops.foldl(with: fn(acc, el) { el /. acc }, from: 24.0, over: [
+    1.0, 2.0, 3.0, 4.0,
+  ])
   |> should.equal(64.0)
 }
 
@@ -101,11 +99,9 @@ pub fn folds_reduces_the_given_list_from_the_right_with_a_function_direction_ind
 }
 
 pub fn folds_reduces_the_given_list_from_the_right_with_a_function_direction_dependent_function_applied_to_non_empty_list_test() {
-  list_ops.foldr(
-    with: fn(acc, el) { el /. acc },
-    from: 24.0,
-    over: [1.0, 2.0, 3.0, 4.0],
-  )
+  list_ops.foldr(with: fn(acc, el) { el /. acc }, from: 24.0, over: [
+    1.0, 2.0, 3.0, 4.0,
+  ])
   |> should.equal(9.0)
 }
 

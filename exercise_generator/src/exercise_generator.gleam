@@ -243,7 +243,9 @@ fn write_solution_files(
   let assert Ok(Nil) = file.write(content, example_path)
 }
 
-fn functions_to_implement(test_cases: List(TestCase)) -> Dict(String, Function) {
+fn functions_to_implement(
+  test_cases: List(TestCase),
+) -> Dict(String, Function) {
   list.fold(over: test_cases, from: dict.new(), with: check_test_case)
 }
 

@@ -36,13 +36,10 @@ pub fn score(word word: String) -> Int {
   word
   |> string.lowercase
   |> string.to_graphemes
-  |> list.fold(
-    0,
-    fn(acc, x) {
-      case dict.get(word_values, x) {
-        Ok(value) -> acc + value
-        _ -> acc
-      }
-    },
-  )
+  |> list.fold(0, fn(acc, x) {
+    case dict.get(word_values, x) {
+      Ok(value) -> acc + value
+      _ -> acc
+    }
+  })
 }

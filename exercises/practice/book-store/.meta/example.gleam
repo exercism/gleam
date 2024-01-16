@@ -5,13 +5,10 @@ import gleam/float
 pub fn lowest_price(books: List(Int)) -> Float {
   let assert [a, b, c, d, e] =
     books
-    |> list.fold(
-      [#(1, 0), #(2, 0), #(3, 0), #(4, 0), #(5, 0)],
-      fn(acc, book) {
-        let assert Ok(current) = list.key_find(acc, book)
-        list.key_set(acc, book, current + 1)
-      },
-    )
+    |> list.fold([#(1, 0), #(2, 0), #(3, 0), #(4, 0), #(5, 0)], fn(acc, book) {
+      let assert Ok(current) = list.key_find(acc, book)
+      list.key_set(acc, book, current + 1)
+    })
     |> list.map(fn(item) { item.1 })
     |> list.sort(int.compare)
 

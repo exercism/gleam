@@ -22,13 +22,15 @@ pub fn count_one_of_each_word_test() {
 pub fn multiple_occurrences_of_a_word_test() {
   "one fish two fish red fish blue fish"
   |> word_count.count_words
-  |> should.equal(dict.from_list([
-    #("one", 1),
-    #("fish", 4),
-    #("two", 1),
-    #("red", 1),
-    #("blue", 1),
-  ]))
+  |> should.equal(
+    dict.from_list([
+      #("one", 1),
+      #("fish", 4),
+      #("two", 1),
+      #("red", 1),
+      #("blue", 1),
+    ]),
+  )
 }
 
 pub fn handles_cramped_lists_test() {
@@ -46,13 +48,15 @@ pub fn handles_expanded_lists_test() {
 pub fn ignore_punctuation_test() {
   "car: carpet as java: javascript!!&@$%^&"
   |> word_count.count_words
-  |> should.equal(dict.from_list([
-    #("car", 1),
-    #("carpet", 1),
-    #("as", 1),
-    #("java", 1),
-    #("javascript", 1),
-  ]))
+  |> should.equal(
+    dict.from_list([
+      #("car", 1),
+      #("carpet", 1),
+      #("as", 1),
+      #("java", 1),
+      #("javascript", 1),
+    ]),
+  )
 }
 
 pub fn include_numbers_test() {
@@ -70,44 +74,50 @@ pub fn normalize_case_test() {
 pub fn with_apostrophes_test() {
   "'First: don't laugh. Then: don't cry. You're getting it.'"
   |> word_count.count_words
-  |> should.equal(dict.from_list([
-    #("first", 1),
-    #("don't", 2),
-    #("laugh", 1),
-    #("then", 1),
-    #("cry", 1),
-    #("you're", 1),
-    #("getting", 1),
-    #("it", 1),
-  ]))
+  |> should.equal(
+    dict.from_list([
+      #("first", 1),
+      #("don't", 2),
+      #("laugh", 1),
+      #("then", 1),
+      #("cry", 1),
+      #("you're", 1),
+      #("getting", 1),
+      #("it", 1),
+    ]),
+  )
 }
 
 pub fn with_quotations_test() {
   "Joe can't tell between 'large' and large."
   |> word_count.count_words
-  |> should.equal(dict.from_list([
-    #("joe", 1),
-    #("can't", 1),
-    #("tell", 1),
-    #("between", 1),
-    #("large", 2),
-    #("and", 1),
-  ]))
+  |> should.equal(
+    dict.from_list([
+      #("joe", 1),
+      #("can't", 1),
+      #("tell", 1),
+      #("between", 1),
+      #("large", 2),
+      #("and", 1),
+    ]),
+  )
 }
 
 pub fn substrings_from_the_beginning_test() {
   "Joe can't tell between app, apple and a."
   |> word_count.count_words
-  |> should.equal(dict.from_list([
-    #("joe", 1),
-    #("can't", 1),
-    #("tell", 1),
-    #("between", 1),
-    #("app", 1),
-    #("apple", 1),
-    #("and", 1),
-    #("a", 1),
-  ]))
+  |> should.equal(
+    dict.from_list([
+      #("joe", 1),
+      #("can't", 1),
+      #("tell", 1),
+      #("between", 1),
+      #("app", 1),
+      #("apple", 1),
+      #("and", 1),
+      #("a", 1),
+    ]),
+  )
 }
 
 pub fn multiple_spaces_not_detected_as_a_word_test() {

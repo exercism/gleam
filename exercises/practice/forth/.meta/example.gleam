@@ -67,7 +67,10 @@ pub fn format_stack(f: Forth) -> String {
   |> string_builder.to_string
 }
 
-fn tokenise_word(word: String, rest: List(String)) -> #(ForthTok, List(String)) {
+fn tokenise_word(
+  word: String,
+  rest: List(String),
+) -> #(ForthTok, List(String)) {
   case word {
     ":" -> {
       let #([first_word, ..instructions], [_, ..rest]) =
@@ -129,15 +132,12 @@ fn execute_builtin(f: Forth, builtin: String) -> Result(Forth, ForthError) {
     "-" -> binary_op(f, fn(a, b) { Ok(a - b) })
     "*" -> binary_op(f, fn(a, b) { Ok(a * b) })
     "/" ->
-      binary_op(
-        f,
-        fn(a, b) {
-          case b {
-            0 -> Error(DivisionByZero)
-            _ -> Ok(a / b)
-          }
-        },
-      )
+      binary_op(f, fn(a, b) {
+        case b {
+          0 -> Error(DivisionByZero)
+          _ -> Ok(a / b)
+        }
+      })
     "DUP" -> {
       use #(h, rest0) <- result.then(stack_pop(f.stack))
       let stack =

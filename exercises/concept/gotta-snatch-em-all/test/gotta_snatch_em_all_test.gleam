@@ -133,25 +133,27 @@ pub fn total_cards_of_three_collections_test() {
 }
 
 pub fn shiny_cards_with_none_test() {
-  gotta_snatch_em_all.shiny_cards(set.from_list([
-    "Blasturtle", "Zumbat", "Hitmonchuck",
-  ]))
+  gotta_snatch_em_all.shiny_cards(
+    set.from_list(["Blasturtle", "Zumbat", "Hitmonchuck"]),
+  )
   |> should.equal(set.new())
 }
 
 pub fn shiny_cards_with_one_test() {
-  gotta_snatch_em_all.shiny_cards(set.from_list([
-    "Blasturtle", "Shiny Phiswan", "Zumbat", "Hitmonchuck",
-  ]))
+  gotta_snatch_em_all.shiny_cards(
+    set.from_list(["Blasturtle", "Shiny Phiswan", "Zumbat", "Hitmonchuck"]),
+  )
   |> should.equal(set.from_list(["Shiny Phiswan"]))
 }
 
 pub fn shiny_cards_with_many_test() {
-  gotta_snatch_em_all.shiny_cards(set.from_list([
-    "Shiny Hitmonchuck", "Blasturtle", "Shiny Shazam", "Shiny Phiswan", "Zumbat",
-    "Hitmonchuck",
-  ]))
-  |> should.equal(set.from_list([
-    "Shiny Hitmonchuck", "Shiny Phiswan", "Shiny Shazam",
-  ]))
+  gotta_snatch_em_all.shiny_cards(
+    set.from_list([
+      "Shiny Hitmonchuck", "Blasturtle", "Shiny Shazam", "Shiny Phiswan",
+      "Zumbat", "Hitmonchuck",
+    ]),
+  )
+  |> should.equal(
+    set.from_list(["Shiny Hitmonchuck", "Shiny Phiswan", "Shiny Shazam"]),
+  )
 }

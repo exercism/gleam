@@ -4,10 +4,9 @@ import gleam/int
 
 pub fn sum(factors factors: List(Int), limit limit: Int) -> Int {
   factors
-  |> list.fold(
-    from: set.new(),
-    with: fn(multiples, factor) { get_multiples(multiples, factor, limit) },
-  )
+  |> list.fold(from: set.new(), with: fn(multiples, factor) {
+    get_multiples(multiples, factor, limit)
+  })
   |> set.to_list
   |> int.sum
 }

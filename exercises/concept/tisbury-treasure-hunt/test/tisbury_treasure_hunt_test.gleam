@@ -13,18 +13,18 @@ pub fn place_location_to_treasure_location_test() {
 
 pub fn seaside_cottages_is_not_at_1f_test() {
   let assert False =
-    tisbury_treasure_hunt.treasure_location_matches_place_location(
-      #("C", 1),
-      #(1, "F"),
-    )
+    tisbury_treasure_hunt.treasure_location_matches_place_location(#("C", 1), #(
+      1,
+      "F",
+    ))
 }
 
 pub fn aqua_lagoon_is_at_1f_test() {
   let assert True =
-    tisbury_treasure_hunt.treasure_location_matches_place_location(
-      #("F", 1),
-      #(1, "F"),
-    )
+    tisbury_treasure_hunt.treasure_location_matches_place_location(#("F", 1), #(
+      1,
+      "F",
+    ))
 }
 
 pub fn places_should_know_how_many_treasures_are_available_test() {

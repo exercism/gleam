@@ -32,12 +32,16 @@ pub fn add_language_to_custom_list_test() {
 }
 
 pub fn count_languages_on_new_list_test() {
-  tracks_on_tracks_on_tracks.count_languages(tracks_on_tracks_on_tracks.new_list())
+  tracks_on_tracks_on_tracks.count_languages(
+    tracks_on_tracks_on_tracks.new_list(),
+  )
   |> should.equal(0)
 }
 
 pub fn count_languages_on_existing_list_test() {
-  tracks_on_tracks_on_tracks.count_languages(tracks_on_tracks_on_tracks.existing_list())
+  tracks_on_tracks_on_tracks.count_languages(
+    tracks_on_tracks_on_tracks.existing_list(),
+  )
   |> should.equal(3)
 }
 
@@ -52,13 +56,14 @@ pub fn reverse_order_of_new_list_test() {
 }
 
 pub fn reverse_order_of_existing_list_test() {
-  tracks_on_tracks_on_tracks.reverse_list(tracks_on_tracks_on_tracks.existing_list())
+  tracks_on_tracks_on_tracks.reverse_list(
+    tracks_on_tracks_on_tracks.existing_list(),
+  )
   |> should.equal(["TypeScript", "Go", "Gleam"])
 }
 
 pub fn reverse_order_of_custom_list_test() {
-  tracks_on_tracks_on_tracks.reverse_list(["Kotlin",
-    "Java", "Scala", "Clojure"])
+  tracks_on_tracks_on_tracks.reverse_list(["Kotlin", "Java", "Scala", "Clojure"])
   |> should.equal(["Clojure", "Scala", "Java", "Kotlin"])
 }
 

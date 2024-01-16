@@ -34,10 +34,9 @@ pub fn label(colors: List(String)) -> Result(Resistance, Nil) {
     _, _, -1 -> Error(Nil)
     _, _, _ -> {
       let value_string =
-        int.to_string(first_color_val) <> int.to_string(second_color_val) <> string.repeat(
-          "0",
-          multiplier_val,
-        )
+        int.to_string(first_color_val)
+        <> int.to_string(second_color_val)
+        <> string.repeat("0", multiplier_val)
 
       let assert Ok(value) = int.parse(value_string)
 

@@ -15,7 +15,11 @@ pub fn verse(number: Int) -> String {
       |> string.append(", and a Partridge in a Pear Tree")
   }
 
-  "On the " <> day <> " day of Christmas my true love gave to me: " <> gifts <> "."
+  "On the "
+  <> day
+  <> " day of Christmas my true love gave to me: "
+  <> gifts
+  <> "."
 }
 
 pub fn lyrics(from starting_verse: Int, to ending_verse: Int) -> String {
