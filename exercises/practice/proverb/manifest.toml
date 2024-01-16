@@ -2,24 +2,25 @@
 # You typically do not need to edit this file
 
 packages = [
-  { name = "exercism_test_runner", version = "1.6.0", build_tools = ["gleam"], requirements = ["gleam_community_ansi", "gleam_stdlib", "glance", "gap", "simplifile", "gleam_erlang", "gleam_json"], otp_app = "exercism_test_runner", source = "hex", outer_checksum = "265A7F6E032F1B4035E322EAE1AAB8325BC69177C5E57B5C758231471E511A54" },
-  { name = "gap", version = "1.0.1", build_tools = ["gleam"], requirements = ["gleam_community_ansi", "gleam_stdlib"], otp_app = "gap", source = "hex", outer_checksum = "5E369751DB547BFBDA7735878DC04DA31FCA3112193D61D5D7566010C7C8BA98" },
-  { name = "glance", version = "0.8.0", build_tools = ["gleam"], requirements = ["glexer", "gleam_stdlib"], otp_app = "glance", source = "hex", outer_checksum = "C78390EAF236A74CE7E8FD7AB07D1D1A494E6C82415B33BA6BB6923275B9FE3B" },
+  { name = "argv", version = "1.0.1", build_tools = ["gleam"], requirements = [], otp_app = "argv", source = "hex", outer_checksum = "A6E9009E50BBE863EB37D963E4315398D41A3D87D0075480FC244125808F964A" },
+  { name = "exercism_test_runner", version = "1.7.0", build_tools = ["gleam"], requirements = ["simplifile", "argv", "gleam_erlang", "gap", "glance", "gleam_stdlib", "gleam_community_ansi", "gleam_json"], otp_app = "exercism_test_runner", source = "hex", outer_checksum = "2FC1BADB19BEC2AE77BFD2D3A606A014C85412A7B874CAFC4BA8CF04B0B257CD" },
+  { name = "gap", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_community_ansi", "gleam_stdlib"], otp_app = "gap", source = "hex", outer_checksum = "2EE1B0A17E85CF73A0C1D29DA315A2699117A8F549C8E8D89FA8261BE41EDEB1" },
+  { name = "glance", version = "0.8.1", build_tools = ["gleam"], requirements = ["gleam_stdlib", "glexer"], otp_app = "glance", source = "hex", outer_checksum = "C486C920E1865F66A404AAB9A762C4226D95B60AC2C733D175B28C3F0920CE21" },
   { name = "gleam_bitwise", version = "1.3.1", build_tools = ["gleam"], requirements = [], otp_app = "gleam_bitwise", source = "hex", outer_checksum = "B36E1D3188D7F594C7FD4F43D0D2CE17561DE896202017548578B16FE1FE9EFC" },
-  { name = "gleam_community_ansi", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_community_colour", "gleam_stdlib"], otp_app = "gleam_community_ansi", source = "hex", outer_checksum = "8B5A9677BC5A2738712BBAF2BA289B1D8195FDF962BBC769569976AD5E9794E1" },
-  { name = "gleam_community_colour", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_community_colour", source = "hex", outer_checksum = "036C206886AFB9F153C552700A7A0B4D2864E3BC96A20C77E5F34A013C051BE3" },
-  { name = "gleam_erlang", version = "0.23.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_erlang", source = "hex", outer_checksum = "C21CFB816C114784E669FFF4BBF433535EEA9960FA2F216209B8691E87156B96" },
-  { name = "gleam_json", version = "0.7.0", build_tools = ["gleam"], requirements = ["thoas", "gleam_stdlib"], otp_app = "gleam_json", source = "hex", outer_checksum = "CB405BD93A8828BCD870463DE29375E7B2D252D9D124C109E5B618AAC00B86FC" },
-  { name = "gleam_otp", version = "0.8.0", build_tools = ["gleam"], requirements = ["gleam_stdlib", "gleam_erlang"], otp_app = "gleam_otp", source = "hex", outer_checksum = "18EF8242A5E54BA92F717C7222F03B3228AEE00D1F286D4C56C3E8C18AA2588E" },
-  { name = "gleam_stdlib", version = "0.32.1", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "ABF00CDCCB66FABBCE351A50060964C4ACE798F95A0D78622C8A7DC838792577" },
+  { name = "gleam_community_ansi", version = "1.4.0", build_tools = ["gleam"], requirements = ["gleam_stdlib", "gleam_community_colour"], otp_app = "gleam_community_ansi", source = "hex", outer_checksum = "FE79E08BF97009729259B6357EC058315B6FBB916FAD1C2FF9355115FEB0D3A4" },
+  { name = "gleam_community_colour", version = "1.3.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_community_colour", source = "hex", outer_checksum = "A49A5E3AE8B637A5ACBA80ECB9B1AFE89FD3D5351FF6410A42B84F666D40D7D5" },
+  { name = "gleam_erlang", version = "0.24.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_erlang", source = "hex", outer_checksum = "26BDB52E61889F56A291CB34167315780EE4AA20961917314446542C90D1C1A0" },
+  { name = "gleam_json", version = "1.0.0", build_tools = ["gleam"], requirements = ["thoas", "gleam_stdlib"], otp_app = "gleam_json", source = "hex", outer_checksum = "8B197DD5D578EA6AC2C0D4BDC634C71A5BCA8E7DB5F47091C263ECB411A60DF3" },
+  { name = "gleam_otp", version = "0.9.0", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_stdlib"], otp_app = "gleam_otp", source = "hex", outer_checksum = "5FADBBEC5ECF3F8B6BE91101D432758503192AE2ADBAD5602158977341489F71" },
+  { name = "gleam_stdlib", version = "0.34.0", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "1FB8454D2991E9B4C0C804544D8A9AD0F6184725E20D63C3155F0AEB4230B016" },
   { name = "glexer", version = "0.7.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "glexer", source = "hex", outer_checksum = "4484942A465482A0A100936E1E5F12314DB4B5AC0D87575A7B9E9062090B96BE" },
-  { name = "simplifile", version = "0.3.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "45E2C6C7FD8D931A660CA56880EC75186BB39C84F36951B4EE284F6F95E8F65D" },
+  { name = "simplifile", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "359CD7006E2F69255025C858CCC6407C11A876EC179E6ED1E46809E8DC6B1AAD" },
   { name = "thoas", version = "0.4.1", build_tools = ["rebar3"], requirements = [], otp_app = "thoas", source = "hex", outer_checksum = "4918D50026C073C4AB1388437132C77A6F6F7C8AC43C60C13758CC0ADCE2134E" },
 ]
 
 [requirements]
 exercism_test_runner = { version = "~> 1.4" }
 gleam_bitwise = { version = "~> 1.2" }
-gleam_otp = { version = "~> 0.7" }
-gleam_stdlib = { version = "~> 0.32" }
-simplifile = { version = "~> 0.1" }
+gleam_otp = { version = "~> 0.7 or ~> 1.0" }
+gleam_stdlib = { version = "~> 0.32 or ~> 1.0" }
+simplifile = { version = "~> 1.0" }
