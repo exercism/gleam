@@ -42,6 +42,6 @@ fn day_gift_pair_for_verse(number) {
     9 -> #("ninth", "nine Ladies Dancing")
     10 -> #("tenth", "ten Lords-a-Leaping")
     11 -> #("eleventh", "eleven Pipers Piping")
-    12 -> #("twelfth", "twelve Drummers Drumming")
+    _12 -> #("twelfth", "twelve Drummers Drumming")
   }
 }

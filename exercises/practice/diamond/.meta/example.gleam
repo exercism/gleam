@@ -1,7 +1,7 @@
 import gleam/list
 import gleam/string
 import gleam/result
-import gleam/bit_string
+import gleam/bit_array
 
 pub fn build(letter: String) -> String {
   let limit = letter_to_int(letter)
@@ -47,6 +47,6 @@ fn letter_to_int(letter: String) -> Int {
 fn int_to_letter(i: Int) -> String {
   let i = i + 65
   <<i>>
-  |> bit_string.to_string
+  |> bit_array.to_string
   |> result.unwrap("A")
 }

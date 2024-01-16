@@ -38,7 +38,7 @@ fn tree_from_traversals_safe(inorder: List(a), preorder: List(a)) -> Tree(a) {
   case preorder {
     [] -> Nil
     [value, ..rest_preorder] -> {
-      let #(left_inorder, [_value, ..right_inorder]) =
+      let assert #(left_inorder, [_value, ..right_inorder]) =
         list.split_while(inorder, fn(x) { x != value })
       let #(left_preorder, right_preorder) =
         list.split(rest_preorder, list.length(left_inorder))
