@@ -45,5 +45,5 @@ pub fn ability() -> Int {
 }
 
 fn roll() -> Int {
-  int.random(7)
+  int.random(6) + 1
 }
