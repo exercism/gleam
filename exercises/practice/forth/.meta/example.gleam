@@ -1,7 +1,6 @@
 import gleam/result
 import gleam/int
 import gleam/dict
-import gleam/order
 import gleam/list
 import gleam/string
 import gleam/string_builder
@@ -73,7 +72,7 @@ fn tokenise_word(
 ) -> #(ForthTok, List(String)) {
   case word {
     ":" -> {
-      let #([first_word, ..instructions], [_, ..rest]) =
+      let assert #([first_word, ..instructions], [_, ..rest]) =
         list.split_while(rest, fn(c) { c != ";" })
       #(
         WordDef(string.uppercase(first_word), UserDef(tokenise(instructions))),
@@ -166,6 +165,7 @@ fn execute_builtin(f: Forth, builtin: String) -> Result(Forth, ForthError) {
         |> stack_push(b)
       Ok(Forth(..f, stack: stack))
     }
+    _ -> panic as { "unexpected builtin " <> builtin }
   }
 }
 

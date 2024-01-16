@@ -1,5 +1,4 @@
 import gleam/int
-import gleam/result
 
 pub fn egg_count(number: Int) -> Int {
   recurse(number, 0)

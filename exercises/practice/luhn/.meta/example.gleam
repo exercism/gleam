@@ -45,7 +45,7 @@ fn double_second_digit(digits: List(Int)) -> List(Int) {
       [first, second]
     }
 
-    [_] -> digits
+    _ -> digits
   }
 }
 

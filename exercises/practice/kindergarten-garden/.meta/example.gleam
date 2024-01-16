@@ -43,7 +43,7 @@ fn to_plant(letter: String) -> Plant {
     "R" -> Radishes
     "C" -> Clover
     "V" -> Violets
-    "G" -> Grass
+    _ -> Grass
   }
 }
 
