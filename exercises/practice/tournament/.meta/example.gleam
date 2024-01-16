@@ -44,7 +44,7 @@ fn parse_results(result: String) -> #(Result, Result) {
   case result {
     "win" -> #(Win, Loss)
     "loss" -> #(Loss, Win)
-    "draw" -> #(Draw, Draw)
+    _draw -> #(Draw, Draw)
   }
 }
 
