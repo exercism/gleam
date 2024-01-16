@@ -23,50 +23,40 @@ pub fn saddle_points(matrix: List(List(Int))) -> List(Position) {
   |> set.to_list
 }
 
-fn find_row_maxima(row: Int, values: List(Int)) -> List(Position) {
+fn find_row_maxima(values: List(Int), row: Int) -> List(Position) {
   let #(_, positions) =
-    list.index_fold(
-      over: values,
-      from: #(0, []),
-      with: fn(acc, value, column) {
-        case acc {
-          #(kept, positions) if value > kept || positions == [] -> #(
-            value,
-            [Position(row + 1, column + 1)],
-          )
+    list.index_fold(over: values, from: #(0, []), with: fn(acc, value, column) {
+      case acc {
+        #(kept, positions) if value > kept || positions == [] -> #(value, [
+          Position(row + 1, column + 1),
+        ])
 
-          #(kept, positions) if value == kept -> #(
-            value,
-            [Position(row + 1, column + 1), ..positions],
-          )
+        #(kept, positions) if value == kept -> #(value, [
+          Position(row + 1, column + 1),
+          ..positions
+        ])
 
-          _ -> acc
-        }
-      },
-    )
+        _ -> acc
+      }
+    })
   positions
 }
 
-fn find_column_minima(column: Int, values: List(Int)) -> List(Position) {
+fn find_column_minima(values: List(Int), column: Int) -> List(Position) {
   let #(_, positions) =
-    list.index_fold(
-      over: values,
-      from: #(0, []),
-      with: fn(acc, value, row) {
-        case acc {
-          #(kept, positions) if value < kept || positions == [] -> #(
-            value,
-            [Position(row + 1, column + 1)],
-          )
+    list.index_fold(over: values, from: #(0, []), with: fn(acc, value, row) {
+      case acc {
+        #(kept, positions) if value < kept || positions == [] -> #(value, [
+          Position(row + 1, column + 1),
+        ])
 
-          #(kept, positions) if value == kept -> #(
-            value,
-            [Position(row + 1, column + 1), ..positions],
-          )
+        #(kept, positions) if value == kept -> #(value, [
+          Position(row + 1, column + 1),
+          ..positions
+        ])
 
-          _ -> acc
-        }
-      },
-    )
+        _ -> acc
+      }
+    })
   positions
 }

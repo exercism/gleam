@@ -37,10 +37,10 @@ pub fn winner(board: String) -> Result(Player, Nil) {
 
 fn parse(rows: List(String)) -> Dict(Position, Player) {
   rows
-  |> list.index_map(fn(row, line) {
+  |> list.index_map(fn(line, row) {
     line
     |> string.to_graphemes
-    |> list.index_map(fn(col, char) {
+    |> list.index_map(fn(char, col) {
       case char {
         "X" -> [#(Position(row, col), X)]
         "O" -> [#(Position(row, col), O)]
@@ -58,10 +58,9 @@ fn o_wins(board: Dict(Position, Player), size: Size) -> Result(Player, Nil) {
     dict.filter(board, fn(pos, player) { player == O && pos.row == 0 })
 
   let end_positions =
-    dict.filter(
-      board,
-      fn(pos, player) { player == O && pos.row == size.rows - 1 },
-    )
+    dict.filter(board, fn(pos, player) {
+      player == O && pos.row == size.rows - 1
+    })
 
   case dict.size(start_positions) > 0 && dict.size(end_positions) > 0 {
     False -> Error(Nil)
@@ -81,12 +80,9 @@ fn x_wins(board: Dict(Position, Player), size: Size) -> Result(Player, Nil) {
     dict.filter(board, fn(pos, player) { player == X && pos.row == pos.column })
 
   let end_positions =
-    dict.filter(
-      board,
-      fn(pos, player) {
-        player == X && pos.column - pos.row == 2 * size.columns - 2
-      },
-    )
+    dict.filter(board, fn(pos, player) {
+      player == X && pos.column - pos.row == 2 * size.columns - 2
+    })
 
   case dict.size(start_positions) > 0 && dict.size(end_positions) > 0 {
     False -> Error(Nil)
@@ -120,11 +116,12 @@ fn traverse_board(
             |> list.filter(fn(pos) { !dict.has_key(explored, pos) })
 
           let explored =
-            list.fold(
-              over: next_positions,
-              from: explored,
-              with: fn(explored, pos) { dict.insert(explored, pos, player) },
-            )
+            list.fold(over: next_positions, from: explored, with: fn(
+              explored,
+              pos,
+            ) {
+              dict.insert(explored, pos, player)
+            })
           traverse_board(
             board,
             list.append(next_positions, rest),
