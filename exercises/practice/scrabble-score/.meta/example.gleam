@@ -1,10 +1,10 @@
 import gleam/string
-import gleam/map
+import gleam/dict
 import gleam/list
 
 pub fn score(word word: String) -> Int {
   let word_values =
-    map.from_list([
+    dict.from_list([
       #("a", 1),
       #("b", 3),
       #("c", 3),
@@ -39,7 +39,7 @@ pub fn score(word word: String) -> Int {
   |> list.fold(
     0,
     fn(acc, x) {
-      case map.get(word_values, x) {
+      case dict.get(word_values, x) {
         Ok(value) -> acc + value
         _ -> acc
       }

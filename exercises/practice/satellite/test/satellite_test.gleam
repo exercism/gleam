@@ -17,19 +17,20 @@ pub fn tree_with_one_item_test() {
 }
 
 pub fn tree_with_many_items_test() {
-  satellite.tree_from_traversals(
-    inorder: ["i", "a", "f", "x", "r"],
-    preorder: ["a", "i", "x", "f", "r"],
+  satellite.tree_from_traversals(inorder: ["i", "a", "f", "x", "r"], preorder: [
+    "a", "i", "x", "f", "r",
+  ])
+  |> should.equal(
+    Ok(Node(
+      value: "a",
+      left: Node(value: "i", left: Nil, right: Nil),
+      right: Node(
+        value: "x",
+        left: Node(value: "f", left: Nil, right: Nil),
+        right: Node(value: "r", left: Nil, right: Nil),
+      ),
+    )),
   )
-  |> should.equal(Ok(Node(
-    value: "a",
-    left: Node(value: "i", left: Nil, right: Nil),
-    right: Node(
-      value: "x",
-      left: Node(value: "f", left: Nil, right: Nil),
-      right: Node(value: "r", left: Nil, right: Nil),
-    ),
-  )))
 }
 
 pub fn reject_traversals_of_different_length_test() {
@@ -38,17 +39,15 @@ pub fn reject_traversals_of_different_length_test() {
 }
 
 pub fn reject_inconsistent_traversals_of_same_length_test() {
-  satellite.tree_from_traversals(
-    inorder: ["a", "b", "c"],
-    preorder: ["x", "y", "z"],
-  )
+  satellite.tree_from_traversals(inorder: ["a", "b", "c"], preorder: [
+    "x", "y", "z",
+  ])
   |> should.equal(Error(DifferentItems))
 }
 
 pub fn reject_traversals_with_repeated_items_test() {
-  satellite.tree_from_traversals(
-    inorder: ["b", "a", "a"],
-    preorder: ["a", "b", "a"],
-  )
+  satellite.tree_from_traversals(inorder: ["b", "a", "a"], preorder: [
+    "a", "b", "a",
+  ])
   |> should.equal(Error(NonUniqueItems))
 }

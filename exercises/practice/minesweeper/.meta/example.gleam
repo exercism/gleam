@@ -2,7 +2,7 @@ import gleam/string
 import gleam/int
 import gleam/list
 import gleam/pair
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 
 type Position {
   Position(Int, Int)
@@ -21,7 +21,7 @@ pub fn annotate(minefield: String) -> String {
   |> print
 }
 
-fn parse(minefield: String) -> Map(Position, Cell) {
+fn parse(minefield: String) -> Dict(Position, Cell) {
   minefield
   |> string.split("\n")
   |> list.index_map(fn(row, line) {
@@ -35,18 +35,18 @@ fn parse(minefield: String) -> Map(Position, Cell) {
     })
   })
   |> list.flatten
-  |> map.from_list
+  |> dict.from_list
 }
 
-fn do_annotate(cells: Map(Position, Cell)) -> Map(Position, Cell) {
-  map.fold(over: cells, from: cells, with: count_neighbors)
+fn do_annotate(cells: Dict(Position, Cell)) -> Dict(Position, Cell) {
+  dict.fold(over: cells, from: cells, with: count_neighbors)
 }
 
 fn count_neighbors(
-  cells: Map(Position, Cell),
+  cells: Dict(Position, Cell),
   pos: Position,
   cell: Cell,
-) -> Map(Position, Cell) {
+) -> Dict(Position, Cell) {
   case cell {
     Empty -> {
       let Position(row, col) = pos
@@ -61,23 +61,23 @@ fn count_neighbors(
           Position(row, col - 1),
           Position(row, col + 1),
         ]
-        |> list.filter(fn(pos) { map.get(cells, pos) == Ok(Bomb) })
+        |> list.filter(fn(pos) { dict.get(cells, pos) == Ok(Bomb) })
         |> list.length
 
-      map.insert(cells, pos, Neighbors(neighbors))
+      dict.insert(cells, pos, Neighbors(neighbors))
     }
     _ -> cells
   }
 }
 
-fn print(cells: Map(Position, Cell)) -> String {
+fn print(cells: Dict(Position, Cell)) -> String {
   cells
-  |> map.to_list
+  |> dict.to_list
   |> list.group(fn(pair) {
     let #(Position(row, _), _) = pair
     row
   })
-  |> map.map_values(fn(_row, cells) {
+  |> dict.map_values(fn(_row, cells) {
     cells
     |> list.sort(fn(a, b) {
       let #(Position(_, col_a), _) = a
@@ -88,7 +88,7 @@ fn print(cells: Map(Position, Cell)) -> String {
     |> list.map(print_cell)
     |> string.concat
   })
-  |> map.to_list
+  |> dict.to_list
   |> list.sort(fn(a, b) { int.compare(pair.first(a), pair.first(b)) })
   |> list.map(pair.second)
   |> string.join("\n")

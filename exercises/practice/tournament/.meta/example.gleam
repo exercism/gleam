@@ -1,7 +1,7 @@
 import gleam/string
 import gleam/list
 import gleam/int
-import gleam/map.{type Map}
+import gleam/dict.{type Dict}
 import gleam/option.{type Option, None, Some}
 import gleam/order.{type Order, Eq, Gt, Lt}
 
@@ -27,18 +27,18 @@ type Score {
 
 const header = "Team                           | MP |  W |  D |  L |  P"
 
-fn get_team_scores(input: String) -> Map(String, Score) {
+fn get_team_scores(input: String) -> Dict(String, Score) {
   input
   |> string.split("\n")
   |> list.fold(
-    from: map.new(),
+    from: dict.new(),
     with: fn(scores, match) {
       let assert [team_a, team_b, result] = string.split(match, ";")
       let #(result_a, result_b) = parse_results(result)
 
       scores
-      |> map.update(team_a, increase(_, result_a))
-      |> map.update(team_b, increase(_, result_b))
+      |> dict.update(team_a, increase(_, result_a))
+      |> dict.update(team_b, increase(_, result_b))
     },
   )
 }
@@ -62,10 +62,10 @@ fn increase(score: Option(Score), result: Result) -> Score {
   }
 }
 
-fn print_table(scores: Map(String, Score)) -> String {
+fn print_table(scores: Dict(String, Score)) -> String {
   let rows =
     scores
-    |> map.to_list
+    |> dict.to_list
     |> list.sort(by: points_then_names)
     |> list.map(format_row)
 

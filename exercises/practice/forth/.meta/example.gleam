@@ -1,6 +1,6 @@
 import gleam/result
 import gleam/int
-import gleam/map
+import gleam/dict
 import gleam/order
 import gleam/list
 import gleam/string
@@ -18,19 +18,19 @@ pub type ForthTok {
 }
 
 pub type Forth {
-  Forth(stack: List(Int), env: map.Map(String, ForthWordDef))
+  Forth(stack: List(Int), env: dict.Dict(String, ForthWordDef))
 }
 
-pub fn stdlib() -> map.Map(String, ForthWordDef) {
-  map.new()
-  |> map.insert("+", BuiltIn("+"))
-  |> map.insert("-", BuiltIn("-"))
-  |> map.insert("/", BuiltIn("/"))
-  |> map.insert("*", BuiltIn("*"))
-  |> map.insert("DUP", BuiltIn("DUP"))
-  |> map.insert("DROP", BuiltIn("DROP"))
-  |> map.insert("SWAP", BuiltIn("SWAP"))
-  |> map.insert("OVER", BuiltIn("OVER"))
+pub fn stdlib() -> dict.Dict(String, ForthWordDef) {
+  dict.new()
+  |> dict.insert("+", BuiltIn("+"))
+  |> dict.insert("-", BuiltIn("-"))
+  |> dict.insert("/", BuiltIn("/"))
+  |> dict.insert("*", BuiltIn("*"))
+  |> dict.insert("DUP", BuiltIn("DUP"))
+  |> dict.insert("DROP", BuiltIn("DROP"))
+  |> dict.insert("SWAP", BuiltIn("SWAP"))
+  |> dict.insert("OVER", BuiltIn("OVER"))
 }
 
 pub type ForthError {
@@ -174,7 +174,7 @@ fn eval_token(forth: Forth, token: ForthTok) -> Result(Forth, ForthError) {
     Value(v) -> Ok(Forth(..forth, stack: stack_push(forth.stack, v)))
     Word(w) ->
       // load word and evaluate with stack
-      case map.get(forth.env, w) {
+      case dict.get(forth.env, w) {
         // You're on your own when you redefine a built in. :)
         Ok(UserDef(body)) -> execute(forth, body)
         Ok(BuiltIn(bin)) -> execute_builtin(forth, bin)
@@ -188,7 +188,7 @@ fn eval_token(forth: Forth, token: ForthTok) -> Result(Forth, ForthError) {
         Error(_) -> {
           // All the words in the definition need to be looked up in the environment
           use updated_def <- result.then(resolve_def(def, forth.env))
-          Ok(Forth(..forth, env: map.insert(forth.env, w, updated_def)))
+          Ok(Forth(..forth, env: dict.insert(forth.env, w, updated_def)))
         }
       }
   }
@@ -196,7 +196,7 @@ fn eval_token(forth: Forth, token: ForthTok) -> Result(Forth, ForthError) {
 
 fn resolve_def(
   definition_body: ForthWordDef,
-  env: map.Map(String, ForthWordDef),
+  env: dict.Dict(String, ForthWordDef),
 ) -> Result(ForthWordDef, ForthError) {
   case definition_body {
     BuiltIn(_) -> Ok(definition_body)
@@ -211,11 +211,11 @@ fn resolve_def(
 
 fn lookup_token(
   token: ForthTok,
-  env: map.Map(String, ForthWordDef),
+  env: dict.Dict(String, ForthWordDef),
 ) -> Result(List(ForthTok), ForthError) {
   case token {
     Word(w) ->
-      case map.get(env, w) {
+      case dict.get(env, w) {
         Ok(UserDef(tokens)) -> Ok(tokens)
         Ok(BuiltIn(body)) -> Ok([Word(body)])
         Error(_) -> Error(UnknownWord)

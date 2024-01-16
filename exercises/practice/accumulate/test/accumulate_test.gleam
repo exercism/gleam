@@ -28,14 +28,10 @@ pub fn accumulate_reversed_strings_test() {
 }
 
 pub fn accumulate_recursively_test() {
-  accumulate.accumulate(
-    ["a", "b", "c"],
-    fn(x) -> List(String) {
-      accumulate.accumulate(
-        ["1", "2", "3"],
-        fn(y) -> String { string.append(x, y) },
-      )
-    },
-  )
+  accumulate.accumulate(["a", "b", "c"], fn(x) -> List(String) {
+    accumulate.accumulate(["1", "2", "3"], fn(y) -> String {
+      string.append(x, y)
+    })
+  })
   |> should.equal([["a1", "a2", "a3"], ["b1", "b2", "b3"], ["c1", "c2", "c3"]])
 }

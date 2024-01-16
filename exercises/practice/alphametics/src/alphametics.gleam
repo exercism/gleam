@@ -1,3 +1,3 @@
-pub fn solve(puzzle: String) -> Result(Map(String, Int), Nil) {
+pub fn solve(puzzle: String) -> Result(Dict(String, Int), Nil) {
   todo
 }
