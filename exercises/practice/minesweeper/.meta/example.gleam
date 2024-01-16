@@ -24,10 +24,10 @@ pub fn annotate(minefield: String) -> String {
 fn parse(minefield: String) -> Dict(Position, Cell) {
   minefield
   |> string.split("\n")
-  |> list.index_map(fn(row, line) {
+  |> list.index_map(fn(line, row) {
     line
     |> string.to_graphemes
-    |> list.index_map(fn(col, char) {
+    |> list.index_map(fn(char, col) {
       case char {
         "_" -> #(Position(row, col), Empty)
         "*" -> #(Position(row, col), Bomb)
