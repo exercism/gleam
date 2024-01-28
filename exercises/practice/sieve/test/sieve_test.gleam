@@ -2,6 +2,10 @@ import exercism/test_runner
 import exercism/should
 import sieve
 
+pub fn main() {
+  test_runner.main()
+}
+
 pub fn no_primes_under_two_test() {
   sieve.primes_up_to(1)
   |> should.equal([])
