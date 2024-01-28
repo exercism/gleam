@@ -1,0 +1,11 @@
+name = "sieve"
+version = "0.1.0"
+
+[dependencies]
+gleam_bitwise = "~> 1.2"
+gleam_otp = "~> 0.7 or ~> 1.0"
+gleam_stdlib = "~> 0.32 or ~> 1.0"
+simplifile = "~> 1.0"
+
+[dev-dependencies]
+exercism_test_runner = "~> 1.4"
