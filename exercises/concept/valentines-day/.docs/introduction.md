@@ -47,8 +47,8 @@ import gleam/float
 
 pub fn describe(number: Number) -> String {
   case flexibleNumber {
-    SomeFloat(f) -> "Float: " ++ float.to_string(f)
-    SomeInt(i) -> "Int: " ++ int.to_string(i)
+    SomeFloat(f) -> "Float: " <> float.to_string(f)
+    SomeInt(i) -> "Int: " <> int.to_string(i)
     Invalid -> "Neither a float nor an int"
   }
 }
