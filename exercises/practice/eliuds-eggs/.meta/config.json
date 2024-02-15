@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "src/eliuds_eggs.gleam"
+    ],
+    "test": [
+      "test/eliuds_eggs_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Help Eliud count the number of eggs in her chicken coop by counting the number of 1 bits in a binary representation.",
+  "source": "Christian Willner, Eric Willigers",
+  "source_url": "https://forum.exercism.org/t/new-exercise-suggestion-eliuds-eggs/7632/5"
+}
