@@ -4,10 +4,10 @@
   ],
   "files": {
     "solution": [
-      "src/pop_count.gleam"
+      "src/eliuds_eggs.gleam"
     ],
     "test": [
-      "test/pop_count_test.gleam"
+      "test/eliuds_eggs_test.gleam"
     ],
     "example": [
       ".meta/example.gleam"
@@ -19,5 +19,5 @@
   },
   "blurb": "Help Eliud count the number of eggs in her chicken coop by counting the number of 1 bits in a binary representation.",
   "source": "Christian Willner, Eric Willigers",
-  "source_url": "https://forum.exercism.org/t/new-exercise-suggestion-pop-count/7632/5"
+  "source_url": "https://forum.exercism.org/t/new-exercise-suggestion-eliuds-eggs/7632/5"
 }
