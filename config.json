@@ -1827,6 +1827,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
+      },
+      {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "a9e52150-65bc-44a9-9ef6-95b995aea794",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
