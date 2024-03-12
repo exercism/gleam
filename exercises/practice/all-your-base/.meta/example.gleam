@@ -26,7 +26,7 @@ pub fn get_base_number(digits: List(Int), base: Int) -> Result(Int, Error) {
   list.fold_until(digits, Ok(0), fn(accumulator, digit) {
     case digit >= 0 && digit < base, accumulator {
       True, Ok(current_total) -> Continue(Ok(current_total * base + digit))
-      False, _ -> Stop(Error(InvalidDigit(digit)))
+      _, _ -> Stop(Error(InvalidDigit(digit)))
     }
   })
 }
