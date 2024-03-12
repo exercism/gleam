@@ -1,6 +1,6 @@
-import wine_cellar.{Red, Rose, White, Wine}
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import wine_cellar.{Red, Rose, White, Wine}
 
 const cellar = [
   Wine("Chardonnay", 2015, "Italy", White),

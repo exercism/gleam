@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import satellite.{DifferentItems, DifferentLengths, Nil, Node, NonUniqueItems}
 
 pub fn main() {

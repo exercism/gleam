@@ -1,6 +1,6 @@
-import exercism/test_runner
-import exercism/should
 import anagram.{find_anagrams}
+import exercism/should
+import exercism/test_runner
 
 pub fn main() {
   test_runner.main()

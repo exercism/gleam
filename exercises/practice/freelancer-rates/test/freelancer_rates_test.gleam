@@ -1,6 +1,6 @@
-import freelancer_rates
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import freelancer_rates
 
 pub fn main() {
   test_runner.main()

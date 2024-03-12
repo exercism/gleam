@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import secret_handshake.{CloseYourEyes, DoubleBlink, Jump, Wink}
 
 pub fn main() {

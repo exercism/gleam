@@ -1,6 +1,6 @@
-import gleam/result
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import gleam/result
 import grade_school
 
 pub fn main() {

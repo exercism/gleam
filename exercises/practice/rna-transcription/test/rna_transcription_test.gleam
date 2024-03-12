@@ -1,6 +1,6 @@
-import rna_transcription
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import rna_transcription
 
 pub fn main() {
   test_runner.main()

@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import ocr_numbers.{Digit, InvalidLineNumber, InvalidRowNumber, List, Unknown}
 
 pub fn main() {

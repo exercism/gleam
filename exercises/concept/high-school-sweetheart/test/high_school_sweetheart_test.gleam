@@ -1,6 +1,6 @@
-import high_school_sweetheart
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import high_school_sweetheart
 
 pub fn main() {
   test_runner.main()

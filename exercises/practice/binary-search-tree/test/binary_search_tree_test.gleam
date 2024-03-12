@@ -1,6 +1,6 @@
-import exercism/test_runner
-import exercism/should
 import binary_search_tree.{Nil, Node}
+import exercism/should
+import exercism/test_runner
 
 pub fn main() {
   test_runner.main()

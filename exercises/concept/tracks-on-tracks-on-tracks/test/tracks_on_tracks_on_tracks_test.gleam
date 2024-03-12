@@ -1,6 +1,6 @@
-import tracks_on_tracks_on_tracks
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import tracks_on_tracks_on_tracks
 
 pub fn main() {
   test_runner.main()

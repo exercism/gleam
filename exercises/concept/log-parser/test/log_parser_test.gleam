@@ -1,6 +1,6 @@
-import log_parser
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import log_parser
 
 pub fn main() {
   test_runner.main()

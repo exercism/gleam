@@ -1,6 +1,6 @@
 import dna_encoding.{Adenine, Cytosine, Guanine, Thymine}
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 
 pub fn main() {
   test_runner.main()
