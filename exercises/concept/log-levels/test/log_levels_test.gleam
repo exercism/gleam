@@ -1,6 +1,6 @@
-import log_levels
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import log_levels
 
 pub fn main() {
   test_runner.main()

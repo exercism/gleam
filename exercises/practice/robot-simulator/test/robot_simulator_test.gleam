@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import robot_simulator.{East, North, Position, Robot, South, West}
 
 pub fn main() {

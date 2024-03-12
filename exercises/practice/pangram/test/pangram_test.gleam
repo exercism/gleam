@@ -1,5 +1,5 @@
-import pangram.{is_pangram}
 import exercism/test_runner
+import pangram.{is_pangram}
 
 pub fn main() {
   test_runner.main()

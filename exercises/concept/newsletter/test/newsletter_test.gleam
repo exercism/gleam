@@ -1,6 +1,6 @@
-import newsletter
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import newsletter
 import simplifile
 
 pub fn main() {

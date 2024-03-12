@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import saddle_points.{Position}
 
 pub fn main() {

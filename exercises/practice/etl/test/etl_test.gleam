@@ -1,7 +1,7 @@
-import gleam/dict
-import exercism/test_runner
-import exercism/should
 import etl
+import exercism/should
+import exercism/test_runner
+import gleam/dict
 
 pub fn main() {
   test_runner.main()

@@ -1,7 +1,7 @@
-import gotta_snatch_em_all
-import gleam/set
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import gleam/set
+import gotta_snatch_em_all
 
 pub fn main() {
   test_runner.main()

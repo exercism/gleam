@@ -1,6 +1,6 @@
-import guessing_game
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import guessing_game
 
 pub fn main() {
   test_runner.main()

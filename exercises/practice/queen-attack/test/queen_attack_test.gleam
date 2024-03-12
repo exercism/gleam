@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import queen_attack.{
   ColumnTooLarge, ColumnTooSmall, Position, RowTooLarge, RowTooSmall,
 }

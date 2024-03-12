@@ -1,5 +1,5 @@
-import exercism/test_runner
 import armstrong_numbers
+import exercism/test_runner
 
 pub fn main() {
   test_runner.main()

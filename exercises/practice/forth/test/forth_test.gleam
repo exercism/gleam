@@ -1,7 +1,7 @@
+import exercism/should
+import exercism/test_runner
 import forth
 import gleam/result
-import exercism/test_runner
-import exercism/should
 
 pub fn main() {
   test_runner.main()

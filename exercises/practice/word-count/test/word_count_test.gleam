@@ -1,7 +1,7 @@
-import word_count
-import gleam/dict
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import gleam/dict
+import word_count
 
 pub fn main() {
   test_runner.main()

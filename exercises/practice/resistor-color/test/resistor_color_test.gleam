@@ -1,8 +1,8 @@
+import exercism/should
+import exercism/test_runner
 import resistor_color.{
   Black, Blue, Brown, Green, Grey, Orange, Red, Violet, White, Yellow,
 }
-import exercism/test_runner
-import exercism/should
 
 pub fn main() {
   test_runner.main()

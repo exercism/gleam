@@ -1,6 +1,6 @@
-import secrets
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import secrets
 
 pub fn main() {
   test_runner.main()

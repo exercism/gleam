@@ -1,6 +1,6 @@
-import spring_cleaning
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import spring_cleaning
 
 pub fn main() {
   test_runner.main()

@@ -1,7 +1,7 @@
 import accumulate
-import gleam/string
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import gleam/string
 
 pub fn main() {
   test_runner.main()

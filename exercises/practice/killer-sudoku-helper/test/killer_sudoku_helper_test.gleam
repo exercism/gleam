@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import killer_sudoku_helper
 
 pub fn main() {

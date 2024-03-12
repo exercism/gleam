@@ -1,6 +1,6 @@
-import roman_numerals.{convert}
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import roman_numerals.{convert}
 
 pub fn main() {
   test_runner.main()

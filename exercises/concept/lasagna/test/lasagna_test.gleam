@@ -1,6 +1,6 @@
-import lasagna
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import lasagna
 
 pub fn main() {
   test_runner.main()

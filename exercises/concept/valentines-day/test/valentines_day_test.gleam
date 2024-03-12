@@ -1,9 +1,9 @@
+import exercism/should
+import exercism/test_runner
 import valentines_day.{
   BoardGame, Chill, Crime, Horror, Korean, Maybe, Movie, No, Restaurant, Romance,
   Thriller, Turkish, Walk, Yes,
 }
-import exercism/test_runner
-import exercism/should
 
 pub fn main() {
   test_runner.main()

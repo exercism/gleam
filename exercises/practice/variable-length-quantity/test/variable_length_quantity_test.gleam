@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import variable_length_quantity.{IncompleteSequence}
 
 pub fn main() {

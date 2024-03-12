@@ -1,9 +1,9 @@
-import exercism/test_runner
 import exercism/should
-import pov.{type Tree, Tree}
+import exercism/test_runner
 import gleam/list
 import gleam/result
 import gleam/string
+import pov.{type Tree, Tree}
 
 pub fn main() {
   test_runner.main()

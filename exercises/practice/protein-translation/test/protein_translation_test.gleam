@@ -1,6 +1,6 @@
-import protein_translation
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import protein_translation
 
 pub fn main() {
   test_runner.main()

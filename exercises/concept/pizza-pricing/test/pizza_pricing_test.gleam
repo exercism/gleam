@@ -1,7 +1,7 @@
-import pizza_pricing.{Caprese, ExtraSauce, ExtraToppings, Formaggio, Margherita}
-import gleam/list
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import gleam/list
+import pizza_pricing.{Caprese, ExtraSauce, ExtraToppings, Formaggio, Margherita}
 
 pub fn main() {
   test_runner.main()

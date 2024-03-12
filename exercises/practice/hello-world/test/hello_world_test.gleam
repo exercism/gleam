@@ -1,6 +1,6 @@
-import hello_world
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import hello_world
 
 pub fn main() {
   test_runner.main()
