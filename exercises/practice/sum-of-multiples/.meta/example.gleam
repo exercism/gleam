@@ -1,6 +1,6 @@
-import gleam/set.{type Set}
-import gleam/list
 import gleam/int
+import gleam/list
+import gleam/set.{type Set}
 
 pub fn sum(factors factors: List(Int), limit limit: Int) -> Int {
   factors

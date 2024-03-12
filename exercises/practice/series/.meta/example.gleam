@@ -1,6 +1,6 @@
-import gleam/string
-import gleam/list
 import gleam/bool
+import gleam/list
+import gleam/string
 
 pub fn slices(input: String, size: Int) -> Result(List(String), Error) {
   use <- bool.guard(input == "", Error(EmptySeries))

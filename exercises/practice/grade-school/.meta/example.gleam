@@ -1,10 +1,10 @@
 import gleam/dict.{type Dict}
+import gleam/int
+import gleam/list
 import gleam/option.{None, Some}
+import gleam/pair
 import gleam/result
 import gleam/string
-import gleam/list
-import gleam/pair
-import gleam/int
 
 pub type School {
   School(grades: Dict(Int, List(String)))

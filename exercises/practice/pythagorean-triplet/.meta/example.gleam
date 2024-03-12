@@ -1,5 +1,5 @@
-import gleam/list
 import gleam/int
+import gleam/list
 
 pub type Triplet {
   Triplet(first: Int, Int, Int)

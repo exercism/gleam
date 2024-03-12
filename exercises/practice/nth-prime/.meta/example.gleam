@@ -1,5 +1,5 @@
-import gleam/int
 import gleam/float
+import gleam/int
 import gleam/iterator.{type Iterator}
 
 pub fn prime(number: Int) -> Result(Int, Nil) {

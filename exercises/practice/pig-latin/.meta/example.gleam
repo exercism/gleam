@@ -1,5 +1,5 @@
-import gleam/string
 import gleam/list
+import gleam/string
 
 pub fn translate(phrase: String) -> String {
   phrase

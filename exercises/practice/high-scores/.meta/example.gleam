@@ -1,5 +1,5 @@
-import gleam/list
 import gleam/int
+import gleam/list
 
 pub fn scores(high_scores: List(Int)) -> List(Int) {
   high_scores

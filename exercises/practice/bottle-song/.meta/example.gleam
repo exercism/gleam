@@ -1,5 +1,5 @@
-import gleam/string
 import gleam/list
+import gleam/string
 
 pub fn recite(
   start_bottles start_bottles: Int,

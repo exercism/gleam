@@ -1,7 +1,7 @@
-import gleam/list
-import gleam/int
-import gleam/function
 import gleam/dict
+import gleam/function
+import gleam/int
+import gleam/list
 import gleam/pair
 
 pub type Category {

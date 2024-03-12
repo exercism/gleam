@@ -1,7 +1,7 @@
-import gleam/result
-import gleam/list
-import gleam/int
 import gleam/dict.{type Dict}
+import gleam/int
+import gleam/list
+import gleam/result
 
 pub type Error {
   ImpossibleTarget
@@ -12,12 +12,12 @@ pub fn find_fewest_coins(
   target: Int,
 ) -> Result(List(Int), Error) {
   list.range(1, target)
-  |> list.fold(from: dict.from_list([#(0, [])]), with: fn(
-    fewest_coins_map,
-    coin,
-  ) {
-    update_fewest_coins_map(coins, fewest_coins_map, coin)
-  })
+  |> list.fold(
+    from: dict.from_list([#(0, [])]),
+    with: fn(fewest_coins_map, coin) {
+      update_fewest_coins_map(coins, fewest_coins_map, coin)
+    },
+  )
   |> dict.get(target)
   |> result.replace_error(ImpossibleTarget)
 }

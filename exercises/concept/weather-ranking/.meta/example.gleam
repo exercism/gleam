@@ -1,6 +1,6 @@
-import gleam/order.{type Order}
 import gleam/float
 import gleam/list
+import gleam/order.{type Order}
 
 pub type City {
   City(name: String, temperature: Temperature)

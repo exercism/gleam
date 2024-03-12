@@ -1,9 +1,9 @@
-import gleam/string
-import gleam/list
-import gleam/int
 import gleam/dict.{type Dict}
+import gleam/int
+import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/order.{type Order, Eq, Gt, Lt}
+import gleam/string
 
 pub fn tally(input: String) -> String {
   case input {

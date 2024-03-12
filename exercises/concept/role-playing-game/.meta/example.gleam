@@ -1,5 +1,5 @@
-import gleam/option.{type Option, None, Some}
 import gleam/int
+import gleam/option.{type Option, None, Some}
 
 pub type Player {
   Player(name: Option(String), level: Int, health: Int, mana: Option(Int))
