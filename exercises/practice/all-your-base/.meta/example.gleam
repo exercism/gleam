@@ -19,6 +19,7 @@ pub fn rebase(
       }
     input, _ if input < 2 -> Error(InvalidBase(input))
     _, output if output < 2 -> Error(InvalidBase(output))
+    _, _ -> panic as "unreachable"
   }
 }
 
