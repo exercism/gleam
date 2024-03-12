@@ -1,9 +1,9 @@
 import gleam/int
-import gleam/string
 import gleam/list
+import gleam/option.{None, Some}
 import gleam/regex
 import gleam/result
-import gleam/option.{None, Some}
+import gleam/string
 
 pub fn encode(plaintext: String) -> String {
   let assert Ok(re) = regex.from_string("(.)\\1*")
@@ -34,6 +34,7 @@ pub fn decode(ciphertext: String) -> String {
         |> list.repeat(letter, _)
         |> string.concat
       [None, Some(letter)] -> letter
+      _ -> panic as "unreachable"
     }
   })
   |> string.concat

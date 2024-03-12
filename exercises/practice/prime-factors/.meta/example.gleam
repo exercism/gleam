@@ -1,5 +1,5 @@
-import gleam/list
 import gleam/int
+import gleam/list
 
 pub fn factors(value: Int) -> List(Int) {
   find_factors(value, 2, [], [])
@@ -19,7 +19,7 @@ fn find_factors(
         1 -> guess + 4
         2 -> 3
         3 -> 5
-        5 -> guess + 2
+        _ -> guess + 2
       }
 
       case list.all(primes, fn(prime) { guess % prime != 0 }) {
