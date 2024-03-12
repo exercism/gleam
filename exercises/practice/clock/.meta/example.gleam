@@ -1,5 +1,5 @@
-import gleam/string
 import gleam/int
+import gleam/string
 
 pub type Clock {
   Clock(minutes: Int)

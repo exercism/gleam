@@ -1,8 +1,8 @@
-import gleam/string
 import gleam/float
+import gleam/int
 import gleam/list
 import gleam/set
-import gleam/int
+import gleam/string
 
 pub fn ciphertext(plaintext: String) -> String {
   plaintext

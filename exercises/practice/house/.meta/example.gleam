@@ -1,10 +1,7 @@
 import gleam/list
 import gleam/string
 
-pub fn recite(
-  start_verse start_verse: Int,
-  end_verse end_verse: Int,
-) -> String {
+pub fn recite(start_verse start_verse: Int, end_verse end_verse: Int) -> String {
   list.range(from: 1, to: end_verse)
   |> list.scan(from: [], with: fn(previous, number) {
     [verse(number), ..previous]

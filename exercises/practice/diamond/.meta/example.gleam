@@ -1,7 +1,7 @@
-import gleam/list
-import gleam/string
-import gleam/result
 import gleam/bit_array
+import gleam/list
+import gleam/result
+import gleam/string
 
 pub fn build(letter: String) -> String {
   let limit = letter_to_int(letter)

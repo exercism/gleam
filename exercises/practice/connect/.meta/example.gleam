@@ -1,7 +1,7 @@
-import gleam/list
 import gleam/dict.{type Dict}
-import gleam/string
+import gleam/list
 import gleam/result
+import gleam/string
 
 pub type Player {
   X
@@ -116,12 +116,11 @@ fn traverse_board(
             |> list.filter(fn(pos) { !dict.has_key(explored, pos) })
 
           let explored =
-            list.fold(over: next_positions, from: explored, with: fn(
-              explored,
-              pos,
-            ) {
-              dict.insert(explored, pos, player)
-            })
+            list.fold(
+              over: next_positions,
+              from: explored,
+              with: fn(explored, pos) { dict.insert(explored, pos, player) },
+            )
           traverse_board(
             board,
             list.append(next_positions, rest),

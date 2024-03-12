@@ -1,6 +1,6 @@
-import gleam/string
 import gleam/list
 import gleam/pair
+import gleam/string
 
 pub type Student {
   Alice

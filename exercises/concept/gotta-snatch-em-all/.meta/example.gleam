@@ -1,6 +1,6 @@
+import gleam/list
 import gleam/set.{type Set}
 import gleam/string
-import gleam/list
 
 pub fn new_collection(card: String) -> Set(String) {
   set.from_list([card])

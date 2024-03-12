@@ -1,8 +1,8 @@
-import gleam/string
+import gleam/dict.{type Dict}
 import gleam/int
 import gleam/list
 import gleam/pair
-import gleam/dict.{type Dict}
+import gleam/string
 
 type Position {
   Position(Int, Int)

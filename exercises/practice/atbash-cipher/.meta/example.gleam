@@ -1,7 +1,7 @@
+import gleam/dict.{type Dict}
+import gleam/list
 import gleam/result
 import gleam/string
-import gleam/list
-import gleam/dict.{type Dict}
 
 pub fn encode(phrase: String) -> String {
   let encode_map = encoding_map()

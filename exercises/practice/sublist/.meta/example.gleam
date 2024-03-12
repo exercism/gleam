@@ -1,6 +1,6 @@
+import gleam/function
 import gleam/int
 import gleam/list
-import gleam/function
 import gleam/order.{Eq, Gt, Lt}
 
 pub type Comparison {

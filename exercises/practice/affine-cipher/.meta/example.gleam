@@ -1,7 +1,7 @@
+import gleam/int
+import gleam/list
 import gleam/result
 import gleam/string
-import gleam/list
-import gleam/int
 
 pub type Error {
   KeyNotCoprime(Int, Int)

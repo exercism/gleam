@@ -1,6 +1,6 @@
+import gleam/dict.{type Dict}
 import gleam/list
 import gleam/string
-import gleam/dict.{type Dict}
 
 type Wall {
   Corner
@@ -40,29 +40,29 @@ fn find_rectangles(map: Dict(#(Int, Int), Wall)) -> Int {
   dict.fold(from: 0, over: corners, with: fn(rectangles, position1, _corner) {
     let #(x1, y1) = position1
 
-    dict.fold(from: rectangles, over: corners, with: fn(
-      rectangles,
-      position2,
-      _corner2,
-    ) {
-      let #(x2, y2) = position2
-      let position3 = #(x1, y2)
-      let position4 = #(x2, y1)
-      let is_rectangle =
-        x1 < x2
-        && y1 < y2
-        && dict.has_key(corners, position3)
-        && dict.has_key(corners, position4)
-        && has_vertical_walls_between(map, position1, position4)
-        && has_vertical_walls_between(map, position3, position2)
-        && has_horizontal_walls_between(map, position1, position3)
-        && has_horizontal_walls_between(map, position4, position2)
+    dict.fold(
+      from: rectangles,
+      over: corners,
+      with: fn(rectangles, position2, _corner2) {
+        let #(x2, y2) = position2
+        let position3 = #(x1, y2)
+        let position4 = #(x2, y1)
+        let is_rectangle =
+          x1 < x2
+          && y1 < y2
+          && dict.has_key(corners, position3)
+          && dict.has_key(corners, position4)
+          && has_vertical_walls_between(map, position1, position4)
+          && has_vertical_walls_between(map, position3, position2)
+          && has_horizontal_walls_between(map, position1, position3)
+          && has_horizontal_walls_between(map, position4, position2)
 
-      case is_rectangle {
-        True -> rectangles + 1
-        False -> rectangles
-      }
-    })
+        case is_rectangle {
+          True -> rectangles + 1
+          False -> rectangles
+        }
+      },
+    )
   })
 }
 

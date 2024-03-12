@@ -1,5 +1,5 @@
-import gleam/string
 import gleam/set
+import gleam/string
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
