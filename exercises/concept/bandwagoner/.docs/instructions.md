@@ -70,7 +70,7 @@ let newCoach = create_coach("Isiah Thomas", True)
 replace_coach team newCoach
 // -> Team(
 //   name: "Indiana Pacers",
-//   coach: Coach(name: "Isia Thoas", FormerPlayer = True),
+//   coach: Coach(name: "Isiah Thomas", FormerPlayer = True),
 //   stats: Stats(wins: 58, losses: 24),
 // ) 
 ```
