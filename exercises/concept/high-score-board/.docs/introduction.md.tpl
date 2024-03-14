@@ -2,4 +2,4 @@
 
 %{concept:type-aliases}
 
-%{concept:maps}
+%{concept:dicts}

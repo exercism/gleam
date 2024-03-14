@@ -252,7 +252,7 @@
         "uuid": "3c916f03-d843-4e5f-88dd-1c422880b235",
         "concepts": [
           "type-aliases",
-          "maps"
+          "dicts"
         ],
         "prerequisites": [
           "generics",
@@ -432,7 +432,7 @@
         ],
         "prerequisites": [
           "custom-types",
-          "maps"
+          "dicts"
         ],
         "status": "active"
       },
@@ -563,7 +563,7 @@
         "prerequisites": [
           "ints",
           "strings",
-          "maps",
+          "dicts",
           "results",
           "lists",
           "case-expressions",
@@ -750,13 +750,13 @@
         "name": "Word Count",
         "uuid": "0c7a2f06-1e53-4043-9e1a-386e90e945b4",
         "practices": [
-          "maps"
+          "dicts"
         ],
         "prerequisites": [
           "lists",
           "strings",
           "regular-expressions",
-          "maps"
+          "dicts"
         ],
         "difficulty": 4
       },
@@ -765,7 +765,7 @@
         "name": "Custom Set",
         "uuid": "70ea5040-42c5-4133-84ec-1a2ae6dde836",
         "practices": [
-          "maps"
+          "dicts"
         ],
         "prerequisites": [
           "opaque-types",
@@ -773,7 +773,7 @@
           "generics",
           "bools",
           "lists",
-          "maps"
+          "dicts"
         ],
         "difficulty": 5
       },
@@ -901,7 +901,7 @@
           "orders"
         ],
         "prerequisites": [
-          "maps",
+          "dicts",
           "strings",
           "lists",
           "orders",
@@ -1014,7 +1014,7 @@
         "prerequisites": [
           "lists",
           "sets",
-          "maps",
+          "dicts",
           "ints",
           "strings",
           "options",
@@ -1044,12 +1044,12 @@
         "name": "Rectangles",
         "uuid": "68171b71-a9eb-4925-a2f3-df0bc27ce41d",
         "practices": [
-          "maps"
+          "dicts"
         ],
         "prerequisites": [
           "lists",
           "strings",
-          "maps",
+          "dicts",
           "tuples",
           "bools"
         ],
@@ -1073,10 +1073,10 @@
         "name": "Scrabble Score",
         "uuid": "109a8a3e-cc3f-4f2a-a385-c12f9e9865cf",
         "practices": [
-          "maps"
+          "dicts"
         ],
         "prerequisites": [
-          "maps",
+          "dicts",
           "lists",
           "labelled-arguments",
           "case-expressions",
@@ -1139,7 +1139,7 @@
           "case-expressions"
         ],
         "prerequisites": [
-          "maps",
+          "dicts",
           "lists",
           "strings",
           "custom-types",
@@ -1246,7 +1246,7 @@
           "results",
           "strings",
           "ints",
-          "maps"
+          "dicts"
         ],
         "difficulty": 3
       },
@@ -1320,7 +1320,7 @@
         "uuid": "1655d9f6-6199-4462-85bd-a5da5f25d30a",
         "practices": [],
         "prerequisites": [
-          "maps",
+          "dicts",
           "lists",
           "strings",
           "ints"
@@ -1362,7 +1362,7 @@
         "prerequisites": [
           "strings",
           "ints",
-          "maps"
+          "dicts"
         ],
         "difficulty": 5
       },
@@ -1485,7 +1485,7 @@
         "prerequisites": [
           "strings",
           "lists",
-          "maps",
+          "dicts",
           "results"
         ],
         "difficulty": 4
@@ -1581,7 +1581,7 @@
         "practices": [],
         "prerequisites": [
           "lists",
-          "maps",
+          "dicts",
           "strings",
           "results",
           "bools",
@@ -1668,7 +1668,7 @@
           "strings",
           "lists",
           "case-expressions",
-          "maps",
+          "dicts",
           "ints"
         ],
         "difficulty": 5
@@ -1727,7 +1727,7 @@
         "uuid": "836dddea-2a02-434f-a886-c8e1c429268f",
         "practices": [],
         "prerequisites": [
-          "maps",
+          "dicts",
           "results",
           "strings",
           "ints",
@@ -1918,8 +1918,8 @@
     },
     {
       "uuid": "2dfd4e7c-7596-4b89-8f58-34b3948526d3",
-      "slug": "maps",
-      "name": "Maps"
+      "slug": "dicts",
+      "name": "Dicts"
     },
     {
       "uuid": "1dbc9485-8d2d-447d-822a-2342905c8990",

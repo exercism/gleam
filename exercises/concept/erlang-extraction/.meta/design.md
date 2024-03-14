@@ -18,4 +18,4 @@
 ## Prerequisites
 
 - `custom-types`
-- `maps`
+- `dicts`
