@@ -1832,8 +1832,13 @@
         "slug": "parallel-letter-frequency",
         "name": "Parallel Letter Frequency",
         "uuid": "a9e52150-65bc-44a9-9ef6-95b995aea794",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "strings",
+          "lists"
+        ],
+        "prerequisites": [
+          "lists"
+        ],
         "difficulty": 5
       }
     ]
