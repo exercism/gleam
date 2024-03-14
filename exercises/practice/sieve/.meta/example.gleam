@@ -1,6 +1,6 @@
-import gleam/list
-import gleam/iterator
 import gleam/bool
+import gleam/iterator
+import gleam/list
 import gleam/set.{type Set}
 
 pub fn primes_up_to(upper_bound: Int) -> List(Int) {

@@ -1,5 +1,5 @@
-import pacman_rules
 import exercism/test_runner
+import pacman_rules
 
 pub fn main() {
   test_runner.main()

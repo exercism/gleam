@@ -1,6 +1,6 @@
-import treasure_chest.{TreasureChest, Unlocked, WrongPassword}
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import treasure_chest.{TreasureChest, Unlocked, WrongPassword}
 
 pub fn main() {
   test_runner.main()

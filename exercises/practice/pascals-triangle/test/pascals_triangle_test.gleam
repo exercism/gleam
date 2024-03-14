@@ -1,8 +1,8 @@
-import pascals_triangle
+import exercism/should
+import exercism/test_runner
 import gleam/list
 import gleam/result
-import exercism/test_runner
-import exercism/should
+import pascals_triangle
 
 pub fn main() {
   test_runner.main()

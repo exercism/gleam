@@ -1,9 +1,9 @@
 import gleam/dict.{type Dict}
-import gleam/string
-import gleam/list
 import gleam/int
+import gleam/list
 import gleam/option
 import gleam/set.{type Set}
+import gleam/string
 
 pub fn solve(puzzle: String) -> Result(Dict(String, Int), Nil) {
   let #(coefficients, leading_digits) = parse_puzzle(puzzle)

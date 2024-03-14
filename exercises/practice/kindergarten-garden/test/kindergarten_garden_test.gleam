@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import kindergarten_garden.{
   Alice, Bob, Charlie, Clover, David, Eve, Fred, Ginny, Grass, Harriet, Ileana,
   Joseph, Kincaid, Larry, Radishes, Violets,

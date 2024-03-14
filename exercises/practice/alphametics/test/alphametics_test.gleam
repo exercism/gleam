@@ -1,6 +1,6 @@
-import exercism/test_runner
-import exercism/should
 import alphametics
+import exercism/should
+import exercism/test_runner
 import gleam/dict
 
 pub fn main() {

@@ -16,7 +16,7 @@ The `Some` constructor is used to wrap a value when it's present, and the `None`
 Accessing the content of a `Option` is often done via pattern matching.
 
 ```gleam
-import gleam/option.{Option, Some, None}
+import gleam/option.{type Option, Some, None}
 
 pub fn say_hello(person: Option(String)) -> String {
   case person {
@@ -37,7 +37,7 @@ say_hello(None)
 The `gleam/option` module also defines a number of useful function for working with `Option` types, such as `unwrap`, which returns the content of an `Option` or a default value if it is `None`.
 
 ```gleam
-import gleam/option.{Option}
+import gleam/option.{type Option}
 
 pub fn say_hello_again(person: Option(String)) -> String {
   let name = option.unwrap(person, "Friend")

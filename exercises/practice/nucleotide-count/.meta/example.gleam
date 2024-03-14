@@ -1,7 +1,7 @@
 import gleam/dict.{type Dict}
-import gleam/string
 import gleam/list
 import gleam/result
+import gleam/string
 
 pub fn nucleotide_count(dna: String) -> Result(Dict(String, Int), Nil) {
   dna

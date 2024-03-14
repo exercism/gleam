@@ -1,6 +1,6 @@
-import gleam/string
 import gleam/list
 import gleam/result
+import gleam/string
 
 pub fn to_rna(dna: String) -> Result(String, Nil) {
   dna

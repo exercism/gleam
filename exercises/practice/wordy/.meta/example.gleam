@@ -45,24 +45,25 @@ fn tokenize(question: String) -> Result(List(Token), Error) {
 }
 
 fn evaluate(tokens: List(Token)) -> Result(Int, Error) {
-  list.try_fold(tokens, [], fn(
-    previous_tokens: List(Token),
-    current_token: Token,
-  ) {
-    case previous_tokens, current_token {
-      [], Operand(_) -> Ok([current_token])
+  list.try_fold(
+    tokens,
+    [],
+    fn(previous_tokens: List(Token), current_token: Token) {
+      case previous_tokens, current_token {
+        [], Operand(_) -> Ok([current_token])
 
-      [Operand(_)], Operator(_) -> Ok([current_token, ..previous_tokens])
+        [Operand(_)], Operator(_) -> Ok([current_token, ..previous_tokens])
 
-      [Operator(operation), Operand(left_operand)], Operand(right_operand) ->
-        case operation(left_operand, right_operand) {
-          Ok(accumulated_result) -> Ok([Operand(accumulated_result)])
-          Error(Nil) -> Error(ImpossibleOperation)
-        }
+        [Operator(operation), Operand(left_operand)], Operand(right_operand) ->
+          case operation(left_operand, right_operand) {
+            Ok(accumulated_result) -> Ok([Operand(accumulated_result)])
+            Error(Nil) -> Error(ImpossibleOperation)
+          }
 
-      _, _ -> Error(SyntaxError)
-    }
-  })
+        _, _ -> Error(SyntaxError)
+      }
+    },
+  )
   |> result.map(fn(result) {
     let assert [Operand(result)] = result
     result

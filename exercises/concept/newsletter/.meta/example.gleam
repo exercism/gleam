@@ -1,7 +1,7 @@
-import simplifile
+import gleam/list
 import gleam/result
 import gleam/string
-import gleam/list
+import simplifile
 
 pub fn read_emails(path: String) -> Result(List(String), Nil) {
   case simplifile.read(path) {

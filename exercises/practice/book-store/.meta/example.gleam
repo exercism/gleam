@@ -1,6 +1,6 @@
+import gleam/float
 import gleam/int
 import gleam/list
-import gleam/float
 
 pub fn lowest_price(books: List(Int)) -> Float {
   let assert [a, b, c, d, e] =
@@ -28,7 +28,7 @@ fn calculate(counts: #(Int, Int, Int, Int, Int), acc: Float) -> Float {
       calculate(#(0, a - 1, b - 1, c - 1, d - 1), acc +. 4.0 *. 640.0)
 
     #(a, b, c, d, e) -> {
-      let [f, g, h, i, j] =
+      let assert [f, g, h, i, j] =
         list.sort([a, b - 1, c - 1, d - 1, e - 1], int.compare)
 
       float.min(

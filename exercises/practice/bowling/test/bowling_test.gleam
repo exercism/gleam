@@ -1,8 +1,8 @@
 import bowling.{
   type Error, Game, GameComplete, GameNotComplete, InvalidPinCount, roll, score,
 }
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import gleam/list
 
 pub fn main() {

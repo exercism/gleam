@@ -1,6 +1,6 @@
-import tisbury_treasure_hunt
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import tisbury_treasure_hunt
 
 pub fn main() {
   test_runner.main()

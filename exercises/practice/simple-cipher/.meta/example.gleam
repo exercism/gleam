@@ -1,7 +1,7 @@
 import gleam/int
-import gleam/string
-import gleam/result
 import gleam/iterator
+import gleam/result
+import gleam/string
 
 pub fn encode(plaintext plaintext: String, key key: String) -> String {
   shift(input: plaintext, key: key, by: int.add)

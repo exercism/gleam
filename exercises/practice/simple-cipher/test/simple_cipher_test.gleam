@@ -1,8 +1,8 @@
-import gleam/iterator
-import gleam/string
-import gleam/regex
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import gleam/iterator
+import gleam/regex
+import gleam/string
 import simple_cipher
 
 pub fn main() {

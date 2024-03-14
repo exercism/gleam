@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import twelve_days.{lyrics, verse}
 
 pub fn main() {

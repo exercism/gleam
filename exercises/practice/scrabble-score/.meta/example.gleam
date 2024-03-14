@@ -1,6 +1,6 @@
-import gleam/string
 import gleam/dict
 import gleam/list
+import gleam/string
 
 pub fn score(word word: String) -> Int {
   let word_values =

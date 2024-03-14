@@ -1,7 +1,7 @@
-import high_score_board
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import gleam/dict
+import high_score_board
 
 pub fn main() {
   test_runner.main()

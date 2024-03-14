@@ -1,8 +1,8 @@
+import exercism/should
+import exercism/test_runner
 import expert_experiments
 import gleam/erlang/process
 import gleam/list
-import exercism/test_runner
-import exercism/should
 
 pub fn main() {
   test_runner.main()

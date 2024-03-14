@@ -1,7 +1,7 @@
-import gleam/iterator
-import exercism/test_runner
-import exercism/should
 import dnd_character
+import exercism/should
+import exercism/test_runner
+import gleam/iterator
 
 pub fn main() {
   test_runner.main()

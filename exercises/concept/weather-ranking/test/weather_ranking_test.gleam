@@ -1,7 +1,7 @@
-import weather_ranking.{Celsius, City, Fahrenheit}
-import gleam/order
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import gleam/order
+import weather_ranking.{Celsius, City, Fahrenheit}
 
 pub fn main() {
   test_runner.main()

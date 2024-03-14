@@ -1,7 +1,7 @@
-import gleam/string
-import gleam/list
 import gleam/dict.{type Dict}
+import gleam/list
 import gleam/result
+import gleam/string
 
 fn shift_map(shift_key: Int, text: String) -> Dict(String, String) {
   let graphemes = string.to_graphemes(text)

@@ -1,5 +1,5 @@
-import gleam/string
 import gleam/list
+import gleam/string
 
 pub type Robot {
   Robot(direction: Direction, position: Position)

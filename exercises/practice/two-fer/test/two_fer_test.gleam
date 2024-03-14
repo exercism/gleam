@@ -1,7 +1,7 @@
-import two_fer.{two_fer}
-import gleam/option.{None, Some}
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import gleam/option.{None, Some}
+import two_fer.{two_fer}
 
 pub fn main() {
   test_runner.main()

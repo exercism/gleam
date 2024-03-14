@@ -1,6 +1,6 @@
-import exercism/test_runner
-import exercism/should
 import all_your_base.{InvalidBase, InvalidDigit}
+import exercism/should
+import exercism/test_runner
 
 pub fn main() {
   test_runner.main()

@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import perfect_numbers.{Abundant, Deficient, NonPositiveInt, Perfect}
 
 pub fn main() {

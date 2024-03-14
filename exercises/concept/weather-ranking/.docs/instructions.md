@@ -28,11 +28,11 @@ Define the `sort_cities_by_temperature` function that takes a list of cities and
 
 ```gleam
 sort_cities_by_temperature([
-  #("London", Celsius(30.5)),
-  #("Paris", Fahrenheit(82.1))
+  City(name: "London", temperature: Celsius(30.5)),
+  City(name: "Paris", temperature: Fahrenheit(82.1))
 ])
 // -> [
-//   #("Paris", Fahrenheit(82.1)),
-//   #("London", Celsius(30.5))
+//   City(name: "Paris", temperature: Fahrenheit(82.1)),
+//   City(name: "London", temperature: Celsius(30.5)))
 // ]
 ```

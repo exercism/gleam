@@ -1,5 +1,5 @@
-import gleam/regex
 import gleam/option.{Some}
+import gleam/regex
 
 pub fn is_valid_line(line: String) -> Bool {
   let assert Ok(re) = regex.from_string("^\\[(DEBUG|INFO|WARNING|ERROR)\\]")

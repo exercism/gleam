@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import high_scores
 
 pub fn main() {

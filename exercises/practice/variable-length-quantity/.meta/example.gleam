@@ -41,5 +41,6 @@ fn do_decode(string: BitArray, acc: Int) -> Result(List(Int), Error) {
       use integers <- result.then(do_decode(rest, 0))
       Ok([128 * acc + last_bits, ..integers])
     }
+    _ -> Ok([])
   }
 }

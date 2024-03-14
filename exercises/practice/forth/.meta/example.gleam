@@ -1,7 +1,7 @@
-import gleam/result
-import gleam/int
 import gleam/dict
+import gleam/int
 import gleam/list
+import gleam/result
 import gleam/string
 import gleam/string_builder
 
@@ -66,10 +66,7 @@ pub fn format_stack(f: Forth) -> String {
   |> string_builder.to_string
 }
 
-fn tokenise_word(
-  word: String,
-  rest: List(String),
-) -> #(ForthTok, List(String)) {
+fn tokenise_word(word: String, rest: List(String)) -> #(ForthTok, List(String)) {
   case word {
     ":" -> {
       let assert #([first_word, ..instructions], [_, ..rest]) =

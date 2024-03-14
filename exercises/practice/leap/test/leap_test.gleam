@@ -1,5 +1,5 @@
-import leap
 import exercism/test_runner
+import leap
 
 pub fn main() {
   test_runner.main()

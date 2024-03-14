@@ -1,6 +1,6 @@
 import gleam/bool
-import gleam/list
 import gleam/dict.{type Dict}
+import gleam/list
 
 pub opaque type Set(t) {
   Set(map: Dict(t, Bool))

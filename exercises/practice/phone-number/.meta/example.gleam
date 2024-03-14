@@ -1,6 +1,6 @@
-import gleam/string
-import gleam/result
 import gleam/list
+import gleam/result
+import gleam/string
 
 pub fn clean(input: String) -> Result(String, String) {
   input

@@ -1,6 +1,6 @@
-import go.{type Game, Black, Game, White}
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
+import go.{type Game, Black, Game, White}
 
 pub fn main() {
   test_runner.main()

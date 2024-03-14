@@ -1,5 +1,5 @@
-import gleam/float
 import exercism/test_runner
+import gleam/float
 import space_age.{Earth, Jupiter, Mars, Mercury, Neptune, Saturn, Uranus, Venus}
 
 pub fn main() {

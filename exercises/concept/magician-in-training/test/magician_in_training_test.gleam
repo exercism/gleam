@@ -1,6 +1,6 @@
-import magician_in_training
-import gleam/queue
 import exercism/test_runner
+import gleam/queue
+import magician_in_training
 
 pub fn main() {
   test_runner.main()

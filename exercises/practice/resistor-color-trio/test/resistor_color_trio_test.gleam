@@ -1,5 +1,5 @@
-import exercism/test_runner
 import exercism/should
+import exercism/test_runner
 import resistor_color_trio.{Resistance, label}
 
 pub fn main() {

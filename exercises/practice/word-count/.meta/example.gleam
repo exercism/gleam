@@ -1,8 +1,8 @@
 import gleam/dict.{type Dict}
 import gleam/list
+import gleam/option
 import gleam/regex
 import gleam/string
-import gleam/option
 
 pub fn count_words(input: String) -> Dict(String, Int) {
   let assert Ok(re) = regex.from_string("[a-z0-9]+('[a-z0-9]+)?")

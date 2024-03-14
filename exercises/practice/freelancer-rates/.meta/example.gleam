@@ -19,6 +19,6 @@ pub fn monthly_rate(hourly_rate: Int, discount: Float) -> Int {
 pub fn days_in_budget(budget: Int, hourly_rate: Int, discount: Float) -> Float {
   float.floor(
     int.to_float(budget)
-      /. apply_discount(float.round(daily_rate(hourly_rate)), discount),
+    /. apply_discount(float.round(daily_rate(hourly_rate)), discount),
   )
 }
