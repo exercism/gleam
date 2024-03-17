@@ -1840,6 +1840,7 @@
           "otp-tasks"
         ],
         "prerequisites": [
+          "strings",
           "lists",
           "maps",
           "regex",
