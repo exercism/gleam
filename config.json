@@ -1834,10 +1834,16 @@
         "uuid": "a9e52150-65bc-44a9-9ef6-95b995aea794",
         "practices": [
           "strings",
-          "lists"
+          "lists",
+          "maps",
+          "regex",
+          "otp-tasks"
         ],
         "prerequisites": [
-          "lists"
+          "lists",
+          "maps",
+          "regex",
+          "otp-tasks"
         ],
         "difficulty": 5
       }
@@ -2023,6 +2029,16 @@
       "uuid": "e33cc76d-a5c5-47cb-ab91-aa1f2da988b9",
       "slug": "use-expressions",
       "name": "Use Expressions"
+    },
+    {
+      "uuid": "afe3cbfc-fd7e-4a47-ba64-613759570f18",
+      "slug": "otp-tasks",
+      "name": "otp-tasks"
+    },
+    {
+      "uuid": "fcf2cba8-5de2-4529-a73b-2a5972041da0",
+      "slug": "regex",
+      "name": "regex"
     }
   ],
   "key_features": [
