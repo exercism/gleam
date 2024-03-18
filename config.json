@@ -1835,14 +1835,14 @@
         "practices": [
           "strings",
           "lists",
-          "maps",
+          "dicts",
           "regex",
           "otp-tasks"
         ],
         "prerequisites": [
           "strings",
           "lists",
-          "maps",
+          "dicts",
           "regex",
           "otp-tasks"
         ],
