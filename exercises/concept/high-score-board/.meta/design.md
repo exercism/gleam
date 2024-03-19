@@ -3,9 +3,9 @@
 ## Learning objectives
 
 - What type aliases are.
-- What maps are.
-- How to create create maps with `map.new` and `map.from_list`.
-- How to add, remove and map entries in a map.
+- What dicts are.
+- How to create create dicts with `dict.new` and `dict.from_list`.
+- How to add, remove and dict entries in a dict.
 - Awareness of other `gleam/result` functions.
 
 ## Out of Scope
@@ -16,7 +16,7 @@
 
 The Concepts this exercise unlocks are:
 
-- `maps`
+- `dicts`
 - `type-aliases`
 
 ## Prerequisites

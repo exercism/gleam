@@ -20,5 +20,5 @@
   "forked_from": [
     "javascript/high-score-board"
   ],
-  "blurb": "Practice Gleam maps by tracking high scores of an arcade game."
+  "blurb": "Practice Gleam dicts by tracking high scores of an arcade game."
 }

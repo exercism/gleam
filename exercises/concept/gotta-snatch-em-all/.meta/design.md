@@ -11,7 +11,7 @@ The Goal is to learn how to use sets.
 
 ## Out of scope
 
-- Relationship with maps.
+- Relationship with dicts.
 - Erlang implementation details.
 - JavaScript implementation details.
 
