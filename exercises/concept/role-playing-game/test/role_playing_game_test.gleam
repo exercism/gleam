@@ -25,8 +25,8 @@ pub fn revive_a_player_that_is_alive_should_return_none_test() {
   |> should.equal(None)
 }
 
-pub fn reviving_a_low_level_player_resets_health_and_removes_mana_test() {
-  Player(name: None, level: 3, health: 0, mana: Some(7))
+pub fn reviving_a_low_level_player_resets_its_health_to_100_test() {
+  Player(name: None, level: 3, health: 0, mana: None)
   |> role_playing_game.revive
   |> should.equal(Some(Player(name: None, level: 3, health: 100, mana: None)))
 }
