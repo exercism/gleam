@@ -77,7 +77,7 @@ replace_coach team newCoach
 
 ## 6. Check for same team
 
-While digging into stats, you're keeping lists of teams and their records. Sometimes, you get things wrong and there are duplicate entries on your list. Implement the `isSameTeam` function that takes two teams and returns `True` if they are the same team, otherwise, return `False`:
+While digging into stats, you're keeping lists of teams and their records. Sometimes, you get things wrong and there are duplicate entries on your list. Implement the `is_same_team` function that takes two teams and returns `True` if they are the same team, otherwise, return `False`:
 
 ```fsharp
 let pacers_coach = create_coach("Larry Bird", True)
@@ -88,7 +88,7 @@ let lakers_coach = create_coach("Del Harris", False)
 let lakers_stats = create_stats(61, 21)
 let lakers_team = create_team("LA Lakers", lakers_coach, lakers_stats)
 
-isSameTeam(pacers_team, lakers_team)
+is_same_team(pacers_team, lakers_team)
 // -> False
 ```
 
