@@ -66,8 +66,8 @@ let coach = create_coach("Larry Bird", True)
 let record = create_stats(58, 24)
 let team = create_team("Indiana Pacers", coach, record)
 
-let newCoach = create_coach("Isiah Thomas", True)
-replace_coach team newCoach
+let new_coach = create_coach("Isiah Thomas", True)
+replace_coach team new_coach
 // -> Team(
 //   name: "Indiana Pacers",
 //   coach: Coach(name: "Isiah Thomas", FormerPlayer = True),
