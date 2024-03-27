@@ -1836,14 +1836,14 @@
           "strings",
           "lists",
           "dicts",
-          "regex",
+          "regular-expressions",
           "otp-tasks"
         ],
         "prerequisites": [
           "strings",
           "lists",
           "dicts",
-          "regex",
+          "regular-expressions",
           "otp-tasks"
         ],
         "difficulty": 5
@@ -2035,11 +2035,6 @@
       "uuid": "afe3cbfc-fd7e-4a47-ba64-613759570f18",
       "slug": "otp-tasks",
       "name": "otp-tasks"
-    },
-    {
-      "uuid": "fcf2cba8-5de2-4529-a73b-2a5972041da0",
-      "slug": "regex",
-      "name": "regex"
     }
   ],
   "key_features": [
