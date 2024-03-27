@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "kahgoh"
+  ],
+  "files": {
+    "solution": [
+      "src/parallel_letter_frequency.gleam"
+    ],
+    "test": [
+      "test/parallel_letter_frequency_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ]
+  },
+  "blurb": "Count the frequency of letters in texts using parallel computation."
+}
