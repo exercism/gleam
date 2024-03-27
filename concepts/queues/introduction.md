@@ -57,7 +57,7 @@ a == b
 // -> False
 ```
 
-If you need to compare two queues for equality use can use the `queue.is_logically_equal` function.
+If you need to compare two queues for equality you can use the `queue.is_logically_equal` function.
 
 ```gleam
 queue.is_logically_equal(a, b, fn(x, y) { x == y })))
