@@ -40,7 +40,7 @@ Implement `secret_divide`. It should return a function which takes one argument 
 
 ```gleam
 let divider = secret_divide(3)
-divider(32)
+divider(30)
 // -> 10
 ```
 
