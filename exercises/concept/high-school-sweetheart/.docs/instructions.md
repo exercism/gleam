@@ -48,7 +48,7 @@ initials("Lance Green")
 
 ## 4. Put the initials inside of the heart
 
-Implement the `pair/2` function. It should take two full names and return the initials inside an ASCII heart. Make sure to reuse `initials` that you defined in the previous step.
+Implement the `pair` function. It should take two full names and return the initials inside an ASCII heart. Make sure to reuse `initials` that you defined in the previous step.
 
 ```gleam
 pair("Blake Miller", "Riley Lewis")
