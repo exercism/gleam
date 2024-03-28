@@ -2,11 +2,15 @@ pub type School {
   TODO
 }
 
+pub fn create() -> School {
+  todo
+}
+
 pub fn roster(school: School) -> List(String) {
   todo
 }
 
-pub fn add(school: School, student: String) -> Result(School, Nil) {
+pub fn add(to school: School, student student: String, grade grade: Int) -> Result(School, Nil) {
   todo
 }
 
