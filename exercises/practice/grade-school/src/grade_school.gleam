@@ -10,7 +10,11 @@ pub fn roster(school: School) -> List(String) {
   todo
 }
 
-pub fn add(to school: School, student student: String, grade grade: Int) -> Result(School, Nil) {
+pub fn add(
+  to school: School,
+  student student: String,
+  grade grade: Int,
+) -> Result(School, Nil) {
   todo
 }
 
