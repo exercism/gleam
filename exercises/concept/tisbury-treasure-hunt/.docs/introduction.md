@@ -44,7 +44,7 @@ person.1 // -> 170
 // Option 2: let
 let #(name2, length2) = person
 // -> name2 = "Jordan"
-// -> length2 = 52
+// -> length2 = 170
 
 // Option 3: case
 case person {
