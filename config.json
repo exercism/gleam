@@ -1705,7 +1705,10 @@
         "name": "Secret Handshake",
         "uuid": "22461f35-684d-4f75-9399-d07a4f483bdd",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "custom-types",
+          "lists"
+        ],
         "difficulty": 2
       },
       {
@@ -1812,11 +1815,11 @@
         "name": "Eliud's Eggs",
         "uuid": "2af8d672-a825-4699-a77e-771d5d48a5d1",
         "practices": [
-          "ints"
+          "recursion"
         ],
         "prerequisites": [
-          "basics",
-          "ints"
+          "ints",
+          "recursion"
         ],
         "difficulty": 2
       },
@@ -1825,7 +1828,10 @@
         "name": "Sieve",
         "uuid": "146a0acd-cabf-431c-97a4-3c719903411f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "recursion"
+        ],
         "difficulty": 4
       }
     ]
