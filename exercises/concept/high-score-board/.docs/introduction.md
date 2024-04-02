@@ -20,7 +20,7 @@ pub fn html_headers() -> Headers {
 
 When written with `pub type` the alias can be used outside of the module it is defined in. If `pub` is omitted then the alias is private and cannot be referenced in other modules.
 
-## dicts
+## Dicts
 
 Dicts in Gleam are the data structure for storing information in key-value pairs. In other languages, these might also be known as associative arrays, hashes, or dictionaries.
 
@@ -28,7 +28,7 @@ Any type can be used for the keys and values in a dict, and they do not guarante
 
 ### Working with dicts
 
-dicts are created and manipulated using functions from the `gleam/dict` module.
+Dicts are created and manipulated using functions from the `gleam/dict` module.
 
 ```gleam
 // Create an empty dict
