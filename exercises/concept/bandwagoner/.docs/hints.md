@@ -11,5 +11,5 @@
 ## 7. Check if you should root for a team
 
 - The best way to execute logic based on the team's value is to use a case expression.
-- If you want to add an additional condition to a pattern, you can add a guard.
+- If you want to add a condition to a pattern, you can use a guard.
 - Pattern matching works for records within records.
