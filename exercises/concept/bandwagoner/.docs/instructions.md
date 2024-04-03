@@ -1,6 +1,6 @@
 # Instructions
 
-In this exercise you're a big sports fan and you've just discovered a passion for NBA basketball. Being new to NBA basketball, you're doing a deep dive into NBA history, keeping track of teams, coaches, their win/loss stats and comparing them against each other.
+In this exercise you're a big sports fan and you've just discovered a passion for NBA basketball. Being new to NBA basketball, you're doing a deep dive into NBA history, keeping track of teams, coaches, their win/loss stats, and comparing them against each other.
 
 As you don't yet have a favorite team, you'll also be developing an algorithm to figure out whether to root for a particular team.
 
