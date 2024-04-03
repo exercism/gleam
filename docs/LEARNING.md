@@ -4,7 +4,7 @@ The official [Gleam language tour](https://gleam.run/book/tour/) is an excellent
 
 ## Additional learning resources
 
-* [Gleam Documentation](https://gleam.run)
+- [Gleam Documentation](https://gleam.run)
 - [Gleam for Elixir users](https://gleam.run/cheatsheets/gleam-for-elixir-users)
 - [Gleam for Elm users](https://gleam.run/cheatsheets/gleam-for-elm-users)
 - [Gleam for Erlang users](https://gleam.run/cheatsheets/gleam-for-erlang-users)
