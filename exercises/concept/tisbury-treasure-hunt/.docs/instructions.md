@@ -43,7 +43,7 @@ Aazra and Rui are designing a pirate-themed treasure hunt. There is a list of tr
 </td></tr>
 </table>
 
-But things are a bit disorganized: Azara's coordinates appear to be formatted and sorted differently from Rui's, and they have to keep looking from one list to the other to figure out which treasures go with which locations. Being budding Gleamlins, they have come to you for help in writing a small program (a set of functions, really) to better organize their hunt information.
+But things are a bit disorganized: Aazra's coordinates appear to be formatted and sorted differently from Rui's, and they have to keep looking from one list to the other to figure out which treasures go with which locations. Being budding Gleamlins, they have come to you for help in writing a small program (a set of functions, really) to better organize their hunt information.
 
 ## 1. Convert locations
 

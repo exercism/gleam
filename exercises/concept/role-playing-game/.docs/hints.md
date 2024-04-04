@@ -2,7 +2,7 @@
 
 ## 1. Introduce yourself
 
-- The [`option.unwrap` function][unwrap] can be used get the value from an option, or a default value if there is no value.
+- The [`option.unwrap` function][unwrap] can be used to get the value from an option, or a default value if there is no value.
 
 ## 2. Implement the revive mechanic
 

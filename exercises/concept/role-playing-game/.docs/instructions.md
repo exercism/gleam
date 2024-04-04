@@ -24,7 +24,7 @@ If they are, it should return a new `Player` instance with 100 health.
 Otherwise, if the player's character isn't dead, the `revive` function returns `None`.
 
 If the player's level is 10 or above, they should also be revived with 100 mana.
-If they player's level is below 10, their mana should be untouched.
+If the player's level is below 10, their mana should be untouched.
 The `revive` function should preserve the player's level.
 
 ```gleam
