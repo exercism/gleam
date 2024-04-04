@@ -1842,15 +1842,13 @@
           "strings",
           "lists",
           "dicts",
-          "regular-expressions",
-          "otp-tasks"
+          "regular-expressions"
         ],
         "prerequisites": [
           "strings",
           "lists",
           "dicts",
-          "regular-expressions",
-          "otp-tasks"
+          "regular-expressions"
         ],
         "difficulty": 5
       }
@@ -2036,11 +2034,6 @@
       "uuid": "e33cc76d-a5c5-47cb-ab91-aa1f2da988b9",
       "slug": "use-expressions",
       "name": "Use Expressions"
-    },
-    {
-      "uuid": "afe3cbfc-fd7e-4a47-ba64-613759570f18",
-      "slug": "otp-tasks",
-      "name": "otp-tasks"
     }
   ],
   "key_features": [
