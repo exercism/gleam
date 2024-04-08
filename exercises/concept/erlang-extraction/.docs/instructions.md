@@ -1,6 +1,6 @@
 # Instructions
 
-Tadhg has found the perfect Erlang library to help with is project. Being an older Erlang library it is using the `gb_trees` module rather than the newer `maps` module for storing data.
+Tadhg has found the perfect Erlang library to help with his project. Being an older Erlang library it is using the `gb_trees` module rather than the newer `maps` module for storing data.
 
 Help out Tadgh by creating external types and functions for working with `gb_trees` in Gleam.
 
