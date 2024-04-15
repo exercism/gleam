@@ -59,7 +59,7 @@ Do you and your friends collectively own all of the Blorkemon™️ cards?
 Implement `total_cards`, which takes a list of collections and returns the total number of different cards in all of the collections.
 
 ```gleam
-total_cards [set.from_list(["Scientuna"]), set.from_list(["Newthree", "Scientuna"])]
+total_cards([set.from_list(["Scientuna"]), set.from_list(["Newthree", "Scientuna"])])
 // -> 2
 ```
 
