@@ -2,11 +2,11 @@
 
 Lucy has an online sticker shop, where she sells cute stickers featuring everyone's favourite programming languages. People from all around the world buy her stickers, and she's having some trouble dealing with all the different currencies.
 
-Create a program that Lucy can use calculate prices while being sure that she's always using the correct currency.
+Create a program that Lucy can use to calculate prices while being sure that she's always using the correct currency.
 
 ## 1. Define the `Usd`, `Eur`, and `Jpy` types
 
-These type are used to represent the different currencies that Lucy's customers use to buy her stickers.
+These types are used to represent the different currencies that Lucy's customers use to buy her stickers.
 
 They are to be used as phantom types and do not need to have any constructors.
 
