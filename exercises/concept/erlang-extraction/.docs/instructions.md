@@ -18,7 +18,7 @@ It should use the `gb_trees:empty/0` function from the Erlang standard library.
 
 The `insert` function should take a `GbTree` and a key and value to insert into the tree. It should return a new `GbTree` with the key and value inserted.
 
-The should take three arguments:
+The function should take three arguments:
 1. The `GbTree` to insert into.
 2. The key to insert.
 3. The value to insert.
@@ -29,7 +29,7 @@ It should use the `gb_trees:insert/3` function from the Erlang standard library.
 
 The `delete` function should take a `GbTree` and a key to delete from the tree. It should return a new `GbTree` with the key and value deleted.
 
-The should take two arguments:
+The function should take two arguments:
 1. The `GbTree` to delete from.
 2. The key to delete.
 
