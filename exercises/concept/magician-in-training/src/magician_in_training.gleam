@@ -1,6 +1,6 @@
 import gleam/queue.{type Queue}
 
-pub fn insert_top(queue: Queue(Int), card: Int) {
+pub fn insert_top(queue: Queue(Int), card: Int) -> Queue(Int) {
   todo
 }
 
