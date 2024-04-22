@@ -16,7 +16,7 @@ The `Some` constructor is used to wrap a value when it's present, and the `None`
 Accessing the content of a `Option` is often done via pattern matching.
 
 ```gleam
-import gleam/option.{type Option, Some, None}
+import gleam/option.{type Option, None, Some}
 
 pub fn say_hello(person: Option(String)) -> String {
   case person {
