@@ -5,7 +5,7 @@ You have three tasks, aiming at correctly displaying the bikes and parts prices 
 
 ## 1. Export the `pence_to_pounds` function
 
-Your colleague has already written the skeleton of the module, the incomplete functions `pence_to_pounds` and `pounds_to_pence`.
+Your colleague has already written the skeleton of the module, the incomplete functions `pence_to_pounds` and `pounds_to_string`.
 However, they have forgotten to export the `pence_to_pounds` function, so it is currently not visible by other modules or by the test suite.
 
 Export the `pence_to_pounds` function.
