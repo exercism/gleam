@@ -12,7 +12,11 @@ type Nationalities =
   Dict(Int, String)
 
 pub fn solve() -> Result(Solution, Nil) {
-  solve_for_colour(houses() |> list.permutations(), dict.new())
+  solve_for_colour(
+    houses()
+      |> list.permutations(),
+    dict.new(),
+  )
 }
 
 fn houses() {
@@ -58,7 +62,8 @@ fn solve_for_colour(
             |> dict.insert("yellow", yellow)
           case
             solve_for_nationalities(
-              houses() |> list.permutations(),
+              houses()
+                |> list.permutations(),
               parameters,
             )
           {
@@ -103,7 +108,8 @@ fn solve_for_nationalities(
             ])
           case
             solve_for_beverages(
-              houses() |> list.permutations(),
+              houses()
+                |> list.permutations(),
               parameters,
               nationalities,
             )
@@ -142,7 +148,8 @@ fn solve_for_beverages(
             |> dict.insert("orange_juice", orange_juice)
           case
             solve_for_cigarettes(
-              houses() |> list.permutations(),
+              houses()
+                |> list.permutations(),
               parameters,
               nationalities,
             )
@@ -187,7 +194,8 @@ fn solve_for_cigarettes(
             |> dict.insert("chesterfields", chesterfields)
           case
             solve_for_pets(
-              houses() |> list.permutations(),
+              houses()
+                |> list.permutations(),
               parameters,
               nationalities,
             )
@@ -219,7 +227,7 @@ fn solve_for_pets(
       case
         dog == spanish
         && snails == old_gold
-        && next_to(fox, chesterfields)  // !!!
+        && next_to(fox, chesterfields)
         && next_to(horse, kools)
       {
         False -> solve_for_pets(rest, parameters, nationalities)
