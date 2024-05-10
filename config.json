@@ -1842,7 +1842,6 @@
           "results"
         ],
         "prerequisites": [
-          "custom-types",
           "recursion"
         ],
         "difficulty": 9
