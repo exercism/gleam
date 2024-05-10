@@ -1,7 +1,7 @@
-pub type Solution {
-  Solution(water_drinker: String, zebra_owner: String)
+pub fn water_drinker() -> Result(String, Nil) {
+  todo
 }
 
-pub fn solve() -> Result(Solution, Nil) {
+pub fn zebra_owner() -> Result(String, Nil) {
   todo
 }

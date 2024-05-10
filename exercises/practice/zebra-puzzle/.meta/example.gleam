@@ -1,7 +1,18 @@
 import gleam/dict.{type Dict}
 import gleam/list
+import gleam/result
 
-pub type Solution {
+pub fn water_drinker() -> Result(String, Nil) {
+  solve()
+  |> result.map(fn(solution) { solution.water_drinker })
+}
+
+pub fn zebra_owner() -> Result(String, Nil) {
+  solve()
+  |> result.map(fn(solution) { solution.zebra_owner })
+}
+
+type Solution {
   Solution(water_drinker: String, zebra_owner: String)
 }
 
@@ -11,7 +22,7 @@ type Parameters =
 type Nationalities =
   Dict(Int, String)
 
-pub fn solve() -> Result(Solution, Nil) {
+fn solve() -> Result(Solution, Nil) {
   solve_for_colour(
     houses()
       |> list.permutations(),

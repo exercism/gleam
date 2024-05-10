@@ -6,12 +6,12 @@ pub fn main() {
   test_runner.main()
 }
 
-pub fn puzzle_test() {
-  let assert Ok(solution) = zebra_puzzle.solve()
+pub fn drinks_water_test() {
+  zebra_puzzle.water_drinker()
+  |> should.equal(Ok("Norwegian"))
+}
 
-  solution.water_drinker
-  |> should.equal("Norwegian")
-
-  solution.zebra_owner
-  |> should.equal("Japanese")
+pub fn owns_zebra_test() {
+  zebra_puzzle.zebra_owner()
+  |> should.equal(Ok("Japanese"))
 }
