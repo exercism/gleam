@@ -339,7 +339,7 @@
         "name": "DNA Encoding",
         "uuid": "e8b77421-e3da-4875-9f9d-8d263df019f2",
         "concepts": [
-          "bit-strings"
+          "bit-arrays"
         ],
         "prerequisites": [
           "lists",
@@ -1746,7 +1746,7 @@
         "uuid": "f7e33664-ea30-4885-8961-4aa984a1341d",
         "practices": [],
         "prerequisites": [
-          "bit-strings",
+          "bit-arrays",
           "case-expressions",
           "lists",
           "recursion",
@@ -1964,8 +1964,8 @@
     },
     {
       "uuid": "8a61a160-c08d-4565-88ba-cab37fc90945",
-      "slug": "bit-strings",
-      "name": "Bit Strings"
+      "slug": "bit-arrays",
+      "name": "Bit Arrays"
     },
     {
       "uuid": "6e5cd6a5-9fd8-4d16-9500-99850894fad9",
