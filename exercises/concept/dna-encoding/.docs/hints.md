@@ -18,8 +18,8 @@
 
 - The `encode_nucleotide` function can be used to encode a single nucleotide.
 
-## 4. Decode a DNA bitstring
+## 4. Decode a DNA bitarray
 
-- The binary int syntax can be used within a bit string pattern.
-- Return `Error(Nil)` if the remaining bit string is not long enough to contain
+- The binary int syntax can be used within a bit array pattern.
+- Return `Error(Nil)` if the remaining bit array is not long enough to contain
   a nucleotide.
