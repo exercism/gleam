@@ -19,7 +19,7 @@ pub fn replace(
 When calling a function with labelled arguments the arguments can be given in any order. Each of these calls to `replace` are equivalent:
 
 ```gleam
-replace(in: "🍔🍔🍔" each: "🍔", with: "🍕")
+replace(in: "🍔🍔🍔", each: "🍔", with: "🍕")
 
 replace(each: "🍔", in: "🍔🍔🍔", with: "🍕")
 
