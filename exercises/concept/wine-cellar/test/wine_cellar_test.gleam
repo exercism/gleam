@@ -5,8 +5,7 @@ import wine_cellar.{Red, Rose, White, Wine}
 const cellar = [
   Wine("Chardonnay", 2015, "Italy", White),
   Wine("Chardonnay", 2014, "France", White),
-  Wine("Dornfelder", 2018, "Germany", Rose),
-  Wine("Merlot", 2015, "France", Red),
+  Wine("Dornfelder", 2018, "Germany", Rose), Wine("Merlot", 2015, "France", Red),
   Wine("Riesling", 2017, "Germany", White),
   Wine("Pinot grigio", 2015, "Germany", White),
   Wine("Pinot noir", 2016, "France", Red),
