@@ -1,7 +1,7 @@
 # Debug
 
 When a test fails, a message is displayed describing what went wrong and for which input.
-You can inspect arbitrary values in your program by passing them to the `debug` method (avaiable at `exercism/test_runner`).
+You can inspect arbitrary values in your program by passing them to the `debug` method.
 This will capture the values and show you the output.
 
 
