@@ -1,7 +1,7 @@
 import exercism/should
 import exercism/test_runner
 import valentines_day.{
-  BoardGame, Chill, Crime, Horror, Korean, Maybe, Movie, No, Restaurant, Romance,
+  BoardGame, Chill, Crime, Horror, Korean, Perhaps, Movie, No, Restaurant, Romance,
   Thriller, Turkish, Walk, Yes,
 }
 
@@ -46,7 +46,7 @@ pub fn rate_korean_restaurant_test() {
 
 pub fn rate_turkish_restaurant_test() {
   valentines_day.rate_activity(Restaurant(Turkish))
-  |> should.equal(Maybe)
+  |> should.equal(Perhaps)
 }
 
 pub fn rate_walk_of_12_kilometer_test() {
@@ -61,12 +61,12 @@ pub fn rate_walk_of_13_kilometers_test() {
 
 pub fn rate_walk_of_11_kilometers_test() {
   valentines_day.rate_activity(Walk(11))
-  |> should.equal(Maybe)
+  |> should.equal(Perhaps)
 }
 
 pub fn rate_walk_of_7_kilometers_test() {
   valentines_day.rate_activity(Walk(7))
-  |> should.equal(Maybe)
+  |> should.equal(Perhaps)
 }
 
 pub fn rate_walk_of_6_kilometers_test() {

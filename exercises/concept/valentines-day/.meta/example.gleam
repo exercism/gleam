@@ -1,7 +1,7 @@
 pub type Approval {
   Yes
   No
-  Maybe
+  Perhaps
 }
 
 pub type Cuisine {
@@ -27,11 +27,11 @@ pub type Activity {
 pub fn rate_activity(activity: Activity) -> Approval {
   case activity {
     Restaurant(Korean) -> Yes
-    Restaurant(Turkish) -> Maybe
+    Restaurant(Turkish) -> Perhaps
     Movie(Romance) -> Yes
     Movie(_) -> No
     Walk(kilometers) if kilometers > 11 -> Yes
-    Walk(kilometers) if kilometers > 6 -> Maybe
+    Walk(kilometers) if kilometers > 6 -> Perhaps
     Walk(_) -> No
     _ -> No
   }

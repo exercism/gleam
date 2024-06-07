@@ -14,9 +14,9 @@ You have six tasks to help choose your Valentine's day activity.
 
 ## 1. Define the approval
 
-For each idea your partner proposes, you respond with one of three options: yes, no or maybe.
+For each idea your partner proposes, you respond with one of three options: yes, no or Perhaps.
 
-Define the `Approval` custom type to represent these options as the following three cases: `Yes`, `No` and `Maybe`.
+Define the `Approval` custom type to represent these options as the following three cases: `Yes`, `No` and `Perhaps`.
 
 ## 2. Define the cuisines
 
@@ -49,12 +49,12 @@ Finally, you're ready to rate your partner's ideas. This is how you feel about y
 - Playing a board game: no.
 - Chill out: no.
 - Watch a movie: yes if it is a romantic movie; otherwise, no.
-- Go to a restaurant: yes if the cuisine is Korean, maybe if it is Turkish.
-- Take a walk: yes if the walk is more than eleven kilometers; maybe if it is more than six kilometers; otherwise, no.
+- Go to a restaurant: yes if the cuisine is Korean, Perhaps if it is Turkish.
+- Take a walk: yes if the walk is more than eleven kilometers; Perhaps if it is more than six kilometers; otherwise, no.
 
 Implement a function named `rate_activity` that takes an `Activity` value and returns the `Approval` based on the above sentiments:
 
 ```gleam
 rate_activity(Restaurant(Turkish))
-// -> Maybe
+// -> Perhaps
 ```
