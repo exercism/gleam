@@ -1833,6 +1833,18 @@
           "recursion"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "82a312b6-5d71-4119-b3b0-211d572c17c8",
+        "practices": [
+          "results"
+        ],
+        "prerequisites": [
+          "recursion"
+        ],
+        "difficulty": 9
       }
     ]
   },
