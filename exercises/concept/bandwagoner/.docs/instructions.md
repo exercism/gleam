@@ -79,7 +79,7 @@ replace_coach(team, new_coach)
 
 While digging into stats, you're keeping lists of teams and their records. Sometimes, you get things wrong and there are duplicate entries on your list. Implement the `is_same_team` function that takes two teams and returns `True` if they are the same team, otherwise, return `False`:
 
-```fsharp
+```gleam
 let pacers_coach = create_coach("Larry Bird", True)
 let pacers_stats = create_stats(58, 24)
 let pacers_team = create_team("Indiana Pacers", pacers_coach, pacers_stats)
