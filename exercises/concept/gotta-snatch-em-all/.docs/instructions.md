@@ -22,7 +22,7 @@ Once you have a collection, it takes a life of its own and must grow.
 Implement `add_card`, which takes a card and a collection, and returns a tuple with two values: a `Bool` that indicates if the card was already in the collection, and the collection with the card added.
 
 ```gleam
-add_card("Scientuna" set.from_list(["Newthree"]))
+add_card(set.from_list(["Newthree"]), "Scientuna")
 // -> #(False, set.from_list(["Newthree", "Scientuna"]))
 ```
 
