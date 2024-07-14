@@ -543,7 +543,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "b6459bf2-1e93-42ea-a743-628548b79e2f",
         "practices": [
           "lists"
