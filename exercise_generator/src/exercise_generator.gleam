@@ -1,15 +1,14 @@
-import gleam/io
+import argv
 import gleam/dict.{type Dict}
-import gleam/function
-import gleam/list
-import gleam/int
-import gleam/float
-import gleam/string
-import gleam/result
-import gleam/erlang
-import gleam/erlang/file.{type Reason}
-import gleam/json
 import gleam/dynamic.{type DecodeError, type Dynamic}
+import gleam/float
+import gleam/int
+import gleam/io
+import gleam/json
+import gleam/list
+import gleam/result
+import gleam/string
+import simplifile.{type FileError}
 
 // Types
 
@@ -126,7 +125,7 @@ fn have_same_type(a: JsonData, b: JsonData) -> Bool {
 // Main
 
 pub fn main() {
-  let assert [slug, canonical_data] = erlang.start_arguments()
+  let assert [slug, canonical_data] = argv.load().arguments
 
   case json.decode(from: canonical_data, using: canonical_data_decoder()) {
     Ok(data) -> {
@@ -176,7 +175,7 @@ fn clean_variable(variable: String) -> String {
 fn write_solution_files(
   slug: String,
   data: CanonicalData,
-) -> Result(Nil, Reason) {
+) -> Result(Nil, FileError) {
   let functions = functions_to_implement(data.cases)
 
   let content =
@@ -232,7 +231,7 @@ fn write_solution_files(
       ["..", "exercises", "practice", slug, "src", exercise <> ".gleam"],
       "/",
     )
-  let assert Ok(Nil) = file.write(content, solution_path)
+  let assert Ok(Nil) = simplifile.write(solution_path, content)
 
   let example_path =
     string.join(
@@ -240,12 +239,10 @@ fn write_solution_files(
       "/",
     )
 
-  let assert Ok(Nil) = file.write(content, example_path)
+  let assert Ok(Nil) = simplifile.write(example_path, content)
 }
 
-fn functions_to_implement(
-  test_cases: List(TestCase),
-) -> Dict(String, Function) {
+fn functions_to_implement(test_cases: List(TestCase)) -> Dict(String, Function) {
   list.fold(over: test_cases, from: dict.new(), with: check_test_case)
 }
 
@@ -330,7 +327,7 @@ fn write_test_file(slug: String, data: CanonicalData) {
       "/",
     )
 
-  let assert Ok(Nil) = file.write(content, path)
+  let assert Ok(Nil) = simplifile.write(path, content)
 }
 
 fn print_comments(comments: List(String)) -> String {
@@ -354,9 +351,9 @@ fn print_test(
   slug: String,
   prefix: String,
   functions: Dict(String, Function),
-  test: TestCase,
+  testcase: TestCase,
 ) -> String {
-  case test {
+  case testcase {
     TestGroup(comments, description, cases) -> {
       let prefix = prefix <> "" <> description <> "_"
       let tests = print_tests(slug, prefix, functions, cases)
@@ -377,8 +374,8 @@ fn print_test(
             "This test reimplements the test with uuid " <> uuid,
             "Please identify that test and remove it. Link:",
             "https://github.com/exercism/problem-specifications/blob/main/exercises/"
-            <> slug
-            <> "/canonical-data.json",
+              <> slug
+              <> "/canonical-data.json",
           ]
           |> list.append(comments)
           |> print_comments()
@@ -468,7 +465,7 @@ fn canonical_data_decoder() -> Decoder(CanonicalData) {
 fn comments_decoder() -> Decoder(List(String)) {
   dynamic.any([
     dynamic.field("comments", dynamic.list(dynamic.string)),
-    function.constant(Ok([])),
+    fn(_) { Ok([]) },
   ])
 }
 
@@ -491,7 +488,7 @@ fn test_decoder() -> Decoder(TestData) {
     optional(dynamic.field("reimplements", dynamic.string)),
     dynamic.field("description", dynamic.string),
     dynamic.field("property", dynamic.string),
-    dynamic.field("input", dynamic.map(dynamic.string, json_data_decoder())),
+    dynamic.field("input", dynamic.dict(dynamic.string, json_data_decoder())),
     dynamic.field("expected", json_data_decoder()),
   )
 }
@@ -505,14 +502,14 @@ fn json_data_decoder() -> Decoder(JsonData) {
     dynamic.decode1(JsonList, dynamic.list(lazy(fn() { json_data_decoder() }))),
     dynamic.decode1(
       JsonObject,
-      dynamic.map(dynamic.string, lazy(fn() { json_data_decoder() })),
+      dynamic.dict(dynamic.string, lazy(fn() { json_data_decoder() })),
     ),
-    function.constant(Ok(JsonNull)),
+    fn(_) { Ok(JsonNull) },
   ])
 }
 
 fn optional(decoder: Decoder(a)) -> Decoder(Result(a, Nil)) {
-  dynamic.any([dynamic.decode1(Ok, decoder), function.constant(Ok(Error(Nil)))])
+  dynamic.any([dynamic.decode1(Ok, decoder), fn(_) { Ok(Error(Nil)) }])
 }
 
 fn lazy(wrapped_decoder: fn() -> Decoder(a)) -> Decoder(a) {

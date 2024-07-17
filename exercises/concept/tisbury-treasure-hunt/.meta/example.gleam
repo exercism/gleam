@@ -34,12 +34,13 @@ pub fn special_case_swap_possible(
 
     "Amethyst Octopus", "Stormy Breakwater", "Glass Starfish" -> True
 
-    "Vintage Pirate Hat", "Harbor Managers Office", "Model Ship in Large Bottle" ->
-      True
+    "Vintage Pirate Hat", "Harbor Managers Office", "Model Ship in Large Bottle"
+    -> True
 
     "Vintage Pirate Hat",
       "Harbor Managers Office",
-      "Antique Glass Fishnet Float" -> True
+      "Antique Glass Fishnet Float"
+    -> True
 
     "Brass Spyglass", "Abandoned Lighthouse", _ -> True
 
