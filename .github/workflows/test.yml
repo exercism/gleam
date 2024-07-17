@@ -17,7 +17,7 @@ jobs:
       - uses: erlef/setup-beam@a6e26b22319003294c58386b6f25edbc7336819a
         with:
           otp-version: "26.2"
-          gleam-version: "1.2.0"
+          gleam-version: "1.3.2"
           elixir-version: "1.16.2"
 
       - name: Run tests for all exercises
