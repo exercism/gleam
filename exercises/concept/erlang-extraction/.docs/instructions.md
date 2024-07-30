@@ -12,7 +12,7 @@ The `GbTree` type should have two type parameters, a key type and a value type. 
 
 The `new_gb_tree` function should take no arguments and return an empty `GbTree`.
 
-It should use the `gb_trees:empty/0` function from the Erlang standard library.
+It should use the [`gb_trees:empty/0` function][empty] from the Erlang standard library.
 
 ## 3. Define the `insert` function
 
@@ -23,7 +23,7 @@ The function should take three arguments:
 2. The key to insert.
 3. The value to insert.
 
-It should use the `gb_trees:insert/3` function from the Erlang standard library.
+It should use the [`gb_trees:insert/3` function][insert] from the Erlang standard library.
 
 ## 4. Define the `delete` function
 
@@ -33,4 +33,8 @@ The function should take two arguments:
 1. The `GbTree` to delete from.
 2. The key to delete.
 
-It should use the `gb_trees:delete_any/2` function from the Erlang standard library.
+It should use the [`gb_trees:delete_any/2` function][delete_any] from the Erlang standard library.
+
+[empty]: https://www.erlang.org/doc/apps/stdlib/gb_trees.html#empty/0
+[insert]: https://www.erlang.org/doc/apps/stdlib/gb_trees.html#insert/3
+[delete_any]: https://www.erlang.org/doc/apps/stdlib/gb_trees.html#delete_any/2
