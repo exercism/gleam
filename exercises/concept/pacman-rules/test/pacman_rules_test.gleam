@@ -56,3 +56,7 @@ pub fn dont_win_if_all_dots_eaten_but_touching_ghost_test() {
 pub fn win_if_all_dots_eaten_and_touching_ghost_with_power_pellet_active_test() {
   let assert True = pacman_rules.win(True, True, True)
 }
+
+pub fn dont_win_if_not_all_dots_eaten_test() {
+  let assert False = pacman_rules.win(False, False, False)
+}
