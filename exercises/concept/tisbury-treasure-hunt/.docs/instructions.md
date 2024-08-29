@@ -62,7 +62,7 @@ Implement the `treasure_location_matches_place_location` function that takes a p
 treasure_location_matches_place_location(#("C", 1), #(1, "C"))
 // -> True
 
-treasure_location_matches_place_location(#("C", 1) #(2, "C"))
+treasure_location_matches_place_location(#("C", 1), #(2, "C"))
 // -> False
 ```
 
