@@ -14,5 +14,5 @@ pub fn count_words(input: String) -> Dict(String, Int) {
 }
 
 fn increment(counts: Dict(String, Int), word: String) -> Dict(String, Int) {
-  dict.update(counts, word, fn(previous) { option.unwrap(previous, 0) + 1 })
+  dict.upsert(counts, word, fn(previous) { option.unwrap(previous, 0) + 1 })
 }

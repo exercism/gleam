@@ -35,8 +35,8 @@ fn get_team_scores(input: String) -> Dict(String, Score) {
     let #(result_a, result_b) = parse_results(result)
 
     scores
-    |> dict.update(team_a, increase(_, result_a))
-    |> dict.update(team_b, increase(_, result_b))
+    |> dict.upsert(team_a, increase(_, result_a))
+    |> dict.upsert(team_b, increase(_, result_b))
   })
 }
 
