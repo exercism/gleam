@@ -43,7 +43,7 @@ fn add_term(
   |> string.to_graphemes
   |> list.reverse
   |> list.index_fold(from: coefficients, with: fn(coefficients, letter, index) {
-    dict.update(coefficients, letter, fn(maybe_coeff) {
+    dict.upsert(coefficients, letter, fn(maybe_coeff) {
       operator(option.unwrap(maybe_coeff, 0), pow(10, index))
     })
   })
