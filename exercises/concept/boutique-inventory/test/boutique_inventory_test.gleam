@@ -55,7 +55,7 @@ pub fn cheap_does_not_consume_iterator_test() {
   |> should.equal([])
 }
 
-pub fn out_of_stock_terst() {
+pub fn out_of_stock_test() {
   [
     Item("Red Brown Dress", 65, 0),
     Item("Black Short Skirt", 29, 8),
