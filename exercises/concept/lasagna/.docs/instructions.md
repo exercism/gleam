@@ -36,8 +36,8 @@ preparation_time_in_minutes(2)
 Define the `total_time_in_minutes` function that takes two arguments: the first argument is the number of layers you added to the lasagna, and the second argument is the number of minutes the lasagna has been in the oven. The function should return how many minutes in total you've worked on cooking the lasagna, which is the sum of the preparation time in minutes, and the time in minutes the lasagna has spent in the oven at the moment.
 
 ```gleam
-total_time_in_minutes(3, 20)
-// -> 26
+total_time_in_minutes(3, 10)
+// -> 16
 ```
 
 ## 5. Create a notification that the lasagna is ready
