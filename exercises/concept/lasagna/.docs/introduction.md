@@ -61,7 +61,7 @@ pub fn greeting() {
 
 ### Code comments
 
-Comments can be used to leave notes for other developers reading the source code. Comments in Gleam are single lines preceeded by `//`.
+Comments can be used to leave notes for other developers reading the source code. Comments in Gleam are single lines preceded by `//`.
 
 ```gleam
 pub fn main() {
