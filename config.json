@@ -480,6 +480,7 @@
         "prerequisites": [
           "options"
         ],
+        "status": "deprecated"
       },
       {
         "slug": "two-fer",

@@ -9,7 +9,7 @@
     "test": [
       "test/boutique_inventory_test.gleam"
     ],
-    "exemplar": [
+    "example": [
       ".meta/example.gleam"
     ],
     "invalidator": [

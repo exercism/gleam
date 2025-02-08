@@ -14,7 +14,7 @@ Item(
 
 ## 1. Return a list of the names of the items
 
-Implement `item_names` function, which takes an yielder of items and returns an yielder of their names in the same order.
+Implement `item_names` function, which takes a yielder of items and returns a yielder of their names in the same order.
 
 ```gleam
 [
@@ -32,7 +32,7 @@ Implement `item_names` function, which takes an yielder of items and returns an 
 
 ## 2. Return any items that are cheap
 
-Implement the `cheap` function, which takes an yielder of items and returns an yielder of items that cost less than 30.
+Implement the `cheap` function, which takes an yielder of items and returns a yielder of items that cost less than 30.
 
 ```gleam
 [

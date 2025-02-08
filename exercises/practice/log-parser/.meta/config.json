@@ -9,7 +9,7 @@
     "test": [
       "test/log_parser_test.gleam"
     ],
-    "exemplar": [
+    "example": [
       ".meta/example.gleam"
     ],
     "invalidator": [

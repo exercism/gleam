@@ -3,7 +3,7 @@ import gleam/int
 import gleam/list
 import gleam/result
 import gleam/string
-import gleam/string_builder
+import gleam/string_tree
 
 pub type ForthWordDef {
   UserDef(List(ForthTok))
@@ -62,8 +62,8 @@ pub fn format_stack(f: Forth) -> String {
   |> list.reverse
   |> list.map(int.to_string)
   |> list.intersperse(with: " ")
-  |> string_builder.from_strings
-  |> string_builder.to_string
+  |> string_tree.from_strings
+  |> string_tree.to_string
 }
 
 fn tokenise_word(word: String, rest: List(String)) -> #(ForthTok, List(String)) {
