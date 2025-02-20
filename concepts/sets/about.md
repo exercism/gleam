@@ -29,10 +29,11 @@ set.insert(eighty_eight, 89)
 // -> set.from_list([88, 89])
 
 set.delete(eighty_eight, 88)
-// -> set.from_list([])
+// -> set.from_list([89])
 
 set.delete(eighty_eight, 89)
-// -> set.from_list([88])
+// -> set.from_list([])
+
 ```
 
 You can query the contents of a set with the functions `set.contains`, and `set.size`.
