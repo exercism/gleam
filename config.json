@@ -782,7 +782,7 @@
           "custom-types",
           "results",
           "generics",
-          "tuples",
+          "tuples"
         ],
         "difficulty": 5
       },
@@ -1209,7 +1209,7 @@
           "ints",
           "strings",
           "case-expressions",
-          "lists",
+          "lists"
         ],
         "difficulty": 5
       },
@@ -1432,7 +1432,7 @@
         "practices": [],
         "prerequisites": [
           "ints",
-          "custom-types",
+          "custom-types"
         ],
         "difficulty": 4
       },

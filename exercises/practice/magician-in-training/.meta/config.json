@@ -3,7 +3,7 @@
   "files": {
     "solution": ["src/magician_in_training.gleam"],
     "test": ["test/magician_in_training_test.gleam"],
-    "exemple": [".meta/example.gleam"],
+    "example": [".meta/example.gleam"],
     "invalidator": ["gleam.toml", "manifest.toml"]
   },
   "forked_from": ["swift/magician-in-training"],
