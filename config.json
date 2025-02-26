@@ -1647,6 +1647,25 @@
         "difficulty": 8
       },
       {
+        "slug": "rational-numbers",
+        "name": "Rational Numbers",
+        "uuid": "52563082-7349-4047-a34c-d9dbeb140c1e",
+        "practices": [
+          "maths",
+          "custom-type"
+        ],
+        "prerequisites": [
+          "maths",
+          "custom-type",
+          "int",
+          "float",
+          "case",
+          "result",
+          "recursion"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "34293b12-1d94-43d9-a9cb-27b8bff92d67",
