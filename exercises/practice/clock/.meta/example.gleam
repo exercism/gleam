@@ -24,12 +24,12 @@ pub fn display(clock: Clock) -> String {
   let hours =
     clock.minutes / minutes_per_hour
     |> int.to_string()
-    |> string.pad_left(to: 2, with: "0")
+    |> string.pad_start(to: 2, with: "0")
 
   let minutes =
     clock.minutes % minutes_per_hour
     |> int.to_string()
-    |> string.pad_left(to: 2, with: "0")
+    |> string.pad_start(to: 2, with: "0")
 
   hours <> ":" <> minutes
 }

@@ -1,15 +1,15 @@
 import gleam/int
 import gleam/list
 import gleam/option.{None, Some}
-import gleam/regex
+import gleam/regexp
 import gleam/result
 import gleam/string
 
 pub fn encode(plaintext: String) -> String {
-  let assert Ok(re) = regex.from_string("(.)\\1*")
+  let assert Ok(re) = regexp.from_string("(.)\\1*")
 
   plaintext
-  |> regex.scan(re, _)
+  |> regexp.scan(re, _)
   |> list.map(fn(m) {
     let assert Ok(letter) = string.first(m.content)
     case string.length(m.content) {
@@ -21,10 +21,10 @@ pub fn encode(plaintext: String) -> String {
 }
 
 pub fn decode(ciphertext: String) -> String {
-  let assert Ok(re) = regex.from_string("(\\d*)(.)")
+  let assert Ok(re) = regexp.from_string("(\\d*)(.)")
 
   ciphertext
-  |> regex.scan(re, _)
+  |> regexp.scan(re, _)
   |> list.map(fn(m) {
     case m.submatches {
       [Some(count), Some(letter)] ->

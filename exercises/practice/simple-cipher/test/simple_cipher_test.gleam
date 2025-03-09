@@ -1,8 +1,8 @@
 import exercism/should
 import exercism/test_runner
-import gleam/iterator
-import gleam/regex
+import gleam/regexp
 import gleam/string
+import gleam/yielder
 import simple_cipher
 
 pub fn main() {
@@ -51,12 +51,12 @@ pub fn substitution_cipher_can_decode_messages_longer_than_the_key_test() {
 }
 
 pub fn random_key_cipher_key_is_made_only_of_lowercase_letters_test() {
-  let assert Ok(re) = regex.from_string("^[a-z]+$")
+  let assert Ok(re) = regexp.from_string("^[a-z]+$")
 
-  iterator.repeatedly(simple_cipher.generate_key)
-  |> iterator.take(100)
-  |> iterator.all(fn(key) {
-    let assert True = regex.check(re, key)
+  yielder.repeatedly(simple_cipher.generate_key)
+  |> yielder.take(100)
+  |> yielder.all(fn(key) {
+    let assert True = regexp.check(re, key)
   })
 }
 
