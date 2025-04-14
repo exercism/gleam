@@ -1,7 +1,7 @@
 import gleam/float
 import gleam/int
-import gleam/iterator
 import gleam/list
+import gleam/yielder
 
 pub type Character {
   Character(
@@ -36,9 +36,9 @@ pub fn modifier(score: Int) -> Int {
 }
 
 pub fn ability() -> Int {
-  iterator.repeatedly(roll)
-  |> iterator.take(4)
-  |> iterator.to_list()
+  yielder.repeatedly(roll)
+  |> yielder.take(4)
+  |> yielder.to_list()
   |> list.sort(int.compare)
   |> list.drop(1)
   |> int.sum()

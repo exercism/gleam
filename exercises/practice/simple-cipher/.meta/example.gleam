@@ -1,7 +1,7 @@
 import gleam/int
-import gleam/iterator
 import gleam/result
 import gleam/string
+import gleam/yielder
 
 pub fn encode(plaintext plaintext: String, key key: String) -> String {
   shift(input: plaintext, key: key, by: int.add)
@@ -12,10 +12,10 @@ pub fn decode(ciphertext ciphertext: String, key key: String) -> String {
 }
 
 pub fn generate_key() -> String {
-  iterator.repeatedly(fn() { int.random(alphabet_length) })
-  |> iterator.map(fn(shift) { string.utf_codepoint(min_int_code_point + shift) })
-  |> iterator.take(up_to: 100)
-  |> iterator.to_list()
+  yielder.repeatedly(fn() { int.random(alphabet_length) })
+  |> yielder.map(fn(shift) { string.utf_codepoint(min_int_code_point + shift) })
+  |> yielder.take(up_to: 100)
+  |> yielder.to_list()
   |> result.values()
   |> string.from_utf_codepoints()
 }
@@ -27,15 +27,15 @@ fn shift(
 ) -> String {
   input
   |> string.to_utf_codepoints()
-  |> iterator.from_list()
-  |> iterator.zip(
+  |> yielder.from_list()
+  |> yielder.zip(
     key
     |> string.to_utf_codepoints()
-    |> iterator.from_list()
-    |> iterator.cycle(),
+    |> yielder.from_list()
+    |> yielder.cycle(),
   )
-  |> iterator.map(fn(pair) { shift_letter(pair.0, pair.1, op) })
-  |> iterator.to_list()
+  |> yielder.map(fn(pair) { shift_letter(pair.0, pair.1, op) })
+  |> yielder.to_list()
   |> string.from_utf_codepoints()
 }
 

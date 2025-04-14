@@ -1,4 +1,4 @@
-import gleam/bitwise
+import gleam/int
 import gleam/list
 
 pub type Command {
@@ -18,7 +18,7 @@ pub fn commands(encoded_message: Int) -> List(Command) {
   ]
   |> list.fold(from: [], with: fn(acc, code_and_command) {
     let #(command_code, command) = code_and_command
-    case bitwise.and(encoded_message, command_code) {
+    case int.bitwise_and(encoded_message, command_code) {
       0 -> acc
       _ -> command(acc)
     }

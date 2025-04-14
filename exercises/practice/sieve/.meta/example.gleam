@@ -1,7 +1,7 @@
 import gleam/bool
-import gleam/iterator
 import gleam/list
 import gleam/set.{type Set}
+import gleam/yielder
 
 pub fn primes_up_to(upper_bound: Int) -> List(Int) {
   // 2 is the first prime number. Smaller input values are invalid.
@@ -35,9 +35,9 @@ fn sieve(
           // Generate a list from n^2 to the upper bound of the multiples of
           // our newly discovered prime.
           let multiples =
-            iterator.iterate(next * next, fn(state) { state + next })
-            |> iterator.take_while(fn(n) { n <= upper_bound })
-            |> iterator.to_list
+            yielder.iterate(next * next, fn(state) { state + next })
+            |> yielder.take_while(fn(n) { n <= upper_bound })
+            |> yielder.to_list
             |> set.from_list
 
           // Add the newly discovered prime to the list of primes, and
