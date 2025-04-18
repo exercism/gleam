@@ -53,4 +53,5 @@
 [filter]: https://hexdocs.pm/gleam_stdlib/gleam/set.html#filter
 [new]: https://hexdocs.pm/gleam_stdlib/gleam/set.html#new
 [union]: https://hexdocs.pm/gleam_stdlib/gleam/set.html#union
+[size]: https://hexdocs.pm/gleam_stdlib/gleam/set.html#size
 [intersection]: https://hexdocs.pm/gleam_stdlib/gleam/set.html#intersection

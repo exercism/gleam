@@ -5,7 +5,7 @@ In this exercise, you'll be applying the [rules of the game of Go](https://matmo
 The game is represented as follows:
 
 ```gleam
-pub Player {
+pub type Player {
   Black
   White
 }

@@ -20,5 +20,5 @@
   "forked_from": [
     "elixir/dna-encoding"
   ],
-  "blurb": "Learn about bit strings by encoding DNA sequences as binary data."
+  "blurb": "Learn about bit arrays by encoding DNA sequences as binary data."
 }

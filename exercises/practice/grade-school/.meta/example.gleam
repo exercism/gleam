@@ -31,7 +31,7 @@ pub fn add(
   case list.contains(roster(school), student) {
     True -> Error(Nil)
     False ->
-      dict.update(in: school.grades, update: grade, with: fn(existing_students) {
+      dict.upsert(in: school.grades, update: grade, with: fn(existing_students) {
         case existing_students {
           Some(students) -> [student, ..students]
           None -> [student]

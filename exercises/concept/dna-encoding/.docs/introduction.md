@@ -51,7 +51,7 @@ let new_value = <<0b011:3, value:bits, 0b000:3>>
 
 ### Concatenating
 
-We can concatenate bit arrays stored in variables using the bit array syntax. The `:bits` annotation must be used when concatenating two bit strings of variable sizes.
+We can concatenate bit arrays stored in variables using the bit array syntax. The `:bits` annotation must be used when concatenating two bit arrays of variable sizes.
 
 ```gleam
 let first = <<0b110:3>>

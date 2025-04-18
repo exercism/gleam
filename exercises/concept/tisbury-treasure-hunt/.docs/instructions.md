@@ -62,7 +62,7 @@ Implement the `treasure_location_matches_place_location` function that takes a p
 treasure_location_matches_place_location(#("C", 1), #(1, "C"))
 // -> True
 
-treasure_location_matches_place_location(#("C", 1) #(2, "C"))
+treasure_location_matches_place_location(#("C", 1), #(2, "C"))
 // -> False
 ```
 
@@ -79,7 +79,7 @@ count_place_treasures(place, treasures)
 
 ## 4. Special Places
 
-Implement the `special_case_swap_possible` function, which takes a treasure (such as `#("Amethyst Octopus", #(1, "F"))`) and a Place (such as `#("Seaside Cottages", #("C", 1))`), and returns `True` for the following combinations:
+Implement the `special_case_swap_possible` function, which takes a treasure (such as `#("Amethyst Octopus", #(1, "F"))`), a Place (such as `#("Seaside Cottages", #("C", 1))`) and a desired treasure (such as `#("Crystal Crab", #(6, "A"))`), and returns `True` for the following combinations:
 
 - The Brass Spyglass can be swapped for any other treasure at the Abandoned Lighthouse.
 - The Amethyst Octopus can be swapped for the Crystal Crab or the Glass Starfish at the Stormy Breakwater.

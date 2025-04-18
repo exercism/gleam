@@ -19,11 +19,11 @@
 
 ## 5. Apply Monday bonus points
 
-- The [`dict.dict_values`][dict_values] function can be used to modify all the values in a dict.
+- The [`dict.map_values`][map_values] function can be used to modify all the values in a dict.
 
 [new]: https://hexdocs.pm/gleam_stdlib/gleam/dict.html#new
 [get]: https://hexdocs.pm/gleam_stdlib/gleam/dict.html#get
 [insert]: https://hexdocs.pm/gleam_stdlib/gleam/dict.html#insert
 [delete]: https://hexdocs.pm/gleam_stdlib/gleam/dict.html#delete
 [from_list]: https://hexdocs.pm/gleam_stdlib/gleam/dict.html#from_list
-[dict_values]: https://hexdocs.pm/gleam_stdlib/gleam/dict.html#dict_values
+[map_values]: https://hexdocs.pm/gleam_stdlib/gleam/dict.html#map_values

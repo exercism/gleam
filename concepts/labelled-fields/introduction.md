@@ -67,7 +67,7 @@ If we only want to match on some of the fields we can use the spread operator `.
 ```gleam
 pub fn is_tall(rect: Rectangle) {
   case rect {
-    Rectangle(height: h, ..) if h > 20.0 -> True
+    Rectangle(height: h, ..) if h >. 20.0 -> True
     _ -> False
   }
 }
