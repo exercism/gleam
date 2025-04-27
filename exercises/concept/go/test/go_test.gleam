@@ -46,12 +46,10 @@ pub fn change_player_if_all_rules_pass_test() {
 
 pub fn retain_error_and_player_if_ko_rule_fails_test() {
   new_game()
-  |> go.apply_rules(
-    identity_rule,
-    identity,
-    identity_rule,
-    error_rule(_, ko_rule()),
-  )
+  |> go.apply_rules(identity_rule, identity, identity_rule, error_rule(
+    _,
+    ko_rule(),
+  ))
   |> should.equal(Game(..new_game(), error: ko_rule()))
 }
 

@@ -1791,9 +1791,8 @@
         "name": "Boutique Inventory",
         "uuid": "72b14411-7d65-446e-a07e-ecf282b8818a",
         "practices": [],
-        "prerequisites": [
-          "lists"
-        ],
+        "prerequisites": [],
+        "difficulty": 9,
         "status": "deprecated"
       },
       {
@@ -1801,9 +1800,8 @@
         "name": "Magician in Training",
         "uuid": "d7a5dc48-3a0f-4953-a450-67f5f169efba",
         "practices": [],
-        "prerequisites": [
-          "opaque-types"
-        ],
+        "prerequisites": [],
+        "difficulty": 9,
         "status": "deprecated"
       },
       {
@@ -1811,9 +1809,8 @@
         "name": "Log Parser",
         "uuid": "0f35ac7e-c86d-4a54-8953-1597dc5534bc",
         "practices": [],
-        "prerequisites": [
-          "options"
-        ],
+        "prerequisites": [],
+        "difficulty": 9,
         "status": "deprecated"
       }
     ]

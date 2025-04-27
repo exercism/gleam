@@ -48,6 +48,16 @@ fn to_plant(letter: String) -> Plant {
 }
 
 const students = [
-  Alice, Bob, Charlie, David, Eve, Fred, Ginny, Harriet, Ileana, Joseph, Kincaid,
+  Alice,
+  Bob,
+  Charlie,
+  David,
+  Eve,
+  Fred,
+  Ginny,
+  Harriet,
+  Ileana,
+  Joseph,
+  Kincaid,
   Larry,
 ]
