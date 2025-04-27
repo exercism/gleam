@@ -4,8 +4,8 @@ set -euo pipefail
 
 # Synopsis:
 # Test the track's exercises.
-# 
-# At a minimum, this file must check if the example/exemplar solution of each 
+#
+# At a minimum, this file must check if the example/exemplar solution of each
 # Practice/Concept Exercise passes the exercise's tests.
 #
 # To check this, you usually have to (temporarily) replace the exercise's solution files
@@ -85,7 +85,7 @@ pub fn main() {
 }
 EOT
 
-  packages_prefix="https://raw.githubusercontent.com/exercism/gleam-test-runner/main/packages"
+  packages_prefix="https://raw.githubusercontent.com/exercism/gleam-test-runner/refs/tags/v1.8.0/packages"
   download all_exercises/gleam.toml "$packages_prefix"/gleam.toml
   download all_exercises/manifest.toml "$packages_prefix"/manifest.toml
   sed -i -e "s/name = \".*\"/name = \"all_exercises\"/" all_exercises/gleam.toml

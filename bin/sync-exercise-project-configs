@@ -31,7 +31,7 @@ check() {
   project="$1"
   update_config_name "$project"
 
-  if ! diff "$canonical_config" "$project"/gleam.toml || 
+  if ! diff "$canonical_config" "$project"/gleam.toml ||
     ! diff "$canonical_manifest" "$project"/manifest.toml
   then
     echo "ERROR: Config files are out of sync with gleam-test-runner config" 1>&2
@@ -47,7 +47,7 @@ sync() {
   cp "$canonical_manifest" "$project"/manifest.toml
 }
 
-packages_prefix="https://raw.githubusercontent.com/exercism/gleam-test-runner/main/packages"
+packages_prefix="https://raw.githubusercontent.com/exercism/gleam-test-runner/refs/tags/v1.8.0/packages"
 project_dir="$(dirname "$(dirname "$0")")"
 tmp_dir="$(mktemp -d)"
 canonical_config="$tmp_dir"/gleam.toml
