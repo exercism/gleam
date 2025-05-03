@@ -53,7 +53,7 @@ pub fn describe(number: Int) -> String {
 // No compiler error
 ```
 
-Multiple __literal patterns__ can be matched in one clause using the `|` to separate between each literal value. Only one guard can be added to a case:
+Multiple can be matched against in one clause using the `|` to separate between pattern. Only one guard can be added to a case:
 
 ```gleam
 pub fn describe(number: Int) -> String {
