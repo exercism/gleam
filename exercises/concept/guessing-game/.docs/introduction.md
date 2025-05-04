@@ -53,7 +53,7 @@ pub fn describe(number: Int) -> String {
 // No compiler error
 ```
 
-Multiple patterns can be matched against in one clause using the `|` to separate between each pattern. Only one guard can be added to a case:
+Multiple patterns can be matched against in one clause using the `|` to separate between each pattern. Only one guard can be added to a clause:
 
 ```gleam
 pub fn describe(number: Int) -> String {
