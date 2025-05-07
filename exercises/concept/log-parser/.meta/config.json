@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "lpil"
+  ],
+  "files": {
+    "solution": [
+      "src/log_parser.gleam"
+    ],
+    "test": [
+      "test/log_parser_test.gleam"
+    ],
+    "exemplar": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "forked_from": [
+    "elixir/log-parser"
+  ],
+  "blurb": "Learn about regular expressions by parsing logs."
+}

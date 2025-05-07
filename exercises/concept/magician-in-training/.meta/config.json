@@ -4,12 +4,12 @@
   ],
   "files": {
     "solution": [
-      "src/log_parser.gleam"
+      "src/magician_in_training.gleam"
     ],
     "test": [
-      "test/log_parser_test.gleam"
+      "test/magician_in_training_test.gleam"
     ],
-    "example": [
+    "exemplar": [
       ".meta/example.gleam"
     ],
     "invalidator": [
@@ -18,7 +18,7 @@
     ]
   },
   "forked_from": [
-    "elixir/log-parser"
+    "swift/magician-in-training"
   ],
-  "blurb": "Learn about regular expressions by parsing logs."
+  "blurb": "Help Elyse with her Enchantments and learn about queues in the process."
 }

@@ -4,7 +4,7 @@ We assume that the student already knows basic regular expressions. The goal of 
 
 ## Learning objectives
 
-- Know about the `gleam/regexp` module.
+- Know about the `gleam/regex` module.
 - Know about modifiers (e.g. unicode, case-insensitive).
 
 ## Out of scope
@@ -18,6 +18,8 @@ We assume that the student already knows basic regular expressions. The goal of 
 
 ## Concepts
 
+- `regular-expressions`
+
 ## Analyzer
 
-- Ensure all functions use the `gleam/regexp` module.
+- Ensure all functions use the `gleam/regex` module.
