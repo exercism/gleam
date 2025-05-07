@@ -412,6 +412,30 @@
           "anonymous-functions"
         ],
         "status": "active"
+      },
+      {
+        "slug": "boutique-inventory",
+        "name": "Boutique Inventory",
+        "uuid": "72b14411-7d65-446e-a07e-ecf282b8818a",
+        "concepts": [],
+        "prerequisites": [],
+        "status": "deprecated"
+      },
+      {
+        "slug": "magician-in-training",
+        "name": "Magician in Training",
+        "uuid": "d7a5dc48-3a0f-4953-a450-67f5f169efba",
+        "concepts": [],
+        "prerequisites": [],
+        "status": "deprecated"
+      },
+      {
+        "slug": "log-parser",
+        "name": "Log Parser",
+        "uuid": "0f35ac7e-c86d-4a54-8953-1597dc5534bc",
+        "concepts": [],
+        "prerequisites": [],
+        "status": "deprecated"
       }
     ],
     "practice": [
@@ -1785,33 +1809,6 @@
           "custom-types"
         ],
         "difficulty": 9
-      },
-      {
-        "slug": "boutique-inventory",
-        "name": "Boutique Inventory",
-        "uuid": "72b14411-7d65-446e-a07e-ecf282b8818a",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 9,
-        "status": "deprecated"
-      },
-      {
-        "slug": "magician-in-training",
-        "name": "Magician in Training",
-        "uuid": "d7a5dc48-3a0f-4953-a450-67f5f169efba",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 9,
-        "status": "deprecated"
-      },
-      {
-        "slug": "log-parser",
-        "name": "Log Parser",
-        "uuid": "0f35ac7e-c86d-4a54-8953-1597dc5534bc",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 9,
-        "status": "deprecated"
       }
     ]
   },
@@ -1947,6 +1944,11 @@
       "name": "Bit Arrays"
     },
     {
+      "uuid": "6e5cd6a5-9fd8-4d16-9500-99850894fad9",
+      "slug": "iterators",
+      "name": "Iterators"
+    },
+    {
       "uuid": "1d9ef9bb-c2e9-4bfb-b284-b8191bc52f2c",
       "slug": "nil",
       "name": "Nil"
@@ -1962,9 +1964,19 @@
       "name": "Opaque Types"
     },
     {
+      "uuid": "5e1bda5f-368e-44a7-bfed-592cf0e859c8",
+      "slug": "queues",
+      "name": "Queues"
+    },
+    {
       "uuid": "620ad3f3-f35f-48c3-b87e-cc781f156361",
       "slug": "phantom-types",
       "name": "Phantom Types"
+    },
+    {
+      "uuid": "c4b81d7a-29ed-4df4-8c32-af74e75fd517",
+      "slug": "regular-expressions",
+      "name": "Regular Expressions"
     },
     {
       "uuid": "b6631661-19d7-4cc2-8859-9848244bd38e",

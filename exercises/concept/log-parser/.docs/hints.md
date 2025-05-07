@@ -11,18 +11,18 @@
 
 ## 1. Identify garbled log lines
 
-- The [`regexp.from_string` function][from-string] can be used to compile a regular expression.
-- The [`regexp.check` function][check] can be used to test whether a regular expression matches a string.
+- The [`regex.from_string` function][from-string] can be used to compile a regular expression.
+- The [`regex.check` function][check] can be used to test whether a regular expression matches a string.
 - Don't forget to escape characters that have special meaning in regular expressions.
 
 ## 2. Split the log line
 
-- The [`regexp.split` function][split] can be used to split a string using a regular expression.
+- The [`regex.split` function][split] can be used to split a string using a regular expression.
 - Don't forget to escape characters that have special meaning in regular expressions.
 
 ## 3. Tag lines with user names
 
-- The [`regexp.scan` function][scan] can be used used to capture parts of a string using a regular expression.
+- The [`regex.scan` function][scan] can be used used to capture parts of a string using a regular expression.
 - Don't forget to escape characters that have special meaning in regular expressions.
 
 [website-regex-info]: https://www.regular-expressions.info
@@ -30,7 +30,7 @@
 [website-regexone]: https://regexone.com/
 [website-regex-101]: https://regex101.com/
 [website-regexr]: https://regexr.com/
-[from-string]: https://hexdocs.pm/gleam_regexp/gleam/regexp.html#from_string
-[check]: https://hexdocs.pm/gleam_regexp/gleam/regexp.html#check
-[split]: https://hexdocs.pm/gleam_regexp/gleam/regexp.html#split
-[scan]: https://hexdocs.pm/gleam_regexp/gleam/regexp.html#scan
+[from-string]: https://hexdocs.pm/gleam_stdlib/gleam/regex.html#from_string
+[check]: https://hexdocs.pm/gleam_stdlib/gleam/regex.html#check
+[split]: https://hexdocs.pm/gleam_stdlib/gleam/regex.html#split
+[scan]: https://hexdocs.pm/gleam_stdlib/gleam/regex.html#scan

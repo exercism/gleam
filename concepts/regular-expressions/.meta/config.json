@@ -1,0 +1,8 @@
+{
+  "blurb": "Regular expressions in Gleam follow the PCRE specification (Perl Compatible Regular Expressions), and can be used to work with patterns in strings.",
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+  ]
+}
