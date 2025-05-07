@@ -1,16 +1,16 @@
-import gleam/queue.{type Queue}
+import gleam/deque.{type Deque}
 
 pub opaque type CircularBuffer(t) {
-  CircularBuffer(capacity: Int, size: Int, queue: Queue(t))
+  CircularBuffer(capacity: Int, size: Int, queue: Deque(t))
 }
 
 pub fn new(capacity: Int) -> CircularBuffer(t) {
   let assert True = capacity > 0
-  CircularBuffer(capacity, 0, queue.new())
+  CircularBuffer(capacity, 0, deque.new())
 }
 
 pub fn read(buffer: CircularBuffer(t)) -> Result(#(t, CircularBuffer(t)), Nil) {
-  case queue.pop_front(buffer.queue) {
+  case deque.pop_front(buffer.queue) {
     Ok(#(item, queue)) -> {
       let buffer = CircularBuffer(..buffer, queue: queue, size: buffer.size - 1)
       Ok(#(item, buffer))
@@ -40,14 +40,14 @@ pub fn overwrite(buffer: CircularBuffer(t), item: t) -> CircularBuffer(t) {
 }
 
 fn unchecked_write(buffer: CircularBuffer(t), item: t) -> CircularBuffer(t) {
-  let queue = queue.push_back(buffer.queue, item)
+  let queue = deque.push_back(buffer.queue, item)
   CircularBuffer(..buffer, queue: queue, size: buffer.size + 1)
 }
 
 fn discard_oldest(buffer: CircularBuffer(t)) -> CircularBuffer(t) {
-  let queue = case queue.pop_front(buffer.queue) {
+  let queue = case deque.pop_front(buffer.queue) {
     Ok(#(_, queue)) -> queue
-    Error(_) -> queue.new()
+    Error(_) -> deque.new()
   }
   CircularBuffer(..buffer, queue: queue, size: buffer.size - 1)
 }

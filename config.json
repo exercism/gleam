@@ -349,18 +349,6 @@
         "status": "active"
       },
       {
-        "slug": "boutique-inventory",
-        "name": "Boutique Inventory",
-        "uuid": "72b14411-7d65-446e-a07e-ecf282b8818a",
-        "concepts": [
-          "iterators"
-        ],
-        "prerequisites": [
-          "lists"
-        ],
-        "status": "active"
-      },
-      {
         "slug": "newsletter",
         "name": "Newsletter",
         "uuid": "83b38de6-ae48-444b-bb18-3cd190eb8569",
@@ -387,18 +375,6 @@
         "status": "active"
       },
       {
-        "slug": "magician-in-training",
-        "name": "Magician in Training",
-        "uuid": "d7a5dc48-3a0f-4953-a450-67f5f169efba",
-        "concepts": [
-          "queues"
-        ],
-        "prerequisites": [
-          "opaque-types"
-        ],
-        "status": "active"
-      },
-      {
         "slug": "sticker-shop",
         "name": "Sticker Shop",
         "uuid": "4fe4df6d-dd44-42d0-bc0c-641afa836b17",
@@ -407,18 +383,6 @@
         ],
         "prerequisites": [
           "opaque-types"
-        ],
-        "status": "active"
-      },
-      {
-        "slug": "log-parser",
-        "name": "Log Parser",
-        "uuid": "0f35ac7e-c86d-4a54-8953-1597dc5534bc",
-        "concepts": [
-          "regular-expressions"
-        ],
-        "prerequisites": [
-          "options"
         ],
         "status": "active"
       },
@@ -937,7 +901,6 @@
         "practices": [],
         "prerequisites": [
           "ints",
-          "iterators",
           "recursion"
         ],
         "difficulty": 3
@@ -1087,7 +1050,6 @@
         "practices": [],
         "prerequisites": [
           "labelled-arguments",
-          "regular-expressions",
           "lists",
           "strings"
         ],
@@ -1156,8 +1118,7 @@
         "practices": [],
         "prerequisites": [
           "ints",
-          "custom-types",
-          "iterators"
+          "custom-types"
         ],
         "difficulty": 4
       },
@@ -1373,7 +1334,6 @@
         "prerequisites": [
           "lists",
           "strings",
-          "regular-expressions",
           "dicts"
         ],
         "difficulty": 4
@@ -1432,16 +1392,13 @@
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "b62f8574-9bac-4b95-a76c-f13789ae2663",
-        "practices": [
-          "queues"
-        ],
+        "practices": [],
         "prerequisites": [
           "opaque-types",
           "custom-types",
           "results",
           "generics",
-          "tuples",
-          "queues"
+          "tuples"
         ],
         "difficulty": 5
       },
@@ -1525,8 +1482,7 @@
           "ints",
           "strings",
           "case-expressions",
-          "lists",
-          "regular-expressions"
+          "lists"
         ],
         "difficulty": 5
       },
@@ -1550,7 +1506,6 @@
         "uuid": "37dd415b-1d67-434d-8705-19295d1438b8",
         "practices": [],
         "prerequisites": [
-          "iterators",
           "strings",
           "lists",
           "ints",
@@ -1739,13 +1694,10 @@
         "slug": "dominoes",
         "name": "Dominoes",
         "uuid": "b59b630e-8648-4498-b8d8-fcfaf261ece3",
-        "practices": [
-          "queues"
-        ],
+        "practices": [],
         "prerequisites": [
           "case-expressions",
           "lists",
-          "queues",
           "tuples"
         ],
         "difficulty": 7
@@ -1833,6 +1785,33 @@
           "custom-types"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "boutique-inventory",
+        "name": "Boutique Inventory",
+        "uuid": "72b14411-7d65-446e-a07e-ecf282b8818a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 9,
+        "status": "deprecated"
+      },
+      {
+        "slug": "magician-in-training",
+        "name": "Magician in Training",
+        "uuid": "d7a5dc48-3a0f-4953-a450-67f5f169efba",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 9,
+        "status": "deprecated"
+      },
+      {
+        "slug": "log-parser",
+        "name": "Log Parser",
+        "uuid": "0f35ac7e-c86d-4a54-8953-1597dc5534bc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 9,
+        "status": "deprecated"
       }
     ]
   },
@@ -1968,11 +1947,6 @@
       "name": "Bit Arrays"
     },
     {
-      "uuid": "6e5cd6a5-9fd8-4d16-9500-99850894fad9",
-      "slug": "iterators",
-      "name": "Iterators"
-    },
-    {
       "uuid": "1d9ef9bb-c2e9-4bfb-b284-b8191bc52f2c",
       "slug": "nil",
       "name": "Nil"
@@ -1988,19 +1962,9 @@
       "name": "Opaque Types"
     },
     {
-      "uuid": "5e1bda5f-368e-44a7-bfed-592cf0e859c8",
-      "slug": "queues",
-      "name": "Queues"
-    },
-    {
       "uuid": "620ad3f3-f35f-48c3-b87e-cc781f156361",
       "slug": "phantom-types",
       "name": "Phantom Types"
-    },
-    {
-      "uuid": "c4b81d7a-29ed-4df4-8c32-af74e75fd517",
-      "slug": "regular-expressions",
-      "name": "Regular Expressions"
     },
     {
       "uuid": "b6631661-19d7-4cc2-8859-9848244bd38e",

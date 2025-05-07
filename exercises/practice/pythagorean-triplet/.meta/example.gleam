@@ -2,7 +2,7 @@ import gleam/int
 import gleam/list
 
 pub type Triplet {
-  Triplet(first: Int, Int, Int)
+  Triplet(first: Int, second: Int, thrid: Int)
 }
 
 pub fn triplets_with_sum(sum: Int) -> List(Triplet) {
