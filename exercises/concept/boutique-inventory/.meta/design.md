@@ -2,20 +2,18 @@
 
 ## Learning objectives
 
-- Know about iterators.
-- Know that iterators are lazy.
-- Know that iterators are ordered.
-- Know that iterators can be infinite.
-- Know about the `gleam/iterator` module.
+- Know about yielders.
+- Know that yielders are lazy.
+- Know that yielders are ordered.
+- Know that yielders can be infinite.
+- Know about the `gleam/yielder` module.
 
 ## Out of scope
 
-- Replaying iterators that have side effects and side causes.
-- The implementation of iterators.
+- Replaying yielders that have side effects and side causes.
+- The implementation of yielders.
 
 ## Concepts
-
-- `iterators`
 
 ## Prerequisites
 

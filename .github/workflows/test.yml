@@ -8,7 +8,7 @@ on:
 
 jobs:
   ci:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository
@@ -17,8 +17,9 @@ jobs:
       - uses: erlef/setup-beam@5304e04ea2b355f03681464e683d92e3b2f18451
         with:
           otp-version: "26.2"
-          gleam-version: "1.3.2"
+          gleam-version: "1.10.0"
           elixir-version: "1.16.2"
+          rebar3-version: "3"
 
       - name: Run tests for all exercises
         run: bin/test
