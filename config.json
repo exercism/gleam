@@ -1490,14 +1490,9 @@
         "name": "Minesweeper",
         "uuid": "abbeeb8f-6ec1-4f57-86fc-2e18b3a62e29",
         "practices": [],
-        "prerequisites": [
-          "strings",
-          "lists",
-          "case-expressions",
-          "dicts",
-          "ints"
-        ],
-        "difficulty": 5
+        "prerequisites": [],
+        "difficulty": 5,
+        "status": "deprecated"
       },
       {
         "slug": "rotational-cipher",
