@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "jiegillet"
+  ],
+  "contributors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "src/flower_field.gleam"
+    ],
+    "test": [
+      "test/flower_field_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}

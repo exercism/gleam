@@ -1457,6 +1457,20 @@
         "difficulty": 5
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "640bba3e-8510-4e74-8c37-6151e33f8d87",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "lists",
+          "case-expressions",
+          "dicts",
+          "ints"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "a66bbefd-db5a-44d0-ab4b-73d871756f08",
