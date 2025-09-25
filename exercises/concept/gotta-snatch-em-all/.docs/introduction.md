@@ -60,7 +60,7 @@ set.intersection(a, b)
 You can filter sets.
 
 ```gleam
-let is_small = fn(n) { x <= 3 }
+let is_small = fn(n) { n <= 3 }
 
 set.filter(b, is_small)
 // -> set.from_list([1, 2, 3])
