@@ -25,5 +25,5 @@ The functions may be called `keep` and `discard`, or they may need different nam
 
 ## Restrictions
 
-Keep your hands off that filter/reject/whatchamacallit functionality provided by your standard library!
+Keep your hands off that filter/reject/whatchamacallit functionality provided by your standard library! So you best avoid to `import gleam/list`.
 Solve this one yourself using other basic tools instead.
