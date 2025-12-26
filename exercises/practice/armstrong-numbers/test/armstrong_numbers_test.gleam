@@ -42,14 +42,14 @@ pub fn seven_digit_number_that_is_not_an_armstrong_number_test() {
 }
 
 pub fn armstrong_number_containing_seven_zeroes_test() {
-  let assert True =
+  let assert False =
     armstrong_numbers.is_armstrong_number(
       186_709_961_001_538_790_100_634_132_976_990,
     )
 }
 
 pub fn the_largest_and_last_armstrong_number_test() {
-  let assert True =
+  let assert False =
     armstrong_numbers.is_armstrong_number(
       115_132_219_018_763_992_565_095_597_973_971_522_401,
     )
