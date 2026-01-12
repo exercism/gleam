@@ -1,20 +1,23 @@
+import gleam/float
 import gleam/int
 import gleam/list
 
-fn repeat_mult(number: Int, power: Int) -> Int {
-  case power {
-    1 -> number
-    pow -> number * repeat_mult(number, pow - 1)
+fn armstrong_number_loop(list: List(Int), npower: Float) -> Int {
+  case list {
+    [] -> 0
+    [item, ..rest] -> {
+      let assert Ok(total) = int.power(item, npower)
+      float.round(total) + armstrong_number_loop(rest, npower)
+    }
   }
 }
 
 pub fn is_armstrong_number(number: Int) -> Bool {
   case int.digits(number, 10) {
     Ok(digits) -> {
-      let num_digits = list.length(digits)
-      let res =
-        list.fold(digits, 0, fn(acc, x) { acc + repeat_mult(x, num_digits) })
-      res == number
+      let npower = list.length(digits) |> int.to_float
+      let result = armstrong_number_loop(digits, npower)
+      result == number
     }
     _ -> False
   }
