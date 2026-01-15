@@ -44,7 +44,7 @@ set.size(eighty_eight)
 // -> 1
 ```
 
-Set can be combined with `set.union`, and `set.intersect`.
+Set can be combined with `set.union`, and `set.intersection`.
 
 ```gleam
 let a = set.from_list([1, 5, 10])
