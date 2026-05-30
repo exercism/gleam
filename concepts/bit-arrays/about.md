@@ -82,7 +82,7 @@ By default, bit arrays are displayed in fragments of 8 bits (a byte), even if yo
 // -> <<251, 3:size(3)>>
 ```
 
-If you create a bit array that represents a printable UTF-8 encoded string, it may displayed as a string by functions such as `io.debug`. This is due to an implementation detail of how Gleam represents strings internally.
+If you create a bit array that represents a printable UTF-8 encoded string, it may be displayed as a string by using the `echo keyword` when targeting Erlang. This is due to an implementation detail of how Gleam represents strings internally.
 
 ```gleam
 <<>>
