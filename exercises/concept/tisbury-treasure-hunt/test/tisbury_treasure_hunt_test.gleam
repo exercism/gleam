@@ -39,6 +39,24 @@ pub fn places_should_know_how_many_treasures_are_available_test() {
     )
 }
 
+pub fn can_swap_brass_spyglass_for_pirate_flag_at_abandoned_lighthouse_test() {
+  let assert True =
+    tisbury_treasure_hunt.special_case_swap_possible(
+      #("Brass Spyglass", #(4, "B")),
+      #("Abandoned Lighthouse", #("B", 4)),
+      #("Pirate Flag", #(7, "F")),
+    )
+}
+
+pub fn cannot_swap_brass_spyglass_for_silver_seahorse_at_spiky_rocks_test() {
+  let assert False =
+    tisbury_treasure_hunt.special_case_swap_possible(
+      #("Brass Spyglass", #(4, "B")),
+      #("Spiky Rocks", #("D", 3)),
+      #("Silver Seahorse", #(4, "E")),
+    )
+}
+
 pub fn can_swap_amethyst_octopus_for_crystal_crab_at_stormy_breakwater_test() {
   let assert True =
     tisbury_treasure_hunt.special_case_swap_possible(
