@@ -1495,6 +1495,24 @@
         "status": "deprecated"
       },
       {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "a9e52150-65bc-44a9-9ef6-95b995aea794",
+        "practices": [
+          "strings",
+          "lists",
+          "dicts",
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "strings",
+          "lists",
+          "dicts",
+          "regular-expressions"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "2e7fdb4d-3e75-4dc2-9fb7-ee1a9e1950f9",
