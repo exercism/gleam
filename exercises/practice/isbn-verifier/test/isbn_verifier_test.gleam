@@ -1,6 +1,9 @@
 import exercism/test_runner
 import isbn_verifier
 
+// An expected value of true indicates a valid ISBN-10,
+// whereas false means the ISBN-10 is invalid.
+
 pub fn main() {
   test_runner.main()
 }
@@ -31,6 +34,14 @@ pub fn invalid_character_in_isbn_is_not_treated_as_zero_test() {
 
 pub fn x_is_only_valid_as_a_check_digit_test() {
   let assert False = isbn_verifier.is_valid("3-598-2X507-9")
+}
+
+pub fn only_one_check_digit_is_allowed_test() {
+  let assert False = isbn_verifier.is_valid("3-598-21508-96")
+}
+
+pub fn x_is_not_substituted_by_the_value_10_test() {
+  let assert False = isbn_verifier.is_valid("3-598-2X507-5")
 }
 
 pub fn valid_isbn_without_separating_dashes_test() {
@@ -73,6 +84,7 @@ pub fn invalid_characters_are_not_ignored_after_checking_length_test() {
   let assert False = isbn_verifier.is_valid("3132P34035")
 }
 
+// Catch invalid characters in an otherwise valid isbn
 pub fn invalid_characters_are_not_ignored_before_checking_length_test() {
   let assert False = isbn_verifier.is_valid("3598P215088")
 }
