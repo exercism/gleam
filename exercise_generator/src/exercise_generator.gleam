@@ -172,6 +172,28 @@ fn clean_variable(variable: String) -> String {
 
 // Writing files
 
+// Write to a file ... but only if the file does not exist or is empty. Do not overwrite.
+fn maybe_write_file(
+  filename: String,
+  content: String,
+) -> Result(Nil, FileError) {
+  case simplifile.verify_is_file(filename) {
+    Ok(True) -> {
+      case simplifile.file_info(filename) {
+        Ok(info) -> {
+          case info.size == 0 {
+            True -> simplifile.write(filename, content)
+            False -> Ok(Nil)
+          }
+        }
+        Error(err) -> Error(err)
+      }
+    }
+    Ok(False) -> simplifile.write(filename, content)
+    Error(err) -> Error(err)
+  }
+}
+
 fn write_solution_files(
   slug: String,
   data: CanonicalData,
@@ -231,7 +253,7 @@ fn write_solution_files(
       ["..", "exercises", "practice", slug, "src", exercise <> ".gleam"],
       "/",
     )
-  let assert Ok(Nil) = simplifile.write(solution_path, content)
+  let assert Ok(Nil) = maybe_write_file(solution_path, content)
 
   let example_path =
     string.join(
@@ -239,7 +261,7 @@ fn write_solution_files(
       "/",
     )
 
-  let assert Ok(Nil) = simplifile.write(example_path, content)
+  let assert Ok(Nil) = maybe_write_file(example_path, content)
 }
 
 fn functions_to_implement(test_cases: List(TestCase)) -> Dict(String, Function) {
