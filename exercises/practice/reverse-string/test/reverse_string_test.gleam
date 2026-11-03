@@ -2,8 +2,6 @@ import exercism/should
 import exercism/test_runner
 import reverse_string
 
-// If property based testing tools are available, a good property to test is reversing a string twice: reverse(reverse(string)) == string
-
 pub fn main() {
   test_runner.main()
 }
