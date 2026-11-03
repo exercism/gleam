@@ -1,6 +1,6 @@
 import exercism/should
 import exercism/test_runner
-import satellite
+import satellite.{DifferentItems, DifferentLengths, Nil, Node, NonUniqueItems}
 
 pub fn main() {
   test_runner.main()
@@ -8,58 +8,58 @@ pub fn main() {
 
 pub fn empty_tree_test() {
   satellite.tree_from_traversals(inorder: [], preorder: [])
-  |> should.equal(Ok(CustomRecordType()))
+  |> should.equal(Ok(Nil))
 }
 
 pub fn tree_with_one_item_test() {
   satellite.tree_from_traversals(inorder: ["a"], preorder: ["a"])
   |> should.equal(
-    Ok(CustomRecordType(l: CustomRecordType(), r: CustomRecordType(), v: "a")),
+    Ok(Node(left: Nil, right: Nil, value: "a")),
   )
 }
 
 pub fn tree_with_many_items_test() {
-  satellite.tree_from_traversals(inorder: ["i", "a", "f", "x", "r"], preorder: [
-    "a", "i", "x", "f", "r",
+  satellite.tree_from_traversals(inorder: ["i", "a", "f", "x", "right"], preorder: [
+    "a", "i", "x", "f", "right",
   ])
   |> should.equal(
-    Ok(CustomRecordType(
-      l: CustomRecordType(l: CustomRecordType(), r: CustomRecordType(), v: "i"),
-      r: CustomRecordType(
-        l: CustomRecordType(
-          l: CustomRecordType(),
-          r: CustomRecordType(),
-          v: "f",
+    Ok(Node(
+      left: Node(left: Nil, right: Nil, value: "i"),
+      right: Node(
+        left: Node(
+          left: Nil,
+          right: Nil,
+          value: "f",
         ),
-        r: CustomRecordType(
-          l: CustomRecordType(),
-          r: CustomRecordType(),
-          v: "r",
+        right: Node(
+          left: Nil,
+          right: Nil,
+          value: "right",
         ),
-        v: "x",
+        value: "x",
       ),
-      v: "a",
+      value: "a",
     )),
   )
 }
 
 pub fn reject_traversals_of_different_length_test() {
-  satellite.tree_from_traversals(inorder: ["b", "a", "r"], preorder: ["a", "b"])
-  |> should.equal(Error("traversals must have the same length"))
+  satellite.tree_from_traversals(inorder: ["b", "a", "right"], preorder: ["a", "b"])
+  |> should.equal(Error(DifferentLengths))
 }
 
 pub fn reject_inconsistent_traversals_of_same_length_test() {
   satellite.tree_from_traversals(inorder: ["a", "b", "c"], preorder: [
     "x", "y", "z",
   ])
-  |> should.equal(Error("traversals must have the same elements"))
+  |> should.equal(Error(DifferentItems))
 }
 
 pub fn reject_traversals_with_repeated_items_test() {
   satellite.tree_from_traversals(inorder: ["b", "a", "a"], preorder: [
     "a", "b", "a",
   ])
-  |> should.equal(Error("traversals must contain unique items"))
+  |> should.equal(Error(NonUniqueItems))
 }
 
 pub fn a_degenerate_binary_tree_test() {
@@ -67,22 +67,22 @@ pub fn a_degenerate_binary_tree_test() {
     "a", "b", "c", "d",
   ])
   |> should.equal(
-    Ok(CustomRecordType(
-      l: CustomRecordType(
-        l: CustomRecordType(
-          l: CustomRecordType(
-            l: CustomRecordType(),
-            r: CustomRecordType(),
-            v: "d",
+    Ok(Node(
+      left: Node(
+        left: Node(
+          left: Node(
+            left: Nil,
+            right: Nil,
+            value: "d",
           ),
-          r: CustomRecordType(),
-          v: "c",
+          right: Nil,
+          value: "c",
         ),
-        r: CustomRecordType(),
-        v: "b",
+        right: Nil,
+        value: "b",
       ),
-      r: CustomRecordType(),
-      v: "a",
+      right: Nil,
+      value: "a",
     )),
   )
 }
@@ -92,22 +92,22 @@ pub fn another_degenerate_binary_tree_test() {
     "a", "b", "c", "d",
   ])
   |> should.equal(
-    Ok(CustomRecordType(
-      l: CustomRecordType(),
-      r: CustomRecordType(
-        l: CustomRecordType(),
-        r: CustomRecordType(
-          l: CustomRecordType(),
-          r: CustomRecordType(
-            l: CustomRecordType(),
-            r: CustomRecordType(),
-            v: "d",
+    Ok(Node(
+      left: Nil,
+      right: Node(
+        left: Nil,
+        right: Node(
+          left: Nil,
+          right: Node(
+            left: Nil,
+            right: Nil,
+            value: "d",
           ),
-          v: "c",
+          value: "c",
         ),
-        v: "b",
+        value: "b",
       ),
-      v: "a",
+      value: "a",
     )),
   )
 }
@@ -118,42 +118,42 @@ pub fn tree_with_many_more_items_test() {
     preorder: ["a", "b", "d", "g", "h", "c", "e", "f", "i"],
   )
   |> should.equal(
-    Ok(CustomRecordType(
-      l: CustomRecordType(
-        l: CustomRecordType(
-          l: CustomRecordType(
-            l: CustomRecordType(),
-            r: CustomRecordType(),
-            v: "g",
+    Ok(Node(
+      left: Node(
+        left: Node(
+          left: Node(
+            left: Nil,
+            right: Nil,
+            value: "g",
           ),
-          r: CustomRecordType(
-            l: CustomRecordType(),
-            r: CustomRecordType(),
-            v: "h",
+          right: Node(
+            left: Nil,
+            right: Nil,
+            value: "h",
           ),
-          v: "d",
+          value: "d",
         ),
-        r: CustomRecordType(),
-        v: "b",
+        right: Nil,
+        value: "b",
       ),
-      r: CustomRecordType(
-        l: CustomRecordType(
-          l: CustomRecordType(),
-          r: CustomRecordType(),
-          v: "e",
+      right: Node(
+        left: Node(
+          left: Nil,
+          right: Nil,
+          value: "e",
         ),
-        r: CustomRecordType(
-          l: CustomRecordType(
-            l: CustomRecordType(),
-            r: CustomRecordType(),
-            v: "i",
+        right: Node(
+          left: Node(
+            left: Nil,
+            right: Nil,
+            value: "i",
           ),
-          r: CustomRecordType(),
-          v: "f",
+          right: Nil,
+          value: "f",
         ),
-        v: "c",
+        value: "c",
       ),
-      v: "a",
+      value: "a",
     )),
   )
 }
