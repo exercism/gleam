@@ -26,11 +26,14 @@ required_tool() {
     command -v "${1}" >/dev/null 2>&1 || die "${1} is required but not installed. Please install it and make sure it's in your PATH."
 }
 
+required_tool docker
+required_tool jq
+
 copy_example_or_exemplar_to_solution() {
-    local dir="${1}" slug="${2}" src
+    local dir="${1}" src dest
     src=$(jq -r '.files.example[0]' "${dir}/.meta/config.json")
     dest=$(jq -r '.files.solution[0]' "${dir}/.meta/config.json")
-    cp -v "${dir}/${src}" "${dir}/${dest}"
+    cp "${dir}/${src}" "${dir}/${dest}"
 }
 
 run_tests() {
@@ -43,7 +46,7 @@ run_tests() {
 
     # /solution is used both as the location to read the code from and as a destination for the results.json file.
     docker run "${docker_args[@]}" "${image}" "${slug}" /solution /solution &&
-        grep -q '^  "status": "pass"' "${dir}/results.json"
+        jq -e '.status == "pass"' "${dir}/results.json" >/dev/null
 }
 
 verify_exercise() {
@@ -54,9 +57,12 @@ verify_exercise() {
 
     echo "Verifying ${slug} exercise..."
     (
-        trap 'sudo rm -rf "${tmpdir}"' EXIT    # remove tempdir when subshell ends
+        # remove tempdir when subshell ends.
+        # sudo needed because test-runner writes files as root.
+        trap 'sudo rm -rf "${tmpdir}"' EXIT
+
         cp -r "${dir}/." "${tmpdir}" || exit
-        copy_example_or_exemplar_to_solution "${tmpdir}" "${slug}"
+        copy_example_or_exemplar_to_solution "${tmpdir}"
         run_tests "${slug}" "${tmpdir}" || { cat "${tmpdir}/results.json"; exit 1; }
     )
 }
@@ -82,10 +88,6 @@ verify_exercises() {
     done
     return "$rc"
 }
-
-
-required_tool docker
-required_tool jq
 
 image=''
 while getopts hi: opt; do
