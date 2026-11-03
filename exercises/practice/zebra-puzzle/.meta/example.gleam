@@ -17,10 +17,7 @@ type Solution {
 }
 
 fn solve() -> Result(Solution, Nil) {
-  solve_for_colour(
-    list.permutations(houses()),
-    dict.new(),
-  )
+  solve_for_colour(list.permutations(houses()), dict.new())
 }
 
 fn houses() {
@@ -65,10 +62,7 @@ fn solve_for_colour(
                 |> dict.insert("ivory", ivory)
                 |> dict.insert("yellow", yellow)
               case
-                solve_for_nationalities(
-                  list.permutations(houses()),
-                  parameters,
-                )
+                solve_for_nationalities(list.permutations(houses()), parameters)
               {
                 Error(Nil) -> solve_for_colour(rest, parameters)
                 Ok(result) -> Ok(result)
@@ -76,7 +70,8 @@ fn solve_for_colour(
             }
           }
         }
-        _ -> Error(Nil) // unexpected permutation shape
+        // unexpected permutation shape
+        _ -> Error(Nil)
       }
     }
   }
@@ -94,7 +89,11 @@ fn solve_for_nationalities(
           case dict.get(parameters, "red"), dict.get(parameters, "blue") {
             Ok(red), Ok(blue) -> {
               // clues: 2, 10, 15
-              case english == red && norwegian == first() && next_to(norwegian, blue) {
+              case
+                english == red
+                && norwegian == first()
+                && next_to(norwegian, blue)
+              {
                 False -> solve_for_nationalities(rest, parameters)
                 True -> {
                   let parameters =
@@ -125,10 +124,12 @@ fn solve_for_nationalities(
                 }
               }
             }
-            _, _ -> Error(Nil) // unexpected dictionary lookup errors
+            // unexpected dictionary lookup errors
+            _, _ -> Error(Nil)
           }
         }
-        _ -> Error(Nil) // unexpected permutation shape
+        // unexpected permutation shape
+        _ -> Error(Nil)
       }
     }
   }
@@ -164,16 +165,19 @@ fn solve_for_beverages(
                       nationalities,
                     )
                   {
-                    Error(Nil) -> solve_for_beverages(rest, parameters, nationalities)
+                    Error(Nil) ->
+                      solve_for_beverages(rest, parameters, nationalities)
                     Ok(result) -> Ok(result)
                   }
                 }
               }
             }
-            _, _ -> Error(Nil) // unexpected dictionary lookup errors
+            // unexpected dictionary lookup errors
+            _, _ -> Error(Nil)
           }
         }
-        _ -> Error(Nil) // unexpected permutation shape
+        // unexpected permutation shape
+        _ -> Error(Nil)
       }
     }
   }
@@ -189,7 +193,11 @@ fn solve_for_hobbies(
     [perm, ..rest] -> {
       case perm {
         [dancing, painting, reading, football, chess] -> {
-          case dict.get(parameters, "yellow"), dict.get(parameters, "japanese"), dict.get(parameters, "orange_juice") {
+          case
+            dict.get(parameters, "yellow"),
+            dict.get(parameters, "japanese"),
+            dict.get(parameters, "orange_juice")
+          {
             Ok(yellow), Ok(japanese), Ok(orange_juice) -> {
               // clues: 8, 13, 14
               case
@@ -213,16 +221,19 @@ fn solve_for_hobbies(
                       nationalities,
                     )
                   {
-                    Error(Nil) -> solve_for_hobbies(rest, parameters, nationalities)
+                    Error(Nil) ->
+                      solve_for_hobbies(rest, parameters, nationalities)
                     Ok(result) -> Ok(result)
                   }
                 }
               }
             }
-            _, _, _ -> Error(Nil) // unexpected dictionary lookup errors
+            // unexpected dictionary lookup errors
+            _, _, _ -> Error(Nil)
           }
         }
-        _ -> Error(Nil) // unexpected permutation shape
+        // unexpected permutation shape
+        _ -> Error(Nil)
       }
     }
   }
@@ -238,7 +249,12 @@ fn solve_for_pets(
     [perm, ..rest] -> {
       case perm {
         [dog, snails, fox, horse, zebra] -> {
-          case dict.get(parameters, "dancing"), dict.get(parameters, "spanish"), dict.get(parameters, "painting"), dict.get(parameters, "reading") {
+          case
+            dict.get(parameters, "dancing"),
+            dict.get(parameters, "spanish"),
+            dict.get(parameters, "painting"),
+            dict.get(parameters, "reading")
+          {
             Ok(dancing), Ok(spanish), Ok(painting), Ok(reading) -> {
               // clues: 3, 7, 11, 12
               case
@@ -251,20 +267,27 @@ fn solve_for_pets(
                 True -> {
                   case dict.get(parameters, "water") {
                     Ok(water) -> {
-                      case dict.get(nationalities, water), dict.get(nationalities, zebra) {
-                        Ok(water_owner), Ok(zebra_owner) -> Ok(Solution(water_owner, zebra_owner))
+                      case
+                        dict.get(nationalities, water),
+                        dict.get(nationalities, zebra)
+                      {
+                        Ok(water_owner), Ok(zebra_owner) ->
+                          Ok(Solution(water_owner, zebra_owner))
                         _, _ -> Error(Nil)
                       }
                     }
-                    _ -> Error(Nil) // unexpected dictionary lookup errors
+                    // unexpected dictionary lookup errors
+                    _ -> Error(Nil)
                   }
                 }
               }
             }
-            _, _, _, _ -> Error(Nil) // unexpected dictionary lookup errors
+            // unexpected dictionary lookup errors
+            _, _, _, _ -> Error(Nil)
           }
         }
-        _ -> Error(Nil) // unexpected permutation shape
+        // unexpected permutation shape
+        _ -> Error(Nil)
       }
     }
   }
