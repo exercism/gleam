@@ -16,16 +16,9 @@ type Solution {
   Solution(water_drinker: String, zebra_owner: String)
 }
 
-type Parameters =
-  Dict(String, Int)
-
-type Nationalities =
-  Dict(Int, String)
-
 fn solve() -> Result(Solution, Nil) {
   solve_for_colour(
-    houses()
-      |> list.permutations(),
+    list.permutations(houses()),
     dict.new(),
   )
 }
@@ -53,7 +46,7 @@ fn middle() {
 
 fn solve_for_colour(
   permutations: List(List(Int)),
-  parameters: Parameters,
+  parameters: Dict(String, Int),
 ) -> Result(Solution, Nil) {
   case permutations {
     [] -> Error(Nil)
@@ -73,8 +66,7 @@ fn solve_for_colour(
             |> dict.insert("yellow", yellow)
           case
             solve_for_nationalities(
-              houses()
-                |> list.permutations(),
+              list.permutations(houses()),
               parameters,
             )
           {
@@ -89,7 +81,7 @@ fn solve_for_colour(
 
 fn solve_for_nationalities(
   permutations: List(List(Int)),
-  parameters: Parameters,
+  parameters: Dict(String, Int),
 ) -> Result(Solution, Nil) {
   case permutations {
     [] -> Error(Nil)
@@ -119,8 +111,7 @@ fn solve_for_nationalities(
             ])
           case
             solve_for_beverages(
-              houses()
-                |> list.permutations(),
+              list.permutations(houses()),
               parameters,
               nationalities,
             )
@@ -136,8 +127,8 @@ fn solve_for_nationalities(
 
 fn solve_for_beverages(
   permutations: List(List(Int)),
-  parameters: Parameters,
-  nationalities: Nationalities,
+  parameters: Dict(String, Int),
+  nationalities: Dict(Int, String),
 ) -> Result(Solution, Nil) {
   case permutations {
     [] -> Error(Nil)
@@ -159,8 +150,7 @@ fn solve_for_beverages(
             |> dict.insert("orange_juice", orange_juice)
           case
             solve_for_cigarettes(
-              houses()
-                |> list.permutations(),
+              list.permutations(houses()),
               parameters,
               nationalities,
             )
@@ -176,8 +166,8 @@ fn solve_for_beverages(
 
 fn solve_for_cigarettes(
   permutations: List(List(Int)),
-  parameters: Parameters,
-  nationalities: Nationalities,
+  parameters: Dict(String, Int),
+  nationalities: Dict(Int, String),
 ) -> Result(Solution, Nil) {
   case permutations {
     [] -> Error(Nil)
@@ -205,8 +195,7 @@ fn solve_for_cigarettes(
             |> dict.insert("chesterfields", chesterfields)
           case
             solve_for_pets(
-              houses()
-                |> list.permutations(),
+              list.permutations(houses()),
               parameters,
               nationalities,
             )
@@ -222,8 +211,8 @@ fn solve_for_cigarettes(
 
 fn solve_for_pets(
   permutations: List(List(Int)),
-  parameters: Parameters,
-  nationalities: Nationalities,
+  parameters: Dict(String, Int),
+  nationalities: Dict(Int, String),
 ) -> Result(Solution, Nil) {
   case permutations {
     [] -> Error(Nil)
