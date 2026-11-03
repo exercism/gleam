@@ -125,7 +125,7 @@ fn solve_for_nationalities(
                 }
               }
             }
-            _ -> Error(Nil) // unexpected dictionary lookup errors
+            _, _ -> Error(Nil) // unexpected dictionary lookup errors
           }
         }
         _ -> Error(Nil) // unexpected permutation shape
@@ -170,7 +170,7 @@ fn solve_for_beverages(
                 }
               }
             }
-            _ -> Error(Nil) // unexpected dictionary lookup errors
+            _, _ -> Error(Nil) // unexpected dictionary lookup errors
           }
         }
         _ -> Error(Nil) // unexpected permutation shape
@@ -219,7 +219,7 @@ fn solve_for_cigarettes(
                 }
               }
             }
-            _ -> Error(Nil) // unexpected dictionary lookup errors
+            _, _, _ -> Error(Nil) // unexpected dictionary lookup errors
           }
         }
         _ -> Error(Nil) // unexpected permutation shape
@@ -253,7 +253,7 @@ fn solve_for_pets(
                     Ok(water) -> {
                       case dict.get(nationalities, water), dict.get(nationalities, zebra) {
                         Ok(water_owner), Ok(zebra_owner) -> Ok(Solution(water_owner, zebra_owner))
-                        _ -> Error(Nil)
+                        _, _ -> Error(Nil)
                       }
                     }
                     _ -> Error(Nil) // unexpected dictionary lookup errors
@@ -261,7 +261,7 @@ fn solve_for_pets(
                 }
               }
             }
-            _ -> Error(Nil) // unexpected dictionary lookup errors
+            _, _, _, _ -> Error(Nil) // unexpected dictionary lookup errors
           }
         }
         _ -> Error(Nil) // unexpected permutation shape
