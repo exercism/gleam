@@ -30,9 +30,6 @@ set.insert(eighty_eight, 88)
 set.insert(eighty_eight, 89)
 // -> set.from_list([88, 89])
 
-set.delete(eighty_eight, 88)
-// -> set.from_list([])
-
 set.delete(eighty_eight, 89)
 // -> set.from_list([88])
 ```
@@ -47,7 +44,7 @@ set.size(eighty_eight)
 // -> 1
 ```
 
-Set can be combined with `set.union`, and `set.intersect`.
+Set can be combined with `set.union`, and `set.intersection`.
 
 ```gleam
 let a = set.from_list([1, 5, 10])
@@ -63,7 +60,7 @@ set.intersection(a, b)
 You can filter sets.
 
 ```gleam
-let is_small = fn(n) { x <= 3 }
+let is_small = fn(n) { n <= 3 }
 
 set.filter(b, is_small)
 // -> set.from_list([1, 2, 3])

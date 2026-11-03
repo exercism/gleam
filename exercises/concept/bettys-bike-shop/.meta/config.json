@@ -11,6 +11,10 @@
     ],
     "exemplar": [
       ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
     ]
   },
   "blurb": "Learn about modules by helping Betty to display her bikes prices."

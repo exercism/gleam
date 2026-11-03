@@ -6,7 +6,7 @@ pub type Tree(a) {
 }
 
 type Zipper(a) {
-  Zipper(focus: Tree(a), List(Crumb(a)))
+  Zipper(focus: Tree(a), children: List(Crumb(a)))
 }
 
 type Crumb(a) {

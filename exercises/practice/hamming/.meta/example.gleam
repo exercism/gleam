@@ -9,5 +9,5 @@ pub fn distance(strand1: String, strand2: String) -> Result(Int, Nil) {
     |> list.filter(fn(pair) { pair.0 != pair.1 })
     |> list.length
   })
-  |> result.nil_error
+  |> result.replace_error(Nil)
 }

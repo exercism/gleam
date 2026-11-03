@@ -35,8 +35,8 @@ fn get_team_scores(input: String) -> Dict(String, Score) {
     let #(result_a, result_b) = parse_results(result)
 
     scores
-    |> dict.update(team_a, increase(_, result_a))
-    |> dict.update(team_b, increase(_, result_b))
+    |> dict.upsert(team_a, increase(_, result_a))
+    |> dict.upsert(team_b, increase(_, result_b))
   })
 }
 
@@ -94,12 +94,12 @@ fn format_row(tally: #(String, Score)) -> String {
   let losses = int.to_string(losses)
 
   [
-    string.pad_right(team, to: 30, with: " "),
-    string.pad_left(matches, to: 2, with: " "),
-    string.pad_left(wins, to: 2, with: " "),
-    string.pad_left(draws, to: 2, with: " "),
-    string.pad_left(losses, to: 2, with: " "),
-    string.pad_left(points, to: 2, with: " "),
+    string.pad_end(team, to: 30, with: " "),
+    string.pad_start(matches, to: 2, with: " "),
+    string.pad_start(wins, to: 2, with: " "),
+    string.pad_start(draws, to: 2, with: " "),
+    string.pad_start(losses, to: 2, with: " "),
+    string.pad_start(points, to: 2, with: " "),
   ]
   |> string.join(" | ")
 }

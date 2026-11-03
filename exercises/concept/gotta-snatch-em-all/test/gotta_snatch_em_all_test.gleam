@@ -157,3 +157,10 @@ pub fn shiny_cards_with_many_test() {
     set.from_list(["Shiny Hitmonchuck", "Shiny Phiswan", "Shiny Shazam"]),
   )
 }
+
+pub fn fake_shiny_not_included_test() {
+  gotta_snatch_em_all.shiny_cards(
+    set.from_list(["Shiny Hitmonchuck", "Shinychu"]),
+  )
+  |> should.equal(set.from_list(["Shiny Hitmonchuck"]))
+}

@@ -13,9 +13,9 @@ pub fn empty_rna_sequence_test() {
 }
 
 pub fn rna_complement_of_cytosine_is_guanine_test() {
-  "G"
+  "C"
   |> rna_transcription.to_rna
-  |> should.equal(Ok("C"))
+  |> should.equal(Ok("G"))
 }
 
 pub fn rna_complement_of_guanine_is_cytosine_test() {

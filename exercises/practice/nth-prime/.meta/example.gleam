@@ -1,23 +1,23 @@
 import gleam/float
 import gleam/int
-import gleam/iterator.{type Iterator}
+import gleam/yielder.{type Yielder}
 
 pub fn prime(number: Int) -> Result(Int, Nil) {
   case number > 0 {
-    True -> iterator.at(primes(), number - 1)
+    True -> yielder.at(primes(), number - 1)
     False -> Error(Nil)
   }
 }
 
-fn primes() -> Iterator(Int) {
-  iterator.single(2)
-  |> iterator.append(iterator.single(3))
-  |> iterator.append(
-    iterator.interleave(
-      iterator.iterate(from: 5, with: fn(x) { x + 6 }),
-      iterator.iterate(from: 7, with: fn(x) { x + 6 }),
+fn primes() -> Yielder(Int) {
+  yielder.single(2)
+  |> yielder.append(yielder.single(3))
+  |> yielder.append(
+    yielder.interleave(
+      yielder.iterate(from: 5, with: fn(x) { x + 6 }),
+      yielder.iterate(from: 7, with: fn(x) { x + 6 }),
     )
-    |> iterator.filter(is_prime),
+    |> yielder.filter(is_prime),
   )
 }
 
@@ -28,6 +28,6 @@ fn is_prime(number: Int) -> Bool {
   number == 2
   || number == 3
   || number == 5
-  || iterator.range(5, root)
-  |> iterator.all(fn(x) { number % x != 0 })
+  || yielder.range(5, root)
+  |> yielder.all(fn(x) { number % x != 0 })
 }

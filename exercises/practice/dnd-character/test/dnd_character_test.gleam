@@ -1,7 +1,7 @@
 import dnd_character
 import exercism/should
 import exercism/test_runner
-import gleam/iterator
+import gleam/yielder
 
 pub fn main() {
   test_runner.main()
@@ -88,72 +88,72 @@ pub fn ability_modifier_ability_modifier_for_score_18_is_4_test() {
 }
 
 pub fn random_ability_is_within_range_test() {
-  iterator.repeatedly(dnd_character.ability)
-  |> iterator.take(100)
-  |> iterator.all(fn(ability) {
+  yielder.repeatedly(dnd_character.ability)
+  |> yielder.take(100)
+  |> yielder.all(fn(ability) {
     let assert True = ability >= 3
     let assert True = ability <= 18
   })
 }
 
 pub fn random_character_charisma_is_within_range_test() {
-  iterator.repeatedly(dnd_character.generate_character)
-  |> iterator.take(100)
-  |> iterator.all(fn(character) {
+  yielder.repeatedly(dnd_character.generate_character)
+  |> yielder.take(100)
+  |> yielder.all(fn(character) {
     let assert True = character.charisma >= 3
     let assert True = character.charisma <= 18
   })
 }
 
 pub fn random_character_constitution_is_within_range_test() {
-  iterator.repeatedly(dnd_character.generate_character)
-  |> iterator.take(100)
-  |> iterator.all(fn(character) {
+  yielder.repeatedly(dnd_character.generate_character)
+  |> yielder.take(100)
+  |> yielder.all(fn(character) {
     let assert True = character.constitution >= 3
     let assert True = character.constitution <= 18
   })
 }
 
 pub fn random_character_dexterity_is_within_range_test() {
-  iterator.repeatedly(dnd_character.generate_character)
-  |> iterator.take(100)
-  |> iterator.all(fn(character) {
+  yielder.repeatedly(dnd_character.generate_character)
+  |> yielder.take(100)
+  |> yielder.all(fn(character) {
     let assert True = character.dexterity >= 3
     let assert True = character.dexterity <= 18
   })
 }
 
 pub fn random_character_intelligence_is_within_range_test() {
-  iterator.repeatedly(dnd_character.generate_character)
-  |> iterator.take(100)
-  |> iterator.all(fn(character) {
+  yielder.repeatedly(dnd_character.generate_character)
+  |> yielder.take(100)
+  |> yielder.all(fn(character) {
     let assert True = character.intelligence >= 3
     let assert True = character.intelligence <= 18
   })
 }
 
 pub fn random_character_strength_is_within_range_test() {
-  iterator.repeatedly(dnd_character.generate_character)
-  |> iterator.take(100)
-  |> iterator.all(fn(character) {
+  yielder.repeatedly(dnd_character.generate_character)
+  |> yielder.take(100)
+  |> yielder.all(fn(character) {
     let assert True = character.strength >= 3
     let assert True = character.strength <= 18
   })
 }
 
 pub fn random_character_wisdom_is_within_range_test() {
-  iterator.repeatedly(dnd_character.generate_character)
-  |> iterator.take(100)
-  |> iterator.all(fn(character) {
+  yielder.repeatedly(dnd_character.generate_character)
+  |> yielder.take(100)
+  |> yielder.all(fn(character) {
     let assert True = character.wisdom >= 3
     let assert True = character.wisdom <= 18
   })
 }
 
 pub fn random_character_hitpoints_is_calculated_correctly_test() {
-  iterator.repeatedly(dnd_character.generate_character)
-  |> iterator.take(100)
-  |> iterator.all(fn(character) {
+  yielder.repeatedly(dnd_character.generate_character)
+  |> yielder.take(100)
+  |> yielder.all(fn(character) {
     let assert True =
       10 + dnd_character.modifier(character.constitution) == character.hitpoints
   })

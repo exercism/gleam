@@ -189,7 +189,7 @@ pub fn stack_over_fail_2_test() {
 pub fn define_new_word_test() {
   forth.new()
   |> forth.eval(": dup-twice dup dup ;")
-  |> result.then(forth.eval(_, "1 dup-twice"))
+  |> result.try(forth.eval(_, "1 dup-twice"))
   |> result.map(forth.format_stack)
   |> succeed_with("1 1 1")
 }
@@ -197,8 +197,8 @@ pub fn define_new_word_test() {
 pub fn redefine_existing_word_test() {
   forth.new()
   |> forth.eval(": foo dup ;")
-  |> result.then(forth.eval(_, ": foo dup dup ;"))
-  |> result.then(forth.eval(_, "1 foo"))
+  |> result.try(forth.eval(_, ": foo dup dup ;"))
+  |> result.try(forth.eval(_, "1 foo"))
   |> result.map(forth.format_stack)
   |> succeed_with("1 1 1")
 }
@@ -206,7 +206,7 @@ pub fn redefine_existing_word_test() {
 pub fn redefining_an_existing_builtin_word_test() {
   forth.new()
   |> forth.eval(": swap dup ;")
-  |> result.then(forth.eval(_, "1 swap"))
+  |> result.try(forth.eval(_, "1 swap"))
   |> result.map(forth.format_stack)
   |> succeed_with("1 1")
 }
@@ -214,7 +214,7 @@ pub fn redefining_an_existing_builtin_word_test() {
 pub fn defining_words_with_odd_characters_test() {
   forth.new()
   |> forth.eval(": € 220371 ;")
-  |> result.then(forth.eval(_, "€"))
+  |> result.try(forth.eval(_, "€"))
   |> result.map(forth.format_stack)
   |> succeed_with("220371")
 }
@@ -234,7 +234,7 @@ pub fn calling_a_nonexistent_word_test() {
 pub fn user_defined_words_execute_in_the_right_order_test() {
   forth.new()
   |> forth.eval(": countup 1 2 3 ;")
-  |> result.then(forth.eval(_, "countup"))
+  |> result.try(forth.eval(_, "countup"))
   |> result.map(forth.format_stack)
   |> succeed_with("1 2 3")
 }
@@ -242,7 +242,7 @@ pub fn user_defined_words_execute_in_the_right_order_test() {
 pub fn user_defined_words_can_override_builtin_operators_test() {
   forth.new()
   |> forth.eval(": + * ;")
-  |> result.then(forth.eval(_, "3 4 +"))
+  |> result.try(forth.eval(_, "3 4 +"))
   |> result.map(forth.format_stack)
   |> succeed_with("12")
 }
@@ -250,9 +250,9 @@ pub fn user_defined_words_can_override_builtin_operators_test() {
 pub fn user_defined_words_can_use_different_words_with_the_same_name_test() {
   forth.new()
   |> forth.eval(": foo 5 ;")
-  |> result.then(forth.eval(_, ": bar foo ;"))
-  |> result.then(forth.eval(_, ": foo 6 ;"))
-  |> result.then(forth.eval(_, "bar foo"))
+  |> result.try(forth.eval(_, ": bar foo ;"))
+  |> result.try(forth.eval(_, ": foo 6 ;"))
+  |> result.try(forth.eval(_, "bar foo"))
   |> result.map(forth.format_stack)
   |> succeed_with("5 6")
 }
@@ -260,8 +260,8 @@ pub fn user_defined_words_can_use_different_words_with_the_same_name_test() {
 pub fn user_defined_words_can_define_word_that_uses_word_with_the_same_name_test() {
   forth.new()
   |> forth.eval(": foo 10 ;")
-  |> result.then(forth.eval(_, ": foo foo 1 + ;"))
-  |> result.then(forth.eval(_, "foo"))
+  |> result.try(forth.eval(_, ": foo foo 1 + ;"))
+  |> result.try(forth.eval(_, "foo"))
   |> result.map(forth.format_stack)
   |> succeed_with("11")
 }
@@ -303,7 +303,7 @@ pub fn over_is_case_insensitive_test() {
 pub fn user_defined_words_are_case_insensitive_test() {
   forth.new()
   |> forth.eval(": foo dup ;")
-  |> result.then(forth.eval(_, "1 FOO Foo foo"))
+  |> result.try(forth.eval(_, "1 FOO Foo foo"))
   |> result.map(forth.format_stack)
   |> succeed_with("1 1 1 1")
 }
@@ -311,7 +311,7 @@ pub fn user_defined_words_are_case_insensitive_test() {
 pub fn definitions_are_case_insensitive_test() {
   forth.new()
   |> forth.eval(": SWAP DUP Dup dup ;")
-  |> result.then(forth.eval(_, "1 swap"))
+  |> result.try(forth.eval(_, "1 swap"))
   |> result.map(forth.format_stack)
   |> succeed_with("1 1 1 1")
 }

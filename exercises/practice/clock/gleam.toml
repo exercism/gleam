@@ -2,11 +2,13 @@ name = "clock"
 version = "0.1.0"
 
 [dependencies]
-gleam_bitwise = "~> 1.2"
 gleam_otp = "~> 0.7 or ~> 1.0"
-gleam_stdlib = "~> 0.32 or ~> 1.0"
+gleam_stdlib = ">= 0.54.0 or ~> 1.0"
 simplifile = "~> 1.0"
 gleam_erlang = ">= 0.25.0 and < 1.0.0"
+gleam_yielder = ">= 1.1.0 and < 2.0.0"
+gleam_regexp = ">= 1.1.0 and < 2.0.0"
+gleam_deque = ">= 1.0.0 and < 2.0.0"
 
 [dev-dependencies]
-exercism_test_runner = "~> 1.4"
+exercism_test_runner = "~> 1.9"

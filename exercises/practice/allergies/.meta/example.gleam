@@ -1,4 +1,4 @@
-import gleam/bitwise
+import gleam/int
 import gleam/list
 
 pub type Allergen {
@@ -26,7 +26,7 @@ fn to_score(allergen: Allergen) -> Int {
 }
 
 pub fn allergic_to(allergen: Allergen, score: Int) -> Bool {
-  bitwise.and(to_score(allergen), score) != 0
+  int.bitwise_and(to_score(allergen), score) != 0
 }
 
 pub fn list(score: Int) -> List(Allergen) {

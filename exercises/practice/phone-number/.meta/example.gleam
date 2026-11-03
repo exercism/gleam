@@ -49,7 +49,7 @@ fn validate_length(input: String) -> Result(String, String) {
 fn validate_and_remove_country_code(input: String) -> Result(String, String) {
   let length = string.length(input)
   case string.first(input) {
-    Ok("1") if length == 11 -> Ok(string.drop_left(input, 1))
+    Ok("1") if length == 11 -> Ok(string.drop_start(input, 1))
     _ if length == 11 -> Error("11 digits must start with 1")
     _ -> Ok(input)
   }
@@ -64,7 +64,7 @@ fn validate_area_code(input: String) -> Result(String, String) {
 }
 
 fn validate_exchange_code(input: String) -> Result(String, String) {
-  let from_exchange_code = string.drop_left(input, 3)
+  let from_exchange_code = string.drop_start(input, 3)
   case string.first(from_exchange_code) {
     Ok("0") -> Error("exchange code cannot start with zero")
     Ok("1") -> Error("exchange code cannot start with one")

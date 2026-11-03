@@ -2,11 +2,11 @@
 
 ## Learning objectives
 
-- Know what a bit string is.
-- Know how to create a bit string literal.
+- Know what a bit array is.
+- Know how to create a bit array literal.
 - Know about the `:` binary size modifier.
-- Know how to construct a bit string.
-- Know how to pattern match a bit string.
+- Know how to construct a bit array.
+- Know how to pattern match a bit array.
 
 ## Out of scope
 
@@ -16,7 +16,7 @@
 
 ## Concepts
 
-- `bit-strings`
+- `bit-arrays`
 
 ## Prerequisites
 

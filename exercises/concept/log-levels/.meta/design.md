@@ -15,7 +15,7 @@
 
 - String implementation on Erlang and JavaScript.
 - String builders.
-- Bit strings.
+- Bit arrays.
 - Memory and performance characteristics.
 
 ## Concepts

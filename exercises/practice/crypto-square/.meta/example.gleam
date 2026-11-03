@@ -21,7 +21,7 @@ fn rows(characters: List(String)) -> List(List(String)) {
   |> list.map(fn(row) {
     row
     |> string.concat()
-    |> string.pad_right(width, " ")
+    |> string.pad_end(width, " ")
     |> string.to_graphemes()
   })
 }

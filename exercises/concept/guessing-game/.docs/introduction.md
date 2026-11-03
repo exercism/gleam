@@ -53,4 +53,21 @@ pub fn describe(number: Int) -> String {
 // No compiler error
 ```
 
+Multiple patterns can be matched against in one clause using the `|` to separate between each pattern. Only one guard can be added to a clause:
+
+```gleam
+pub fn describe(number: Int) -> String {
+  let yell = True
+  case number {
+    0 -> "Zero"
+    3 | 5 -> "One of the first odd prime numbers"
+    2 | 4 | 6 | 8 if !yell -> "One of the even numbers less than 10"
+    i if i % 2 == 0 && yell -> "[Yelling] I'm telling you! It's a even nunber"
+    i if i < 0 -> "Negative number"
+    _ -> "Positive number"
+  }
+}
+// No compiler error
+```
+
 Case expressions will test a value against each pattern from top to bottom, until it finds a matching pattern and executes the logic associated with that pattern. The order of patterns matters!

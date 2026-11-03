@@ -1,3 +1,3 @@
 # Introduction
 
-%{concept:bit-strings}
+%{concept:bit-arrays}

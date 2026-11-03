@@ -220,6 +220,14 @@ pub fn root_for_team_with_more_losses_than_wins_and_non_former_player_coach_test
   let assert True = bandwagoner.root_for_team(team)
 }
 
+pub fn root_for_team_chicago_bulls_test() {
+  let stats = bandwagoner.create_stats(50, 13)
+  let coach = bandwagoner.create_coach("Billy Donovan", False)
+  let team = bandwagoner.create_team("Chicago Bulls", coach, stats)
+
+  let assert True = bandwagoner.root_for_team(team)
+}
+
 pub fn dont_root_for_team_not_matching_criteria_test() {
   let stats = bandwagoner.create_stats(51, 31)
   let coach = bandwagoner.create_coach("Frank Layden", False)

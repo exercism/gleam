@@ -30,9 +30,9 @@ pub type Order {
 
 The type has three variants, each used to represent the relationship between value and another value:
 
-- `Gt` - the value is _larger_ than the other value.
+- `Gt` - the value is _greater than_ the other value.
 - `Eq` - the value is _equal_ to the other value.
-- `Lt` - the value is _smaller_ than the other value.
+- `Lt` - the value is _lower than_ the other value.
 
 If a data type can be compared by size it is common for the module to define a `compare` function which returns an `Order` value. For example, `gleam/float` and `gleam/int` define `compare` functions that operate on floats and ints respectively.
 

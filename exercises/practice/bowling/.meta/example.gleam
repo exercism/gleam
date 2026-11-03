@@ -128,8 +128,7 @@ pub fn roll(game: Game, knocked_pins: Int) -> Result(Game, Error) {
                 list.last(new_game.frames)
                 |> result.unwrap(Frame([], []))
               case
-                is_frame_rolls_done(last)
-                && list.length(new_game.frames) < 10
+                is_frame_rolls_done(last) && list.length(new_game.frames) < 10
               {
                 True -> {
                   let frames =
