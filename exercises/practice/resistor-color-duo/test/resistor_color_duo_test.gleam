@@ -1,42 +1,37 @@
-import exercism/should
 import exercism/test_runner
-import resistor_color_duo
+import resistor_color_duo.{
+  Black, Blue, Brown, Green, Grey, Orange, Red, Violet, White, Yellow,
+}
+
 
 pub fn main() {
   test_runner.main()
 }
 
 pub fn brown_and_black_test() {
-  resistor_color_duo.value(["brown", "black"])
-  |> should.equal(10)
+  let assert Ok(10) = resistor_color_duo.value([Brown, Black])
 }
 
 pub fn blue_and_grey_test() {
-  resistor_color_duo.value(["blue", "grey"])
-  |> should.equal(68)
+  let assert Ok(68) = resistor_color_duo.value([Blue, Grey])
 }
 
 pub fn yellow_and_violet_test() {
-  resistor_color_duo.value(["yellow", "violet"])
-  |> should.equal(47)
+  let assert Ok(47) = resistor_color_duo.value([Yellow, Violet])
 }
 
 pub fn white_and_red_test() {
-  resistor_color_duo.value(["white", "red"])
-  |> should.equal(92)
+  let assert Ok(92) = resistor_color_duo.value([White, Red])
 }
 
 pub fn orange_and_orange_test() {
-  resistor_color_duo.value(["orange", "orange"])
-  |> should.equal(33)
+  let assert Ok(33) = resistor_color_duo.value([Orange, Orange])
 }
 
 pub fn ignore_additional_colors_test() {
-  resistor_color_duo.value(["green", "brown", "orange"])
-  |> should.equal(51)
+  let assert Ok(51) = resistor_color_duo.value([Green, Brown, Orange])
 }
 
 pub fn black_and_brown_one_digit_test() {
-  resistor_color_duo.value(["black", "brown"])
-  |> should.equal(1)
+  let assert Ok(1) = resistor_color_duo.value([Black, Brown])
 }
