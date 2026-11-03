@@ -158,7 +158,7 @@ fn solve_for_beverages(
                     |> dict.insert("coffee", coffee)
                     |> dict.insert("orange_juice", orange_juice)
                   case
-                    solve_for_cigarettes(
+                    solve_for_hobbies(
                       list.permutations(houses()),
                       parameters,
                       nationalities,
@@ -179,7 +179,7 @@ fn solve_for_beverages(
   }
 }
 
-fn solve_for_cigarettes(
+fn solve_for_hobbies(
   permutations: List(List(Int)),
   parameters: Dict(String, Int),
   nationalities: Dict(Int, String),
@@ -188,24 +188,24 @@ fn solve_for_cigarettes(
     [] -> Error(Nil)
     [perm, ..rest] -> {
       case perm {
-        [old_gold, kools, chesterfields, lucky_strike, parliaments] -> {
+        [dancing, painting, reading, football, chess] -> {
           case dict.get(parameters, "yellow"), dict.get(parameters, "japanese"), dict.get(parameters, "orange_juice") {
             Ok(yellow), Ok(japanese), Ok(orange_juice) -> {
               // clues: 8, 13, 14
               case
-                kools == yellow
-                && lucky_strike == orange_juice
-                && parliaments == japanese
+                painting == yellow
+                && football == orange_juice
+                && chess == japanese
               {
-                False -> solve_for_cigarettes(rest, parameters, nationalities)
+                False -> solve_for_hobbies(rest, parameters, nationalities)
                 True -> {
                   let parameters =
                     parameters
-                    |> dict.insert("kools", kools)
-                    |> dict.insert("old_gold", old_gold)
-                    |> dict.insert("lucky_strike", lucky_strike)
-                    |> dict.insert("parliaments", parliaments)
-                    |> dict.insert("chesterfields", chesterfields)
+                    |> dict.insert("dancing", dancing)
+                    |> dict.insert("painting", painting)
+                    |> dict.insert("football", football)
+                    |> dict.insert("chess", chess)
+                    |> dict.insert("reading", reading)
                   case
                     solve_for_pets(
                       list.permutations(houses()),
@@ -213,7 +213,7 @@ fn solve_for_cigarettes(
                       nationalities,
                     )
                   {
-                    Error(Nil) -> solve_for_cigarettes(rest, parameters, nationalities)
+                    Error(Nil) -> solve_for_hobbies(rest, parameters, nationalities)
                     Ok(result) -> Ok(result)
                   }
                 }
@@ -238,14 +238,14 @@ fn solve_for_pets(
     [perm, ..rest] -> {
       case perm {
         [dog, snails, fox, horse, zebra] -> {
-          case dict.get(parameters, "kools"), dict.get(parameters, "spanish"), dict.get(parameters, "old_gold"), dict.get(parameters, "chesterfields") {
-            Ok(kools), Ok(spanish), Ok(old_gold), Ok(chesterfields) -> {
+          case dict.get(parameters, "dancing"), dict.get(parameters, "spanish"), dict.get(parameters, "painting"), dict.get(parameters, "reading") {
+            Ok(dancing), Ok(spanish), Ok(painting), Ok(reading) -> {
               // clues: 3, 7, 11, 12
               case
                 dog == spanish
-                && snails == old_gold
-                && next_to(fox, chesterfields)
-                && next_to(horse, kools)
+                && snails == dancing
+                && next_to(fox, reading)
+                && next_to(horse, painting)
               {
                 False -> solve_for_pets(rest, parameters, nationalities)
                 True -> {
