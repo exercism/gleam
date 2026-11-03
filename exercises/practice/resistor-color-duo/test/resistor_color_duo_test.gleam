@@ -3,7 +3,6 @@ import resistor_color_duo.{
   Black, Blue, Brown, Green, Grey, Orange, Red, Violet, White, Yellow,
 }
 
-
 pub fn main() {
   test_runner.main()
 }

@@ -26,7 +26,15 @@ pub fn color_codes_orange_test() {
 pub fn colors_test() {
   resistor_color.colors()
   |> should.equal([
-    Black, Brown, Red, Orange, Yellow, Green, Blue, Violet,
-    Grey, White,
+    Black,
+    Brown,
+    Red,
+    Orange,
+    Yellow,
+    Green,
+    Blue,
+    Violet,
+    Grey,
+    White,
   ])
 }

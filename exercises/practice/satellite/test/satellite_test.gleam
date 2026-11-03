@@ -13,29 +13,20 @@ pub fn empty_tree_test() {
 
 pub fn tree_with_one_item_test() {
   satellite.tree_from_traversals(inorder: ["a"], preorder: ["a"])
-  |> should.equal(
-    Ok(Node(left: Nil, right: Nil, value: "a")),
-  )
+  |> should.equal(Ok(Node(left: Nil, right: Nil, value: "a")))
 }
 
 pub fn tree_with_many_items_test() {
-  satellite.tree_from_traversals(inorder: ["i", "a", "f", "x", "right"], preorder: [
-    "a", "i", "x", "f", "right",
-  ])
+  satellite.tree_from_traversals(
+    inorder: ["i", "a", "f", "x", "right"],
+    preorder: ["a", "i", "x", "f", "right"],
+  )
   |> should.equal(
     Ok(Node(
       left: Node(left: Nil, right: Nil, value: "i"),
       right: Node(
-        left: Node(
-          left: Nil,
-          right: Nil,
-          value: "f",
-        ),
-        right: Node(
-          left: Nil,
-          right: Nil,
-          value: "right",
-        ),
+        left: Node(left: Nil, right: Nil, value: "f"),
+        right: Node(left: Nil, right: Nil, value: "right"),
         value: "x",
       ),
       value: "a",
@@ -44,7 +35,9 @@ pub fn tree_with_many_items_test() {
 }
 
 pub fn reject_traversals_of_different_length_test() {
-  satellite.tree_from_traversals(inorder: ["b", "a", "right"], preorder: ["a", "b"])
+  satellite.tree_from_traversals(inorder: ["b", "a", "right"], preorder: [
+    "a", "b",
+  ])
   |> should.equal(Error(DifferentLengths))
 }
 
@@ -70,11 +63,7 @@ pub fn a_degenerate_binary_tree_test() {
     Ok(Node(
       left: Node(
         left: Node(
-          left: Node(
-            left: Nil,
-            right: Nil,
-            value: "d",
-          ),
+          left: Node(left: Nil, right: Nil, value: "d"),
           right: Nil,
           value: "c",
         ),
@@ -98,11 +87,7 @@ pub fn another_degenerate_binary_tree_test() {
         left: Nil,
         right: Node(
           left: Nil,
-          right: Node(
-            left: Nil,
-            right: Nil,
-            value: "d",
-          ),
+          right: Node(left: Nil, right: Nil, value: "d"),
           value: "c",
         ),
         value: "b",
@@ -121,33 +106,17 @@ pub fn tree_with_many_more_items_test() {
     Ok(Node(
       left: Node(
         left: Node(
-          left: Node(
-            left: Nil,
-            right: Nil,
-            value: "g",
-          ),
-          right: Node(
-            left: Nil,
-            right: Nil,
-            value: "h",
-          ),
+          left: Node(left: Nil, right: Nil, value: "g"),
+          right: Node(left: Nil, right: Nil, value: "h"),
           value: "d",
         ),
         right: Nil,
         value: "b",
       ),
       right: Node(
-        left: Node(
-          left: Nil,
-          right: Nil,
-          value: "e",
-        ),
+        left: Node(left: Nil, right: Nil, value: "e"),
         right: Node(
-          left: Node(
-            left: Nil,
-            right: Nil,
-            value: "i",
-          ),
+          left: Node(left: Nil, right: Nil, value: "i"),
           right: Nil,
           value: "f",
         ),
