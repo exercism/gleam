@@ -53,6 +53,5 @@ pub fn triplets_for_large_number_test() {
     Triplet(5000, 12_000, 13_000),
     Triplet(6000, 11_250, 12_750),
     Triplet(7500, 10_000, 12_500),
-   ])
- }
-
+  ])
+}
