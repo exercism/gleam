@@ -2,6 +2,10 @@ import change.{ImpossibleTarget}
 import exercism/should
 import exercism/test_runner
 
+// Given an infinite supply of coins with different values, 
+// find the smallest number of coins needed to make a desired 
+// amount of change.
+
 pub fn main() {
   test_runner.main()
 }
@@ -46,6 +50,11 @@ pub fn possible_change_without_unit_coins_available_test() {
 pub fn another_possible_change_without_unit_coins_available_test() {
   change.find_fewest_coins([4, 5], 27)
   |> should.equal(Ok([4, 4, 4, 5, 5, 5]))
+}
+
+pub fn a_greedy_approach_is_not_optimal_test() {
+  change.find_fewest_coins([1, 10, 11], 20)
+  |> should.equal(Ok([10, 10]))
 }
 
 pub fn no_coins_make_0_change_test() {
