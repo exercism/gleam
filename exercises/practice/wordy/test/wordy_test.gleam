@@ -11,9 +11,29 @@ pub fn just_a_number_test() {
   |> should.equal(Ok(5))
 }
 
+pub fn just_a_zero_test() {
+  wordy.answer("What is 0?")
+  |> should.equal(Ok(0))
+}
+
+pub fn just_a_negative_number_test() {
+  wordy.answer("What is -123?")
+  |> should.equal(Ok(-123))
+}
+
 pub fn addition_test() {
   wordy.answer("What is 1 plus 1?")
   |> should.equal(Ok(2))
+}
+
+pub fn addition_with_a_left_hand_zero_test() {
+  wordy.answer("What is 0 plus 2?")
+  |> should.equal(Ok(2))
+}
+
+pub fn addition_with_a_right_hand_zero_test() {
+  wordy.answer("What is 3 plus 0?")
+  |> should.equal(Ok(3))
 }
 
 pub fn more_addition_test() {
