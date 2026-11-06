@@ -35,3 +35,18 @@ pub fn an_even_sized_word_test() {
   reverse_string.reverse("drawer")
   |> should.equal("reward")
 }
+
+pub fn wide_characters_test() {
+  reverse_string.reverse("子猫")
+  |> should.equal("猫子")
+}
+
+pub fn grapheme_cluster_with_pre_combined_form_test() {
+  reverse_string.reverse("Würstchenstand")
+  |> should.equal("dnatsnehctsrüW")
+}
+
+pub fn grapheme_clusters_test() {
+  reverse_string.reverse("ผู้เขียนโปรแกรม")
+  |> should.equal("มรกแรปโนยขีเผู้")
+}
