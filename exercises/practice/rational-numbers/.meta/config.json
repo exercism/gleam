@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "natanaelsirqueira"
+  ],
+  "files": {
+    "solution": [
+      "src/rational_numbers.gleam"
+    ],
+    "test": [
+      "test/rational_numbers_test.gleam"
+    ],
+    "example": [
+      ".meta/example.gleam"
+    ],
+    "invalidator": [
+      "gleam.toml",
+      "manifest.toml"
+    ]
+  },
+  "blurb": "Implement rational numbers.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Rational_number"
+}
