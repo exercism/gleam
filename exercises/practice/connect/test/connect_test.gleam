@@ -75,6 +75,28 @@ pub fn x_wins_crossing_from_left_to_right_test() {
   |> should.equal(Ok(X))
 }
 
+pub fn x_wins_with_left_hand_dead_end_fork_test() {
+  connect.winner(
+    "
+. . X .
+ X X . .
+  . X X X
+   O O O O",
+  )
+  |> should.equal(Ok(X))
+}
+
+pub fn x_wins_with_right_hand_dead_end_fork_test() {
+  connect.winner(
+    "
+. . X X
+ X X . .
+  . X X .
+   O O O O",
+  )
+  |> should.equal(Ok(X))
+}
+
 pub fn o_wins_crossing_from_top_to_bottom_test() {
   connect.winner(
     "
