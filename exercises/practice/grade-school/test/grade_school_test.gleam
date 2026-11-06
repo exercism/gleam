@@ -3,6 +3,9 @@ import exercism/test_runner
 import gleam/result
 import grade_school
 
+// Given students' names along with the grade that they are in, 
+// create a roster for the school.
+
 pub fn main() {
   test_runner.main()
 }
@@ -45,6 +48,23 @@ pub fn multiple_students_in_the_same_grade_are_added_to_the_roster_test() {
   |> should.equal(Ok(["Blair", "James", "Paul"]))
 }
 
+pub fn cannot_add_student_to_same_grade_in_the_roster_more_than_once_test() {
+  let assert Error(_) =
+    grade_school.create()
+    |> grade_school.add(student: "Blair", grade: 2)
+    |> result.try(grade_school.add(to: _, student: "James", grade: 2))
+    |> result.try(grade_school.add(to: _, student: "James", grade: 2))
+    |> result.try(grade_school.add(to: _, student: "Paul", grade: 2))
+}
+
+pub fn adding_students_in_multiple_grades_test() {
+  let assert Ok(_) =
+    grade_school.create()
+    |> grade_school.add(student: "Chelsea", grade: 3)
+    |> result.try(grade_school.add(to: _, student: "Logan", grade: 7))
+    |> result.map(grade_school.roster)
+}
+
 pub fn students_in_multiple_grades_are_added_to_the_roster_test() {
   grade_school.create()
   |> grade_school.add(student: "Chelsea", grade: 3)
@@ -53,22 +73,13 @@ pub fn students_in_multiple_grades_are_added_to_the_roster_test() {
   |> should.equal(Ok(["Chelsea", "Logan"]))
 }
 
-pub fn student_cant_be_added_to_same_grade_in_the_roster_more_than_once_test() {
-  let assert Error(_) =
-    grade_school.create()
-    |> grade_school.add(student: "Blair", grade: 2)
-    |> result.try(grade_school.add(to: _, student: "James", grade: 2))
-    |> result.try(grade_school.add(to: _, student: "James", grade: 2))
-    |> result.try(grade_school.add(to: _, student: "Paul", grade: 2))
-}
-
-pub fn student_cant_be_added_to_multiple_grades_in_the_roster_test() {
+pub fn cannot_add_same_student_to_multiple_grades_in_the_roster_test() {
   let assert Error(_) =
     grade_school.create()
     |> grade_school.add(student: "Blair", grade: 2)
     |> result.try(grade_school.add(to: _, student: "James", grade: 2))
     |> result.try(grade_school.add(to: _, student: "James", grade: 3))
-    |> result.try(grade_school.add(to: _, student: "Paul", grade: 2))
+    |> result.try(grade_school.add(to: _, student: "Paul", grade: 3))
 }
 
 pub fn students_are_sorted_by_grades_in_the_roster_test() {

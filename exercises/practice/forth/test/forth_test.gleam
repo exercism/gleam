@@ -3,6 +3,10 @@ import exercism/test_runner
 import forth
 import gleam/result
 
+// The cases are split into multiple sections, all with the same structure.
+// In all cases, the `expected` key is the resulting stack
+// after executing the Forth program contained in the `input` key, unless an 'error' exists.
+
 pub fn main() {
   test_runner.main()
 }
@@ -22,69 +26,69 @@ fn run_forth_for(prog: String, expected: String) {
   |> succeed_with(expected)
 }
 
-pub fn no_input_no_stack_test() {
+fn run_forth_and_error(prog: String, expected: forth.ForthError) {
   forth.new()
-  |> forth.format_stack
-  |> should.equal("")
+  |> forth.eval(prog)
+  |> error_with(expected)
 }
 
-pub fn numbers_just_get_pushed_onto_the_stack_test() {
+pub fn parsing_and_numbers_numbers_just_get_pushed_onto_the_stack_test() {
   run_forth_for("1 2 3 4 5", "1 2 3 4 5")
 }
 
-pub fn pushes_negative_numbers_onto_the_stack_test() {
+pub fn parsing_and_numbers_pushes_negative_numbers_onto_the_stack_test() {
   run_forth_for("-1 -2 -3 -4 -5", "-1 -2 -3 -4 -5")
 }
 
-pub fn can_add_two_numbers_test() {
+pub fn addition_can_add_two_numbers_test() {
   run_forth_for("1 2 +", "3")
 }
 
-pub fn errors_if_there_is_nothing_on_the_stack_test() {
-  forth.new()
-  |> forth.eval("+")
-  |> error_with(forth.StackUnderflow)
+pub fn addition_errors_if_there_is_nothing_on_the_stack_test() {
+  run_forth_and_error("+", forth.StackUnderflow)
 }
 
-pub fn errors_if_there_is_only_one_value_on_the_stack_test() {
-  forth.new()
-  |> forth.eval("1 +")
-  |> error_with(forth.StackUnderflow)
+pub fn addition_errors_if_there_is_only_one_value_on_the_stack_test() {
+  run_forth_and_error("1 +", forth.StackUnderflow)
 }
 
-pub fn can_subtract_two_numbers_test() {
+pub fn addition_more_than_two_values_on_the_stack_test() {
+  run_forth_for("1 2 3 +", "1 5")
+}
+
+pub fn subtraction_can_subtract_two_numbers_test() {
   run_forth_for("3 4 -", "-1")
 }
 
 pub fn subtraction_errors_if_there_is_nothing_on_the_stack_test() {
-  forth.new()
-  |> forth.eval("-")
-  |> error_with(forth.StackUnderflow)
+  run_forth_and_error("-", forth.StackUnderflow)
 }
 
 pub fn subtraction_errors_if_there_is_only_one_value_on_the_stack_test() {
-  forth.new()
-  |> forth.eval("1 -")
-  |> error_with(forth.StackUnderflow)
+  run_forth_and_error("1 -", forth.StackUnderflow)
 }
 
-pub fn can_multiply_two_numbers_test() {
+pub fn subtraction_more_than_two_values_on_the_stack_test() {
+  run_forth_for("1 12 3 -", "1 9")
+}
+
+pub fn multiplication_can_multiply_two_numbers_test() {
   run_forth_for("2 4 *", "8")
 }
 
 pub fn multiplication_errors_if_there_is_nothing_on_the_stack_test() {
-  forth.new()
-  |> forth.eval("*")
-  |> error_with(forth.StackUnderflow)
+  run_forth_and_error("*", forth.StackUnderflow)
 }
 
 pub fn multiplication_errors_if_there_is_only_one_value_on_the_stack_test() {
-  forth.new()
-  |> forth.eval("1 *")
-  |> error_with(forth.StackUnderflow)
+  run_forth_and_error("1 *", forth.StackUnderflow)
 }
 
-pub fn can_divide_two_numbers_test() {
+pub fn multiplication_more_than_two_values_on_the_stack_test() {
+  run_forth_for("1 2 3 *", "1 6")
+}
+
+pub fn division_can_divide_two_numbers_test() {
   run_forth_for("12 3 /", "4")
 }
 
@@ -92,143 +96,100 @@ pub fn division_performs_integer_division_test() {
   run_forth_for("8 3 /", "2")
 }
 
+pub fn division_errors_if_dividing_by_zero_test() {
+  run_forth_and_error("4 0 /", forth.DivisionByZero)
+}
+
 pub fn division_errors_if_there_is_nothing_on_the_stack_test() {
-  forth.new()
-  |> forth.eval("/")
-  |> error_with(forth.StackUnderflow)
+  run_forth_and_error("/", forth.StackUnderflow)
 }
 
 pub fn division_errors_if_there_is_only_one_value_on_the_stack_test() {
-  forth.new()
-  |> forth.eval("1 /")
-  |> error_with(forth.StackUnderflow)
+  run_forth_and_error("1 /", forth.StackUnderflow)
 }
 
-pub fn basic_arithmetic_test() {
+pub fn division_more_than_two_values_on_the_stack_test() {
+  run_forth_for("1 12 3 /", "1 4")
+}
+
+pub fn combined_arithmetic_addition_and_subtraction_test() {
   run_forth_for("1 2 + 4 -", "-1")
 }
 
-pub fn integer_division_test() {
+pub fn combined_arithmetic_multiplication_and_division_test() {
   run_forth_for("2 4 * 3 /", "2")
 }
 
-pub fn division_by_zero_test() {
-  forth.new()
-  |> forth.eval("4 0 /")
-  |> error_with(forth.DivisionByZero)
+pub fn combined_arithmetic_multiplication_and_addition_test() {
+  run_forth_for("1 3 4 * +", "13")
 }
 
-pub fn stack_dup1_test() {
-  run_forth_for("1 DUP", "1 1")
+pub fn combined_arithmetic_addition_and_multiplication_test() {
+  run_forth_for("1 3 4 + *", "7")
 }
 
-pub fn stack_dup2_test() {
-  run_forth_for("1 2 DUP", "1 2 2")
+pub fn dup_copies_a_value_on_the_stack_test() {
+  run_forth_for("1 dup", "1 1")
 }
 
-pub fn stack_dup_fail_test() {
-  forth.new()
-  |> forth.eval("DUP")
-  |> error_with(forth.StackUnderflow)
+pub fn dup_copies_the_top_value_on_the_stack_test() {
+  run_forth_for("1 2 dup", "1 2 2")
 }
 
-pub fn stack_drop1_test() {
+pub fn dup_errors_if_there_is_nothing_on_the_stack_test() {
+  run_forth_and_error("dup", forth.StackUnderflow)
+}
+
+pub fn drop_removes_the_top_value_on_the_stack_if_it_is_the_only_one_test() {
   run_forth_for("1 drop", "")
 }
 
-pub fn stack_drop2_test() {
+pub fn drop_removes_the_top_value_on_the_stack_if_it_is_not_the_only_one_test() {
   run_forth_for("1 2 drop", "1")
 }
 
-pub fn stack_drop_fail_test() {
-  forth.new()
-  |> forth.eval("drop")
-  |> error_with(forth.StackUnderflow)
+pub fn drop_errors_if_there_is_nothing_on_the_stack_test() {
+  run_forth_and_error("drop", forth.StackUnderflow)
 }
 
-pub fn stack_swap1_test() {
+pub fn swap_swaps_the_top_two_values_on_the_stack_if_they_are_the_only_ones_test() {
   run_forth_for("1 2 swap", "2 1")
 }
 
-pub fn stack_swap2_test() {
+pub fn swap_swaps_the_top_two_values_on_the_stack_if_they_are_not_the_only_ones_test() {
   run_forth_for("1 2 3 swap", "1 3 2")
 }
 
-pub fn stack_swap_fail1_test() {
-  forth.new()
-  |> forth.eval("swap")
-  |> error_with(forth.StackUnderflow)
+pub fn swap_errors_if_there_is_nothing_on_the_stack_test() {
+  run_forth_and_error("swap", forth.StackUnderflow)
 }
 
-pub fn stack_swap_fail2_test() {
-  forth.new()
-  |> forth.eval("1 swap")
-  |> error_with(forth.StackUnderflow)
+pub fn swap_errors_if_there_is_only_one_value_on_the_stack_test() {
+  run_forth_and_error("1 swap", forth.StackUnderflow)
 }
 
-pub fn stack_over_1_test() {
+pub fn over_copies_the_second_element_if_there_are_only_two_test() {
   run_forth_for("1 2 over", "1 2 1")
 }
 
-pub fn stack_over_2_test() {
+pub fn over_copies_the_second_element_if_there_are_more_than_two_test() {
   run_forth_for("1 2 3 over", "1 2 3 2")
 }
 
-pub fn stack_over_fail_1_test() {
-  forth.new()
-  |> forth.eval("1 over")
-  |> error_with(forth.StackUnderflow)
+pub fn over_errors_if_there_is_nothing_on_the_stack_test() {
+  run_forth_and_error("over", forth.StackUnderflow)
 }
 
-pub fn stack_over_fail_2_test() {
-  forth.new()
-  |> forth.eval("over")
-  |> error_with(forth.StackUnderflow)
+pub fn over_errors_if_there_is_only_one_value_on_the_stack_test() {
+  run_forth_and_error("1 over", forth.StackUnderflow)
 }
 
-pub fn define_new_word_test() {
+pub fn user_defined_words_can_consist_of_built_in_words_test() {
   forth.new()
   |> forth.eval(": dup-twice dup dup ;")
   |> result.try(forth.eval(_, "1 dup-twice"))
   |> result.map(forth.format_stack)
   |> succeed_with("1 1 1")
-}
-
-pub fn redefine_existing_word_test() {
-  forth.new()
-  |> forth.eval(": foo dup ;")
-  |> result.try(forth.eval(_, ": foo dup dup ;"))
-  |> result.try(forth.eval(_, "1 foo"))
-  |> result.map(forth.format_stack)
-  |> succeed_with("1 1 1")
-}
-
-pub fn redefining_an_existing_builtin_word_test() {
-  forth.new()
-  |> forth.eval(": swap dup ;")
-  |> result.try(forth.eval(_, "1 swap"))
-  |> result.map(forth.format_stack)
-  |> succeed_with("1 1")
-}
-
-pub fn defining_words_with_odd_characters_test() {
-  forth.new()
-  |> forth.eval(": € 220371 ;")
-  |> result.try(forth.eval(_, "€"))
-  |> result.map(forth.format_stack)
-  |> succeed_with("220371")
-}
-
-pub fn defining_a_number_test() {
-  forth.new()
-  |> forth.eval(": 1 2 ;")
-  |> error_with(forth.InvalidWord)
-}
-
-pub fn calling_a_nonexistent_word_test() {
-  forth.new()
-  |> forth.eval("1 foo")
-  |> error_with(forth.UnknownWord)
 }
 
 pub fn user_defined_words_execute_in_the_right_order_test() {
@@ -239,7 +200,24 @@ pub fn user_defined_words_execute_in_the_right_order_test() {
   |> succeed_with("1 2 3")
 }
 
-pub fn user_defined_words_can_override_builtin_operators_test() {
+pub fn user_defined_words_can_override_other_user_defined_words_test() {
+  forth.new()
+  |> forth.eval(": foo dup ;")
+  |> result.try(forth.eval(_, ": foo dup dup ;"))
+  |> result.try(forth.eval(_, "1 foo"))
+  |> result.map(forth.format_stack)
+  |> succeed_with("1 1 1")
+}
+
+pub fn user_defined_words_can_override_built_in_words_test() {
+  forth.new()
+  |> forth.eval(": swap dup ;")
+  |> result.try(forth.eval(_, "1 swap"))
+  |> result.map(forth.format_stack)
+  |> succeed_with("1 1")
+}
+
+pub fn user_defined_words_can_override_built_in_operators_test() {
   forth.new()
   |> forth.eval(": + * ;")
   |> result.try(forth.eval(_, "3 4 +"))
@@ -257,50 +235,35 @@ pub fn user_defined_words_can_use_different_words_with_the_same_name_test() {
   |> succeed_with("5 6")
 }
 
-pub fn user_defined_words_can_define_word_that_uses_word_with_the_same_name_test() {
-  forth.new()
-  |> forth.eval(": foo 10 ;")
-  |> result.try(forth.eval(_, ": foo foo 1 + ;"))
-  |> result.try(forth.eval(_, "foo"))
-  |> result.map(forth.format_stack)
-  |> succeed_with("11")
-}
-
 pub fn user_defined_words_cannot_redefine_non_negative_numbers_test() {
-  forth.new()
-  |> forth.eval(": 1 2 ;")
-  |> error_with(forth.InvalidWord)
+  run_forth_and_error(": 1 2 ;", forth.InvalidWord)
 }
 
 pub fn user_defined_words_cannot_redefine_negative_numbers_test() {
-  forth.new()
-  |> forth.eval(": -1 2 ;")
-  |> error_with(forth.InvalidWord)
+  run_forth_and_error(": -1 2 ;", forth.InvalidWord)
 }
 
-pub fn user_defined_words_errors_if_executing_non_existent_word_test() {
-  forth.new()
-  |> forth.eval("foo")
-  |> error_with(forth.UnknownWord)
+pub fn user_defined_words_errors_if_executing_a_non_existent_word_test() {
+  run_forth_and_error("foo", forth.UnknownWord)
 }
 
-pub fn dup_is_case_insensitive_test() {
+pub fn case_insensitivity_dup_is_case_insensitive_test() {
   run_forth_for("1 DUP Dup dup", "1 1 1 1")
 }
 
-pub fn drop_is_case_insensitive_test() {
+pub fn case_insensitivity_drop_is_case_insensitive_test() {
   run_forth_for("1 2 3 4 DROP Drop drop", "1")
 }
 
-pub fn swap_is_case_insensitive_test() {
+pub fn case_insensitivity_swap_is_case_insensitive_test() {
   run_forth_for("1 2 SWAP 3 Swap 4 swap", "2 3 4 1")
 }
 
-pub fn over_is_case_insensitive_test() {
+pub fn case_insensitivity_over_is_case_insensitive_test() {
   run_forth_for("1 2 OVER Over over", "1 2 1 2 1")
 }
 
-pub fn user_defined_words_are_case_insensitive_test() {
+pub fn case_insensitivity_user_defined_words_are_case_insensitive_test() {
   forth.new()
   |> forth.eval(": foo dup ;")
   |> result.try(forth.eval(_, "1 FOO Foo foo"))
@@ -308,7 +271,7 @@ pub fn user_defined_words_are_case_insensitive_test() {
   |> succeed_with("1 1 1 1")
 }
 
-pub fn definitions_are_case_insensitive_test() {
+pub fn case_insensitivity_definitions_are_case_insensitive_test() {
   forth.new()
   |> forth.eval(": SWAP DUP Dup dup ;")
   |> result.try(forth.eval(_, "1 swap"))

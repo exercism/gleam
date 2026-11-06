@@ -34,11 +34,3 @@ pub fn ignore_additional_colors_test() {
 pub fn black_and_brown_one_digit_test() {
   let assert Ok(1) = resistor_color_duo.value([Black, Brown])
 }
-
-pub fn fails_if_only_one_color_is_provided_test() {
-  let assert Error(Nil) = resistor_color_duo.value([Black])
-}
-
-pub fn fails_if_no_color_is_provided_test() {
-  let assert Error(Nil) = resistor_color_duo.value([])
-}

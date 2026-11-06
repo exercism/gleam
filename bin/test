@@ -22,6 +22,7 @@ set -euo pipefail
 # ./bin/test practice/the-slug-of-my-practice-exercise
 
 exit_code=0
+declare -a failed=()
 
 function verify_exercise {
   local dir slug implementation_file stub_backup_file module
@@ -38,6 +39,7 @@ function verify_exercise {
   if ! (cd "$dir" && gleam test)
   then
     echo "${slug}: solution did not pass the tests"
+    failed+=( "${slug}" )
     exit_code=1
   fi
 
@@ -133,4 +135,8 @@ case $# in
     ;;
 esac
 
-exit ${exit_code}
+if (( "${#failed[@]}" > 0 )); then
+    printf "Exercises failed:"
+    printf "* %s\n" "${failed[@]}"
+    exit 1
+fi

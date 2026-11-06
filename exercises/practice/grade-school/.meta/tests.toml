@@ -39,6 +39,8 @@ reimplements = "c125dab7-2a53-492f-a99a-56ad511940d8"
 [d7982c4f-1602-49f6-a651-620f2614243a]
 description = "Student not added to same grade in the roster more than once"
 reimplements = "a0c7b9b8-0e89-47f8-8b4a-c50f885e79d1"
+include = false
+comment = "add returns an error so the roster is not retrieved"
 
 [e70d5d8f-43a9-41fd-94a4-1ea0fa338056]
 description = "Adding students in multiple grades"
@@ -56,6 +58,8 @@ reimplements = "c125dab7-2a53-492f-a99a-56ad511940d8"
 [c7ec1c5e-9ab7-4d3b-be5c-29f2f7a237c5]
 description = "Student not added to multiple grades in the roster"
 reimplements = "6a03b61e-1211-4783-a3cc-fc7f773fba3f"
+include = false
+comment = "add returns an error so the roster is not retrieved"
 
 [d9af4f19-1ba1-48e7-94d0-dabda4e5aba6]
 description = "Students are sorted by grades in the roster"
@@ -74,12 +78,18 @@ description = "Grade is empty if no students in that grade"
 
 [2bfc697c-adf2-4b65-8d0f-c46e085f796e]
 description = "Student not added to same grade more than once"
+include = false
+comment = "add returns an error so the roster is not retrieved"
 
 [66c8e141-68ab-4a04-a15a-c28bc07fe6b9]
 description = "Student not added to multiple grades"
+include = false
+comment = "add returns an error so the roster is not retrieved"
 
 [c9c1fc2f-42e0-4d2c-b361-99271f03eda7]
 description = "Student not added to other grade for multiple grades"
+include = false
+comment = "add returns an error so the roster is not retrieved"
 
 [1bfbcef1-e4a3-49e8-8d22-f6f9f386187e]
 description = "Students are sorted by name in a grade"

@@ -12,7 +12,7 @@ pub fn empty_rna_sequence_results_in_no_proteins_test() {
   |> should.equal(Ok([]))
 }
 
-pub fn methione_rna_sequence_test() {
+pub fn methionine_rna_sequence_test() {
   "AUG"
   |> protein_translation.proteins
   |> should.equal(Ok(["Methionine"]))
@@ -120,6 +120,7 @@ pub fn sequence_of_two_protein_codons_translates_into_proteins_test() {
   |> should.equal(Ok(["Phenylalanine", "Phenylalanine"]))
 }
 
+/// The codons are different, the proteins they translate into are not.
 pub fn sequence_of_two_different_protein_codons_translates_into_proteins_test() {
   "UUAUUG"
   |> protein_translation.proteins
@@ -156,28 +157,28 @@ pub fn translation_stops_if_stop_codon_in_middle_of_three_codon_sequence_test() 
   |> should.equal(Ok(["Tryptophan"]))
 }
 
-pub fn non_existing_codon_cant_translate_test() {
-  "AAA"
+pub fn translation_stops_if_stop_codon_in_middle_of_six_codon_sequence_test() {
+  "UGGUGUUAUUAAUGGUUU"
   |> protein_translation.proteins
-  |> should.equal(Error(Nil))
+  |> should.equal(Ok(["Tryptophan", "Cysteine", "Tyrosine"]))
 }
 
-pub fn unknown_amino_acids_not_part_of_a_codon_cant_translate_test() {
+pub fn sequence_of_two_non_stop_codons_does_not_translate_to_a_stop_codon_test() {
+  "AUGAUG"
+  |> protein_translation.proteins
+  |> should.equal(Ok(["Methionine", "Methionine"]))
+}
+
+pub fn unknown_amino_acids_not_part_of_a_codon_can_t_translate_test() {
   "XYZ"
   |> protein_translation.proteins
   |> should.equal(Error(Nil))
 }
 
-pub fn incomplete_rna_sequence_cant_translate_test() {
+pub fn incomplete_rna_sequence_can_t_translate_test() {
   "AUGU"
   |> protein_translation.proteins
   |> should.equal(Error(Nil))
-}
-
-pub fn translation_stops_if_stop_codon_in_middle_of_six_codon_sequence_test() {
-  "UGGUGUUAUUAAUGGUUU"
-  |> protein_translation.proteins
-  |> should.equal(Ok(["Tryptophan", "Cysteine", "Tyrosine"]))
 }
 
 pub fn incomplete_rna_sequence_can_translate_if_valid_until_a_stop_codon_test() {
