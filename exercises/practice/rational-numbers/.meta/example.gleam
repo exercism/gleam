@@ -1,5 +1,5 @@
-import gleam/int
 import gleam/float
+import gleam/int
 import gleam/result
 
 pub type RationalNumber {
@@ -69,7 +69,7 @@ pub fn power_of_real(
 ) -> Result(Float, Nil) {
   let RationalNumber(numerator, denominator) = exponent
 
-  use power <- result.then(float.power(base, int.to_float(numerator)))
+  use power <- result.try(float.power(base, int.to_float(numerator)))
 
   nth_root(denominator, of: power)
 }
