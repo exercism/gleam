@@ -142,3 +142,8 @@ _123*2
 111111",
   )
 }
+
+pub fn multiple_adjacent_flowers_test() {
+  flower_field.annotate("_**_")
+  |> should.equal("1**1")
+}
