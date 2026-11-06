@@ -56,6 +56,11 @@ pub fn first_letter_and_ay_are_moved_to_the_end_of_words_that_start_with_consona
   |> should.equal("atqay")
 }
 
+pub fn first_letter_and_ay_are_moved_to_the_end_of_words_that_start_with_consonants_word_beginning_with_consonant_and_vowel_containing_qu_test() {
+  pig_latin.translate("liquid")
+  |> should.equal("iquidlay")
+}
+
 pub fn some_letter_clusters_are_treated_like_a_single_consonant_word_beginning_with_ch_test() {
   pig_latin.translate("chair")
   |> should.equal("airchay")
