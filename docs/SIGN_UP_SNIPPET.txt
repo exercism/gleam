@@ -1,0 +1,16 @@
+pub fn most_common_word(text: String) -> String {
+  let #(best, best_count, _) =
+    text
+    |> string.lowercase
+    |> string.split(" ")
+    |> list.fold(#("", 0, dict.new()), fn(acc, word) {
+      let #(best, best_count, counts) = acc
+      let count = result.unwrap(dict.get(counts, word), 0) + 1
+      let counts = dict.insert(counts, word, count)
+      case count > best_count {
+        True -> #(word, count, counts)
+        False -> #(best, best_count, counts)
+      }
+    })
+  "\"" <> best <> "\" appears " <> int.to_string(best_count) <> " times"
+}
