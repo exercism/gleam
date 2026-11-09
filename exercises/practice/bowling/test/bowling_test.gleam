@@ -5,24 +5,6 @@ import exercism/should
 import exercism/test_runner
 import gleam/list
 
-// Students should implement roll and score methods.
-// Roll should accept a single integer.
-// Score should return the game's final score, when possible
-// For brevity the tests display all the previous rolls in an array;
-// each element of the previousRolls array should be passed to the roll method
-// and each of those previous rolls is expected to succeed.
-// 
-// Two properties are tested:
-// 
-// `score`: All rolls succeed, and taking the score gives the expected result.
-// The expected result may be an integer score or an error.
-// 
-// `roll`: All previousRolls succeed, and rolling the number of pins in `roll` produces the expected result.
-// Currently, all cases of this type result in errors.
-// 
-// In all error cases you should expect an error as is idiomatic for your language
-// whether that be via exceptions, optional values, or otherwise.
-
 pub fn main() {
   test_runner.main()
 }
