@@ -41,18 +41,6 @@ pub fn eight_character_plaintext_results_in_3_chunks_the_last_one_with_a_trailin
   |> should.equal("clu hlt io ")
 }
 
-pub fn with_54_character_plaintext_results_in_7_chunks_the_last_two_with_trailing_spaces_test() {
-  crypto_square.ciphertext(
-    "If man was meant to stay on the ground, god would have given us roots.",
-  )
-  |> should.equal(
-    "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau ",
-  )
-}
-
-// This test reimplements the test with uuid fbcb0c6d-4c39-4a31-83f6-c473baa6af80
-// Please identify that test and remove it. Link:
-// https://github.com/exercism/problem-specifications/blob/main/exercises/crypto-square/canonical-data.json
 pub fn with_54_character_plaintext_results_in_8_chunks_the_last_two_with_trailing_spaces_test() {
   crypto_square.ciphertext(
     "If man was meant to stay on the ground, god would have given us roots.",
