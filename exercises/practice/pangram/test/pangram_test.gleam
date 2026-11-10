@@ -17,33 +17,40 @@ pub fn perfect_lower_case_test() {
 }
 
 pub fn only_lower_case_test() {
-  let assert True = pangram.is_pangram("the quick brown fox jumps over the lazy dog")
+  let assert True =
+    pangram.is_pangram("the quick brown fox jumps over the lazy dog")
 }
 
 pub fn missing_the_letter_x__test() {
-  let assert False = pangram.is_pangram(
-    "a quick movement of the enemy will jeopardize five gunboats",
-  )
+  let assert False =
+    pangram.is_pangram(
+      "a quick movement of the enemy will jeopardize five gunboats",
+    )
 }
 
 pub fn missing_the_letter_h__test() {
-  let assert False = pangram.is_pangram("five boxing wizards jump quickly at it")
+  let assert False =
+    pangram.is_pangram("five boxing wizards jump quickly at it")
 }
 
 pub fn with_underscores_test() {
-  let assert True = pangram.is_pangram("the_quick_brown_fox_jumps_over_the_lazy_dog")
+  let assert True =
+    pangram.is_pangram("the_quick_brown_fox_jumps_over_the_lazy_dog")
 }
 
 pub fn with_numbers_test() {
-  let assert True = pangram.is_pangram("the 1 quick brown fox jumps over the 2 lazy dogs")
+  let assert True =
+    pangram.is_pangram("the 1 quick brown fox jumps over the 2 lazy dogs")
 }
 
 pub fn missing_letters_replaced_by_numbers_test() {
-  let assert False = pangram.is_pangram("7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog")
+  let assert False =
+    pangram.is_pangram("7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog")
 }
 
 pub fn mixed_case_and_punctuation_test() {
-  let assert True = pangram.is_pangram("\"Five quacking Zephyrs jolt my wax bed.\"")
+  let assert True =
+    pangram.is_pangram("\"Five quacking Zephyrs jolt my wax bed.\"")
 }
 
 pub fn a_m_and_a_m_are_26_different_characters_but_not_a_pangram_test() {
