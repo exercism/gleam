@@ -1,9 +1,6 @@
 import exercism/test_runner
 import pangram
 
-// A pangram is a sentence using every letter of the alphabet at least once.
-// Output should be a boolean denoting if the string is a pangram or not.
-
 pub fn main() {
   test_runner.main()
 }
