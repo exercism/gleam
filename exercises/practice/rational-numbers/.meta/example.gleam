@@ -91,9 +91,10 @@ pub fn reduce(r: RationalNumber) -> RationalNumber {
 }
 
 fn power_of_integer(number base: Int, to exponent: Int) -> Int {
-  let assert Ok(power) = int.power(base, int.to_float(exponent))
-
-  float.round(power)
+  case exponent <= 0 {
+    True -> 1
+    False -> base * power_of_integer(base, to: exponent - 1)
+  }
 }
 
 fn nth_root(n: Int, of p: Float) -> Result(Float, Nil) {
@@ -103,8 +104,8 @@ fn nth_root(n: Int, of p: Float) -> Result(Float, Nil) {
 }
 
 fn gcd(a: Int, b: Int) -> Int {
-  case a, b {
-    a, 0 -> a
-    a, b -> gcd(b, a % b)
+  case b {
+    0 -> a
+    _ -> gcd(b, a % b)
   }
 }
