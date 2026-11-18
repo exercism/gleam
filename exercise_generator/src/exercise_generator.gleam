@@ -300,16 +300,12 @@ fn check_test_case(
 fn write_test_file(slug: String, data: CanonicalData) {
   let exercise = kebab_to_snake(slug)
   let functions = functions_to_implement(data.cases)
-  let comments = print_comments(data.comments)
   let test_cases = print_tests(slug, "", functions, data.cases)
 
   let content =
     "
   import exercism/test_runner
-  import exercism/should
   import <exercise>
-
-  <comments>
 
   pub fn main() {
     test_runner.main()
@@ -400,8 +396,8 @@ fn print_test(
       "
       <comments>
       pub fn <test_name>_test(){
-        <exercise>.<function>(<input>)
-        |> should.equal(<expected>)
+        let assert <expected> = 
+	  <exercise>.<function>(<input>)
       }
       "
       |> string.replace("<comments>", comments)
