@@ -20,5 +20,6 @@
   "forked_from": [
     "elixir/high-school-sweetheart"
   ],
+  "icon": "high-school-sweethearts",
   "blurb": "Learn about the pipe operator by helping high school sweethearts profess their love on social media via ASCII art."
 }

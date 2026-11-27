@@ -20,5 +20,6 @@
   "forked_from": [
     "elm/secure-treasure-chest"
   ],
+  "icon": "secret-agent",
   "blurb": "Learn about opaque types by making a more secure treasure chest"
 }

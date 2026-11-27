@@ -17,5 +17,6 @@
       "manifest.toml"
     ]
   },
+  "icon": "the-weather-in-deather",
   "blurb": "Learn about the Order type by ranking weather conditions"
 }
