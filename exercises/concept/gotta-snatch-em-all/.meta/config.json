@@ -20,5 +20,6 @@
   "forked_from": [
     "elm/gotta-snatch-em-all"
   ],
+  "icon": "character-study",
   "blurb": "Learn to use sets by playing a trading card game"
 }
